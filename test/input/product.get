@@ -1,0 +1,1 @@
+GET /autocomplete?pretty=1&keyword=ajax_fi_all&pattern=Helsi&product=test&time=200808060000 HTTP/1.0

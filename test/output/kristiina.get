@@ -1,0 +1,96 @@
+{
+    "autocomplete" : {
+        "result" : [
+            {
+                "id" : 650769,
+                "name" : "Kristiinankaupunki",
+                "country" : "FI",
+                "feature" : "PPLA3",
+                "area" : "Kristiinankaupunki",
+                "population" : 7712,
+                "lon" : 21.376,
+                "lat" : 62.2743,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : -16777299,
+                "name" : "12 Kristiinankaupunki",
+                "country" : "FI",
+                "feature" : "CHNN",
+                "area" : "Helsinki",
+                "population" : 0,
+                "lon" : 21.1013,
+                "lat" : 62.1913,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : -10022770,
+                "name" : "EPV-Kristiina",
+                "country" : "FI",
+                "feature" : "PS",
+                "area" : "Kristiinankaupunki",
+                "population" : 0,
+                "lon" : 21.309,
+                "lat" : 62.2575,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : -16000034,
+                "name" : "Karhusaari",
+                "country" : "FI",
+                "feature" : "SYNOP",
+                "area" : "Kristiinankaupunki",
+                "population" : 0,
+                "lon" : 21.3211,
+                "lat" : 62.2575,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : -16000175,
+                "name" : "Majakka",
+                "country" : "FI",
+                "feature" : "SYNOP",
+                "area" : "Kristiinankaupunki",
+                "population" : 0,
+                "lon" : 21.1698,
+                "lat" : 62.2032,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : -103312,
+                "name" : "Kristiinankaupunki radioaktiivisuusasema",
+                "country" : "FI",
+                "feature" : "STUK",
+                "area" : "Kristiinankaupunki",
+                "population" : 0,
+                "lon" : 21.4119,
+                "lat" : 62.2686,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : -100381,
+                "name" : "Kristiina Opt",
+                "country" : "FI",
+                "feature" : "SYNOP",
+                "area" : "Kristiinankaupunki",
+                "population" : 0,
+                "lon" : 21.5308,
+                "lat" : 62.0678,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : -100344,
+                "name" : "Kristiina R",
+                "country" : "FI",
+                "feature" : "SYNOP",
+                "area" : "Kristiinankaupunki",
+                "population" : 0,
+                "lon" : 21.5308,
+                "lat" : 62.0678,
+                "timezone" : "Europe/Helsinki"
+            }
+        ],
+        "found-results" : 8,
+        "max-results" : 15
+    }
+}

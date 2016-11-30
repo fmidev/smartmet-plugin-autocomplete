@@ -1,0 +1,228 @@
+{
+    "autocomplete" : {
+        "result" : [
+            {
+                "id" : 651075,
+                "name" : "Koski",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Hattula",
+                "population" : 0,
+                "lon" : 24.2333,
+                "lat" : 61,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651071,
+                "name" : "Koski",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Kauhajoki",
+                "population" : 0,
+                "lon" : 22.2,
+                "lat" : 62.4,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651068,
+                "name" : "Koski",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Kauhava",
+                "population" : 0,
+                "lon" : 23.0333,
+                "lat" : 63.2667,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651079,
+                "name" : "Koski",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Lohja",
+                "population" : 0,
+                "lon" : 24.05,
+                "lat" : 60.35,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651074,
+                "name" : "Koski",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Loimaa",
+                "population" : 0,
+                "lon" : 22.95,
+                "lat" : 61.0167,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651070,
+                "name" : "Koski",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Sein\u00E4joki",
+                "population" : 0,
+                "lon" : 22.7333,
+                "lat" : 62.9667,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651072,
+                "name" : "Koski",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Ulvila",
+                "population" : 0,
+                "lon" : 22.1833,
+                "lat" : 61.4667,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651078,
+                "name" : "Koski",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Vehmaa",
+                "population" : 0,
+                "lon" : 21.75,
+                "lat" : 60.6167,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651066,
+                "name" : "Koskiaho",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Pudasj\u00E4rvi",
+                "population" : 0,
+                "lon" : 27.6167,
+                "lat" : 65.45,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651059,
+                "name" : "Koskimies",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Savitaipale",
+                "population" : 0,
+                "lon" : 27.7167,
+                "lat" : 61.2667,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651060,
+                "name" : "Koskim\u00E4ki",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Kuhmo",
+                "population" : 0,
+                "lon" : 29.0833,
+                "lat" : 64.3167,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651062,
+                "name" : "Koskim\u00E4ki",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Kurikka",
+                "population" : 0,
+                "lon" : 21.9833,
+                "lat" : 62.7,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651061,
+                "name" : "Koskim\u00E4ki",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Kyyj\u00E4rvi",
+                "population" : 0,
+                "lon" : 24.4667,
+                "lat" : 63.0167,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 7731822,
+                "name" : "Koskinen",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Tohmaj\u00E4rvi",
+                "population" : 0,
+                "lon" : 30.387,
+                "lat" : 62.1398,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651056,
+                "name" : "Koskioinen",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Punkalaidun",
+                "population" : 0,
+                "lon" : 23.2,
+                "lat" : 61.1,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651054,
+                "name" : "Koskip\u00E4\u00E4",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Hartola",
+                "population" : 0,
+                "lon" : 26.0333,
+                "lat" : 61.5667,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651052,
+                "name" : "Koskis",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Raasepori",
+                "population" : 0,
+                "lon" : 23.3,
+                "lat" : 60.1667,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 651077,
+                "name" : "Koski Tl",
+                "country" : "FI",
+                "feature" : "PPLA3",
+                "area" : "",
+                "population" : 0,
+                "lon" : 23.15,
+                "lat" : 60.65,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 843945,
+                "name" : "Koskikeskus",
+                "country" : "FI",
+                "feature" : "MALL",
+                "area" : "Oulu",
+                "population" : 0,
+                "lon" : 25.4833,
+                "lat" : 65.0167,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : -10000581,
+                "name" : "Koski-Golf",
+                "country" : "FI",
+                "feature" : "RECG",
+                "area" : "Kouvola",
+                "population" : 0,
+                "lon" : 26.6584,
+                "lat" : 60.9266,
+                "timezone" : "Europe/Helsinki"
+            }
+        ],
+        "found-results" : 20,
+        "max-results" : 100
+    }
+}

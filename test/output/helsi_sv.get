@@ -1,0 +1,63 @@
+{
+    "autocomplete" : {
+        "result" : [
+            {
+                "id" : 658225,
+                "name" : "Helsinki",
+                "country" : "FI",
+                "feature" : "PPLC",
+                "area" : "",
+                "population" : 558457,
+                "lon" : 24.9354,
+                "lat" : 60.1695,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 2706767,
+                "name" : "Helsingborg",
+                "country" : "SE",
+                "feature" : "PPLA2",
+                "area" : "Ruotsi",
+                "population" : 91025,
+                "lon" : 12.6944,
+                "lat" : 56.0467,
+                "timezone" : "Europe/Stockholm"
+            },
+            {
+                "id" : 658227,
+                "name" : "Helsinginpit\u00E4j\u00E4",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Vantaa",
+                "population" : 0,
+                "lon" : 24.9833,
+                "lat" : 60.2833,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 658230,
+                "name" : "Helsingby",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Mustasaari",
+                "population" : 0,
+                "lon" : 21.8,
+                "lat" : 63.0333,
+                "timezone" : "Europe/Helsinki"
+            },
+            {
+                "id" : 658224,
+                "name" : "Helsinginkyl\u00E4",
+                "country" : "FI",
+                "feature" : "PPL",
+                "area" : "Taivassalo",
+                "population" : 0,
+                "lon" : 21.4381,
+                "lat" : 60.6078,
+                "timezone" : "Europe/Helsinki"
+            }
+        ],
+        "found-results" : 5,
+        "max-results" : 15
+    }
+}

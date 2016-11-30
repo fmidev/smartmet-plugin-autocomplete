@@ -1,0 +1,41 @@
+{
+    "autocomplete" : {
+        "result" : [
+            {
+                "id" : 846452,
+                "name" : "Stockholm",
+                "country" : "FI",
+                "feature" : "ISL",
+                "area" : "V\u00E5rd\u00F6",
+                "population" : 0,
+                "lon" : 20.5239,
+                "lat" : 60.1569,
+                "timezone" : "Europe/Mariehamn"
+            },
+            {
+                "id" : 2673730,
+                "name" : "Tukholma",
+                "country" : "SE",
+                "feature" : "PPLC",
+                "area" : "Ruotsi",
+                "population" : 1253309,
+                "lon" : 18.0649,
+                "lat" : 59.3326,
+                "timezone" : "Europe/Stockholm"
+            },
+            {
+                "id" : 636085,
+                "name" : "Tukkisaari",
+                "country" : "FI",
+                "feature" : "ISL",
+                "area" : "Pietarsaari",
+                "population" : 0,
+                "lon" : 22.6833,
+                "lat" : 63.7,
+                "timezone" : "Europe/Helsinki"
+            }
+        ],
+        "found-results" : 3,
+        "max-results" : 15
+    }
+}

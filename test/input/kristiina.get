@@ -1,0 +1,1 @@
+GET /autocomplete?pretty=1&keyword=all&pattern=kristiina HTTP/1.0
