@@ -13,28 +13,6 @@
                 "timezone" : "Europe/Helsinki"
             },
             {
-                "id" : -16777299,
-                "name" : "12 Kristiinankaupunki",
-                "country" : "FI",
-                "feature" : "CHNN",
-                "area" : "Helsinki",
-                "population" : 0,
-                "lon" : 21.1013,
-                "lat" : 62.1913,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : -10022770,
-                "name" : "EPV-Kristiina",
-                "country" : "FI",
-                "feature" : "PS",
-                "area" : "Kristiinankaupunki",
-                "population" : 0,
-                "lon" : 21.309,
-                "lat" : 62.2575,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
                 "id" : -16000034,
                 "name" : "Karhusaari",
                 "country" : "FI",
@@ -90,7 +68,7 @@
                 "timezone" : "Europe/Helsinki"
             }
         ],
-        "found-results" : 8,
+        "found-results" : 6,
         "max-results" : 15
     }
 }
