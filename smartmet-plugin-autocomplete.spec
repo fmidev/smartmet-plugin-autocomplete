@@ -12,14 +12,12 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: libconfig-devel
 BuildRequires: boost-devel
 BuildRequires: libsmartmet-macgyver-devel >= 16.9.30
-BuildRequires: mysql++-devel
 BuildRequires: libjson_spirit
 BuildRequires: smartmet-library-spine-devel >= 16.11.29
 BuildRequires: smartmet-engine-geonames-devel >= 16.11.30
 BuildRequires: smartmet-engine-geoip-devel >= 16.11.30
 BuildRequires: smartmet-engine-querydata-devel >= 16.11.30
 Requires: libconfig
-Requires: mysql++
 Requires: libsmartmet-macgyver >= 16.9.30
 Requires: smartmet-library-spine >= 16.11.29
 Requires: smartmet-engine-geonames >= 16.11.30
@@ -33,10 +31,6 @@ Requires: boost-iostreams
 Requires: boost-regex
 Requires: boost-system
 Requires: boost-thread
-BuildRequires: mariadb-devel
-Requires: mariadb-libs
-%else
-BuildRequires: mysql-devel
 %endif
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
@@ -65,6 +59,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Upcoming
+- Test result changes due to limitations in dockerized test data
+- mysql and mariadb dependencies removed; product configuration now in config file
+
 * Wed Nov 30 2016 Mika Heiskanen <mika.heiskanen@fmi.fi> - 16.11.30-1.fmi
 - Using test database in test configuration
 - No installation for configuration

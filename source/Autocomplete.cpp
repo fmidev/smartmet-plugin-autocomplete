@@ -14,8 +14,6 @@
 #include <macgyver/TimeFormatter.h>
 #include <macgyver/TimeParser.h>
 
-#include <mysql++/mysql++.h>
-
 #include <json_spirit/json_spirit.h>
 
 #include <boost/algorithm/string.hpp>
@@ -84,27 +82,57 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
   {
     ProductParameters result;
 
-    const libconfig::Setting &host = theConfig.lookup("database.host");
-    const libconfig::Setting &user = theConfig.lookup("database.user");
-    const libconfig::Setting &pass = theConfig.lookup("database.pass");
+    const char *optProducts = "products";
 
-    mysqlpp::Connection mysql;
-
-    if (!mysql.connect("autocomplete", host, user, pass))
-      throw SmartMet::Spine::Exception(BCP, "Failed to connect to autocomplete database");
-
-    auto query = mysql.query();
-    query << "SELECT product,param FROM parameters";
-
-    auto res = query.store();
-    if (!res)
+    if (!theConfig.exists(optProducts))
       return result;
 
-    for (size_t i = 0; i < res.num_rows(); ++i)
+    libconfig::Setting &products = theConfig.lookup(optProducts);
+
+    if (!products.isGroup())
+      throw SmartMet::Spine::Exception(BCP,
+                                       "Products must be stored as a group of arrays: line " +
+                                           Fmi::to_string(products.getSourceLine()));
+
+    for (int i = 0; i < products.getLength(); i++)
     {
-      string product = res.at(i).at(0).c_str();
-      string param = res.at(i).at(1).c_str();
-      result.add(product, ParameterFactory::instance().parse(param));
+      libconfig::Setting &product = products[i];
+
+      if (!product.isArray())
+        throw SmartMet::Spine::Exception(BCP,
+                                         "Product must be stored as an array of parameters: line " +
+                                             Fmi::to_string(product.getSourceLine()));
+
+      string productName = product.getName();
+
+      for (int j = 0; j < product.getLength(); j++)
+      {
+        try
+        {
+          string param = product[j];
+          result.add(productName, ParameterFactory::instance().parse(param));
+        }
+        catch (libconfig::ParseException &e)
+        {
+          throw SmartMet::Spine::Exception(BCP,
+                                           string("Configuration error ' ") + e.getError() +
+                                               "' with variable '" + productName + "' on line " +
+                                               Fmi::to_string(e.getLine()));
+        }
+        catch (libconfig::ConfigException &)
+        {
+          throw SmartMet::Spine::Exception(BCP,
+                                           string("Configuration error with variable '") +
+                                               productName + "' on line " +
+                                               Fmi::to_string(product[j].getSourceLine()));
+        }
+        catch (std::exception &e)
+        {
+          throw SmartMet::Spine::Exception(BCP,
+                                           e.what() + string(" (line number ") +
+                                               Fmi::to_string(product[j].getSourceLine()) + ")");
+        }
+      }
     }
 
     return result;
