@@ -80,7 +80,7 @@ endif
 
 LIBS = -L$(libdir) \
 	-lsmartmet-spine \
-	-lsmartmet_macgyver \
+	-lsmartmet-macgyver \
 	-ljson_spirit \
 	-L$(libdir)/mysql -lmysqlclient_r \
 	-lmysqlpp \
