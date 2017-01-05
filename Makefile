@@ -129,8 +129,7 @@ release: all
 profile: all
 
 configtest:
-	@echo Validating test/cnf/autocomplete.conf
-	@cfgvalidate -v test/cnf/autocomplete.conf
+	@if [ -x "$$(command -v cfgvalidate)" ]; then cfgvalidate -v test/cnf/autocomplete.conf; fi
 
 $(LIBFILE): $(OBJS)
 	$(CXX) $(CFLAGS) -shared -rdynamic -o $(LIBFILE) $(OBJS) $(LIBS)
