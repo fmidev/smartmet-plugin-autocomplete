@@ -78,7 +78,7 @@ endif
 
 LIBS = -L$(libdir) \
 	-lsmartmet-spine \
-	-lsmartmet_macgyver \
+	-lsmartmet-macgyver \
 	-ljson_spirit \
 	-lboost_date_time \
 	-lboost_thread \
@@ -125,8 +125,7 @@ release: all
 profile: all
 
 configtest:
-	@echo Validating test/cnf/autocomplete.conf
-	@cfgvalidate -v test/cnf/autocomplete.conf
+	@if [ -x "$$(command -v cfgvalidate)" ]; then cfgvalidate -v test/cnf/autocomplete.conf; fi
 
 $(LIBFILE): $(OBJS)
 	$(CXX) $(CFLAGS) -shared -rdynamic -o $(LIBFILE) $(OBJS) $(LIBS)
@@ -151,7 +150,6 @@ objdir:
 rpm: clean
 	if [ -e $(SPEC).spec ]; \
 	then \
-	  smartspecupdate $(SPEC).spec ; \
 	  mkdir -p $(rpmsourcedir) ; \
 	  tar -C ../../ -cf $(rpmsourcedir)/$(SPEC).tar plugins/$(SUBNAME) ; \
 	  gzip -f $(rpmsourcedir)/$(SPEC).tar ; \

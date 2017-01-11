@@ -21,8 +21,8 @@ INCLUDES = \
 
 LIBS = \
 	-lsmartmet-spine \
-	-lsmartmet_macgyver \
-	-lsmartmet_newbase \
+	-lsmartmet-macgyver \
+	-lsmartmet-newbase \
 	`pkg-config --libs libconfig++` \
 	-lmysqlpp \
 	-lboost_date_time \
