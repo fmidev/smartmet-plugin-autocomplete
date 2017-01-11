@@ -40,8 +40,7 @@ ifeq ($(CXX), clang++)
 
  INCLUDES = \
 	-isystem $(includedir) \
-	-isystem $(includedir)/smartmet \
-	-isystem $(includedir)/mysql
+	-isystem $(includedir)/smartmet
 
 else
 
@@ -62,8 +61,7 @@ else
 
  INCLUDES = \
 	-I$(includedir) \
-	-I$(includedir)/smartmet \
-	-I$(includedir)/mysql
+	-I$(includedir)/smartmet
 
 endif
 
@@ -82,8 +80,6 @@ LIBS = -L$(libdir) \
 	-lsmartmet-spine \
 	-lsmartmet-macgyver \
 	-ljson_spirit \
-	-L$(libdir)/mysql -lmysqlclient_r \
-	-lmysqlpp \
 	-lboost_date_time \
 	-lboost_thread \
 	-lboost_filesystem \

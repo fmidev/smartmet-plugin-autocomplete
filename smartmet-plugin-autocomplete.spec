@@ -12,14 +12,12 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: libconfig-devel
 BuildRequires: boost-devel
 BuildRequires: smartmet-library-macgyver-devel >= 16.12.20
-BuildRequires: mysql++-devel
 BuildRequires: libjson_spirit
 BuildRequires: smartmet-library-spine-devel >= 17.1.4
 BuildRequires: smartmet-engine-geonames-devel >= 17.1.4
 BuildRequires: smartmet-engine-geoip-devel >= 17.1.4
 BuildRequires: smartmet-engine-querydata-devel >= 17.1.4
 Requires: libconfig
-Requires: mysql++
 Requires: smartmet-library-macgyver >= 16.12.20
 Requires: smartmet-library-spine >= 17.1.4
 Requires: smartmet-engine-geonames >= 17.1.4
@@ -33,10 +31,6 @@ Requires: boost-iostreams
 Requires: boost-regex
 Requires: boost-system
 Requires: boost-thread
-BuildRequires: mariadb-devel
-Requires: mariadb-libs
-%else
-BuildRequires: mysql-devel
 %endif
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
@@ -65,6 +59,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Upcoming
+- Test result changes due to limitations in dockerized test data
+- mysql and mariadb dependencies removed; product configuration now in config file
 * Wed Jan  4 2017 Mika Heiskanen <mika.heiskanen@fmi.fi> - 17.1.4-1.fmi
 - Changed to use renamed SmartMet base libraries
 
