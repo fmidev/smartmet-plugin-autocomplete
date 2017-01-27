@@ -625,8 +625,6 @@ void Autocomplete::init()
 
     itsQEngine = reinterpret_cast<SmartMet::Engine::Querydata::Engine *>(engine);
 
-    // Load places from fminames
-
     try
     {
       itsConfig.readFile(itsConfigFile);
@@ -642,6 +640,15 @@ void Autocomplete::init()
     {
       throw SmartMet::Spine::Exception(BCP, "autocomplete configuration error");
     }
+
+    // Cannot register until geonames suggest is ready
+
+    while (!itsGeoEngine->isSuggestReady())
+    {
+      boost::this_thread::sleep(boost::posix_time::milliseconds(100));
+    }
+
+    // Ready for service now
 
     if (!itsReactor->addContentHandler(
             itsParent,

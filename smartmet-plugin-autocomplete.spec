@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 17.1.4
+Version: 17.1.27
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -13,17 +13,17 @@ BuildRequires: libconfig-devel
 BuildRequires: boost-devel
 BuildRequires: smartmet-library-macgyver-devel >= 16.12.20
 BuildRequires: libjson_spirit
-BuildRequires: smartmet-library-spine-devel >= 17.1.4
+BuildRequires: smartmet-library-spine-devel >= 17.1.10
 BuildRequires: smartmet-engine-geonames-devel >= 17.1.4
 BuildRequires: smartmet-engine-geoip-devel >= 17.1.4
-BuildRequires: smartmet-engine-querydata-devel >= 17.1.4
+BuildRequires: smartmet-engine-querydata-devel >= 17.1.9
 Requires: libconfig
 Requires: smartmet-library-macgyver >= 16.12.20
-Requires: smartmet-library-spine >= 17.1.4
+Requires: smartmet-library-spine >= 17.1.10
 Requires: smartmet-engine-geonames >= 17.1.4
 Requires: smartmet-engine-geoip >= 17.1.4
 Requires: smartmet-server >= 17.1.4
-Requires: smartmet-engine-querydata >= 17.1.4
+Requires: smartmet-engine-querydata >= 17.1.9
 %if 0%{rhel} >= 7
 Requires: boost-date-time
 Requires: boost-filesystem
@@ -59,9 +59,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
-* Upcoming
+* Fri Jan 27 2017 Mika Heiskanen <mika.heiskanen@fmi.fi> - 17.1.27-1.fmi
+- Geonames engine usage changed, now explicitly wait for it to report autocomplete is ready
+
+* Wed Jan 11 2017 Mika Heiskanen <mika.heiskanen@fmi.fi> - 17.1.11-1.fmi
 - Test result changes due to limitations in dockerized test data
 - mysql and mariadb dependencies removed; product configuration now in config file
+
 * Wed Jan  4 2017 Mika Heiskanen <mika.heiskanen@fmi.fi> - 17.1.4-1.fmi
 - Changed to use renamed SmartMet base libraries
 
