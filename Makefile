@@ -87,12 +87,6 @@ LIBS = -L$(libdir) \
 	-lboost_regex \
 	-lboost_system
 
-# rpm variables
-
-rpmsourcedir = /tmp/$(shell whoami)/rpmbuild
-
-rpmerr = "There's no spec file ($(SPEC).spec). RPM wasn't created. Please make a spec file or copy and rename it into $(SPEC).spec"
-
 # What to install
 
 LIBFILE = $(SUBNAME).so
@@ -150,12 +144,11 @@ objdir:
 rpm: clean
 	if [ -e $(SPEC).spec ]; \
 	then \
-	  mkdir -p $(rpmsourcedir) ; \
-	  tar -czvf $(rpmsourcedir)/$(SPEC).tar.gz --transform "s,^,plugins/$(SPEC)/," * ; \
-	  rpmbuild -ta $(rpmsourcedir)/$(SPEC).tar.gz ; \
-	  rm -f $(rpmsourcedir)/$(SPEC).tar.gz ; \
+	  tar -czvf $(SPEC).tar.gz --transform "s,^,plugins/$(SPEC)/," * ; \
+	  rpmbuild -ta $(SPEC).tar.gz ; \
+	  rm -f $(SPEC).tar.gz ; \
 	else \
-	  echo $(rpmerr); \
+	  echo $(SPEC).spec missing; \
 	fi;
 
 .SUFFIXES: $(SUFFIXES) .cpp
