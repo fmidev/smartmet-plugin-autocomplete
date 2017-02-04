@@ -42,9 +42,9 @@ SmartMet autocomplete plugin
 %prep
 rm -rf $RPM_BUILD_ROOT
 
-%setup -q -n plugins/%{DIRNAME}
+%setup -q -n plugins/%{SPECNAME}
  
-%build -q -n plugins/%{DIRNAME}
+%build -q -n plugins/%{SPECNAME}
 make %{_smp_mflags}
 
 %install
