@@ -6,7 +6,6 @@
 #include <spine/Reactor.h>
 #include <spine/TimeSeries.h>
 #include <spine/TimeSeriesOutput.h>
-#include <engines/geoip/Engine.h>
 #include <engines/geonames/Engine.h>
 
 #include <macgyver/CharsetTools.h>
@@ -42,34 +41,6 @@ namespace Plugin
 {
 namespace Autocomplete
 {
-// ----------------------------------------------------------------------
-/*!
- * \brief Determine if the response can be cached
- */
-// ----------------------------------------------------------------------
-
-bool is_cache_ok(const HTTP::Request &theRequest)
-{
-  try
-  {
-    // Cannot cache if we check for client IP
-
-    string locateflag = SmartMet::Spine::optional_string(theRequest.getParameter("locate"), "");
-    if (!locateflag.empty())
-    {
-      string ip = SmartMet::Spine::optional_string(theRequest.getParameter("ip"), "");
-      if (ip.empty())
-        return false;
-    }
-
-    return true;
-  }
-  catch (...)
-  {
-    throw SmartMet::Spine::Exception(BCP, "Operation failed!", NULL);
-  }
-}
-
 // ----------------------------------------------------------------------
 /*!
  * \brief Read product parameters from the database
@@ -291,34 +262,19 @@ void Autocomplete::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
 
       // Build cache expiration time info
 
-      bool cacheok = is_cache_ok(theRequest);
-
       boost::shared_ptr<TimeFormatter> tformat(TimeFormatter::create("http"));
 
-      if (cacheok)
-      {
-        ptime t_expires = t_now + seconds(expires_seconds);
+      ptime t_expires = t_now + seconds(expires_seconds);
 
-        // The headers themselves
+      // The headers themselves
 
-        std::string cachecontrol = "public, max-age=" + Fmi::to_string(expires_seconds);
-        std::string expiration = tformat->format(t_expires);
-        std::string modification = tformat->format(t_now);
+      std::string cachecontrol = "public, max-age=" + Fmi::to_string(expires_seconds);
+      std::string expiration = tformat->format(t_expires);
+      std::string modification = tformat->format(t_now);
 
-        theResponse.setHeader("Cache-Control", cachecontrol.c_str());
-        theResponse.setHeader("Expires", expiration.c_str());
-        theResponse.setHeader("Last-Modified", modification.c_str());
-      }
-      else
-      {
-        theResponse.setHeader("Cache-Control", "no-cache, must-revalidate");
-        theResponse.setHeader("Pragma", "no-cache");
-
-        // Expired already at some past date
-
-        std::string expiration = tformat->format(t_now - years(1));
-        theResponse.setHeader("Expires", expiration.c_str());
-      }
+      theResponse.setHeader("Cache-Control", cachecontrol.c_str());
+      theResponse.setHeader("Expires", expiration.c_str());
+      theResponse.setHeader("Last-Modified", modification.c_str());
     }
     catch (...)
     {
@@ -382,117 +338,6 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
     json_spirit::Object json;
     json_spirit::Object jautocomplete;
     json_spirit::Array jresult;
-
-    // Proof-of-Concept IP tracking
-
-    string locateflag = SmartMet::Spine::optional_string(theRequest.getParameter("locate"), "");
-    if (!locateflag.empty())
-    {
-      string ip = SmartMet::Spine::optional_string(theRequest.getParameter("ip"), "");
-      if (ip.empty())
-      {
-        // No IP specified in query string, first check proxy header
-        auto headerip = theRequest.getHeader("X-Forwarded-For");
-
-        if (headerip)
-        {
-          ip = *headerip;
-          // Remove the possible upstream information
-          string::size_type npos = ip.find(',');
-          if (npos != string::npos)
-            ip.erase(npos);
-        }
-        else
-        {
-          // If no proxy forward header in the request, use the requesters IP
-          ip = theRequest.getClientIP();
-        }
-      }
-
-      // Consult the GeoIP
-      boost::shared_ptr<SmartMet::Engine::Geoip::GeoIPLocation> location(
-          itsGeoIPEngine->locationByIP(ip.c_str()));
-
-      if (!location)
-      {
-        jautocomplete.push_back(json_spirit::Pair("found-results", 0));
-        jautocomplete.push_back(json_spirit::Pair("max-results", int(maxresults)));
-        jautocomplete.push_back(json_spirit::Pair("error-message", "GeoIP query failed"));
-        json.push_back(json_spirit::Pair("autocomplete", jautocomplete));
-
-        if (pretty)
-          theResponse.appendContent(write_formatted(json).c_str());
-        else
-          theResponse.appendContent(write(json).c_str());
-
-        return;
-      }
-
-      // Find the nearest Location for this lat, lon with this Keyword
-
-      SmartMet::Spine::LocationPtr nearestLocation =
-          itsGeoEngine->keywordSearch(location->lon, location->lat, -1, lang, keyword);
-
-      if (!nearestLocation)
-      {
-        jautocomplete.push_back(json_spirit::Pair("found-results", 0));
-        jautocomplete.push_back(json_spirit::Pair("max-results", int(maxresults)));
-        jautocomplete.push_back(
-            json_spirit::Pair("error-message", "Found no near location for IP"));
-        json.push_back(json_spirit::Pair("autocomplete", jautocomplete));
-
-        if (pretty)
-          theResponse.appendContent(write_formatted(json).c_str());
-        else
-          theResponse.appendContent(write(json).c_str());
-
-        return;  // No nearest place from fminames/geonames found.
-      }
-
-      // Possible character set conversions
-      std::string name = nearestLocation->name;
-      std::string area = nearestLocation->area;
-
-      // Send GeoIP tracking result
-
-      // TODO: Add weather
-
-      json_spirit::Object j;
-      j.push_back(json_spirit::Pair("id", int(nearestLocation->geoid)));
-      j.push_back(json_spirit::Pair("name", name));
-      j.push_back(json_spirit::Pair("country", nearestLocation->iso2));
-      j.push_back(json_spirit::Pair("feature", nearestLocation->feature));
-      j.push_back(json_spirit::Pair("area", area));
-      j.push_back(json_spirit::Pair("population", nearestLocation->population));
-      j.push_back(json_spirit::Pair("lon", nearestLocation->longitude));
-      j.push_back(json_spirit::Pair("lat", nearestLocation->latitude));
-      j.push_back(json_spirit::Pair("timezone", nearestLocation->timezone));
-      append_forecast(j,
-                      itsProductParameters.parameters(product),
-                      nearestLocation,
-                      *itsQEngine,
-                      *itsGeoEngine,
-                      valueformatter,
-                      *timeformatter,
-                      stamp,
-                      lang,
-                      outlocale);
-
-      jresult.push_back(j);
-
-      jautocomplete.push_back(json_spirit::Pair("result", jresult));
-      jautocomplete.push_back(json_spirit::Pair("found-results", 1));
-      jautocomplete.push_back(json_spirit::Pair("max-results", int(maxresults)));
-      json.push_back(json_spirit::Pair("autocomplete", jautocomplete));
-
-      if (pretty)
-        theResponse.appendContent(write_formatted(json).c_str());
-      else
-        theResponse.appendContent(write(json).c_str());
-
-      // GeoIP tracking done
-      return;
-    }
 
     // ---- NORMAL AUTOCOMPLETION ROUTINES --------------------------------
 
@@ -609,13 +454,6 @@ void Autocomplete::init()
       throw SmartMet::Spine::Exception(BCP, "Geonames engine unavailable");
 
     itsGeoEngine = reinterpret_cast<SmartMet::Engine::Geonames::Engine *>(engine);
-
-    // Connect to GeoIP Engine
-    engine = itsReactor->getSingleton("Geoip", NULL);
-    if (engine == NULL)
-      throw SmartMet::Spine::Exception(BCP, "Geoip engine unavailable");
-
-    itsGeoIPEngine = reinterpret_cast<SmartMet::Engine::Geoip::Engine *>(engine);
 
     // Connect to QEngine
 

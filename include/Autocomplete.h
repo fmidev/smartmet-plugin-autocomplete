@@ -3,7 +3,6 @@
 #include "ProductParameters.h"
 
 #include <engines/geonames/Engine.h>
-#include <engines/geoip/Engine.h>
 #include <engines/querydata/Engine.h>
 #include <engines/sputnik/Engine.h>
 #include <spine/SmartMetPlugin.h>
@@ -18,7 +17,6 @@
 namespace SmartMet
 {
 class FmiNames;
-class GeoIPEngine;
 
 namespace Plugin
 {
@@ -47,7 +45,6 @@ class Autocomplete
  private:
   SmartMet::Engine::Querydata::Engine* itsQEngine;   // does not own
   SmartMet::Engine::Geonames::Engine* itsGeoEngine;  // does not own
-  SmartMet::Engine::Geoip::Engine* itsGeoIPEngine;   // does not own
   SmartMetPlugin* itsParent;                         // does not own
   libconfig::Config itsConfig;
   Reactor* itsReactor;  // does not own
