@@ -318,7 +318,6 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
         SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("max"), 15);
     unsigned long page =
         SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("page"), 0);
-    string format = SmartMet::Spine::optional_string(theRequest.getParameter("format"), "json");
     bool pretty = SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("pretty"), false);
     string product = SmartMet::Spine::optional_string(theRequest.getParameter("product"), "");
     string timeformat =
