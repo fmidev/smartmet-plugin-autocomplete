@@ -9,7 +9,7 @@
 #include <engines/geonames/Engine.h>
 
 #include <macgyver/CharsetTools.h>
-#include <macgyver/String.h>
+#include <macgyver/StringConversion.h>
 #include <macgyver/TimeFormatter.h>
 #include <macgyver/TimeParser.h>
 

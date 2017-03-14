@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 17.2.11
+Version: 17.3.14
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -11,17 +11,17 @@ Source0: %{name}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: libconfig-devel
 BuildRequires: boost-devel
-BuildRequires: smartmet-library-macgyver-devel >= 17.1.18
+BuildRequires: smartmet-library-macgyver-devel >= 17.3.14
 BuildRequires: libjson_spirit
-BuildRequires: smartmet-library-spine-devel >= 17.2.3
-BuildRequires: smartmet-engine-geonames-devel >= 17.2.3
-BuildRequires: smartmet-engine-querydata-devel >= 17.2.3
+BuildRequires: smartmet-library-spine-devel >= 17.3.14
+BuildRequires: smartmet-engine-geonames-devel >= 17.3.14
+BuildRequires: smartmet-engine-querydata-devel >= 17.3.14
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 17.1.18
-Requires: smartmet-library-spine >= 17.2.3
-Requires: smartmet-engine-geonames >= 17.2.3
-Requires: smartmet-server >= 17.1.25
-Requires: smartmet-engine-querydata >= 17.2.3
+Requires: smartmet-library-macgyver >= 17.3.14
+Requires: smartmet-library-spine >= 17.3.14
+Requires: smartmet-engine-geonames >= 17.3.14
+Requires: smartmet-server >= 17.3.14
+Requires: smartmet-engine-querydata >= 17.3.14
 %if 0%{rhel} >= 7
 Requires: boost-date-time
 Requires: boost-filesystem
@@ -57,6 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue Mar 14 2017 Mika Heiskanen <mika.heiskanen@fmi.fi> - 17.3.14-1.fmi
+- Switched to use macgyver StringConversion tools 
+
 * Sat Feb 11 2017 Mika Heiskanen <mika.heiskanen@fmi.fi> - 17.2.11-1.fmi
 - Repackaged due to newbase API change
 
