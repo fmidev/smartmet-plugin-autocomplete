@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 17.3.14
+Version: 17.3.15
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -13,15 +13,15 @@ BuildRequires: libconfig-devel
 BuildRequires: boost-devel
 BuildRequires: smartmet-library-macgyver-devel >= 17.3.14
 BuildRequires: libjson_spirit
-BuildRequires: smartmet-library-spine-devel >= 17.3.14
-BuildRequires: smartmet-engine-geonames-devel >= 17.3.14
-BuildRequires: smartmet-engine-querydata-devel >= 17.3.14
+BuildRequires: smartmet-library-spine-devel >= 17.3.15
+BuildRequires: smartmet-engine-geonames-devel >= 17.3.15
+BuildRequires: smartmet-engine-querydata-devel >= 17.3.15
 Requires: libconfig
 Requires: smartmet-library-macgyver >= 17.3.14
-Requires: smartmet-library-spine >= 17.3.14
-Requires: smartmet-engine-geonames >= 17.3.14
-Requires: smartmet-server >= 17.3.14
-Requires: smartmet-engine-querydata >= 17.3.14
+Requires: smartmet-library-spine >= 17.3.15
+Requires: smartmet-engine-geonames >= 17.3.15
+Requires: smartmet-server >= 17.3.15
+Requires: smartmet-engine-querydata >= 17.3.15
 %if 0%{rhel} >= 7
 Requires: boost-date-time
 Requires: boost-filesystem
@@ -57,6 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Wed Mar 15 2017 Mika Heiskanen <mika.heiskanen@fmi.fi> - 17.3.15-1.fmi
+- Recompiled since Spine::Exception changed
+
 * Tue Mar 14 2017 Mika Heiskanen <mika.heiskanen@fmi.fi> - 17.3.14-1.fmi
 - Switched to use macgyver StringConversion tools 
 

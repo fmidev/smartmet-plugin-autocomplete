@@ -281,7 +281,10 @@ void Autocomplete::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
       SmartMet::Spine::Exception exception(BCP, "Request processing exception!", NULL);
       exception.addParameter("URI", theRequest.getURI());
 
-      std::cerr << exception.getStackTrace();
+      if (!exception.stackTraceDisabled())
+        std::cerr << exception.getStackTrace();
+      else
+        std::cerr << "Error: " << exception.what() << std::endl;
 
       string msg = string("Error: ") + exception.what();
       theResponse.setStatus(HTTP::Status::ok);
