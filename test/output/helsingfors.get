@@ -1,173 +1,173 @@
 {
-    "autocomplete" : {
-        "result" : [
-            {
-                "id" : 658225,
-                "name" : "Helsingfors",
-                "country" : "FI",
-                "feature" : "PPLC",
-                "area" : "Helsingfors",
-                "population" : 558457,
-                "lon" : 24.9354,
-                "lat" : 60.1695,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 658288,
-                "name" : "Heinola",
-                "country" : "FI",
-                "feature" : "PPLA3",
-                "area" : "",
-                "population" : 20849,
-                "lon" : 26.0381,
-                "lat" : 61.2056,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 2706767,
-                "name" : "Helsingborg",
-                "country" : "SE",
-                "feature" : "PPLA2",
-                "area" : "Sverige",
-                "population" : 91025,
-                "lon" : 12.6944,
-                "lat" : 56.0467,
-                "timezone" : "Europe/Stockholm"
-            },
-            {
-                "id" : 847508,
-                "name" : "Henriksdal",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Helsingfors",
-                "population" : 0,
-                "lon" : 25.0739,
-                "lat" : 60.2661,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 658318,
-                "name" : "Hein\u00E4vesi",
-                "country" : "FI",
-                "feature" : "PPLA3",
-                "area" : "",
-                "population" : 4457,
-                "lon" : 28.6,
-                "lat" : 62.4333,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 7521686,
-                "name" : "Hermanstad",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Helsingfors",
-                "population" : 0,
-                "lon" : 24.9671,
-                "lat" : 60.1951,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 6940574,
-                "name" : "Etel\u00E4-Hervanta",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Tammerfors",
-                "population" : 0,
-                "lon" : 23.8631,
-                "lat" : 61.4393,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 7871210,
-                "name" : "Hein\u00E4nen",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Tammerfors",
-                "population" : 0,
-                "lon" : 23.9763,
-                "lat" : 61.6443,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 658227,
-                "name" : "Helsinginpit\u00E4j\u00E4",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Vanda",
-                "population" : 0,
-                "lon" : 24.9833,
-                "lat" : 60.2833,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 7645362,
-                "name" : "Hepokulta",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "\u00C5bo",
-                "population" : 0,
-                "lon" : 22.2463,
-                "lat" : 60.4723,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 6545255,
-                "name" : "Herton\u00E4s strand",
-                "country" : "FI",
-                "feature" : "PPLX",
-                "area" : "Helsingfors",
-                "population" : 0,
-                "lon" : 25.0369,
-                "lat" : 60.1907,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 658132,
-                "name" : "Herton\u00E4s",
-                "country" : "FI",
-                "feature" : "PPLX",
-                "area" : "Helsingfors",
-                "population" : 0,
-                "lon" : 25.0354,
-                "lat" : 60.1947,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 658120,
-                "name" : "Hervanta",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Tammerfors",
-                "population" : 0,
-                "lon" : 23.8517,
-                "lat" : 61.4511,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 7521769,
-                "name" : "Hembacken",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Esbo",
-                "population" : 0,
-                "lon" : 24.5249,
-                "lat" : 60.2658,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 843438,
-                "name" : "V\u00E4tra Herton\u00E4s",
-                "country" : "FI",
-                "feature" : "PPLX",
-                "area" : "Helsingfors",
-                "population" : 0,
-                "lon" : 25.0306,
-                "lat" : 60.2144,
-                "timezone" : "Europe/Helsinki"
-            }
-        ],
-        "found-results" : 15,
-        "max-results" : 15
-    }
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Helsingfors",
+            "country" : "FI",
+            "feature" : "PPLC",
+            "id" : 658225,
+            "lat" : 60.169519999999999,
+            "lon" : 24.935449999999999,
+            "name" : "Helsingfors",
+            "population" : 558457,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 658288,
+            "lat" : 61.205640000000002,
+            "lon" : 26.03811,
+            "name" : "Heinola",
+            "population" : 20849,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Sverige",
+            "country" : "SE",
+            "feature" : "PPLA2",
+            "id" : 2706767,
+            "lat" : 56.046729999999997,
+            "lon" : 12.694369999999999,
+            "name" : "Helsingborg",
+            "population" : 91025,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Helsingfors",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 847508,
+            "lat" : 60.266109999999998,
+            "lon" : 25.073889999999999,
+            "name" : "Henriksdal",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 658318,
+            "lat" : 62.433329999999998,
+            "lon" : 28.600000000000001,
+            "name" : "Heinävesi",
+            "population" : 4457,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Helsingfors",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 7521686,
+            "lat" : 60.195050000000002,
+            "lon" : 24.967120000000001,
+            "name" : "Hermanstad",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Tammerfors",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 6940574,
+            "lat" : 61.439259999999997,
+            "lon" : 23.86308,
+            "name" : "Etelä-Hervanta",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Tammerfors",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 7871210,
+            "lat" : 61.644329999999997,
+            "lon" : 23.976289999999999,
+            "name" : "Heinänen",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Vanda",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 658227,
+            "lat" : 60.283329999999999,
+            "lon" : 24.983329999999999,
+            "name" : "Helsinginpitäjä",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Åbo",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 7645362,
+            "lat" : 60.472279999999998,
+            "lon" : 22.24633,
+            "name" : "Hepokulta",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Helsingfors",
+            "country" : "FI",
+            "feature" : "PPLX",
+            "id" : 6545255,
+            "lat" : 60.1907,
+            "lon" : 25.036899999999999,
+            "name" : "Hertonäs strand",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Helsingfors",
+            "country" : "FI",
+            "feature" : "PPLX",
+            "id" : 658132,
+            "lat" : 60.194710000000001,
+            "lon" : 25.035350000000001,
+            "name" : "Hertonäs",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Tammerfors",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 658120,
+            "lat" : 61.451079999999997,
+            "lon" : 23.851659999999999,
+            "name" : "Hervanta",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Esbo",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 7521769,
+            "lat" : 60.265790000000003,
+            "lon" : 24.524920000000002,
+            "name" : "Hembacken",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Helsingfors",
+            "country" : "FI",
+            "feature" : "PPLX",
+            "id" : 843438,
+            "lat" : 60.214440000000003,
+            "lon" : 25.030560000000001,
+            "name" : "Vätra Hertonäs",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
 }

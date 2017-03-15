@@ -1,74 +1,74 @@
 {
-    "autocomplete" : {
-        "result" : [
-            {
-                "id" : 3573374,
-                "name" : "The Valley",
-                "country" : "AI",
-                "feature" : "PPLC",
-                "area" : "Anguilla",
-                "population" : 2035,
-                "lon" : -63.0578,
-                "lat" : 18.217,
-                "timezone" : "America/Anguilla"
-            },
-            {
-                "id" : 2747373,
-                "name" : "Haag",
-                "country" : "NL",
-                "feature" : "PPLG",
-                "area" : "Alankomaat",
-                "population" : 474292,
-                "lon" : 4.29861,
-                "lat" : 52.0767,
-                "timezone" : "Europe/Amsterdam"
-            },
-            {
-                "id" : 734077,
-                "name" : "Thessaloniki",
-                "country" : "GR",
-                "feature" : "PPLA",
-                "area" : "Kreikka",
-                "population" : 354290,
-                "lon" : 22.9309,
-                "lat" : 40.6436,
-                "timezone" : "Europe/Athens"
-            },
-            {
-                "id" : 4175117,
-                "name" : "The Hammocks",
-                "country" : "US",
-                "feature" : "PPL",
-                "area" : "Yhdysvallat",
-                "population" : 51003,
-                "lon" : -80.4445,
-                "lat" : 25.6715,
-                "timezone" : "America/New_York"
-            },
-            {
-                "id" : 4736476,
-                "name" : "The Woodlands",
-                "country" : "US",
-                "feature" : "PPL",
-                "area" : "Yhdysvallat",
-                "population" : 93847,
-                "lon" : -95.4894,
-                "lat" : 30.158,
-                "timezone" : "America/Chicago"
-            },
-            {
-                "id" : 1254744,
-                "name" : "Thenkasi",
-                "country" : "IN",
-                "feature" : "PPL",
-                "area" : "Intia",
-                "population" : 65496,
-                "lon" : 77.3153,
-                "lat" : 8.96003,
-                "timezone" : "Asia/Kolkata"
-            }
-        ],
-        "found-results" : 6,
-        "max-results" : 15
-    }
+   "autocomplete" : {
+      "found-results" : 6,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Anguilla",
+            "country" : "AI",
+            "feature" : "PPLC",
+            "id" : 3573374,
+            "lat" : 18.217040000000001,
+            "lon" : -63.057830000000003,
+            "name" : "The Valley",
+            "population" : 2035,
+            "timezone" : "America/Anguilla"
+         },
+         {
+            "area" : "Alankomaat",
+            "country" : "NL",
+            "feature" : "PPLG",
+            "id" : 2747373,
+            "lat" : 52.07667,
+            "lon" : 4.29861,
+            "name" : "Haag",
+            "population" : 474292,
+            "timezone" : "Europe/Amsterdam"
+         },
+         {
+            "area" : "Kreikka",
+            "country" : "GR",
+            "feature" : "PPLA",
+            "id" : 734077,
+            "lat" : 40.643610000000002,
+            "lon" : 22.930859999999999,
+            "name" : "Thessaloniki",
+            "population" : 354290,
+            "timezone" : "Europe/Athens"
+         },
+         {
+            "area" : "Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPL",
+            "id" : 4175117,
+            "lat" : 25.671489999999999,
+            "lon" : -80.444500000000005,
+            "name" : "The Hammocks",
+            "population" : 51003,
+            "timezone" : "America/New_York"
+         },
+         {
+            "area" : "Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPL",
+            "id" : 4736476,
+            "lat" : 30.157990000000002,
+            "lon" : -95.489379999999997,
+            "name" : "The Woodlands",
+            "population" : 93847,
+            "timezone" : "America/Chicago"
+         },
+         {
+            "area" : "Intia",
+            "country" : "IN",
+            "feature" : "PPL",
+            "id" : 1254744,
+            "lat" : 8.9600299999999997,
+            "lon" : 77.315250000000006,
+            "name" : "Thenkasi",
+            "population" : 65496,
+            "timezone" : "Asia/Kolkata"
+         }
+      ]
+   }
 }

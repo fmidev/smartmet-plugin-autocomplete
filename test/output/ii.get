@@ -1,173 +1,173 @@
 {
-    "autocomplete" : {
-        "result" : [
-            {
-                "id" : 656851,
-                "name" : "Ii",
-                "country" : "FI",
-                "feature" : "PPLA3",
-                "area" : "",
-                "population" : 6546,
-                "lon" : 25.3731,
-                "lat" : 65.3174,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 656820,
-                "name" : "Iisalmi",
-                "country" : "FI",
-                "feature" : "PPLA3",
-                "area" : "",
-                "population" : 22588,
-                "lon" : 27.1907,
-                "lat" : 63.5592,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 656807,
-                "name" : "Iitti",
-                "country" : "FI",
-                "feature" : "PPLA3",
-                "area" : "",
-                "population" : 7246,
-                "lon" : 26.3387,
-                "lat" : 60.8949,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 630952,
-                "name" : "Yli-Ii",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Oulu",
-                "population" : 2235,
-                "lon" : 25.8333,
-                "lat" : 65.3667,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 840723,
-                "name" : "Iivisniemi",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Espoo",
-                "population" : 0,
-                "lon" : 24.6941,
-                "lat" : 60.1492,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 660119,
-                "name" : "Etel\u00E4-Ii",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Ii",
-                "population" : 0,
-                "lon" : 25.3667,
-                "lat" : 65.2667,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 656840,
-                "name" : "Iikka",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Vaala",
-                "population" : 0,
-                "lon" : 26.8,
-                "lat" : 64.4333,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 656835,
-                "name" : "Iiksenvaara",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Joensuu",
-                "population" : 0,
-                "lon" : 29.85,
-                "lat" : 62.5833,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 656833,
-                "name" : "Iim\u00E4ki",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Iisalmi",
-                "population" : 0,
-                "lon" : 27.0667,
-                "lat" : 63.6333,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 7645543,
-                "name" : "Iinatti",
-                "country" : "FI",
-                "feature" : "PPLX",
-                "area" : "Oulu",
-                "population" : 0,
-                "lon" : 25.5832,
-                "lat" : 64.9722,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 656830,
-                "name" : "Iinattij\u00E4rvi",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Pudasj\u00E4rvi",
-                "population" : 0,
-                "lon" : 27.5,
-                "lat" : 65.4833,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 656828,
-                "name" : "Iiranta",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Iisalmi",
-                "population" : 0,
-                "lon" : 27.15,
-                "lat" : 63.6167,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 854748,
-                "name" : "Iiroinen",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Masku",
-                "population" : 0,
-                "lon" : 21.8328,
-                "lat" : 60.555,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 656826,
-                "name" : "Iirola",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Sastamala",
-                "population" : 0,
-                "lon" : 23,
-                "lat" : 61.5,
-                "timezone" : "Europe/Helsinki"
-            },
-            {
-                "id" : 656823,
-                "name" : "Iiruu",
-                "country" : "FI",
-                "feature" : "PPL",
-                "area" : "Alaj\u00E4rvi",
-                "population" : 0,
-                "lon" : 24.05,
-                "lat" : 63.05,
-                "timezone" : "Europe/Helsinki"
-            }
-        ],
-        "found-results" : 15,
-        "max-results" : 15
-    }
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 656851,
+            "lat" : 65.317350000000005,
+            "lon" : 25.373100000000001,
+            "name" : "Ii",
+            "population" : 6546,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 656820,
+            "lat" : 63.559150000000002,
+            "lon" : 27.190670000000001,
+            "name" : "Iisalmi",
+            "population" : 22588,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 656807,
+            "lat" : 60.894880000000001,
+            "lon" : 26.33869,
+            "name" : "Iitti",
+            "population" : 7246,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Oulu",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 630952,
+            "lat" : 65.366669999999999,
+            "lon" : 25.83333,
+            "name" : "Yli-Ii",
+            "population" : 2235,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Espoo",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 840723,
+            "lat" : 60.1492,
+            "lon" : 24.694089999999999,
+            "name" : "Iivisniemi",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Ii",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 660119,
+            "lat" : 65.266670000000005,
+            "lon" : 25.366669999999999,
+            "name" : "Etelä-Ii",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Vaala",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 656840,
+            "lat" : 64.433329999999998,
+            "lon" : 26.800000000000001,
+            "name" : "Iikka",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Joensuu",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 656835,
+            "lat" : 62.583329999999997,
+            "lon" : 29.850000000000001,
+            "name" : "Iiksenvaara",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Iisalmi",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 656833,
+            "lat" : 63.633330000000001,
+            "lon" : 27.066669999999998,
+            "name" : "Iimäki",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Oulu",
+            "country" : "FI",
+            "feature" : "PPLX",
+            "id" : 7645543,
+            "lat" : 64.972210000000004,
+            "lon" : 25.583210000000001,
+            "name" : "Iinatti",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Pudasjärvi",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 656830,
+            "lat" : 65.483329999999995,
+            "lon" : 27.5,
+            "name" : "Iinattijärvi",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Iisalmi",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 656828,
+            "lat" : 63.616669999999999,
+            "lon" : 27.149999999999999,
+            "name" : "Iiranta",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Masku",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 854748,
+            "lat" : 60.555,
+            "lon" : 21.83278,
+            "name" : "Iiroinen",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Sastamala",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 656826,
+            "lat" : 61.5,
+            "lon" : 23,
+            "name" : "Iirola",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Alajärvi",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 656823,
+            "lat" : 63.049999999999997,
+            "lon" : 24.050000000000001,
+            "name" : "Iiruu",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
 }

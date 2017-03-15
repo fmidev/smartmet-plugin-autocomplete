@@ -13,7 +13,7 @@
 #include <macgyver/TimeFormatter.h>
 #include <macgyver/TimeParser.h>
 
-#include <json_spirit/json_spirit.h>
+#include <json/json.h>
 
 #include <boost/algorithm/string.hpp>
 #include <boost/bind.hpp>
@@ -120,7 +120,7 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
  */
 // ----------------------------------------------------------------------
 
-void append_forecast(json_spirit::Object &theResult,
+void append_forecast(Json::Value &theResult,
                      const ProductParameters::ParameterList &theParameters,
                      const SmartMet::Spine::LocationPtr theLoc,
                      SmartMet::Engine::Querydata::Engine &theEngine,
@@ -141,8 +141,11 @@ void append_forecast(json_spirit::Object &theResult,
 
     if (producer.empty())
     {
+      Json::Value nulljson;
       BOOST_FOREACH (const Parameter &param, theParameters)
-        theResult.push_back(json_spirit::Pair(param.name(), json_spirit::Value::null));
+      {
+        theResult[param.name()] = nulljson;
+      }
       return;
     }
 
@@ -189,7 +192,7 @@ void append_forecast(json_spirit::Object &theResult,
 
       auto tmp = q->value(qparams, t);
       boost::apply_visitor(val_visitor, tmp);
-      theResult.push_back(json_spirit::Pair(param.name(), ss.str()));
+      theResult[param.name()] = ss.str();
       ss.str("");
     }
   }
@@ -337,9 +340,15 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
 
     std::locale outlocale = locale(localename.c_str());
 
-    json_spirit::Object json;
-    json_spirit::Object jautocomplete;
-    json_spirit::Array jresult;
+    Json::Value json;
+    Json::Value jautocomplete;
+    Json::Value jresult;
+
+    std::unique_ptr<Json::Writer> writer;
+    if (pretty)
+      writer.reset(new Json::StyledWriter);
+    else
+      writer.reset(new Json::FastWriter);
 
     // ---- NORMAL AUTOCOMPLETION ROUTINES --------------------------------
 
@@ -348,15 +357,12 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
     {
       // Send error message
 
-      jautocomplete.push_back(json_spirit::Pair("found-results", 0));
-      jautocomplete.push_back(json_spirit::Pair("max-results", int(maxresults)));
-      jautocomplete.push_back(json_spirit::Pair("error-message", "Invalid pattern for search"));
-      json.push_back(json_spirit::Pair("autocomplete", jautocomplete));
+      jautocomplete["found-results"] = 0;
+      jautocomplete["max-results"] = int(maxresults);
+      jautocomplete["error-message"] = "Invalid pattern for search";
+      json["autocomplete"] = jautocomplete;
 
-      if (pretty)
-        theResponse.appendContent(write_formatted(json).c_str());
-      else
-        theResponse.appendContent(write(json).c_str());
+      theResponse.appendContent(writer->write(json));
 
       return;
     }
@@ -372,17 +378,17 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
       string name = ptr->name;
       string area = ptr->area;
 
-      json_spirit::Object j;
+      Json::Value j;
 
-      j.push_back(json_spirit::Pair("id", int(ptr->geoid)));
-      j.push_back(json_spirit::Pair("name", name));
-      j.push_back(json_spirit::Pair("country", ptr->iso2));
-      j.push_back(json_spirit::Pair("feature", ptr->feature));
-      j.push_back(json_spirit::Pair("area", area));
-      j.push_back(json_spirit::Pair("population", ptr->population));
-      j.push_back(json_spirit::Pair("lon", ptr->longitude));
-      j.push_back(json_spirit::Pair("lat", ptr->latitude));
-      j.push_back(json_spirit::Pair("timezone", ptr->timezone));
+      j["id"] = int(ptr->geoid);
+      j["name"] = name;
+      j["country"] = ptr->iso2;
+      j["feature"] = ptr->feature;
+      j["area"] = area;
+      j["population"] = ptr->population;
+      j["lon"] = ptr->longitude;
+      j["lat"] = ptr->latitude;
+      j["timezone"] = ptr->timezone;
       append_forecast(j,
                       itsProductParameters.parameters(product),
                       ptr,
@@ -394,18 +400,15 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
                       lang,
                       outlocale);
 
-      jresult.push_back(j);
+      jresult.append(j);
     }
 
-    jautocomplete.push_back(json_spirit::Pair("result", jresult));
-    jautocomplete.push_back(json_spirit::Pair("found-results", jresult.size()));
-    jautocomplete.push_back(json_spirit::Pair("max-results", int(maxresults)));
-    json.push_back(json_spirit::Pair("autocomplete", jautocomplete));
+    jautocomplete["result"] = jresult;
+    jautocomplete["found-results"] = jresult.size();
+    jautocomplete["max-results"] = int(maxresults);
+    json["autocomplete"] = jautocomplete;
 
-    if (pretty)
-      theResponse.appendContent(write_formatted(json).c_str());
-    else
-      theResponse.appendContent(write(json).c_str());
+    theResponse.appendContent(writer->write(json));
 
     return;
   }
