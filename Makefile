@@ -40,7 +40,8 @@ ifeq ($(CXX), clang++)
 
  INCLUDES = \
 	-isystem $(includedir) \
-	-isystem $(includedir)/smartmet
+	-isystem $(includedir)/smartmet \
+	`pkg-config --cflags jsoncpp`
 
 else
 
@@ -61,7 +62,8 @@ else
 
  INCLUDES = \
 	-I$(includedir) \
-	-I$(includedir)/smartmet
+	-I$(includedir)/smartmet \
+	`pkg-config --cflags jsoncpp`
 
 endif
 
@@ -77,9 +79,9 @@ else
 endif
 
 LIBS = -L$(libdir) \
+	`pkg-config --libs jsoncpp` \
 	-lsmartmet-spine \
 	-lsmartmet-macgyver \
-	-ljson_spirit \
 	-lboost_date_time \
 	-lboost_thread \
 	-lboost_filesystem \
