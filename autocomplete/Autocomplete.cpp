@@ -1,12 +1,12 @@
 #include "Autocomplete.h"
 
-#include <spine/Exception.h>
+#include <engines/geonames/Engine.h>
 #include <spine/Convenience.h>
+#include <spine/Exception.h>
 #include <spine/ParameterFactory.h>
 #include <spine/Reactor.h>
 #include <spine/TimeSeries.h>
 #include <spine/TimeSeriesOutput.h>
-#include <engines/geonames/Engine.h>
 
 #include <macgyver/CharsetTools.h>
 #include <macgyver/StringConversion.h>
@@ -24,9 +24,9 @@
 #include <boost/thread.hpp>
 
 #include <iostream>
-#include <stdexcept>
-#include <sstream>
 #include <map>
+#include <sstream>
+#include <stdexcept>
 #include <unistd.h>
 
 using namespace std;
@@ -283,11 +283,7 @@ void Autocomplete::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
     {
       SmartMet::Spine::Exception exception(BCP, "Request processing exception!", NULL);
       exception.addParameter("URI", theRequest.getURI());
-
-      if (!exception.stackTraceDisabled())
-        std::cerr << exception.getStackTrace();
-      else
-        std::cerr << "Error: " << exception.what() << std::endl;
+      exception.printError();
 
       string msg = string("Error: ") + exception.what();
       theResponse.setStatus(HTTP::Status::ok);
