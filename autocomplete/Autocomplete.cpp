@@ -324,8 +324,12 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
     string product = SmartMet::Spine::optional_string(theRequest.getParameter("product"), "");
     string timeformat =
         SmartMet::Spine::optional_string(theRequest.getParameter("timeformat"), "iso");
-    string localename =
-        SmartMet::Spine::optional_string(theRequest.getParameter("locale"), "fi_FI");
+
+    // default is fi_FI, override from configi and then finally from querystring
+    string localename = "fi_FI";
+    itsConfig.lookupValue("locale", localename);
+    localename = SmartMet::Spine::optional_string(theRequest.getParameter("locale"), localename);
+
     string stamp = SmartMet::Spine::optional_string(theRequest.getParameter("time"), "");
 
     if (!product.empty() && !itsProductParameters.contains(product))
