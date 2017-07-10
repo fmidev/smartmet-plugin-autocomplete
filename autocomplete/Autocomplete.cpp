@@ -315,20 +315,21 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
     // Parse query strings
     string keyword = SmartMet::Spine::optional_string(theRequest.getParameter("keyword"), "");
     string pattern = SmartMet::Spine::optional_string(theRequest.getParameter("pattern"), "");
-    string lang = SmartMet::Spine::optional_string(theRequest.getParameter("lang"), "fi");
+    string lang =
+        SmartMet::Spine::optional_string(theRequest.getParameter("lang"), itsDefaultLanguage);
     unsigned long maxresults =
-        SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("max"), 15);
+        SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("max"), itsMaxResults);
     unsigned long page =
         SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("page"), 0);
-    bool pretty = SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("pretty"), false);
+    bool pretty = SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("pretty"),
+                                                          itsPrettyPrintFlag);
     string product = SmartMet::Spine::optional_string(theRequest.getParameter("product"), "");
     string timeformat =
-        SmartMet::Spine::optional_string(theRequest.getParameter("timeformat"), "iso");
+        SmartMet::Spine::optional_string(theRequest.getParameter("timeformat"), itsTimeFormat);
 
     // default is fi_FI, override from configi and then finally from querystring
-    string localename = "fi_FI";
-    itsConfig.lookupValue("locale", localename);
-    localename = SmartMet::Spine::optional_string(theRequest.getParameter("locale"), localename);
+    string localename =
+        SmartMet::Spine::optional_string(theRequest.getParameter("locale"), itsDefaultLocale);
 
     string stamp = SmartMet::Spine::optional_string(theRequest.getParameter("time"), "");
 
@@ -471,15 +472,26 @@ void Autocomplete::init()
     try
     {
       itsConfig.readFile(itsConfigFile);
+
+      itsDefaultLanguage = itsConfig.lookup("language").c_str();
+      itsDefaultLocale = itsConfig.lookup("locale").c_str();
+      itsPrettyPrintFlag = itsConfig.lookup("pretty");
+      itsTimeFormat = itsConfig.lookup("timeformat").c_str();
+      itsMaxResults = itsConfig.lookup("maxresults");
+
       itsProductParameters = read_product_parameters(itsConfig);
     }
-    catch (libconfig::ParseException &e)
+    catch (const libconfig::SettingNotFoundException &e)
+    {
+      throw Spine::Exception(BCP, "Setting not found").addParameter("Setting path", e.getPath());
+    }
+    catch (const libconfig::ParseException &e)
     {
       throw SmartMet::Spine::Exception(BCP,
                                        string("autocomplete configuration error '") + e.getError() +
                                            "' on line " + Fmi::to_string(e.getLine()));
     }
-    catch (libconfig::ConfigException &)
+    catch (const libconfig::ConfigException &)
     {
       throw SmartMet::Spine::Exception(BCP, "autocomplete configuration error");
     }

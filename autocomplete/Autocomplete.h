@@ -5,9 +5,9 @@
 #include <engines/geonames/Engine.h>
 #include <engines/querydata/Engine.h>
 #include <engines/sputnik/Engine.h>
-#include <spine/SmartMetPlugin.h>
-#include <spine/Reactor.h>
 #include <spine/HTTP.h>
+#include <spine/Reactor.h>
+#include <spine/SmartMetPlugin.h>
 
 #include <libconfig.h++>
 
@@ -49,6 +49,12 @@ class Autocomplete
   libconfig::Config itsConfig;
   Reactor* itsReactor;  // does not own
   const char* itsConfigFile;
+
+  std::string itsDefaultLanguage;  // default translation language
+  std::string itsDefaultLocale;    // default locale for location name translations
+  bool itsPrettyPrintFlag;         // pretty printing off by default
+  std::string itsTimeFormat;       // iso, sql, xml, epoch, timestamp, http
+  int itsMaxResults;               // names per page, default page is always zero
 
   ProductParameters itsProductParameters;
 };
