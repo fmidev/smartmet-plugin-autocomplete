@@ -35,6 +35,8 @@ class Autocomplete
   // Thread for initializing the whole search system
   void init();
 
+  void shutdown();
+
   // Constructor and destructor
   //
   Autocomplete(SmartMetPlugin* theParent,
@@ -43,6 +45,7 @@ class Autocomplete
   ~Autocomplete();
 
  private:
+  std::atomic<bool> itsShutdownRequested;
   SmartMet::Engine::Querydata::Engine* itsQEngine;   // does not own
   SmartMet::Engine::Geonames::Engine* itsGeoEngine;  // does not own
   SmartMetPlugin* itsParent;                         // does not own

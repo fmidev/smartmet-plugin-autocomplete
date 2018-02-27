@@ -433,11 +433,22 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
 Autocomplete::Autocomplete(SmartMetPlugin *theParent,
                            SmartMet::Spine::Reactor *theReactor,
                            const char *theConfig)
-    : itsReactor(theReactor), itsConfigFile(theConfig)
+    : itsShutdownRequested(false), itsReactor(theReactor), itsConfigFile(theConfig)
 {
   // Banner
 
   itsParent = theParent;
+}
+
+// ----------------------------------------------------------------------
+/*!
+ * \brief Set shutdown mode
+ */
+// ----------------------------------------------------------------------
+
+void Autocomplete::shutdown()
+{
+  itsShutdownRequested = true;
 }
 
 // ----------------------------------------------------------------------
@@ -500,6 +511,8 @@ void Autocomplete::init()
 
     while (!itsGeoEngine->isSuggestReady())
     {
+      if (itsShutdownRequested)
+        return;
       boost::this_thread::sleep(boost::posix_time::milliseconds(100));
     }
 

@@ -8,8 +8,8 @@
 #include "Autocomplete.h"
 
 #include <spine/Exception.h>
-#include <spine/SmartMet.h>
 #include <spine/Reactor.h>
+#include <spine/SmartMet.h>
 #include <sstream>
 #include <stdexcept>
 
@@ -26,7 +26,11 @@ namespace Autocomplete
 // ----------------------------------------------------------------------
 
 Plugin::Plugin(Reactor *theReactor, const char *theConfig)
-    : SmartMetPlugin(), itsReactor(theReactor), itsConfig(theConfig), itsModuleName("Autocomplete")
+    : SmartMetPlugin(),
+      itsShutdownRequested(false),
+      itsReactor(theReactor),
+      itsConfig(theConfig),
+      itsModuleName("Autocomplete")
 {
   try
   {
@@ -66,6 +70,8 @@ void Plugin::init()
 void Plugin::shutdown()
 {
   std::cout << "  -- Shutdown requested (autocomplete)\n";
+  itsShutdownRequested = true;
+  itsAutocomplete->shutdown();
 }
 
 // ----------------------------------------------------------------------

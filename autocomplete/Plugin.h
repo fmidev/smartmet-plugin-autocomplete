@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <spine/SmartMetPlugin.h>
-#include <spine/Reactor.h>
 #include <spine/HTTP.h>
+#include <spine/Reactor.h>
+#include <spine/SmartMetPlugin.h>
 
 #include "Autocomplete.h"
 
@@ -36,6 +36,7 @@ class Plugin : public SmartMetPlugin
                       HTTP::Response& theResponse);
 
  private:
+  boost::atomic<bool> itsShutdownRequested;
   SmartMet::Spine::Reactor* itsReactor;
   const char* itsConfig;
   Autocomplete* itsAutocomplete;
