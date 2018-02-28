@@ -44,5 +44,5 @@ test: $(PROG)
 	./$$prog; \
 	done
 
-$(PROG) : % : %.cpp Makefile
+$(PROG) : % : %.cpp Makefile ../autocomplete.so
 	$(CC) $(CFLAGS) -o $@ $@.cpp $(INCLUDES) $(LIBS)
