@@ -83,21 +83,21 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
           string param = product[j];
           result.add(productName, ParameterFactory::instance().parse(param));
         }
-        catch (libconfig::ParseException &e)
+        catch (const libconfig::ParseException &e)
         {
           throw SmartMet::Spine::Exception(BCP,
                                            string("Configuration error ' ") + e.getError() +
                                                "' with variable '" + productName + "' on line " +
                                                Fmi::to_string(e.getLine()));
         }
-        catch (libconfig::ConfigException &)
+        catch (const libconfig::ConfigException &)
         {
           throw SmartMet::Spine::Exception(BCP,
                                            string("Configuration error with variable '") +
                                                productName + "' on line " +
                                                Fmi::to_string(product[j].getSourceLine()));
         }
-        catch (std::exception &e)
+        catch (const std::exception &e)
         {
           throw SmartMet::Spine::Exception(BCP,
                                            e.what() + string(" (line number ") +
