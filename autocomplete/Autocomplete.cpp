@@ -110,7 +110,7 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception(BCP, "Operation failed!", NULL);
+    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -198,7 +198,7 @@ void append_forecast(Json::Value &theResult,
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception(BCP, "Operation failed!", NULL);
+    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -281,7 +281,7 @@ void Autocomplete::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
     }
     catch (...)
     {
-      SmartMet::Spine::Exception exception(BCP, "Request processing exception!", NULL);
+      SmartMet::Spine::Exception exception(BCP, "Request processing exception!", nullptr);
       exception.addParameter("URI", theRequest.getURI());
       exception.printError();
 
@@ -296,7 +296,7 @@ void Autocomplete::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception(BCP, "Operation failed!", NULL);
+    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -415,7 +415,7 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception(BCP, "Operation failed!", NULL);
+    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -466,16 +466,16 @@ void Autocomplete::init()
   try
   {
     // Connect to GeoEngine
-    auto engine = itsReactor->getSingleton("Geonames", NULL);
-    if (engine == NULL)
+    auto engine = itsReactor->getSingleton("Geonames", nullptr);
+    if (engine == nullptr)
       throw SmartMet::Spine::Exception(BCP, "Geonames engine unavailable");
 
     itsGeoEngine = reinterpret_cast<SmartMet::Engine::Geonames::Engine *>(engine);
 
     // Connect to QEngine
 
-    engine = itsReactor->getSingleton("Querydata", NULL);
-    if (engine == NULL)
+    engine = itsReactor->getSingleton("Querydata", nullptr);
+    if (engine == nullptr)
       throw SmartMet::Spine::Exception(BCP, "Querydata engine unavailable");
 
     itsQEngine = reinterpret_cast<SmartMet::Engine::Querydata::Engine *>(engine);
@@ -528,7 +528,7 @@ void Autocomplete::init()
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception(BCP, "Operation failed!", NULL);
+    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
