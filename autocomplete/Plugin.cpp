@@ -30,6 +30,7 @@ Plugin::Plugin(Reactor *theReactor, const char *theConfig)
       itsShutdownRequested(false),
       itsReactor(theReactor),
       itsConfig(theConfig),
+      itsAutoComplete(nullptr),
       itsModuleName("Autocomplete")
 {
   try
