@@ -6,11 +6,11 @@
 
 #pragma once
 
+#include "Autocomplete.h"
+#include <boost/move/unique_ptr.hpp>
 #include <spine/HTTP.h>
 #include <spine/Reactor.h>
 #include <spine/SmartMetPlugin.h>
-
-#include "Autocomplete.h"
 
 namespace SmartMet
 {
@@ -22,7 +22,7 @@ class Plugin : public SmartMetPlugin
 {
  public:
   Plugin(Reactor* theReactor, const char* theConfig);
-  virtual ~Plugin();
+  virtual ~Plugin() = default;
 
   const std::string& getPluginName() const;
   int getRequiredAPIVersion() const;
@@ -39,7 +39,7 @@ class Plugin : public SmartMetPlugin
   boost::atomic<bool> itsShutdownRequested;
   SmartMet::Spine::Reactor* itsReactor;
   const char* itsConfig;
-  Autocomplete* itsAutocomplete;
+  boost::movelib::unique_ptr<Autocomplete> itsAutocomplete;
   const std::string itsModuleName;
 
 };  // class Plugin

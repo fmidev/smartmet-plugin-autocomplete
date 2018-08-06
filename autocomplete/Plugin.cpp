@@ -29,7 +29,6 @@ Plugin::Plugin(Reactor *theReactor, const char *theConfig)
     : itsShutdownRequested(false),
       itsReactor(theReactor),
       itsConfig(theConfig),
-      itsAutoComplete(nullptr),
       itsModuleName("Autocomplete")
 {
   try
@@ -52,7 +51,7 @@ void Plugin::init()
 {
   try
   {
-    itsAutocomplete = new SmartMet::Plugin::Autocomplete::Autocomplete(this, itsReactor, itsConfig);
+    itsAutocomplete = boost::movelib::make_unique<Autocomplete>(this, itsReactor, itsConfig);
     itsAutocomplete->init();
   }
   catch (...)
@@ -86,16 +85,6 @@ void Plugin::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
 {
 }
 
-// ----------------------------------------------------------------------
-/*!
- * \brief Destructor
- */
-// ----------------------------------------------------------------------
-
-Plugin::~Plugin()
-{
-  delete itsAutocomplete;
-}
 // ----------------------------------------------------------------------
 /*!
  * \brief Return the plugin name
