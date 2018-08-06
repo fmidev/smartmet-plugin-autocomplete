@@ -26,8 +26,7 @@ namespace Autocomplete
 // ----------------------------------------------------------------------
 
 Plugin::Plugin(Reactor *theReactor, const char *theConfig)
-    : SmartMetPlugin(),
-      itsShutdownRequested(false),
+    : itsShutdownRequested(false),
       itsReactor(theReactor),
       itsConfig(theConfig),
       itsAutoComplete(nullptr),
