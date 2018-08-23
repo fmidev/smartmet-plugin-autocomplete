@@ -37,17 +37,6 @@
             "timezone" : "Europe/Athens"
          },
          {
-            "area" : "FL, Yhdysvallat",
-            "country" : "US",
-            "feature" : "PPL",
-            "id" : 4175117,
-            "lat" : 25.671489999999999,
-            "lon" : -80.444500000000005,
-            "name" : "The Hammocks",
-            "population" : 51003,
-            "timezone" : "America/New_York"
-         },
-         {
             "area" : "TX, Yhdysvallat",
             "country" : "US",
             "feature" : "PPL",
@@ -57,6 +46,17 @@
             "name" : "The Woodlands",
             "population" : 93847,
             "timezone" : "America/Chicago"
+         },
+         {
+            "area" : "FL, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPL",
+            "id" : 4175117,
+            "lat" : 25.671489999999999,
+            "lon" : -80.444500000000005,
+            "name" : "The Hammocks",
+            "population" : 51003,
+            "timezone" : "America/New_York"
          },
          {
             "area" : "Intia",

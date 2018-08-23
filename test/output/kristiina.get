@@ -28,17 +28,6 @@
          {
             "area" : "Kristiinankaupunki",
             "country" : "FI",
-            "feature" : "SYNOP",
-            "id" : -16000175,
-            "lat" : 62.203240000000001,
-            "lon" : 21.169830000000001,
-            "name" : "Majakka",
-            "population" : 0,
-            "timezone" : "Europe/Helsinki"
-         },
-         {
-            "area" : "Kristiinankaupunki",
-            "country" : "FI",
             "feature" : "STUK",
             "id" : -103312,
             "lat" : 62.268599999999999,
@@ -66,6 +55,17 @@
             "lat" : 62.067799999999998,
             "lon" : 21.530819999999999,
             "name" : "Kristiina R",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Kristiinankaupunki",
+            "country" : "FI",
+            "feature" : "SYNOP",
+            "id" : -16000175,
+            "lat" : 62.203240000000001,
+            "lon" : 21.169830000000001,
+            "name" : "Majakka",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          }

@@ -1,6 +1,6 @@
 {
    "autocomplete" : {
-      "found-results" : 20,
+      "found-results" : 21,
       "max-results" : 100,
       "result" : [
          {
@@ -89,6 +89,17 @@
             "lon" : 21.75,
             "name" : "Koski",
             "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "ADM3",
+            "id" : 651091,
+            "lat" : 60.666699999999999,
+            "lon" : 23.083300000000001,
+            "name" : "Koski",
+            "population" : 2514,
             "timezone" : "Europe/Helsinki"
          },
          {

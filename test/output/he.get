@@ -37,15 +37,15 @@
             "timezone" : "Europe/Stockholm"
          },
          {
-            "area" : "Helsinki",
-            "country" : "FI",
-            "feature" : "PPL",
-            "id" : 847508,
-            "lat" : 60.266109999999998,
-            "lon" : 25.073889999999999,
-            "name" : "Heikinlaakso",
-            "population" : 0,
-            "timezone" : "Europe/Helsinki"
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2620425,
+            "lat" : 56.139319999999998,
+            "lon" : 8.9737799999999996,
+            "name" : "Herning",
+            "population" : 44763,
+            "timezone" : "Europe/Copenhagen"
          },
          {
             "area" : "",
@@ -59,15 +59,15 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Tanska",
-            "country" : "DK",
-            "feature" : "PPLA2",
-            "id" : 2620473,
-            "lat" : 56.036059999999999,
-            "lon" : 12.6136,
-            "name" : "Helsingør",
-            "population" : 35048,
-            "timezone" : "Europe/Copenhagen"
+            "area" : "Helsinki",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 847508,
+            "lat" : 60.266109999999998,
+            "lon" : 25.073889999999999,
+            "name" : "Heikinlaakso",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
          },
          {
             "area" : "Helsinki",
@@ -84,11 +84,11 @@
             "area" : "Tanska",
             "country" : "DK",
             "feature" : "PPLA2",
-            "id" : 2620425,
-            "lat" : 56.139319999999998,
-            "lon" : 8.9737799999999996,
-            "name" : "Herning",
-            "population" : 44763,
+            "id" : 2620473,
+            "lat" : 56.036059999999999,
+            "lon" : 12.6136,
+            "name" : "Helsingør",
+            "population" : 35048,
             "timezone" : "Europe/Copenhagen"
          },
          {
@@ -101,17 +101,6 @@
             "name" : "Etelä-Hervanta",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
-         },
-         {
-            "area" : "Tanska",
-            "country" : "DK",
-            "feature" : "PPLA2",
-            "id" : 2620583,
-            "lat" : 55.770429999999998,
-            "lon" : 9.7011000000000003,
-            "name" : "Hedensted",
-            "population" : 10048,
-            "timezone" : "Europe/Copenhagen"
          },
          {
             "area" : "Tampere",
@@ -165,6 +154,17 @@
             "lat" : 60.194710000000001,
             "lon" : 25.035350000000001,
             "name" : "Herttoniemi",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Tampere",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 658120,
+            "lat" : 61.451079999999997,
+            "lon" : 23.851659999999999,
+            "name" : "Hervanta",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          }
