@@ -1,20 +1,4 @@
 #include "Autocomplete.h"
-
-#include <engines/geonames/Engine.h>
-#include <spine/Convenience.h>
-#include <spine/Exception.h>
-#include <spine/ParameterFactory.h>
-#include <spine/Reactor.h>
-#include <spine/TimeSeries.h>
-#include <spine/TimeSeriesOutput.h>
-
-#include <macgyver/CharsetTools.h>
-#include <macgyver/StringConversion.h>
-#include <macgyver/TimeFormatter.h>
-#include <macgyver/TimeParser.h>
-
-#include <json/json.h>
-
 #include <boost/algorithm/string.hpp>
 #include <boost/bind.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
@@ -22,7 +6,18 @@
 #include <boost/foreach.hpp>
 #include <boost/shared_ptr.hpp>
 #include <boost/thread.hpp>
-
+#include <engines/geonames/Engine.h>
+#include <json/json.h>
+#include <macgyver/CharsetTools.h>
+#include <macgyver/StringConversion.h>
+#include <macgyver/TimeFormatter.h>
+#include <macgyver/TimeParser.h>
+#include <spine/Convenience.h>
+#include <spine/Exception.h>
+#include <spine/ParameterFactory.h>
+#include <spine/Reactor.h>
+#include <spine/TimeSeries.h>
+#include <spine/TimeSeriesOutput.h>
 #include <iostream>
 #include <map>
 #include <sstream>
@@ -142,10 +137,9 @@ void append_forecast(Json::Value &theResult,
     if (producer.empty())
     {
       Json::Value nulljson;
-      BOOST_FOREACH (const Parameter &param, theParameters)
-      {
+      for (const Parameter &param : theParameters)
         theResult[param.name()] = nulljson;
-      }
+
       return;
     }
 
@@ -174,7 +168,7 @@ void append_forecast(Json::Value &theResult,
     ostringstream ss;
     TimeSeries::OStreamVisitor val_visitor(ss, theValueFormatter, precision);
 
-    BOOST_FOREACH (const Parameter &param, theParameters)
+    for (const Parameter &param : theParameters)
     {
       SmartMet::Engine::Querydata::ParameterOptions qparams(param,
                                                             producer,
@@ -383,7 +377,7 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
 
     // Loop through the Locations
 
-    BOOST_FOREACH (SmartMet::Spine::LocationPtr &ptr, suggestions)
+    for (const SmartMet::Spine::LocationPtr &ptr : suggestions)
     {
       string name = ptr->name;
       string area = ptr->area;
