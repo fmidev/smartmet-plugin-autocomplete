@@ -56,18 +56,18 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
     libconfig::Setting &products = theConfig.lookup(optProducts);
 
     if (!products.isGroup())
-      throw SmartMet::Spine::Exception(BCP,
-                                       "Products must be stored as a group of arrays: line " +
-                                           Fmi::to_string(products.getSourceLine()));
+      throw Spine::Exception(BCP,
+                             "Products must be stored as a group of arrays: line " +
+                                 Fmi::to_string(products.getSourceLine()));
 
     for (int i = 0; i < products.getLength(); i++)
     {
       libconfig::Setting &product = products[i];
 
       if (!product.isArray())
-        throw SmartMet::Spine::Exception(BCP,
-                                         "Product must be stored as an array of parameters: line " +
-                                             Fmi::to_string(product.getSourceLine()));
+        throw Spine::Exception(BCP,
+                               "Product must be stored as an array of parameters: line " +
+                                   Fmi::to_string(product.getSourceLine()));
 
       string productName = product.getName();
 
@@ -80,23 +80,22 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
         }
         catch (const libconfig::ParseException &e)
         {
-          throw SmartMet::Spine::Exception(BCP,
-                                           string("Configuration error ' ") + e.getError() +
-                                               "' with variable '" + productName + "' on line " +
-                                               Fmi::to_string(e.getLine()));
+          throw Spine::Exception(BCP,
+                                 string("Configuration error ' ") + e.getError() +
+                                     "' with variable '" + productName + "' on line " +
+                                     Fmi::to_string(e.getLine()));
         }
         catch (const libconfig::ConfigException &)
         {
-          throw SmartMet::Spine::Exception(BCP,
-                                           string("Configuration error with variable '") +
-                                               productName + "' on line " +
-                                               Fmi::to_string(product[j].getSourceLine()));
+          throw Spine::Exception(BCP,
+                                 string("Configuration error with variable '") + productName +
+                                     "' on line " + Fmi::to_string(product[j].getSourceLine()));
         }
         catch (const std::exception &e)
         {
-          throw SmartMet::Spine::Exception(BCP,
-                                           e.what() + string(" (line number ") +
-                                               Fmi::to_string(product[j].getSourceLine()) + ")");
+          throw Spine::Exception(BCP,
+                                 e.what() + string(" (line number ") +
+                                     Fmi::to_string(product[j].getSourceLine()) + ")");
         }
       }
     }
@@ -105,7 +104,7 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -117,9 +116,9 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
 
 void append_forecast(Json::Value &theResult,
                      const ProductParameters::ParameterList &theParameters,
-                     const SmartMet::Spine::LocationPtr theLoc,
-                     SmartMet::Engine::Querydata::Engine &theEngine,
-                     SmartMet::Engine::Geonames::Engine &theGeoEngine,
+                     const Spine::LocationPtr theLoc,
+                     Engine::Querydata::Engine &theEngine,
+                     Engine::Geonames::Engine &theGeoEngine,
                      const ValueFormatter &theValueFormatter,
                      const Fmi::TimeFormatter &theTimeFormatter,
                      const string &theStamp,
@@ -170,19 +169,19 @@ void append_forecast(Json::Value &theResult,
 
     for (const Parameter &param : theParameters)
     {
-      SmartMet::Engine::Querydata::ParameterOptions qparams(param,
-                                                            producer,
-                                                            *theLoc,
-                                                            theLoc->iso2,
-                                                            theLoc->name,
-                                                            theTimeFormatter,
-                                                            timestring,
-                                                            theLang,
-                                                            theLocale,
-                                                            theLoc->timezone,
-                                                            findnearest,
-                                                            nearestpoint,
-                                                            lastpoint);
+      Engine::Querydata::ParameterOptions qparams(param,
+                                                  producer,
+                                                  *theLoc,
+                                                  theLoc->iso2,
+                                                  theLoc->name,
+                                                  theTimeFormatter,
+                                                  timestring,
+                                                  theLang,
+                                                  theLocale,
+                                                  theLoc->timezone,
+                                                  findnearest,
+                                                  nearestpoint,
+                                                  lastpoint);
 
       auto tmp = q->value(qparams, t);
       boost::apply_visitor(val_visitor, tmp);
@@ -192,7 +191,7 @@ void append_forecast(Json::Value &theResult,
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -209,7 +208,7 @@ void append_forecast(Json::Value &theResult,
  */
 // ----------------------------------------------------------------------
 
-void Autocomplete::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
+void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
                                   const HTTP::Request &theRequest,
                                   HTTP::Response &theResponse)
 
@@ -275,7 +274,7 @@ void Autocomplete::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
     }
     catch (...)
     {
-      SmartMet::Spine::Exception exception(BCP, "Request processing exception!", nullptr);
+      Spine::Exception exception(BCP, "Request processing exception!", nullptr);
       exception.addParameter("URI", theRequest.getURI());
       exception.printError();
 
@@ -290,7 +289,7 @@ void Autocomplete::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -307,37 +306,33 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
     string theURI = theRequest.getURI();
 
     // Parse query strings
-    string keyword = SmartMet::Spine::optional_string(theRequest.getParameter("keyword"), "");
+    string keyword = Spine::optional_string(theRequest.getParameter("keyword"), "");
 
-    string pattern = SmartMet::Spine::optional_string(theRequest.getParameter("pattern"), "");
+    string pattern = Spine::optional_string(theRequest.getParameter("pattern"), "");
 
-    string lang =
-        SmartMet::Spine::optional_string(theRequest.getParameter("lang"), itsDefaultLanguage);
+    string lang = Spine::optional_string(theRequest.getParameter("lang"), itsDefaultLanguage);
 
     unsigned long maxresults =
-        SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("max"), itsMaxResults);
+        Spine::optional_unsigned_long(theRequest.getParameter("max"), itsMaxResults);
 
-    unsigned long page =
-        SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("page"), 0);
+    unsigned long page = Spine::optional_unsigned_long(theRequest.getParameter("page"), 0);
 
-    bool pretty =
-        SmartMet::Spine::optional_bool(theRequest.getParameter("pretty"), itsPrettyPrintFlag);
+    bool pretty = Spine::optional_bool(theRequest.getParameter("pretty"), itsPrettyPrintFlag);
 
-    bool debug = SmartMet::Spine::optional_bool(theRequest.getParameter("debug"), false);
+    bool debug = Spine::optional_bool(theRequest.getParameter("debug"), false);
 
-    string product = SmartMet::Spine::optional_string(theRequest.getParameter("product"), "");
+    string product = Spine::optional_string(theRequest.getParameter("product"), "");
 
     string timeformat =
-        SmartMet::Spine::optional_string(theRequest.getParameter("timeformat"), itsTimeFormat);
+        Spine::optional_string(theRequest.getParameter("timeformat"), itsTimeFormat);
 
     // default is fi_FI, override from configi and then finally from querystring
-    string localename =
-        SmartMet::Spine::optional_string(theRequest.getParameter("locale"), itsDefaultLocale);
+    string localename = Spine::optional_string(theRequest.getParameter("locale"), itsDefaultLocale);
 
-    string stamp = SmartMet::Spine::optional_string(theRequest.getParameter("time"), "");
+    string stamp = Spine::optional_string(theRequest.getParameter("time"), "");
 
     if (!product.empty() && !itsProductParameters.contains(product))
-      throw SmartMet::Spine::Exception(BCP, "Product " + product + " has no associated parameters");
+      throw Spine::Exception(BCP, "Product " + product + " has no associated parameters");
 
     ValueFormatter valueformatter(theRequest);
     boost::shared_ptr<Fmi::TimeFormatter> timeformatter(Fmi::TimeFormatter::create(timeformat));
@@ -372,12 +367,12 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
     }
 
     // Query the Suggestor engine
-    SmartMet::Spine::LocationList suggestions =
+    Spine::LocationList suggestions =
         itsGeoEngine->suggest(pattern, lang, keyword, page, maxresults);
 
     // Loop through the Locations
 
-    for (const SmartMet::Spine::LocationPtr &ptr : suggestions)
+    for (const Spine::LocationPtr &ptr : suggestions)
     {
       string name = ptr->name;
       string area = ptr->area;
@@ -422,7 +417,7 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -438,7 +433,7 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
 // ----------------------------------------------------------------------
 
 Autocomplete::Autocomplete(SmartMetPlugin *theParent,
-                           SmartMet::Spine::Reactor *theReactor,
+                           Spine::Reactor *theReactor,
                            const char *theConfig)
     : itsShutdownRequested(false), itsReactor(theReactor), itsConfigFile(theConfig)
 {
@@ -475,17 +470,17 @@ void Autocomplete::init()
     // Connect to GeoEngine
     auto engine = itsReactor->getSingleton("Geonames", nullptr);
     if (engine == nullptr)
-      throw SmartMet::Spine::Exception(BCP, "Geonames engine unavailable");
+      throw Spine::Exception(BCP, "Geonames engine unavailable");
 
-    itsGeoEngine = reinterpret_cast<SmartMet::Engine::Geonames::Engine *>(engine);
+    itsGeoEngine = reinterpret_cast<Engine::Geonames::Engine *>(engine);
 
     // Connect to QEngine
 
     engine = itsReactor->getSingleton("Querydata", nullptr);
     if (engine == nullptr)
-      throw SmartMet::Spine::Exception(BCP, "Querydata engine unavailable");
+      throw Spine::Exception(BCP, "Querydata engine unavailable");
 
-    itsQEngine = reinterpret_cast<SmartMet::Engine::Querydata::Engine *>(engine);
+    itsQEngine = reinterpret_cast<Engine::Querydata::Engine *>(engine);
 
     try
     {
@@ -505,13 +500,13 @@ void Autocomplete::init()
     }
     catch (const libconfig::ParseException &e)
     {
-      throw SmartMet::Spine::Exception(BCP,
-                                       string("autocomplete configuration error '") + e.getError() +
-                                           "' on line " + Fmi::to_string(e.getLine()));
+      throw Spine::Exception(BCP,
+                             string("autocomplete configuration error '") + e.getError() +
+                                 "' on line " + Fmi::to_string(e.getLine()));
     }
     catch (const libconfig::ConfigException &)
     {
-      throw SmartMet::Spine::Exception(BCP, "autocomplete configuration error");
+      throw Spine::Exception(BCP, "autocomplete configuration error");
     }
 
     // Cannot register until geonames suggest is ready
@@ -530,12 +525,12 @@ void Autocomplete::init()
             "/autocomplete",
             boost::bind(&Autocomplete::requestHandler, this, _1, _2, _3)))
     {
-      throw SmartMet::Spine::Exception(BCP, "Failed to register autocomplete content handler");
+      throw Spine::Exception(BCP, "Failed to register autocomplete content handler");
     }
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
