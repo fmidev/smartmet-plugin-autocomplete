@@ -4,17 +4,6 @@
       "max-results" : 15,
       "result" : [
          {
-            "area" : "Ruotsi",
-            "country" : "SE",
-            "feature" : "PPLC",
-            "id" : 2673730,
-            "lat" : 59.33258,
-            "lon" : 18.064900000000002,
-            "name" : "Tukholma",
-            "population" : 1253309,
-            "timezone" : "Europe/Stockholm"
-         },
-         {
             "area" : "Vårdö",
             "country" : "FI",
             "feature" : "ISL",
@@ -24,6 +13,17 @@
             "name" : "Stockholm",
             "population" : 0,
             "timezone" : "Europe/Mariehamn"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLC",
+            "id" : 2673730,
+            "lat" : 59.33258,
+            "lon" : 18.064900000000002,
+            "name" : "Tukholma",
+            "population" : 1253309,
+            "timezone" : "Europe/Stockholm"
          },
          {
             "area" : "Pietarsaari",
