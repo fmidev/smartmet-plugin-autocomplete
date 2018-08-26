@@ -53,11 +53,11 @@ class Autocomplete
   Reactor* itsReactor;  // does not own
   const char* itsConfigFile;
 
-  std::string itsDefaultLanguage;  // default translation language
-  std::string itsDefaultLocale;    // default locale for location name translations
-  bool itsPrettyPrintFlag;         // pretty printing off by default
-  std::string itsTimeFormat;       // iso, sql, xml, epoch, timestamp, http
-  int itsMaxResults;               // names per page, default page is always zero
+  std::string itsDefaultLanguage;   // default translation language
+  std::string itsDefaultLocale;     // default locale for location name translations
+  bool itsPrettyPrintFlag = false;  // pretty printing off by default
+  std::string itsTimeFormat;        // iso, sql, xml, epoch, timestamp, http
+  int itsMaxResults;                // names per page, default page is always zero
 
   ProductParameters itsProductParameters;
 };

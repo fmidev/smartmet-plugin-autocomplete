@@ -310,20 +310,29 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
 {
   try
   {
-    string theURI(theRequest.getURI());
+    string theURI = theRequest.getURI();
 
     // Parse query strings
     string keyword = SmartMet::Spine::optional_string(theRequest.getParameter("keyword"), "");
+
     string pattern = SmartMet::Spine::optional_string(theRequest.getParameter("pattern"), "");
+
     string lang =
         SmartMet::Spine::optional_string(theRequest.getParameter("lang"), itsDefaultLanguage);
+
     unsigned long maxresults =
         SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("max"), itsMaxResults);
+
     unsigned long page =
         SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("page"), 0);
-    bool pretty = SmartMet::Spine::optional_unsigned_long(theRequest.getParameter("pretty"),
-                                                          itsPrettyPrintFlag);
+
+    bool pretty =
+        SmartMet::Spine::optional_bool(theRequest.getParameter("pretty"), itsPrettyPrintFlag);
+
+    bool debug = SmartMet::Spine::optional_bool(theRequest.getParameter("debug"), false);
+
     string product = SmartMet::Spine::optional_string(theRequest.getParameter("product"), "");
+
     string timeformat =
         SmartMet::Spine::optional_string(theRequest.getParameter("timeformat"), itsTimeFormat);
 
@@ -390,6 +399,10 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
       j["lon"] = ptr->longitude;
       j["lat"] = ptr->latitude;
       j["timezone"] = ptr->timezone;
+
+      if (debug)
+        j["score"] = ptr->priority;
+
       append_forecast(j,
                       itsProductParameters.parameters(product),
                       ptr,
