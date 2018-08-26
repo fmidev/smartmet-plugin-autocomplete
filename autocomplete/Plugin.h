@@ -21,23 +21,23 @@ namespace Autocomplete
 class Plugin : public SmartMetPlugin
 {
  public:
-  Plugin(Reactor* theReactor, const char* theConfig);
+  Plugin(Spine::Reactor* theReactor, const char* theConfig);
   virtual ~Plugin() = default;
 
   const std::string& getPluginName() const;
   int getRequiredAPIVersion() const;
-  bool queryIsFast(const SmartMet::Spine::HTTP::Request& theRequest) const;
+  bool queryIsFast(const Spine::HTTP::Request& theRequest) const;
 
  protected:
   void init();
   void shutdown();
-  void requestHandler(SmartMet::Spine::Reactor& theReactor,
-                      const HTTP::Request& theRequest,
-                      HTTP::Response& theResponse);
+  void requestHandler(Spine::Reactor& theReactor,
+                      const Spine::HTTP::Request& theRequest,
+                      Spine::HTTP::Response& theResponse);
 
  private:
   boost::atomic<bool> itsShutdownRequested;
-  SmartMet::Spine::Reactor* itsReactor;
+  Spine::Reactor* itsReactor;
   const char* itsConfig;
   boost::movelib::unique_ptr<Autocomplete> itsAutocomplete;
   const std::string itsModuleName;

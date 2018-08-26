@@ -7,7 +7,6 @@
 #pragma once
 
 #include <spine/Parameter.h>
-
 #include <list>
 #include <map>
 #include <string>
@@ -18,14 +17,13 @@ namespace Plugin
 {
 namespace Autocomplete
 {
-using namespace SmartMet::Spine;
 class ProductParameters
 {
  public:
-  typedef std::list<Parameter> ParameterList;
+  typedef std::list<Spine::Parameter> ParameterList;
   typedef std::map<std::string, ParameterList> Parameters;
 
-  void add(const std::string& theProduct, const Parameter& theParameter);
+  void add(const std::string& theProduct, const Spine::Parameter& theParameter);
   bool contains(const std::string& theProduct) const;
   const ParameterList& parameters(const std::string& theProduct);
 

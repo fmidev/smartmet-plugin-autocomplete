@@ -1,16 +1,13 @@
 #pragma once
 
 #include "ProductParameters.h"
-
 #include <engines/geonames/Engine.h>
 #include <engines/querydata/Engine.h>
 #include <engines/sputnik/Engine.h>
 #include <spine/HTTP.h>
 #include <spine/Reactor.h>
 #include <spine/SmartMetPlugin.h>
-
 #include <libconfig.h++>
-
 #include <set>
 #include <string>
 
@@ -25,12 +22,11 @@ namespace Autocomplete
 class Autocomplete
 {
  public:
-  void requestHandler(SmartMet::Spine::Reactor& theReactor,
-                      const SmartMet::Spine::HTTP::Request& theRequest,
-                      SmartMet::Spine::HTTP::Response& theResponse);
+  void requestHandler(Spine::Reactor& theReactor,
+                      const Spine::HTTP::Request& theRequest,
+                      Spine::HTTP::Response& theResponse);
 
-  void complete(const SmartMet::Spine::HTTP::Request& theRequest,
-                SmartMet::Spine::HTTP::Response& theResponse);
+  void complete(const Spine::HTTP::Request& theRequest, Spine::HTTP::Response& theResponse);
 
   // Thread for initializing the whole search system
   void init();
@@ -39,18 +35,16 @@ class Autocomplete
 
   // Constructor and destructor
   //
-  Autocomplete(SmartMetPlugin* theParent,
-               SmartMet::Spine::Reactor* theReactor,
-               const char* theConfig);
+  Autocomplete(SmartMetPlugin* theParent, Spine::Reactor* theReactor, const char* theConfig);
   ~Autocomplete();
 
  private:
   std::atomic<bool> itsShutdownRequested;
-  SmartMet::Engine::Querydata::Engine* itsQEngine;   // does not own
-  SmartMet::Engine::Geonames::Engine* itsGeoEngine;  // does not own
-  SmartMetPlugin* itsParent;                         // does not own
+  Engine::Querydata::Engine* itsQEngine;   // does not own
+  Engine::Geonames::Engine* itsGeoEngine;  // does not own
+  SmartMetPlugin* itsParent;               // does not own
   libconfig::Config itsConfig;
-  Reactor* itsReactor;  // does not own
+  Spine::Reactor* itsReactor;  // does not own
   const char* itsConfigFile;
 
   std::string itsDefaultLanguage;   // default translation language

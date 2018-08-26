@@ -15,7 +15,7 @@ namespace Autocomplete
  */
 // ----------------------------------------------------------------------
 
-void ProductParameters::add(const std::string& theProduct, const Parameter& theParameter)
+void ProductParameters::add(const std::string& theProduct, const Spine::Parameter& theParameter)
 {
   try
   {
@@ -23,7 +23,7 @@ void ProductParameters::add(const std::string& theProduct, const Parameter& theP
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -41,7 +41,7 @@ bool ProductParameters::contains(const std::string& theProduct) const
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -61,7 +61,7 @@ const ProductParameters::ParameterList& ProductParameters::parameters(const std:
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 

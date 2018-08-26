@@ -4,6 +4,7 @@
 #include <boost/date_time/gregorian/gregorian.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/foreach.hpp>
+#include <boost/move/unique_ptr.hpp>
 #include <boost/shared_ptr.hpp>
 #include <boost/thread.hpp>
 #include <engines/geonames/Engine.h>
@@ -23,12 +24,6 @@
 #include <sstream>
 #include <stdexcept>
 #include <unistd.h>
-
-using namespace std;
-
-using namespace boost::gregorian;
-using namespace boost::posix_time;
-using namespace boost::local_time;
 
 namespace SmartMet
 {
@@ -69,32 +64,32 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
                                "Product must be stored as an array of parameters: line " +
                                    Fmi::to_string(product.getSourceLine()));
 
-      string productName = product.getName();
+      std::string productName = product.getName();
 
       for (int j = 0; j < product.getLength(); j++)
       {
         try
         {
-          string param = product[j];
-          result.add(productName, ParameterFactory::instance().parse(param));
+          std::string param = product[j];
+          result.add(productName, Spine::ParameterFactory::instance().parse(param));
         }
         catch (const libconfig::ParseException &e)
         {
           throw Spine::Exception(BCP,
-                                 string("Configuration error ' ") + e.getError() +
+                                 std::string("Configuration error ' ") + e.getError() +
                                      "' with variable '" + productName + "' on line " +
                                      Fmi::to_string(e.getLine()));
         }
         catch (const libconfig::ConfigException &)
         {
           throw Spine::Exception(BCP,
-                                 string("Configuration error with variable '") + productName +
+                                 std::string("Configuration error with variable '") + productName +
                                      "' on line " + Fmi::to_string(product[j].getSourceLine()));
         }
         catch (const std::exception &e)
         {
           throw Spine::Exception(BCP,
-                                 e.what() + string(" (line number ") +
+                                 e.what() + std::string(" (line number ") +
                                      Fmi::to_string(product[j].getSourceLine()) + ")");
         }
       }
@@ -119,10 +114,10 @@ void append_forecast(Json::Value &theResult,
                      const Spine::LocationPtr theLoc,
                      Engine::Querydata::Engine &theEngine,
                      Engine::Geonames::Engine &theGeoEngine,
-                     const ValueFormatter &theValueFormatter,
+                     const Spine::ValueFormatter &theValueFormatter,
                      const Fmi::TimeFormatter &theTimeFormatter,
-                     const string &theStamp,
-                     const string &theLang,
+                     const std::string &theStamp,
+                     const std::string &theLang,
                      const std::locale &theLocale)
 {
   try
@@ -136,7 +131,7 @@ void append_forecast(Json::Value &theResult,
     if (producer.empty())
     {
       Json::Value nulljson;
-      for (const Parameter &param : theParameters)
+      for (const Spine::Parameter &param : theParameters)
         theResult[param.name()] = nulljson;
 
       return;
@@ -146,8 +141,8 @@ void append_forecast(Json::Value &theResult,
 
     auto timezone = theGeoEngine.getTimeZones().time_zone_from_string(theLoc->timezone);
 
-    ptime utc = second_clock::universal_time();
-    local_date_time t(utc, timezone);
+    auto utc = boost::posix_time::second_clock::universal_time();
+    boost::local_time::local_date_time t(utc, timezone);
 
     // Regression tests may override the date
     if (!theStamp.empty())
@@ -160,14 +155,14 @@ void append_forecast(Json::Value &theResult,
     int precision = 0;
     const bool findnearest = false;
     NFmiPoint nearestpoint, lastpoint;
-    const string timestring = "";
+    const std::string timestring;
 
     // And process all parameters
 
-    ostringstream ss;
-    TimeSeries::OStreamVisitor val_visitor(ss, theValueFormatter, precision);
+    std::ostringstream ss;
+    Spine::TimeSeries::OStreamVisitor val_visitor(ss, theValueFormatter, precision);
 
-    for (const Parameter &param : theParameters)
+    for (const Spine::Parameter &param : theParameters)
     {
       Engine::Querydata::ParameterOptions qparams(param,
                                                   producer,
@@ -209,36 +204,32 @@ void append_forecast(Json::Value &theResult,
 // ----------------------------------------------------------------------
 
 void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
-                                  const HTTP::Request &theRequest,
-                                  HTTP::Response &theResponse)
+                                  const Spine::HTTP::Request &theRequest,
+                                  Spine::HTTP::Response &theResponse)
 
 {
   try
   {
-    using namespace boost::posix_time;
-    using namespace Fmi::TimeParser;
-    using Fmi::TimeFormatter;
-
     // Default expiration time
 
     const int expires_seconds = 60;
 
     // Now
 
-    ptime t_now = second_clock::universal_time();
+    const auto t_now = boost::posix_time::second_clock::universal_time();
 
     // Handle If-Modified-Since queries
 
-    auto if_modified_since = theRequest.getHeader("If-Modified-Since");
+    const auto if_modified_since = theRequest.getHeader("If-Modified-Since");
 
     if (if_modified_since)
     {
       try
       {
-        ptime t_modified = parse_http(*if_modified_since);
-        if (t_now - t_modified < seconds(expires_seconds))
+        const auto t_modified = Fmi::TimeParser::parse_http(*if_modified_since);
+        if (t_now - t_modified < boost::posix_time::seconds(expires_seconds))
         {
-          theResponse.setStatus(HTTP::Status::not_modified);
+          theResponse.setStatus(Spine::HTTP::Status::not_modified);
           return;
         }
       }
@@ -253,14 +244,14 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
     try
     {
       complete(theRequest, theResponse);
-      theResponse.setStatus(HTTP::Status::ok);
+      theResponse.setStatus(Spine::HTTP::Status::ok);
       theResponse.setHeader("Content-Type", "application/json; charset=UTF-8");
 
       // Build cache expiration time info
 
-      boost::shared_ptr<TimeFormatter> tformat(TimeFormatter::create("http"));
+      boost::shared_ptr<Fmi::TimeFormatter> tformat(Fmi::TimeFormatter::create("http"));
 
-      ptime t_expires = t_now + seconds(expires_seconds);
+      auto t_expires = t_now + boost::posix_time::seconds(expires_seconds);
 
       // The headers themselves
 
@@ -268,9 +259,9 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
       std::string expiration = tformat->format(t_expires);
       std::string modification = tformat->format(t_now);
 
-      theResponse.setHeader("Cache-Control", cachecontrol.c_str());
-      theResponse.setHeader("Expires", expiration.c_str());
-      theResponse.setHeader("Last-Modified", modification.c_str());
+      theResponse.setHeader("Cache-Control", cachecontrol);
+      theResponse.setHeader("Expires", expiration);
+      theResponse.setHeader("Last-Modified", modification);
     }
     catch (...)
     {
@@ -278,13 +269,13 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
       exception.addParameter("URI", theRequest.getURI());
       exception.printError();
 
-      string msg = string("Error: ") + exception.what();
-      theResponse.setStatus(HTTP::Status::ok);
+      std::string msg = std::string("Error: ") + exception.what();
+      theResponse.setStatus(Spine::HTTP::Status::ok);
 
       // Remove newlines, make sure length is reasonable
       boost::algorithm::replace_all(msg, "\n", " ");
       msg = msg.substr(0, 100);
-      theResponse.setHeader("X-Autocomplete-Error", msg.c_str());
+      theResponse.setHeader("X-Autocomplete-Error", msg);
     }
   }
   catch (...)
@@ -299,18 +290,19 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
  */
 // ----------------------------------------------------------------------
 
-void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &theResponse)
+void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
+                            Spine::HTTP::Response &theResponse)
 {
   try
   {
-    string theURI = theRequest.getURI();
+    std::string theURI = theRequest.getURI();
 
-    // Parse query strings
-    string keyword = Spine::optional_string(theRequest.getParameter("keyword"), "");
+    // Parse query std::strings
+    std::string keyword = Spine::optional_string(theRequest.getParameter("keyword"), "");
 
-    string pattern = Spine::optional_string(theRequest.getParameter("pattern"), "");
+    std::string pattern = Spine::optional_string(theRequest.getParameter("pattern"), "");
 
-    string lang = Spine::optional_string(theRequest.getParameter("lang"), itsDefaultLanguage);
+    std::string lang = Spine::optional_string(theRequest.getParameter("lang"), itsDefaultLanguage);
 
     unsigned long maxresults =
         Spine::optional_unsigned_long(theRequest.getParameter("max"), itsMaxResults);
@@ -321,33 +313,34 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
 
     bool debug = Spine::optional_bool(theRequest.getParameter("debug"), false);
 
-    string product = Spine::optional_string(theRequest.getParameter("product"), "");
+    std::string product = Spine::optional_string(theRequest.getParameter("product"), "");
 
-    string timeformat =
+    std::string timeformat =
         Spine::optional_string(theRequest.getParameter("timeformat"), itsTimeFormat);
 
-    // default is fi_FI, override from configi and then finally from querystring
-    string localename = Spine::optional_string(theRequest.getParameter("locale"), itsDefaultLocale);
+    // default is fi_FI, override from configi and then finally from querystd::string
+    std::string localename =
+        Spine::optional_string(theRequest.getParameter("locale"), itsDefaultLocale);
 
-    string stamp = Spine::optional_string(theRequest.getParameter("time"), "");
+    std::string stamp = Spine::optional_string(theRequest.getParameter("time"), "");
 
     if (!product.empty() && !itsProductParameters.contains(product))
       throw Spine::Exception(BCP, "Product " + product + " has no associated parameters");
 
-    ValueFormatter valueformatter(theRequest);
+    Spine::ValueFormatter valueformatter(theRequest);
     boost::shared_ptr<Fmi::TimeFormatter> timeformatter(Fmi::TimeFormatter::create(timeformat));
 
-    std::locale outlocale = locale(localename.c_str());
+    std::locale outlocale = std::locale(localename.c_str());
 
     Json::Value json;
     Json::Value jautocomplete;
     Json::Value jresult;
 
-    std::unique_ptr<Json::Writer> writer;
+    boost::movelib::unique_ptr<Json::Writer> writer;
     if (pretty)
-      writer.reset(new Json::StyledWriter);
+      writer = boost::movelib::make_unique<Json::StyledWriter>();
     else
-      writer.reset(new Json::FastWriter);
+      writer = boost::movelib::make_unique<Json::FastWriter>();
 
     // ---- NORMAL AUTOCOMPLETION ROUTINES --------------------------------
 
@@ -374,8 +367,8 @@ void Autocomplete::complete(const HTTP::Request &theRequest, HTTP::Response &the
 
     for (const Spine::LocationPtr &ptr : suggestions)
     {
-      string name = ptr->name;
-      string area = ptr->area;
+      std::string name = ptr->name;
+      std::string area = ptr->area;
 
       Json::Value j;
 
@@ -501,7 +494,7 @@ void Autocomplete::init()
     catch (const libconfig::ParseException &e)
     {
       throw Spine::Exception(BCP,
-                             string("autocomplete configuration error '") + e.getError() +
+                             std::string("autocomplete configuration error '") + e.getError() +
                                  "' on line " + Fmi::to_string(e.getLine()));
     }
     catch (const libconfig::ConfigException &)
@@ -542,8 +535,7 @@ void Autocomplete::init()
 
 Autocomplete::~Autocomplete()
 {
-  // Banner
-  cout << "\t+ Autocomplete plugin shutting down" << endl;
+  std::cout << "\t+ Autocomplete plugin shutting down" << std::endl;
 }
 
 }  // namespace Autocomplete

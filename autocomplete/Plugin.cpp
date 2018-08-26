@@ -25,7 +25,7 @@ namespace Autocomplete
  */
 // ----------------------------------------------------------------------
 
-Plugin::Plugin(Reactor *theReactor, const char *theConfig)
+Plugin::Plugin(Spine::Reactor *theReactor, const char *theConfig)
     : itsShutdownRequested(false),
       itsReactor(theReactor),
       itsConfig(theConfig),
@@ -34,11 +34,11 @@ Plugin::Plugin(Reactor *theReactor, const char *theConfig)
   try
   {
     if (theReactor->getRequiredAPIVersion() != SMARTMET_API_VERSION)
-      throw SmartMet::Spine::Exception(BCP, "Autocomplete and Server API version mismatch");
+      throw Spine::Exception(BCP, "Autocomplete and Server API version mismatch");
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -56,7 +56,7 @@ void Plugin::init()
   }
   catch (...)
   {
-    throw SmartMet::Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Spine::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -79,9 +79,9 @@ void Plugin::shutdown()
  */
 // ----------------------------------------------------------------------
 
-void Plugin::requestHandler(SmartMet::Spine::Reactor & /* theReactor */,
-                            const HTTP::Request & /* theRequest */,
-                            HTTP::Response & /* theResponse */)
+void Plugin::requestHandler(Spine::Reactor & /* theReactor */,
+                            const Spine::HTTP::Request & /* theRequest */,
+                            Spine::HTTP::Response & /* theResponse */)
 {
 }
 
@@ -111,7 +111,7 @@ int Plugin::getRequiredAPIVersion() const
  */
 // ----------------------------------------------------------------------
 
-bool Plugin::queryIsFast(const SmartMet::Spine::HTTP::Request & /* theRequest */) const
+bool Plugin::queryIsFast(const Spine::HTTP::Request & /* theRequest */) const
 {
   return true;
 }
