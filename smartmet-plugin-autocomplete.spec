@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 18.8.26
+Version: 19.2.14
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,18 +14,18 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost-devel
-BuildRequires: smartmet-library-macgyver-devel >= 18.8.20
+BuildRequires: smartmet-library-macgyver-devel >= 18.11.24
 BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 18.8.20
-BuildRequires: smartmet-engine-geonames-devel >= 18.8.26
-BuildRequires: smartmet-engine-querydata-devel >= 18.8.20
+BuildRequires: smartmet-library-spine-devel >= 18.12.13
+BuildRequires: smartmet-engine-geonames-devel >= 19.1.28
+BuildRequires: smartmet-engine-querydata-devel >= 19.2.8
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 18.8.20
-Requires: smartmet-library-spine >= 18.8.20
-Requires: smartmet-engine-geonames >= 18.8.26
-Requires: smartmet-server >= 18.8.22
-Requires: smartmet-engine-querydata >= 18.8.20
+Requires: smartmet-library-macgyver >= 18.11.24
+Requires: smartmet-library-spine >= 18.12.13
+Requires: smartmet-engine-geonames >= 19.1.28
+Requires: smartmet-server >= 18.12.14
+Requires: smartmet-engine-querydata >= 19.2.8
 %if 0%{rhel} >= 7
 Requires: boost-date-time
 Requires: boost-filesystem
@@ -62,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Thu Feb 14 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.2.14-1.fmi
+- Added client IP to exception reports
+
 * Sun Aug 26 2018 Mika Heiskanen <mika.heiskanen@fmi.fi> - 18.8.26-1.fmi
 - debug=1 option will now print the sort score of the location
 - Silenced CodeChecker warnings
