@@ -325,6 +325,8 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     std::string stamp = Spine::optional_string(theRequest.getParameter("time"), "");
 
+    bool duplicates = Spine::optional_bool(theRequest.getParameter("duplicates"), false);
+
     if (!product.empty() && !itsProductParameters.contains(product))
       throw Spine::Exception(BCP, "Product " + product + " has no associated parameters");
 
@@ -361,8 +363,9 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     }
 
     // Query the Suggestor engine
-    Spine::LocationList suggestions =
-        itsGeoEngine->suggest(pattern, lang, keyword, page, maxresults);
+    auto suggestions =
+        (duplicates ? itsGeoEngine->suggestDuplicates(pattern, lang, keyword, page, maxresults)
+                    : itsGeoEngine->suggest(pattern, lang, keyword, page, maxresults));
 
     // Loop through the Locations
 
