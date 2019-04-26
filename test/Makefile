@@ -31,6 +31,7 @@ LIBS = \
 	-lboost_regex \
 	-lboost_iostreams \
 	-lboost_system \
+	-lgdal \
 	-lbz2 -lz -lpthread
 
 all: $(PROG)
