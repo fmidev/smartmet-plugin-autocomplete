@@ -1,0 +1,30 @@
+{
+   "autocomplete" : {
+      "found-results" : 2,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Kolumbia",
+            "country" : "CO",
+            "feature" : "PPLC",
+            "id" : 3688689,
+            "lat" : 4.6097099999999998,
+            "lon" : -74.08175,
+            "name" : "Bogotá",
+            "population" : 7674366,
+            "timezone" : "America/Bogota"
+         },
+         {
+            "area" : "Indonesia",
+            "country" : "ID",
+            "feature" : "PPL",
+            "id" : 1648473,
+            "lat" : -6.5944399999999996,
+            "lon" : 106.78917,
+            "name" : "Bogor",
+            "population" : 800000,
+            "timezone" : "Asia/Jakarta"
+         }
+      ]
+   }
+}
