@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 19.2.26
+Version: 19.8.9
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -17,13 +17,13 @@ BuildRequires: boost-devel
 BuildRequires: smartmet-library-macgyver-devel >= 18.11.24
 BuildRequires: jsoncpp-devel
 BuildRequires: smartmet-library-spine-devel >= 18.12.13
-BuildRequires: smartmet-engine-geonames-devel >= 19.2.26
+BuildRequires: smartmet-engine-geonames-devel >= 19.8.9
 BuildRequires: smartmet-engine-querydata-devel >= 19.2.8
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
 Requires: smartmet-library-macgyver >= 18.11.24
 Requires: smartmet-library-spine >= 18.12.13
-Requires: smartmet-engine-geonames >= 19.2.26
+Requires: smartmet-engine-geonames >= 19.8.9
 Requires: smartmet-server >= 18.12.14
 Requires: smartmet-engine-querydata >= 19.2.8
 %if 0%{rhel} >= 7
@@ -62,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Fri Aug  9 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.8.9-1.fmi
+- Added tests for ascii_autocomplete mode
+
 * Tue Feb 26 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.2.26-1.fmi
 - Added option duplicates for keeping different feature types even if the names are the same
 

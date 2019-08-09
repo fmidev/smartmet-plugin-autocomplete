@@ -1,0 +1,19 @@
+{
+   "autocomplete" : {
+      "found-results" : 1,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Saksa",
+            "country" : "DE",
+            "feature" : "PPLA",
+            "id" : 2867714,
+            "lat" : 48.137430000000002,
+            "lon" : 11.57549,
+            "name" : "München",
+            "population" : 1260391,
+            "timezone" : "Europe/Berlin"
+         }
+      ]
+   }
+}

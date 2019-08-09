@@ -1,4 +1,6 @@
+
 #include "Plugin.h"
+
 #include <spine/PluginTest.h>
 
 using namespace std;
@@ -24,6 +26,7 @@ int main()
   options.defaultlogging = false;
   options.quiet = true;
 
+  std::setlocale(LC_ALL, "");  // for iconv to work
   SmartMet::Spine::PluginTest::test(options, prelude);
 
   return 0;
