@@ -246,6 +246,7 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
       complete(theRequest, theResponse);
       theResponse.setStatus(Spine::HTTP::Status::ok);
       theResponse.setHeader("Content-Type", "application/json; charset=UTF-8");
+      theResponse.setHeader("Access-Control-Allow-Origin", "*");
 
       // Build cache expiration time info
 
