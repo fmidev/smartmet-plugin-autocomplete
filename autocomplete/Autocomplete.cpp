@@ -111,7 +111,7 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
 
 void append_forecast(Json::Value &theResult,
                      const ProductParameters::ParameterList &theParameters,
-                     const Spine::LocationPtr theLoc,
+                     const Spine::LocationPtr &theLoc,
                      Engine::Querydata::Engine &theEngine,
                      Engine::Geonames::Engine &theGeoEngine,
                      const Spine::ValueFormatter &theValueFormatter,
