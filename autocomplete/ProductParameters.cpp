@@ -9,6 +9,13 @@ namespace Plugin
 {
 namespace Autocomplete
 {
+
+namespace
+{
+  // to keep parameters() const correct
+  ProductParameters::ParameterList my_empty_product;
+}
+  
 // ----------------------------------------------------------------------
 /*!
  * \brief Add a new parameter for a product
@@ -51,13 +58,14 @@ bool ProductParameters::contains(const std::string& theProduct) const
  */
 // ----------------------------------------------------------------------
 
-const ProductParameters::ParameterList& ProductParameters::parameters(const std::string& theProduct)
+const ProductParameters::ParameterList& ProductParameters::parameters(const std::string& theProduct) const
 {
   try
   {
-    // If the product didn't have any contents prior to this call,
-    // and empty list will be created at this point
-    return itsParameters[theProduct];
+    auto pos = itsParameters.find(theProduct);
+    if(pos != itsParameters.end())
+      return pos->second;
+    return my_empty_product;
   }
   catch (...)
   {

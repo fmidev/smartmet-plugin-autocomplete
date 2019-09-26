@@ -25,7 +25,7 @@ class ProductParameters
 
   void add(const std::string& theProduct, const Spine::Parameter& theParameter);
   bool contains(const std::string& theProduct) const;
-  const ParameterList& parameters(const std::string& theProduct);
+  const ParameterList& parameters(const std::string& theProduct) const;
 
  private:
   Parameters itsParameters;
