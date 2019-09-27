@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 19.9.5
+Version: 19.9.26
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,23 +14,22 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost-devel
-BuildRequires: smartmet-library-macgyver-devel >= 19.8.2
+BuildRequires: smartmet-library-macgyver-devel >= 19.9.26
 BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 19.8.28
-BuildRequires: smartmet-engine-geonames-devel >= 19.8.28
-BuildRequires: smartmet-engine-querydata-devel >= 19.8.28
+BuildRequires: smartmet-library-spine-devel >= 19.9.26
+BuildRequires: smartmet-engine-geonames-devel >= 19.9.26
+BuildRequires: smartmet-engine-querydata-devel >= 19.9.26
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 19.8.2
-Requires: smartmet-library-spine >= 19.8.28
-Requires: smartmet-engine-geonames >= 19.8.28
-Requires: smartmet-server >= 19.8.9
-Requires: smartmet-engine-querydata >= 19.8.28
+Requires: smartmet-library-macgyver >= 19.9.26
+Requires: smartmet-library-spine >= 19.9.26
+Requires: smartmet-engine-geonames >= 19.9.26
+Requires: smartmet-server >= 19.9.26
+Requires: smartmet-engine-querydata >= 19.9.26
 %if 0%{rhel} >= 7
 Requires: boost-date-time
 Requires: boost-filesystem
 Requires: boost-iostreams
-Requires: boost-regex
 Requires: boost-system
 Requires: boost-thread
 Requires: jsoncpp
@@ -62,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Thu Sep 26 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.9.26-1.fmi
+- Fixed thread safety issue
+
 * Thu Sep  5 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.9.5-1.fmi
 - Added CORS headers
 

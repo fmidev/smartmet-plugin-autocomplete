@@ -3,8 +3,6 @@
 
 #include <spine/PluginTest.h>
 
-using namespace std;
-
 void prelude(SmartMet::Spine::Reactor& reactor)
 {
 #if 1
@@ -16,7 +14,7 @@ void prelude(SmartMet::Spine::Reactor& reactor)
   }
 #endif
 
-  cout << endl << "Testing autocomplete plugin" << endl << "===========================" << endl;
+  std::cout << "\nTesting autocomplete plugin\n===========================\n";
 }
 
 int main()
@@ -27,7 +25,7 @@ int main()
   options.quiet = true;
 
   std::setlocale(LC_ALL, "");  // for iconv to work
-  SmartMet::Spine::PluginTest::test(options, prelude);
+  SmartMet::Spine::PluginTest::test(options, prelude, false, 10);
 
   return 0;
 }
