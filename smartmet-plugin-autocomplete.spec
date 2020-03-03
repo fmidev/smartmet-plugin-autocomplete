@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 20.2.25
+Version: 20.3.3
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,15 +14,15 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost-devel
-BuildRequires: smartmet-library-macgyver-devel >= 20.2.5
+BuildRequires: smartmet-library-macgyver-devel >= 20.2.27
 BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 20.2.13
+BuildRequires: smartmet-library-spine-devel >= 20.2.26
 BuildRequires: smartmet-engine-geonames-devel >= 19.12.5
 BuildRequires: smartmet-engine-querydata-devel >= 20.1.30
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 20.2.5
-Requires: smartmet-library-spine >= 20.2.13
+Requires: smartmet-library-macgyver >= 20.2.27
+Requires: smartmet-library-spine >= 20.2.26
 Requires: smartmet-engine-geonames >= 19.12.5
 Requires: smartmet-server >= 20.2.13
 Requires: smartmet-engine-querydata >= 20.1.30
@@ -61,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue Mar  3 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.3.3-1.fmi
+- Repackaged due to base library changes
+
 * Tue Feb 25 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.2.25-1.fmi
 - Repackaged due to base library changes
 
