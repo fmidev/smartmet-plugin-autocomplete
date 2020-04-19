@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 20.3.3
+Version: 20.4.18
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -13,27 +13,25 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
-BuildRequires: boost-devel
-BuildRequires: smartmet-library-macgyver-devel >= 20.2.27
+BuildRequires: boost169-devel
+BuildRequires: smartmet-library-macgyver-devel >= 20.4.18
 BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 20.2.7
-BuildRequires: smartmet-engine-geonames-devel >= 20.2.7
-BuildRequires: smartmet-engine-querydata-devel >= 20.2.13
+BuildRequires: smartmet-library-spine-devel >= 20.4.18
+BuildRequires: smartmet-engine-geonames-devel >= 20.4.18
+BuildRequires: smartmet-engine-querydata-devel >= 20.4.18
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 20.2.5
-Requires: smartmet-library-spine >= 20.2.7
-Requires: smartmet-engine-geonames >= 20.2.7
-Requires: smartmet-server >= 20.2.13
-Requires: smartmet-engine-querydata >= 20.2.13
-%if 0%{rhel} >= 7
-Requires: boost-date-time
-Requires: boost-filesystem
-Requires: boost-iostreams
-Requires: boost-system
-Requires: boost-thread
+Requires: smartmet-library-macgyver >= 20.4.18
+Requires: smartmet-library-spine >= 20.4.18
+Requires: smartmet-engine-geonames >= 20.4.18
+Requires: smartmet-server >= 20.4.18
+Requires: smartmet-engine-querydata >= 20.4.18
+Requires: boost169-date-time
+Requires: boost169-filesystem
+Requires: boost169-iostreams
+Requires: boost169-system
+Requires: boost169-thread
 Requires: jsoncpp
-%endif
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
@@ -61,6 +59,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Sat Apr 18 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.4.18-1.fmi
+- Upgraded to Boost 1.69
+
 * Tue Mar  3 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.3.3-1.fmi
 - Repackaged due to base library changes
 
