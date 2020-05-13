@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 20.4.18
+Version: 20.5.13
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -16,16 +16,16 @@ BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
 BuildRequires: smartmet-library-macgyver-devel >= 20.4.18
 BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 20.4.18
+BuildRequires: smartmet-library-spine-devel >= 20.5.12
 BuildRequires: smartmet-engine-geonames-devel >= 20.4.18
-BuildRequires: smartmet-engine-querydata-devel >= 20.4.18
+BuildRequires: smartmet-engine-querydata-devel >= 20.5.13
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
 Requires: smartmet-library-macgyver >= 20.4.18
-Requires: smartmet-library-spine >= 20.4.18
+Requires: smartmet-library-spine >= 20.5.12
 Requires: smartmet-engine-geonames >= 20.4.18
 Requires: smartmet-server >= 20.4.18
-Requires: smartmet-engine-querydata >= 20.4.18
+Requires: smartmet-engine-querydata >= 20.5.13
 %if 0%{rhel} >= 7
 Requires: boost169-date-time
 Requires: boost169-filesystem
@@ -61,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Wed May 13 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.5.13-1.fmi
+- Repackaged since Spine Parameter class ABI changed
+
 * Sat Apr 18 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.4.18-1.fmi
 - Upgraded to Boost 1.69
 
