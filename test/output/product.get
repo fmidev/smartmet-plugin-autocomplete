@@ -4,7 +4,7 @@
       "max-results" : 15,
       "result" : [
          {
-            "Temperature" : "16",
+            "Temperature" : "14",
             "WeatherSymbol3" : "3",
             "area" : "",
             "country" : "FI",
@@ -18,8 +18,8 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "Temperature" : "17",
-            "WeatherSymbol3" : "2",
+            "Temperature" : "16",
+            "WeatherSymbol3" : "1",
             "area" : "Ruotsi",
             "country" : "SE",
             "feature" : "PPLA2",
@@ -32,8 +32,8 @@
             "timezone" : "Europe/Stockholm"
          },
          {
-            "Temperature" : "17",
-            "WeatherSymbol3" : "2",
+            "Temperature" : "16",
+            "WeatherSymbol3" : "1",
             "area" : "Tanska",
             "country" : "DK",
             "feature" : "PPLA2",
@@ -46,7 +46,7 @@
             "timezone" : "Europe/Copenhagen"
          },
          {
-            "Temperature" : "15",
+            "Temperature" : "13",
             "WeatherSymbol3" : "3",
             "area" : "Vantaa",
             "country" : "FI",
@@ -74,7 +74,7 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "Temperature" : "17",
+            "Temperature" : "16",
             "WeatherSymbol3" : "2",
             "area" : "Taivassalo",
             "country" : "FI",
@@ -88,8 +88,8 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "Temperature" : "17",
-            "WeatherSymbol3" : "2",
+            "Temperature" : "16",
+            "WeatherSymbol3" : "1",
             "area" : "Ruotsi",
             "country" : "SE",
             "feature" : "ADM3",
@@ -102,8 +102,8 @@
             "timezone" : "Europe/Stockholm"
          },
          {
-            "Temperature" : "17",
-            "WeatherSymbol3" : "2",
+            "Temperature" : "16",
+            "WeatherSymbol3" : "1",
             "area" : "Ruotsi",
             "country" : "SE",
             "feature" : "ADM3",
@@ -116,7 +116,7 @@
             "timezone" : "Europe/Stockholm"
          },
          {
-            "Temperature" : "15",
+            "Temperature" : "14",
             "WeatherSymbol3" : "3",
             "area" : "Helsinki",
             "country" : "FI",
@@ -130,7 +130,7 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "Temperature" : "16",
+            "Temperature" : "14",
             "WeatherSymbol3" : "3",
             "area" : "Helsinki",
             "country" : "FI",
@@ -144,7 +144,7 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "Temperature" : "15",
+            "Temperature" : "14",
             "WeatherSymbol3" : "3",
             "area" : "Helsinki",
             "country" : "FI",
@@ -158,8 +158,8 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "Temperature" : "13",
-            "WeatherSymbol3" : "3",
+            "Temperature" : "12",
+            "WeatherSymbol3" : "2",
             "area" : "Helsinki",
             "country" : "FI",
             "feature" : "RECG",
@@ -172,8 +172,8 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "Temperature" : "14",
-            "WeatherSymbol3" : "3",
+            "Temperature" : "12",
+            "WeatherSymbol3" : "2",
             "area" : "Suomi",
             "country" : "FI",
             "feature" : "RECG",
