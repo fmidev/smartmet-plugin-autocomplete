@@ -34,30 +34,28 @@ GCC_DIAG_COLOR ?= always
 # Boost 1.69
 
 ifneq "$(wildcard /usr/include/boost169)" ""
-  INCLUDES += -I/usr/include/boost169
+  INCLUDES += -isystem /usr/include/boost169
   LIBS += -L/usr/lib64/boost169
 endif
 
 ifneq "$(wildcard /usr/gdal30/include)" ""
-  INCLUDES += -I/usr/gdal30/include
+  INCLUDES += -isystem /usr/gdal30/include
   LIBS += -L/usr/gdal30/lib
 else
-  INCLUDES += -I/usr/include/gdal
+  INCLUDES += -isystem /usr/include/gdal
 endif
 
 ifeq ($(CXX), clang++)
 
  FLAGS = \
 	-std=c++11 -fPIC -MD \
-	-Weverything \
 	-Wno-c++98-compat \
 	-Wno-float-equal \
 	-Wno-padded \
 	-Wno-missing-prototypes
 
  INCLUDES += \
-	-isystem $(includedir) \
-	-isystem $(includedir)/smartmet \
+	-I$(includedir)/smartmet \
 	`pkg-config --cflags jsoncpp`
 
 else
@@ -76,7 +74,6 @@ else
  FLAGS_RELEASE = -Wuninitialized
 
  INCLUDES += \
-	-I$(includedir) \
 	-I$(includedir)/smartmet \
 	`pkg-config --cflags jsoncpp`
 
