@@ -1,7 +1,7 @@
 // ======================================================================
 
 #include "ProductParameters.h"
-#include <spine/Exception.h>
+#include <macgyver/Exception.h>
 
 namespace SmartMet
 {
@@ -30,7 +30,7 @@ void ProductParameters::add(const std::string& theProduct, const Spine::Paramete
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -48,7 +48,7 @@ bool ProductParameters::contains(const std::string& theProduct) const
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -69,7 +69,7 @@ const ProductParameters::ParameterList& ProductParameters::parameters(const std:
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 

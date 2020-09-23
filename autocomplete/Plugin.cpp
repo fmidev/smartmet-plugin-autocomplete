@@ -7,7 +7,7 @@
 #include "Plugin.h"
 #include "Autocomplete.h"
 
-#include <spine/Exception.h>
+#include <macgyver/Exception.h>
 #include <spine/Reactor.h>
 #include <spine/SmartMet.h>
 #include <sstream>
@@ -34,11 +34,11 @@ Plugin::Plugin(Spine::Reactor *theReactor, const char *theConfig)
   try
   {
     if (theReactor->getRequiredAPIVersion() != SMARTMET_API_VERSION)
-      throw Spine::Exception(BCP, "Autocomplete and Server API version mismatch");
+      throw Fmi::Exception(BCP, "Autocomplete and Server API version mismatch");
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -56,7 +56,7 @@ void Plugin::init()
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
