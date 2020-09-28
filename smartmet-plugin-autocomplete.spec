@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 20.8.21
+Version: 20.9.23
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,9 +14,8 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 20.8.21
+BuildRequires: smartmet-library-macgyver-devel >= 20.9.18
 BuildRequires: jsoncpp-devel
-<<<<<<< HEAD
 BuildRequires: smartmet-library-spine-devel >= 20.5.12
 BuildRequires: smartmet-engine-geonames-devel >= 20.4.20
 BuildRequires: smartmet-engine-querydata-devel >= 20.5.13
@@ -27,19 +26,13 @@ Requires: smartmet-library-spine >= 20.5.12
 Requires: smartmet-engine-geonames >= 20.4.20
 Requires: smartmet-server >= 20.4.18
 Requires: smartmet-engine-querydata >= 20.5.13
-=======
-BuildRequires: smartmet-library-spine-devel >= 20.8.21
-BuildRequires: smartmet-engine-geonames-devel >= 20.8.21
-BuildRequires: smartmet-engine-querydata-devel >= 20.8.21
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 20.8.21
-Requires: smartmet-library-spine >= 20.8.21
-Requires: smartmet-engine-geonames >= 20.8.21
-Requires: smartmet-server >= 20.8.21
-Requires: smartmet-engine-querydata >= 20.8.21
-%if 0%{rhel} >= 7
->>>>>>> master
+Requires: smartmet-library-macgyver >= 20.9.18
+Requires: smartmet-library-spine >= 20.9.23
+Requires: smartmet-engine-geonames >= 20.9.23
+Requires: smartmet-server >= 20.9.23
+Requires: smartmet-engine-querydata >= 20.9.23
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
@@ -73,6 +66,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Wed Sep 23 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.9.23-1.fmi
+- Use Fmi::Exception instead of Spine::Exception
+
 * Fri Aug 21 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.8.21-1.fmi
 - Upgrade to fmt 6.2
 

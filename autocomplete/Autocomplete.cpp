@@ -14,7 +14,7 @@
 #include <macgyver/TimeFormatter.h>
 #include <macgyver/TimeParser.h>
 #include <spine/Convenience.h>
-#include <spine/Exception.h>
+#include <macgyver/Exception.h>
 #include <spine/ParameterFactory.h>
 #include <spine/Reactor.h>
 #include <spine/TimeSeries.h>
@@ -51,7 +51,7 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
     libconfig::Setting &products = theConfig.lookup(optProducts);
 
     if (!products.isGroup())
-      throw Spine::Exception(BCP,
+      throw Fmi::Exception(BCP,
                              "Products must be stored as a group of arrays: line " +
                                  Fmi::to_string(products.getSourceLine()));
 
@@ -60,7 +60,7 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
       libconfig::Setting &product = products[i];
 
       if (!product.isArray())
-        throw Spine::Exception(BCP,
+        throw Fmi::Exception(BCP,
                                "Product must be stored as an array of parameters: line " +
                                    Fmi::to_string(product.getSourceLine()));
 
@@ -75,20 +75,20 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
         }
         catch (const libconfig::ParseException &e)
         {
-          throw Spine::Exception(BCP,
+          throw Fmi::Exception(BCP,
                                  std::string("Configuration error ' ") + e.getError() +
                                      "' with variable '" + productName + "' on line " +
                                      Fmi::to_string(e.getLine()));
         }
         catch (const libconfig::ConfigException &)
         {
-          throw Spine::Exception(BCP,
+          throw Fmi::Exception(BCP,
                                  std::string("Configuration error with variable '") + productName +
                                      "' on line " + Fmi::to_string(product[j].getSourceLine()));
         }
         catch (const std::exception &e)
         {
-          throw Spine::Exception(BCP,
+          throw Fmi::Exception(BCP,
                                  e.what() + std::string(" (line number ") +
                                      Fmi::to_string(product[j].getSourceLine()) + ")");
         }
@@ -99,7 +99,7 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -186,7 +186,7 @@ void append_forecast(Json::Value &theResult,
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -266,7 +266,7 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
     }
     catch (...)
     {
-      Spine::Exception exception(BCP, "Request processing exception!", nullptr);
+      Fmi::Exception exception(BCP, "Request processing exception!", nullptr);
       exception.addParameter("URI", theRequest.getURI());
       exception.addParameter("ClientIP", theRequest.getClientIP());
       exception.printError();
@@ -282,7 +282,7 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -329,7 +329,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     bool duplicates = Spine::optional_bool(theRequest.getParameter("duplicates"), false);
 
     if (!product.empty() && !itsProductParameters.contains(product))
-      throw Spine::Exception(BCP, "Product " + product + " has no associated parameters");
+      throw Fmi::Exception(BCP, "Product " + product + " has no associated parameters");
 
     Spine::ValueFormatter valueformatter(theRequest);
     boost::shared_ptr<Fmi::TimeFormatter> timeformatter(Fmi::TimeFormatter::create(timeformat));
@@ -415,7 +415,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
@@ -468,7 +468,7 @@ void Autocomplete::init()
     // Connect to GeoEngine
     auto engine = itsReactor->getSingleton("Geonames", nullptr);
     if (engine == nullptr)
-      throw Spine::Exception(BCP, "Geonames engine unavailable");
+      throw Fmi::Exception(BCP, "Geonames engine unavailable");
 
     itsGeoEngine = reinterpret_cast<Engine::Geonames::Engine *>(engine);
 
@@ -476,7 +476,7 @@ void Autocomplete::init()
 
     engine = itsReactor->getSingleton("Querydata", nullptr);
     if (engine == nullptr)
-      throw Spine::Exception(BCP, "Querydata engine unavailable");
+      throw Fmi::Exception(BCP, "Querydata engine unavailable");
 
     itsQEngine = reinterpret_cast<Engine::Querydata::Engine *>(engine);
 
@@ -494,17 +494,17 @@ void Autocomplete::init()
     }
     catch (const libconfig::SettingNotFoundException &e)
     {
-      throw Spine::Exception(BCP, "Setting not found").addParameter("Setting path", e.getPath());
+      throw Fmi::Exception(BCP, "Setting not found").addParameter("Setting path", e.getPath());
     }
     catch (const libconfig::ParseException &e)
     {
-      throw Spine::Exception(BCP,
+      throw Fmi::Exception(BCP,
                              std::string("autocomplete configuration error '") + e.getError() +
                                  "' on line " + Fmi::to_string(e.getLine()));
     }
     catch (const libconfig::ConfigException &)
     {
-      throw Spine::Exception(BCP, "autocomplete configuration error");
+      throw Fmi::Exception(BCP, "autocomplete configuration error");
     }
 
     // Cannot register until geonames suggest is ready
@@ -523,12 +523,12 @@ void Autocomplete::init()
             "/autocomplete",
             boost::bind(&Autocomplete::requestHandler, this, _1, _2, _3)))
     {
-      throw Spine::Exception(BCP, "Failed to register autocomplete content handler");
+      throw Fmi::Exception(BCP, "Failed to register autocomplete content handler");
     }
   }
   catch (...)
   {
-    throw Spine::Exception::Trace(BCP, "Operation failed!");
+    throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
 }
 
