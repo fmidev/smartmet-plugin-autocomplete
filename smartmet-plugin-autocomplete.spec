@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 20.9.23
+Version: 20.10.6
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,14 +14,14 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 20.9.18
+BuildRequires: smartmet-library-macgyver-devel >= 20.10.5
 BuildRequires: jsoncpp-devel
 BuildRequires: smartmet-library-spine-devel >= 20.9.23
 BuildRequires: smartmet-engine-geonames-devel >= 20.9.23
 BuildRequires: smartmet-engine-querydata-devel >= 20.9.23
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 20.9.18
+Requires: smartmet-library-macgyver >= 20.10.5
 Requires: smartmet-library-spine >= 20.9.23
 Requires: smartmet-engine-geonames >= 20.9.23
 Requires: smartmet-server >= 20.9.23
@@ -61,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue Oct  6 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.10.6-1.fmi
+- Enable sensible relative libconfig include paths
+
 * Wed Sep 23 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.9.23-1.fmi
 - Use Fmi::Exception instead of Spine::Exception
 

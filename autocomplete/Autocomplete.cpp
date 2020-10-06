@@ -482,6 +482,11 @@ void Autocomplete::init()
 
     try
     {
+      // Enable sensible relative include paths
+      boost::filesystem::path p = itsConfigFile;
+      p.remove_filename();
+      itsConfig.setIncludeDir(p.c_str());
+
       itsConfig.readFile(itsConfigFile);
 
       itsDefaultLanguage = itsConfig.lookup("language").c_str();
