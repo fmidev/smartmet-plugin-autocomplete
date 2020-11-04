@@ -37,6 +37,7 @@ Requires: jsoncpp
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
+#TestRequires: smartmet-test-data >= 20.6.30
 
 %description
 SmartMet autocomplete plugin
