@@ -48,7 +48,6 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: zlib-devel
 #TestRequires: libpng-devel
 #TestRequires: bzip2-devel
-#TestRequires: perf
 
 %description
 SmartMet autocomplete plugin
