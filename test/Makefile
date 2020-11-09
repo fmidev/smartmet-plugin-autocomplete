@@ -36,7 +36,6 @@ endif
 INCLUDES += \
 	-I../autocomplete \
 	-I/usr/include/smartmet \
-	-isystem /usr/include/mysql \
 	`pkg-config --cflags libconfig++`
 
 LIBS += \
@@ -44,7 +43,6 @@ LIBS += \
 	-lsmartmet-macgyver \
 	-lsmartmet-newbase \
 	`pkg-config --libs libconfig++` \
-	-lmysqlpp \
 	-lboost_date_time \
 	-lboost_thread \
 	-lboost_filesystem \
@@ -59,9 +57,7 @@ clean:
 test: $(PROG)
 	rm -f failures/*
 	@echo Running tests:
-	@for prog in $(PROG); do \
-	./$$prog; \
-	done
+	@for prog in $(PROG); do ./$$prog; done
 
 $(PROG) : % : %.cpp Makefile ../autocomplete.so
 	$(CXX) $(CFLAGS) -o $@ $@.cpp $(INCLUDES) $(LIBS)
