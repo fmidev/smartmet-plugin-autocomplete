@@ -25,7 +25,5 @@ int main()
   options.quiet = true;
 
   std::setlocale(LC_ALL, "");  // for iconv to work
-  SmartMet::Spine::PluginTest::test(options, prelude, false, 10);
-
-  return 0;
+  return SmartMet::Spine::PluginTest::test(options, prelude, false, 10);
 }
