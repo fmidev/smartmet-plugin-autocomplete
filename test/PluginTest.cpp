@@ -24,6 +24,6 @@ int main()
   options.defaultlogging = false;
   options.quiet = true;
 
-  std::setlocale(LC_ALL, "");  // for iconv to work
+  std::setlocale(LC_ALL, "en_US.UTF-8");  // for iconv to work
   return SmartMet::Spine::PluginTest::test(options, prelude, false, 10);
 }
