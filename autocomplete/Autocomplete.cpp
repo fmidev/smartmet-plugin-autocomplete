@@ -154,7 +154,8 @@ void append_forecast(Json::Value &theResult,
 
     int precision = 0;
     const bool findnearest = false;
-    NFmiPoint nearestpoint, lastpoint;
+    NFmiPoint nearestpoint;
+    NFmiPoint lastpoint;
     const std::string timestring;
 
     // And process all parameters
@@ -349,7 +350,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     // ---- NORMAL AUTOCOMPLETION ROUTINES --------------------------------
 
     // If the pattern is empty or too big it makes no point to do search.
-    if (pattern.size() == 0 || pattern.size() >= 32)
+    if (pattern.empty() || pattern.size() >= 32)
     {
       // Send error message
 
@@ -466,7 +467,7 @@ void Autocomplete::init()
   try
   {
     // Connect to GeoEngine
-    auto engine = itsReactor->getSingleton("Geonames", nullptr);
+    auto * engine = itsReactor->getSingleton("Geonames", nullptr);
     if (engine == nullptr)
       throw Fmi::Exception(BCP, "Geonames engine unavailable");
 

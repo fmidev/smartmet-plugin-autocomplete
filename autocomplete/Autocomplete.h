@@ -40,9 +40,9 @@ class Autocomplete
 
  private:
   std::atomic<bool> itsShutdownRequested;
-  Engine::Querydata::Engine* itsQEngine;   // does not own
-  Engine::Geonames::Engine* itsGeoEngine;  // does not own
-  SmartMetPlugin* itsParent;               // does not own
+  Engine::Querydata::Engine* itsQEngine = nullptr;   // does not own
+  Engine::Geonames::Engine* itsGeoEngine = nullptr;  // does not own
+  SmartMetPlugin* itsParent = nullptr;               // does not own
   libconfig::Config itsConfig;
   Spine::Reactor* itsReactor;  // does not own
   const char* itsConfigFile;
