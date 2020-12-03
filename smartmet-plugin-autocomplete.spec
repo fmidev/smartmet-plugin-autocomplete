@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 20.10.6
+Version: 20.12.3
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,18 +14,18 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 20.10.5
+BuildRequires: smartmet-library-macgyver-devel >= 20.11.24
 BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 20.9.23
-BuildRequires: smartmet-engine-geonames-devel >= 20.9.23
-BuildRequires: smartmet-engine-querydata-devel >= 20.9.23
+BuildRequires: smartmet-library-spine-devel >= 20.11.23
+BuildRequires: smartmet-engine-geonames-devel >= 20.10.28
+BuildRequires: smartmet-engine-querydata-devel >= 20.10.6
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 20.10.5
-Requires: smartmet-library-spine >= 20.9.23
-Requires: smartmet-engine-geonames >= 20.9.23
-Requires: smartmet-server >= 20.9.23
-Requires: smartmet-engine-querydata >= 20.9.23
+Requires: smartmet-library-macgyver >= 20.11.24
+Requires: smartmet-library-spine >= 20.11.23
+Requires: smartmet-engine-geonames >= 20.10.28
+Requires: smartmet-server >= 20.10.28
+Requires: smartmet-engine-querydata >= 20.10.6
 %if 0%{rhel} >= 7
 Requires: boost169-date-time
 Requires: boost169-filesystem
@@ -39,10 +39,10 @@ Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gcc-c++
 #TestRequires: gdal-devel
-#TestRequires: smartmet-engine-geonames-devel >= 20.9.23
-#TestRequires: smartmet-engine-querydata-devel >= 20.9.23
+#TestRequires: smartmet-engine-geonames-devel >= 20.10.28
+#TestRequires: smartmet-engine-querydata-devel >= 20.10.6
 #TestRequires: smartmet-engine-sputnik-devel
-#TestRequires: smartmet-library-spine-devel >= 20.9.23
+#TestRequires: smartmet-library-spine-devel >= 20.11.23
 #TestRequires: smartmet-test-data >= 20.6.30
 #TestRequires: smartmet-test-db
 #TestRequires: zlib-devel
@@ -72,6 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Thu Dec  3 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.3-1.fmi
+- Silenced CodeChecker warnings
+
 * Tue Oct  6 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.10.6-1.fmi
 - Enable sensible relative libconfig include paths
 
