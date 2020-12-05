@@ -51,7 +51,7 @@ class Autocomplete
   std::string itsDefaultLocale;     // default locale for location name translations
   bool itsPrettyPrintFlag = false;  // pretty printing off by default
   std::string itsTimeFormat;        // iso, sql, xml, epoch, timestamp, http
-  int itsMaxResults;                // names per page, default page is always zero
+  int itsMaxResults = 0;            // names per page, default page is always zero
 
   ProductParameters itsProductParameters;
 };
