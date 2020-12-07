@@ -16,14 +16,14 @@ BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
 BuildRequires: smartmet-library-macgyver-devel >= 20.11.24
 BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 20.11.23
-BuildRequires: smartmet-engine-geonames-devel >= 20.10.28
+BuildRequires: smartmet-library-spine-devel >= 20.12.4
+BuildRequires: smartmet-engine-geonames-devel >= 20.12.4
 BuildRequires: smartmet-engine-querydata-devel >= 20.10.6
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
 Requires: smartmet-library-macgyver >= 20.11.24
-Requires: smartmet-library-spine >= 20.11.23
-Requires: smartmet-engine-geonames >= 20.10.28
+Requires: smartmet-library-spine >= 20.12.4
+Requires: smartmet-engine-geonames >= 20.12.4
 Requires: smartmet-server >= 20.10.28
 Requires: smartmet-engine-querydata >= 20.10.6
 %if 0%{rhel} >= 7
@@ -39,10 +39,10 @@ Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gcc-c++
 #TestRequires: gdal-devel
-#TestRequires: smartmet-engine-geonames-devel >= 20.10.28
+#TestRequires: smartmet-engine-geonames-devel >= 20.12.4
 #TestRequires: smartmet-engine-querydata-devel >= 20.10.6
 #TestRequires: smartmet-engine-sputnik-devel
-#TestRequires: smartmet-library-spine-devel >= 20.11.23
+#TestRequires: smartmet-library-spine-devel >= 20.12.4
 #TestRequires: smartmet-test-data >= 20.6.30
 #TestRequires: smartmet-test-db
 #TestRequires: zlib-devel
