@@ -1,72 +1,44 @@
-PROG = $(patsubst %.cpp,%,$(wildcard *Test.cpp))
+all:
 
-FLAGS = -std=c++11 -Wall -W -Wno-unused-parameter
-
-EXTRAFLAGS = -Werror -pedantic -Wpointer-arith -Wcast-qual \
-	-Wcast-align -Wwrite-strings -Wconversion -Winline \
-	-Wctor-dtor-privacy -Wnon-virtual-dtor -Wno-pmf-conversions \
-	-Wsign-promo -Wchar-subscripts -Wold-style-cast \
-	-Wshadow -Woverloaded-virtual
-
-DIFFICULTFLAGS = -Weffc++ -Wunreachable-code -Wredundant-decls
-
-ifeq ($(TSAN), yes)
-  FLAGS += -fsanitize=thread
-endif
-ifeq ($(ASAN), yes)
-  FLAGS += -fsanitize=address -fsanitize=pointer-compare -fsanitize=pointer-subtract -fsanitize=undefined -fsanitize-address-use-after-scope
-endif
-
-CFLAGS = -DUNIX -O0 -g $(FLAGS)
-
-# Boost 1.69
-
-ifneq "$(wildcard /usr/include/boost169)" ""
-  INCLUDES += -isystem /usr/include/boost169
-  LIBS += -L/usr/lib64/boost169
-endif
-
-ifneq "$(wildcard /usr/gdal30/include)" ""
-  INCLUDES += -isystem /usr/gdal30/include
-  LIBS += -L/usr/gdal30/lib
-else
-  INCLUDES += -isystem /usr/include/gdal
-endif
-
-INCLUDES += \
-	-I../autocomplete \
-	-I/usr/include/smartmet \
-	`pkg-config --cflags libconfig++`
-
-LIBS += \
-	-lsmartmet-spine \
-	-lsmartmet-macgyver \
-	-lsmartmet-newbase \
-	`pkg-config --libs libconfig++` \
-	-lboost_date_time \
-	-lboost_thread \
-	-lboost_filesystem \
-	-lboost_iostreams \
-	-lboost_system \
-	-lbz2 -lz -lpthread
-
-all: $(PROG)
 clean:
-	rm -f $(PROG) *~
+	rm -f PluginTest *~
+	-$(MAKE) stop-test-db:
+	rm -f cnf/geonames.conf
+	rm -fr tmp-geonames-db
+	rm -f tmp-geonames-db.log
 
+TEST_PREPARE_TARGETS := cnf/geonames.conf
+TEST_FINISH_TARGETS := dummy
 ifdef CI
-test: $(PROG) fminames
+GEONAMES_HOST_EDIT := sed -e 's/"smartmet-test"/"localhost"/g'
+TEST_PREPARE_TARGETS += geonames-database
+TEST_FINISH_TARGETS += stop-test-db
 else
-test: $(PROG)
+GEONAMES_HOST_EDIT := cat
 endif
+
+TEST_DB_DIR := tmp-geonames-db
+TESTER_PARAM := --handler=/autocomplete --reactor-config=cnf/reactor.conf
+
+test:	$(TEST_PREPARE_TARGETS)
 	@rm -f failures/*
 	@echo Running tests:
-	@for prog in $(PROG); do ./$$prog; done
+	ok=true; smartmet-plugin-test $(TESTER_PARAM) || ok=false; $(MAKE) $(TEST_FINISH_TARGETS); $$ok
 
-fminames:
-	@sed -i -e 's/"smartmet-test"/"localhost"/g' cnf/*.conf
-	@/usr/share/smartmet/test/db/init-and-start.sh && /usr/share/smartmet/test/db/install-test-db.sh > /dev/null
+cnf/geonames.conf: cnf/geonames.conf.in dummy
+	$(GEONAMES_HOST_EDIT) $< >$@
+
+geonames-database:
+	rm -rf tmp-geonames-db
+	if ! /usr/share/smartmet/test/db/create-local-db.sh $(TEST_DB_DIR) >tmp-geonames-db.log 2>&1 ; then \
+	    cat tmp-geonames-db.log; \
+	    false; \
+	fi
+	/usr/share/smartmet/test/db/test-db-ctl.sh $(TEST_DB_DIR) start -w
+
+stop-test-db:
+	/usr/share/smartmet/test/db/test-db-ctl.sh $(TEST_DB_DIR) stop
 
 
-$(PROG) : % : %.cpp Makefile ../autocomplete.so
-	$(CXX) $(CFLAGS) -o $@ $@.cpp $(INCLUDES) $(LIBS)
+dummy:
+	true

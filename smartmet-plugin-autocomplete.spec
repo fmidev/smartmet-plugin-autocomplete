@@ -37,17 +37,14 @@ Requires: jsoncpp
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
-#TestRequires: gcc-c++
 #TestRequires: gdal-devel
-#TestRequires: smartmet-engine-geonames-devel >= 20.12.4
-#TestRequires: smartmet-engine-querydata-devel >= 20.10.6
+#TestRequires: jsoncpp-devel
+#TestRequires: smartmet-engine-geonames >= 20.12.4
+#TestRequires: smartmet-engine-querydata >= 20.10.6
 #TestRequires: smartmet-engine-sputnik-devel
-#TestRequires: smartmet-library-spine-devel >= 20.12.4
+#TestRequires: smartmet-library-spine-devel >= 20.12.04
 #TestRequires: smartmet-test-data >= 20.6.30
 #TestRequires: smartmet-test-db
-#TestRequires: zlib-devel
-#TestRequires: libpng-devel
-#TestRequires: bzip2-devel
 
 %description
 SmartMet autocomplete plugin
