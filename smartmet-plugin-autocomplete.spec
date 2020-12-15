@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 20.12.3
+Version: 20.12.15
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,18 +14,18 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 20.11.24
+BuildRequires: smartmet-library-macgyver-devel >= 20.12.15
 BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 20.12.4
-BuildRequires: smartmet-engine-geonames-devel >= 20.12.4
-BuildRequires: smartmet-engine-querydata-devel >= 20.10.6
+BuildRequires: smartmet-library-spine-devel >= 20.12.15
+BuildRequires: smartmet-engine-geonames-devel >= 20.12.15
+BuildRequires: smartmet-engine-querydata-devel >= 20.12.15
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 20.11.24
-Requires: smartmet-library-spine >= 20.12.4
-Requires: smartmet-engine-geonames >= 20.12.4
+Requires: smartmet-library-macgyver >= 20.12.15
+Requires: smartmet-library-spine >= 20.12.15
+Requires: smartmet-engine-geonames >= 20.12.15
 Requires: smartmet-server >= 20.10.28
-Requires: smartmet-engine-querydata >= 20.10.6
+Requires: smartmet-engine-querydata >= 20.12.15
 %if 0%{rhel} >= 7
 Requires: boost169-date-time
 Requires: boost169-filesystem
@@ -37,10 +37,10 @@ Requires: jsoncpp
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
-#TestRequires: gdal-devel
+#TestRequires: gdal32-devel
 #TestRequires: jsoncpp-devel
-#TestRequires: smartmet-engine-geonames >= 20.12.4
-#TestRequires: smartmet-engine-querydata >= 20.10.6
+#TestRequires: smartmet-engine-geonames >= 20.12.15
+#TestRequires: smartmet-engine-querydata >= 20.12.15
 #TestRequires: smartmet-engine-sputnik-devel
 #TestRequires: smartmet-library-spine-devel >= 20.12.04
 #TestRequires: smartmet-test-data >= 20.6.30
@@ -69,6 +69,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue Dec 15 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.15-1.fmi
+- Upgrade to pgdg12
+
 * Thu Dec  3 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.3-1.fmi
 - Silenced CodeChecker warnings
 
