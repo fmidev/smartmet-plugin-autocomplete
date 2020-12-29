@@ -38,14 +38,15 @@ Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal32-devel
+#TestRequires: gdal32-libs
 #TestRequires: jsoncpp-devel
+#TestRequires: postgis31_12
 #TestRequires: smartmet-engine-geonames >= 20.12.15
 #TestRequires: smartmet-engine-querydata >= 20.12.15
 #TestRequires: smartmet-engine-sputnik-devel
 #TestRequires: smartmet-library-spine-devel >= 20.12.04
 #TestRequires: smartmet-test-data >= 20.6.30
 #TestRequires: smartmet-test-db
-#TestRequires: gdal32-libs
 
 %description
 SmartMet autocomplete plugin
