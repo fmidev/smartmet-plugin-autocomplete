@@ -20,20 +20,20 @@ BuildRequires: smartmet-library-spine-devel >= 20.12.15
 BuildRequires: smartmet-engine-geonames-devel >= 20.12.15
 BuildRequires: smartmet-engine-querydata-devel >= 20.12.15
 BuildRequires: smartmet-engine-sputnik-devel
+Requires: gdal32-libs
 Requires: libconfig
 Requires: smartmet-library-macgyver >= 20.12.15
 Requires: smartmet-library-spine >= 20.12.15
 Requires: smartmet-engine-geonames >= 20.12.15
 Requires: smartmet-server >= 20.10.28
 Requires: smartmet-engine-querydata >= 20.12.15
-%if 0%{rhel} >= 7
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
 Requires: boost169-system
 Requires: boost169-thread
 Requires: jsoncpp
-%endif
+
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
@@ -45,6 +45,7 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: smartmet-library-spine-devel >= 20.12.04
 #TestRequires: smartmet-test-data >= 20.6.30
 #TestRequires: smartmet-test-db
+#TestRequires: gdal32-libs
 
 %description
 SmartMet autocomplete plugin
