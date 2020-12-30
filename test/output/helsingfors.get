@@ -43,7 +43,7 @@
             "id" : 658318,
             "lat" : 62.433329999999998,
             "lon" : 28.600000000000001,
-            "name" : "Heinävesi",
+            "name" : "Hein\u00e4vesi",
             "population" : 4457,
             "timezone" : "Europe/Helsinki"
          },
@@ -76,7 +76,7 @@
             "id" : 6940574,
             "lat" : 61.439259999999997,
             "lon" : 23.86308,
-            "name" : "Etelä-Hervanta",
+            "name" : "Etel\u00e4-Hervanta",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -87,7 +87,7 @@
             "id" : 7871210,
             "lat" : 61.644329999999997,
             "lon" : 23.976289999999999,
-            "name" : "Heinänen",
+            "name" : "Hein\u00e4nen",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -98,7 +98,7 @@
             "id" : 658227,
             "lat" : 60.283329999999999,
             "lon" : 24.983329999999999,
-            "name" : "Helsinginpitäjä",
+            "name" : "Helsinginpit\u00e4j\u00e4",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -114,7 +114,7 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Åbo",
+            "area" : "\u00c5bo",
             "country" : "FI",
             "feature" : "PPL",
             "id" : 7645362,
@@ -131,7 +131,7 @@
             "id" : 658132,
             "lat" : 60.194710000000001,
             "lon" : 25.035350000000001,
-            "name" : "Hertonäs",
+            "name" : "Herton\u00e4s",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -142,7 +142,7 @@
             "id" : 6545255,
             "lat" : 60.1907,
             "lon" : 25.036899999999999,
-            "name" : "Hertonäs strand",
+            "name" : "Herton\u00e4s strand",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -158,13 +158,13 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Åbo",
+            "area" : "\u00c5bo",
             "country" : "FI",
             "feature" : "PPL",
             "id" : 841887,
             "lat" : 60.433889999999998,
             "lon" : 22.25694,
-            "name" : "Lill Heikkilä",
+            "name" : "Lill Heikkil\u00e4",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          }
