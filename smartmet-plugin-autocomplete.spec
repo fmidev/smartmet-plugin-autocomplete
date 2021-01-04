@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 20.12.15
+Version: 20.12.30
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -15,15 +15,15 @@ BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
 BuildRequires: smartmet-library-macgyver-devel >= 20.12.15
-BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 20.12.15
+BuildRequires: jsoncpp-devel >= 1.8.4
+BuildRequires: smartmet-library-spine-devel >= 20.12.30
 BuildRequires: smartmet-engine-geonames-devel >= 20.12.15
-BuildRequires: smartmet-engine-querydata-devel >= 20.12.15
+BuildRequires: smartmet-engine-querydata-devel >= 20.12.30
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: gdal32-libs
 Requires: libconfig
 Requires: smartmet-library-macgyver >= 20.12.15
-Requires: smartmet-library-spine >= 20.12.15
+Requires: smartmet-library-spine >= 20.12.30
 Requires: smartmet-engine-geonames >= 20.12.15
 Requires: smartmet-server >= 20.10.28
 Requires: smartmet-engine-querydata >= 20.12.15
@@ -32,14 +32,14 @@ Requires: boost169-filesystem
 Requires: boost169-iostreams
 Requires: boost169-system
 Requires: boost169-thread
-Requires: jsoncpp
+Requires: jsoncpp >= 1.8.4
 
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal32-devel
 #TestRequires: gdal32-libs
-#TestRequires: jsoncpp-devel
+#TestRequires: jsoncpp-devel >= 1.8.4
 #TestRequires: postgis31_12
 #TestRequires: smartmet-engine-geonames >= 20.12.15
 #TestRequires: smartmet-engine-querydata >= 20.12.15
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Wed Dec 30 2020 Andris Pavenis <andris.pavenis@fmi.fi> - 20.12.30-1.fmi
+- Rebuild due to jsoncpp upgrade for RHEL7
+
 * Tue Dec 15 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.15-1.fmi
 - Upgrade to pgdg12
 

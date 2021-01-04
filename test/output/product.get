@@ -40,7 +40,7 @@
             "id" : 2620473,
             "lat" : 56.036059999999999,
             "lon" : 12.6136,
-            "name" : "Helsingør",
+            "name" : "Helsing\u00f8r",
             "population" : 35048,
             "sunelevation" : "-16",
             "timezone" : "Europe/Copenhagen"
@@ -54,7 +54,7 @@
             "id" : 658227,
             "lat" : 60.283329999999999,
             "lon" : 24.983329999999999,
-            "name" : "Helsinginpitäjä",
+            "name" : "Helsinginpit\u00e4j\u00e4",
             "population" : 0,
             "sunelevation" : "-11",
             "timezone" : "Europe/Helsinki"
@@ -82,7 +82,7 @@
             "id" : 658224,
             "lat" : 60.607799999999997,
             "lon" : 21.438099999999999,
-            "name" : "Helsinginkylä",
+            "name" : "Helsinginkyl\u00e4",
             "population" : 0,
             "sunelevation" : "-10",
             "timezone" : "Europe/Helsinki"
@@ -138,7 +138,7 @@
             "id" : -10000569,
             "lat" : 60.189999999999998,
             "lon" : 25.02,
-            "name" : "Itä-Helsingin Golf",
+            "name" : "It\u00e4-Helsingin Golf",
             "population" : 0,
             "sunelevation" : "-11",
             "timezone" : "Europe/Helsinki"

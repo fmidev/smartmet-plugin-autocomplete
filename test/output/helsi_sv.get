@@ -32,7 +32,7 @@
             "id" : 658227,
             "lat" : 60.283329999999999,
             "lon" : 24.983329999999999,
-            "name" : "Helsinginpitäjä",
+            "name" : "Helsinginpit\u00e4j\u00e4",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -54,7 +54,7 @@
             "id" : 658224,
             "lat" : 60.607799999999997,
             "lon" : 21.438099999999999,
-            "name" : "Helsinginkylä",
+            "name" : "Helsinginkyl\u00e4",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          }
