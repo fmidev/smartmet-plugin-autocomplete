@@ -48,7 +48,7 @@ configtest:
 	@if [ -x "$$(command -v cfgvalidate)" ]; then cfgvalidate -v test/cnf/autocomplete.conf; fi
 
 $(LIBFILE): $(OBJS)
-	$(CC) $(LDFLAGS) -shared -rdynamic -o $(LIBFILE) $(OBJS) $(LIBS)
+	$(CXX) $(LDFLAGS) -shared -rdynamic -o $(LIBFILE) $(OBJS) $(LIBS)
 
 clean:
 	rm -f $(LIBFILE) *~ $(SUBNAME)/*~
