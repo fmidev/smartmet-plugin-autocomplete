@@ -37,6 +37,7 @@ Requires: jsoncpp >= 1.8.4
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
+#TestRequires: gcc-c++
 #TestRequires: gdal32-devel
 #TestRequires: gdal32-libs
 #TestRequires: jsoncpp-devel >= 1.8.4
