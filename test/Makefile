@@ -24,7 +24,7 @@ TEST_RUNNER :=
 test: $(TEST_PREPARE_TARGETS)
 	@rm -f failures/*
 	@echo Running tests:
-	ok=true; smartmet-plugin-test --handler=/autocomplete --reactor-config=cnf/reactor.conf || ok=false; $(MAKE) $(TEST_FINISH_TARGETS); $$ok
+	ok=true; $(TEST_RUNNER) smartmet-plugin-test --handler=/autocomplete --reactor-config=cnf/reactor.conf || ok=false; $(MAKE) $(TEST_FINISH_TARGETS); $$ok
 
 geonames-database:
 	@-$(MAKE) stop-test-db
