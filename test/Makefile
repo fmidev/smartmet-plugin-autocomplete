@@ -8,8 +8,10 @@ clean:
 
 TEST_PREPARE_TARGETS := cnf/geonames.conf
 
+TEST_DB_DIR := $(shell pwd)/tmp-geonames-db
+
 ifdef CI
-GEONAMES_HOST_EDIT := sed -e 's/"smartmet-test"/"localhost"/g'
+GEONAMES_HOST_EDIT := sed -e 's|"smartmet-test"|"$(TEST_DB_DIR)"|g'
 TEST_PREPARE_TARGETS += geonames-database start-geonames-db
 TEST_FINISH_TARGETS := stop-test-db
 else
@@ -17,7 +19,6 @@ GEONAMES_HOST_EDIT := cat
 TEST_FINISH_TARGETS := dummy
 endif
 
-TEST_DB_DIR := $(shell pwd)/tmp-geonames-db
 TEST_RUNNER :=
 
 
