@@ -8,7 +8,7 @@
             "country" : "FI",
             "feature" : "PPL",
             "id" : 651075,
-            "lat" : 61,
+            "lat" : 61.0,
             "lon" : 24.233329999999999,
             "name" : "Koski",
             "population" : 0,
@@ -59,7 +59,7 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Seinäjoki",
+            "area" : "Sein\u00e4joki",
             "country" : "FI",
             "feature" : "PPL",
             "id" : 651070,
@@ -103,7 +103,7 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Pudasjärvi",
+            "area" : "Pudasj\u00e4rvi",
             "country" : "FI",
             "feature" : "PPL",
             "id" : 651066,
@@ -131,7 +131,7 @@
             "id" : 651060,
             "lat" : 64.316670000000002,
             "lon" : 29.08333,
-            "name" : "Koskimäki",
+            "name" : "Koskim\u00e4ki",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -142,23 +142,23 @@
             "id" : 651062,
             "lat" : 62.700000000000003,
             "lon" : 21.983329999999999,
-            "name" : "Koskimäki",
+            "name" : "Koskim\u00e4ki",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Kyyjärvi",
+            "area" : "Kyyj\u00e4rvi",
             "country" : "FI",
             "feature" : "PPL",
             "id" : 651061,
             "lat" : 63.016669999999998,
             "lon" : 24.466670000000001,
-            "name" : "Koskimäki",
+            "name" : "Koskim\u00e4ki",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Tohmajärvi",
+            "area" : "Tohmaj\u00e4rvi",
             "country" : "FI",
             "feature" : "PPL",
             "id" : 7731822,
@@ -186,7 +186,7 @@
             "id" : 651054,
             "lat" : 61.566670000000002,
             "lon" : 26.033329999999999,
-            "name" : "Koskipää",
+            "name" : "Koskip\u00e4\u00e4",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },

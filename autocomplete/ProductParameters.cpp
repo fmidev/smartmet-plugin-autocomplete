@@ -12,9 +12,8 @@ namespace Autocomplete
 
 namespace
 {
-  // to keep parameters() const correct
-  ProductParameters::ParameterList my_empty_product;
-}
+const ProductParameters::ParameterList my_empty_product; // to keep parameters() const correct
+} // namespace
   
 // ----------------------------------------------------------------------
 /*!

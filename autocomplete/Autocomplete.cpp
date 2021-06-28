@@ -1,5 +1,6 @@
 #include "Autocomplete.h"
-#include <boost/algorithm/string.hpp>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/split.hpp>
 #include <boost/bind.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
@@ -10,11 +11,11 @@
 #include <engines/geonames/Engine.h>
 #include <json/json.h>
 #include <macgyver/CharsetTools.h>
+#include <macgyver/Exception.h>
 #include <macgyver/StringConversion.h>
 #include <macgyver/TimeFormatter.h>
 #include <macgyver/TimeParser.h>
 #include <spine/Convenience.h>
-#include <macgyver/Exception.h>
 #include <spine/ParameterFactory.h>
 #include <spine/Reactor.h>
 #include <spine/TimeSeries.h>
@@ -52,8 +53,8 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
 
     if (!products.isGroup())
       throw Fmi::Exception(BCP,
-                             "Products must be stored as a group of arrays: line " +
-                                 Fmi::to_string(products.getSourceLine()));
+                           "Products must be stored as a group of arrays: line " +
+                               Fmi::to_string(products.getSourceLine()));
 
     for (int i = 0; i < products.getLength(); i++)
     {
@@ -61,8 +62,8 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
 
       if (!product.isArray())
         throw Fmi::Exception(BCP,
-                               "Product must be stored as an array of parameters: line " +
-                                   Fmi::to_string(product.getSourceLine()));
+                             "Product must be stored as an array of parameters: line " +
+                                 Fmi::to_string(product.getSourceLine()));
 
       std::string productName = product.getName();
 
@@ -76,21 +77,21 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
         catch (const libconfig::ParseException &e)
         {
           throw Fmi::Exception(BCP,
-                                 std::string("Configuration error ' ") + e.getError() +
-                                     "' with variable '" + productName + "' on line " +
-                                     Fmi::to_string(e.getLine()));
+                               std::string("Configuration error ' ") + e.getError() +
+                                   "' with variable '" + productName + "' on line " +
+                                   Fmi::to_string(e.getLine()));
         }
         catch (const libconfig::ConfigException &)
         {
           throw Fmi::Exception(BCP,
-                                 std::string("Configuration error with variable '") + productName +
-                                     "' on line " + Fmi::to_string(product[j].getSourceLine()));
+                               std::string("Configuration error with variable '") + productName +
+                                   "' on line " + Fmi::to_string(product[j].getSourceLine()));
         }
         catch (const std::exception &e)
         {
           throw Fmi::Exception(BCP,
-                                 e.what() + std::string(" (line number ") +
-                                     Fmi::to_string(product[j].getSourceLine()) + ")");
+                               e.what() + std::string(" (line number ") +
+                                   Fmi::to_string(product[j].getSourceLine()) + ")");
         }
       }
     }
@@ -154,7 +155,8 @@ void append_forecast(Json::Value &theResult,
 
     int precision = 0;
     const bool findnearest = false;
-    NFmiPoint nearestpoint, lastpoint;
+    NFmiPoint nearestpoint;
+    NFmiPoint lastpoint;
     const std::string timestring;
 
     // And process all parameters
@@ -349,7 +351,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     // ---- NORMAL AUTOCOMPLETION ROUTINES --------------------------------
 
     // If the pattern is empty or too big it makes no point to do search.
-    if (pattern.size() == 0 || pattern.size() >= 32)
+    if (pattern.empty() || pattern.size() >= 32)
     {
       // Send error message
 
@@ -363,45 +365,109 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
       return;
     }
 
-    // Query the Suggestor engine
-    auto suggestions =
-        (duplicates ? itsGeoEngine->suggestDuplicates(pattern, lang, keyword, page, maxresults)
-                    : itsGeoEngine->suggest(pattern, lang, keyword, page, maxresults));
+    // Check how many languages are requested, since the output changes for multiple languages
 
-    // Loop through the Locations
+    std::vector<std::string> languages;
+    boost::algorithm::split(languages, lang, boost::algorithm::is_any_of(","));
 
-    for (const Spine::LocationPtr &ptr : suggestions)
+    if (languages.size() == 1)
     {
-      std::string name = ptr->name;
-      std::string area = ptr->area;
+      // Query the Suggestor engine for a single language
 
-      Json::Value j;
+      auto suggestions =
+          (duplicates ? itsGeoEngine->suggestDuplicates(pattern, lang, keyword, page, maxresults)
+                      : itsGeoEngine->suggest(pattern, lang, keyword, page, maxresults));
 
-      j["id"] = int(ptr->geoid);
-      j["name"] = name;
-      j["country"] = ptr->iso2;
-      j["feature"] = ptr->feature;
-      j["area"] = area;
-      j["population"] = ptr->population;
-      j["lon"] = ptr->longitude;
-      j["lat"] = ptr->latitude;
-      j["timezone"] = ptr->timezone;
+      // Loop through the Locations
 
-      if (debug)
-        j["score"] = ptr->priority;
+      for (const Spine::LocationPtr &ptr : suggestions)
+      {
+        std::string name = ptr->name;
+        std::string area = ptr->area;
 
-      append_forecast(j,
-                      itsProductParameters.parameters(product),
-                      ptr,
-                      *itsQEngine,
-                      *itsGeoEngine,
-                      valueformatter,
-                      *timeformatter,
-                      stamp,
-                      lang,
-                      outlocale);
+        Json::Value j;
 
-      jresult.append(j);
+        j["id"] = int(ptr->geoid);
+        j["feature"] = ptr->feature;
+        j["population"] = ptr->population;
+        j["lon"] = ptr->longitude;
+        j["lat"] = ptr->latitude;
+        j["timezone"] = ptr->timezone;
+
+        j["name"] = name;
+        j["country"] = ptr->iso2;
+        j["area"] = area;
+
+        if (debug)
+          j["score"] = ptr->priority;
+
+        append_forecast(j,
+                        itsProductParameters.parameters(product),
+                        ptr,
+                        *itsQEngine,
+                        *itsGeoEngine,
+                        valueformatter,
+                        *timeformatter,
+                        stamp,
+                        lang,
+                        outlocale);
+
+        jresult.append(j);
+      }
+    }
+
+    else
+    {
+      // Query the Suggestor engine for multiple languages
+      auto lang_suggestions = itsGeoEngine->suggest(pattern, languages, keyword, page, maxresults);
+
+      // Create location list iterators for each language
+
+      std::vector<Spine::LocationList::const_iterator> iterators;
+      for (const auto &suggestions : lang_suggestions)
+        iterators.push_back(suggestions.begin());
+
+      while (iterators[0] != lang_suggestions[0].end())
+      {
+        Json::Value j;
+
+        const auto &ptr = *iterators[0];
+
+        j["id"] = int(ptr->geoid);
+        j["feature"] = ptr->feature;
+        j["population"] = ptr->population;
+        j["lon"] = ptr->longitude;
+        j["lat"] = ptr->latitude;
+        j["timezone"] = ptr->timezone;
+
+        for (std::size_t i = 0; i < languages.size(); i++)
+        {
+          const auto &lg = languages[i];
+          const auto &lptr = *iterators[i];
+
+          j["name"][lg] = lptr->name;
+          j["area"][lg] = lptr->area;
+          j["country"][lg] = lptr->country;
+
+          ++iterators[i];
+        }
+
+        if (debug)
+          j["score"] = ptr->priority;
+
+        append_forecast(j,
+                        itsProductParameters.parameters(product),
+                        ptr,
+                        *itsQEngine,
+                        *itsGeoEngine,
+                        valueformatter,
+                        *timeformatter,
+                        stamp,
+                        lang,
+                        outlocale);
+
+        jresult.append(j);
+      }
     }
 
     jautocomplete["result"] = jresult;
@@ -466,7 +532,7 @@ void Autocomplete::init()
   try
   {
     // Connect to GeoEngine
-    auto engine = itsReactor->getSingleton("Geonames", nullptr);
+    auto *engine = itsReactor->getSingleton("Geonames", nullptr);
     if (engine == nullptr)
       throw Fmi::Exception(BCP, "Geonames engine unavailable");
 
@@ -504,8 +570,8 @@ void Autocomplete::init()
     catch (const libconfig::ParseException &e)
     {
       throw Fmi::Exception(BCP,
-                             std::string("autocomplete configuration error '") + e.getError() +
-                                 "' on line " + Fmi::to_string(e.getLine()));
+                           std::string("autocomplete configuration error '") + e.getError() +
+                               "' on line " + Fmi::to_string(e.getLine()));
     }
     catch (const libconfig::ConfigException &)
     {

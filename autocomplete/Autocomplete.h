@@ -40,9 +40,9 @@ class Autocomplete
 
  private:
   std::atomic<bool> itsShutdownRequested;
-  Engine::Querydata::Engine* itsQEngine;   // does not own
-  Engine::Geonames::Engine* itsGeoEngine;  // does not own
-  SmartMetPlugin* itsParent;               // does not own
+  Engine::Querydata::Engine* itsQEngine = nullptr;   // does not own
+  Engine::Geonames::Engine* itsGeoEngine = nullptr;  // does not own
+  SmartMetPlugin* itsParent = nullptr;               // does not own
   libconfig::Config itsConfig;
   Spine::Reactor* itsReactor;  // does not own
   const char* itsConfigFile;
@@ -51,7 +51,7 @@ class Autocomplete
   std::string itsDefaultLocale;     // default locale for location name translations
   bool itsPrettyPrintFlag = false;  // pretty printing off by default
   std::string itsTimeFormat;        // iso, sql, xml, epoch, timestamp, http
-  int itsMaxResults;                // names per page, default page is always zero
+  int itsMaxResults = 0;            // names per page, default page is always zero
 
   ProductParameters itsProductParameters;
 };

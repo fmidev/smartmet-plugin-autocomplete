@@ -1,0 +1,330 @@
+{
+   "autocomplete" : {
+      "found-results" : 14,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : {
+               "en" : "",
+               "fi" : "",
+               "sv" : ""
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "PPLC",
+            "id" : 658225,
+            "lat" : 60.169519999999999,
+            "lon" : 24.935449999999999,
+            "name" : {
+               "en" : "Helsinki",
+               "fi" : "Helsinki",
+               "sv" : "Helsingfors"
+            },
+            "population" : 558457,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : {
+               "en" : "Sweden",
+               "fi" : "Ruotsi",
+               "sv" : "Sverige"
+            },
+            "country" : {
+               "en" : "Sweden",
+               "fi" : "Ruotsi",
+               "sv" : "Sverige"
+            },
+            "feature" : "PPLA2",
+            "id" : 2706767,
+            "lat" : 56.046729999999997,
+            "lon" : 12.694369999999999,
+            "name" : {
+               "en" : "Helsingborg",
+               "fi" : "Helsingborg",
+               "sv" : "Helsingborg"
+            },
+            "population" : 91025,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : {
+               "en" : "Espoo",
+               "fi" : "Espoo",
+               "sv" : "Esbo"
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "PPL",
+            "id" : 6691859,
+            "lat" : 60.189590000000003,
+            "lon" : 24.83502,
+            "name" : {
+               "en" : "Helsinki University of Technology student village",
+               "fi" : "Teekkarikyl\u00e4",
+               "sv" : "Teknologbyn"
+            },
+            "population" : 3496,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : {
+               "en" : "Denmark",
+               "fi" : "Tanska",
+               "sv" : "Danmark"
+            },
+            "country" : {
+               "en" : "Denmark",
+               "fi" : "Tanska",
+               "sv" : "Danmark"
+            },
+            "feature" : "PPLA2",
+            "id" : 2620473,
+            "lat" : 56.036059999999999,
+            "lon" : 12.6136,
+            "name" : {
+               "en" : "Elsinore",
+               "fi" : "Helsing\u00f8r",
+               "sv" : "Helsing\u00f6r"
+            },
+            "population" : 35048,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : {
+               "en" : "Vantaa",
+               "fi" : "Vantaa",
+               "sv" : "Vanda"
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "PPL",
+            "id" : 658227,
+            "lat" : 60.283329999999999,
+            "lon" : 24.983329999999999,
+            "name" : {
+               "en" : "Helsinginpit\u00e4j\u00e4",
+               "fi" : "Helsinginpit\u00e4j\u00e4",
+               "sv" : "Helsinginpit\u00e4j\u00e4"
+            },
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : {
+               "en" : "Mustasaari",
+               "fi" : "Mustasaari",
+               "sv" : "Korsholm"
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "PPL",
+            "id" : 658230,
+            "lat" : 63.033329999999999,
+            "lon" : 21.800000000000001,
+            "name" : {
+               "en" : "Helsingby",
+               "fi" : "Helsingby",
+               "sv" : "Helsingby"
+            },
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : {
+               "en" : "Taivassalo",
+               "fi" : "Taivassalo",
+               "sv" : "T\u00f6vsala"
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "PPL",
+            "id" : 658224,
+            "lat" : 60.607799999999997,
+            "lon" : 21.438099999999999,
+            "name" : {
+               "en" : "Helsinginkyl\u00e4",
+               "fi" : "Helsinginkyl\u00e4",
+               "sv" : "Helsinginkyl\u00e4"
+            },
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : {
+               "en" : "Sweden",
+               "fi" : "Ruotsi",
+               "sv" : "Sverige"
+            },
+            "country" : {
+               "en" : "Sweden",
+               "fi" : "Ruotsi",
+               "sv" : "Sverige"
+            },
+            "feature" : "ADM3",
+            "id" : 8132399,
+            "lat" : 56.038449999999997,
+            "lon" : 12.70261,
+            "name" : {
+               "en" : "Helsingborgs Gustav Adolf",
+               "fi" : "Helsingborgs Gustav Adolf",
+               "sv" : "Helsingborgs Gustav Adolf"
+            },
+            "population" : 31081,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : {
+               "en" : "Sweden",
+               "fi" : "Ruotsi",
+               "sv" : "Sverige"
+            },
+            "country" : {
+               "en" : "Sweden",
+               "fi" : "Ruotsi",
+               "sv" : "Sverige"
+            },
+            "feature" : "ADM3",
+            "id" : 8132398,
+            "lat" : 56.046410000000002,
+            "lon" : 12.696770000000001,
+            "name" : {
+               "en" : "Helsingborgs Maria",
+               "fi" : "Helsingborgs Maria",
+               "sv" : "Helsingborgs Maria"
+            },
+            "population" : 30640,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : {
+               "en" : "Helsinki",
+               "fi" : "Helsinki",
+               "sv" : "Helsingfors"
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "RECG",
+            "id" : -10000557,
+            "lat" : 60.2121,
+            "lon" : 24.8598,
+            "name" : {
+               "en" : "Helsingin Golfklubi",
+               "fi" : "Helsingin Golfklubi",
+               "sv" : "Helsingin Golfklubi"
+            },
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : {
+               "en" : "Helsinki",
+               "fi" : "Helsinki",
+               "sv" : "Helsingfors"
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "RECG",
+            "id" : -10000569,
+            "lat" : 60.189999999999998,
+            "lon" : 25.02,
+            "name" : {
+               "en" : "It\u00e4-Helsingin Golf",
+               "fi" : "It\u00e4-Helsingin Golf",
+               "sv" : "It\u00e4-Helsingin Golf"
+            },
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : {
+               "en" : "Helsinki",
+               "fi" : "Helsinki",
+               "sv" : "Helsingfors"
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "STDM",
+            "id" : 6956577,
+            "lat" : 60.186990000000002,
+            "lon" : 24.92718,
+            "name" : {
+               "en" : "Olympic Stadium",
+               "fi" : "Olympiastadion Helsinki",
+               "sv" : "Olympiastadion"
+            },
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : {
+               "en" : "Helsinki",
+               "fi" : "Helsinki",
+               "sv" : "Helsingfors"
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "RECG",
+            "id" : -16777445,
+            "lat" : 60.359000000000002,
+            "lon" : 24.6524,
+            "name" : {
+               "en" : "Suur-Helsingin Golf Lakisto",
+               "fi" : "Suur-Helsingin Golf Lakisto",
+               "sv" : "Suur-Helsingin Golf Lakisto"
+            },
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "country" : {
+               "en" : "Finland",
+               "fi" : "Suomi",
+               "sv" : "Finland"
+            },
+            "feature" : "RECG",
+            "id" : -16777444,
+            "lat" : 60.314,
+            "lon" : 24.680199999999999,
+            "name" : {
+               "en" : "Suur-Helsingin Golf Luukki",
+               "fi" : "Suur-Helsingin Golf Luukki",
+               "sv" : "Suur-Helsingin Golf Luukki"
+            },
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}

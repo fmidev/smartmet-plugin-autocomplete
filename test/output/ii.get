@@ -65,7 +65,7 @@
             "id" : 660119,
             "lat" : 65.266670000000005,
             "lon" : 25.366669999999999,
-            "name" : "Etelä-Ii",
+            "name" : "Etel\u00e4-Ii",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -98,7 +98,7 @@
             "id" : 656833,
             "lat" : 63.633330000000001,
             "lon" : 27.066669999999998,
-            "name" : "Iimäki",
+            "name" : "Iim\u00e4ki",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -114,13 +114,13 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Pudasjärvi",
+            "area" : "Pudasj\u00e4rvi",
             "country" : "FI",
             "feature" : "PPL",
             "id" : 656830,
             "lat" : 65.483329999999995,
             "lon" : 27.5,
-            "name" : "Iinattijärvi",
+            "name" : "Iinattij\u00e4rvi",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
@@ -152,13 +152,13 @@
             "feature" : "PPL",
             "id" : 656826,
             "lat" : 61.5,
-            "lon" : 23,
+            "lon" : 23.0,
             "name" : "Iirola",
             "population" : 0,
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Alajärvi",
+            "area" : "Alaj\u00e4rvi",
             "country" : "FI",
             "feature" : "PPL",
             "id" : 656823,

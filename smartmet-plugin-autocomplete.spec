@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 20.10.6
+Version: 21.6.15
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,34 +14,40 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 20.10.5
-BuildRequires: jsoncpp-devel
-BuildRequires: smartmet-library-spine-devel >= 20.5.12
-BuildRequires: smartmet-engine-geonames-devel >= 20.4.20
-BuildRequires: smartmet-engine-querydata-devel >= 20.5.13
+BuildRequires: smartmet-library-macgyver-devel >= 21.6.10
+BuildRequires: jsoncpp-devel >= 1.8.4
+BuildRequires: smartmet-library-spine-devel >= 21.6.15
+BuildRequires: smartmet-engine-geonames-devel >= 21.6.15
+BuildRequires: smartmet-engine-querydata-devel >= 21.6.3
 BuildRequires: smartmet-engine-sputnik-devel
+Requires: gdal32-libs
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 20.4.18
-Requires: smartmet-library-spine >= 20.5.12
-Requires: smartmet-engine-geonames >= 20.4.20
-Requires: smartmet-server >= 20.4.18
-Requires: smartmet-engine-querydata >= 20.5.13
-BuildRequires: smartmet-engine-sputnik-devel
-Requires: libconfig
-Requires: smartmet-library-macgyver >= 20.10.5
-Requires: smartmet-library-spine >= 20.9.23
-Requires: smartmet-engine-geonames >= 20.9.23
-Requires: smartmet-server >= 20.9.23
-Requires: smartmet-engine-querydata >= 20.9.23
+Requires: smartmet-library-macgyver >= 21.6.10
+Requires: smartmet-library-spine >= 21.6.15
+Requires: smartmet-engine-geonames >= 21.6.15
+Requires: smartmet-server >= 21.6.3
+Requires: smartmet-engine-querydata >= 21.6.3
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
 Requires: boost169-system
 Requires: boost169-thread
-Requires: jsoncpp
+Requires: jsoncpp >= 1.8.4
+
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
+#TestRequires: gcc-c++
+#TestRequires: gdal32-devel
+#TestRequires: gdal32-libs
+#TestRequires: jsoncpp-devel >= 1.8.4
+#TestRequires: postgis31_12
+#TestRequires: smartmet-engine-geonames >= 21.6.15
+#TestRequires: smartmet-engine-querydata >= 21.6.3
+#TestRequires: smartmet-engine-sputnik-devel
+#TestRequires: smartmet-library-spine-devel >= 20.12.04
+#TestRequires: smartmet-test-data >= 20.6.30
+#TestRequires: smartmet-test-db
 
 %description
 SmartMet autocomplete plugin
@@ -66,6 +72,24 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue Jun 15 2021 Mika Heiskanen <mika.heiskanen@fmi.fi> - 21.6.15-1.fmi
+- Support multiple language queries as in lang=fi,sv,en
+
+* Thu Feb 18 2021 Mika Heiskanen <mika.heiskanen@fmi.fi> - 21.2.18-1.fmi
+- Repackaged due to newbase ABI changes
+
+* Thu Jan 14 2021 Mika Heiskanen <mika.heiskanen@fmi.fi> - 21.1.14-1.fmi
+- Repackaged smartmet to resolve debuginfo issues
+
+* Wed Dec 30 2020 Andris Pavenis <andris.pavenis@fmi.fi> - 20.12.30-1.fmi
+- Rebuild due to jsoncpp upgrade for RHEL7
+
+* Tue Dec 15 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.15-1.fmi
+- Upgrade to pgdg12
+
+* Thu Dec  3 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.3-1.fmi
+- Silenced CodeChecker warnings
+
 * Tue Oct  6 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.10.6-1.fmi
 - Enable sensible relative libconfig include paths
 

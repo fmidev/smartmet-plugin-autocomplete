@@ -10,7 +10,7 @@
             "id" : 2867714,
             "lat" : 48.137430000000002,
             "lon" : 11.57549,
-            "name" : "München",
+            "name" : "M\u00fcnchen",
             "population" : 1260391,
             "timezone" : "Europe/Berlin"
          }
