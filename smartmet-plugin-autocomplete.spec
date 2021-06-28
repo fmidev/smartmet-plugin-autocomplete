@@ -111,6 +111,9 @@ rm -rf $RPM_BUILD_ROOT
 * Tue Feb 25 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.2.25-1.fmi
 - Repackaged due to base library changes
 
+* Thu Feb 13 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.2.13-1.fmi
+- Repackaged due to ABI changes
+
 * Wed Nov 20 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.11.20-1.fmi
 - Repackaged since Spine::Parameter size changed
 

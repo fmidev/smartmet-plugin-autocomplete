@@ -1,0 +1,19 @@
+{
+   "autocomplete" : {
+      "found-results" : 1,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Helsinki",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 7521687,
+            "lat" : 60.17501,
+            "lon" : 24.94575,
+            "name" : "Kaisaniemi",
+            "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}
