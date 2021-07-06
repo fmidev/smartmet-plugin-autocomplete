@@ -7,12 +7,14 @@ clean:
 
 
 TEST_PREPARE_TARGETS := cnf/geonames.conf
+TEST_RUNNER_OPT :=
 
 TEST_DB_DIR := $(shell pwd)/tmp-geonames-db
 
 ifdef CI
 GEONAMES_HOST_EDIT := sed -e 's|"smartmet-test"|"$(TEST_DB_DIR)"|g'
 TEST_PREPARE_TARGETS += geonames-database start-geonames-db
+TEST_RUNNER_OPT += --ignore .expect_to_fail
 TEST_FINISH_TARGETS := stop-test-db
 else
 GEONAMES_HOST_EDIT := cat
@@ -25,7 +27,7 @@ TEST_RUNNER :=
 test: $(TEST_PREPARE_TARGETS)
 	@rm -f failures/*
 	@echo Running tests:
-	ok=true; $(TEST_RUNNER) smartmet-plugin-test --handler=/autocomplete --reactor-config=cnf/reactor.conf || ok=false; $(MAKE) $(TEST_FINISH_TARGETS); $$ok
+	ok=true; $(TEST_RUNNER) smartmet-plugin-test --handler=/autocomplete --reactor-config=cnf/reactor.conf $(TEST_RUNNER_OPT) || ok=false; $(MAKE) $(TEST_FINISH_TARGETS); $$ok
 
 geonames-database:
 	@-$(MAKE) stop-test-db
