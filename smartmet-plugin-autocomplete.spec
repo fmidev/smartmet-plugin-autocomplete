@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 21.6.15
+Version: 21.8.2
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,19 +14,19 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 21.6.10
+BuildRequires: smartmet-library-macgyver-devel >= 21.7.28
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 21.6.15
-BuildRequires: smartmet-engine-geonames-devel >= 21.6.15
-BuildRequires: smartmet-engine-querydata-devel >= 21.6.3
+BuildRequires: smartmet-library-spine-devel >= 21.7.28
+BuildRequires: smartmet-engine-geonames-devel >= 21.8.2
+BuildRequires: smartmet-engine-querydata-devel >= 21.8.2
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: gdal32-libs
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 21.6.10
-Requires: smartmet-library-spine >= 21.6.15
-Requires: smartmet-engine-geonames >= 21.6.15
+Requires: smartmet-library-macgyver >= 21.7.28
+Requires: smartmet-library-spine >= 21.7.28
+Requires: smartmet-engine-geonames >= 21.8.2
 Requires: smartmet-server >= 21.6.3
-Requires: smartmet-engine-querydata >= 21.6.3
+Requires: smartmet-engine-querydata >= 21.8.2
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
@@ -42,8 +42,8 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal32-libs
 #TestRequires: jsoncpp-devel >= 1.8.4
 #TestRequires: postgis31_12
-#TestRequires: smartmet-engine-geonames >= 21.6.15
-#TestRequires: smartmet-engine-querydata >= 21.6.3
+#TestRequires: smartmet-engine-geonames >= 21.8.2
+#TestRequires: smartmet-engine-querydata >= 21.8.2
 #TestRequires: smartmet-engine-sputnik-devel
 #TestRequires: smartmet-library-spine-devel >= 20.12.04
 #TestRequires: smartmet-test-data >= 20.6.30
@@ -72,6 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Mon Aug  2 2021 Mika Heiskanen <mika.heiskanen@fmi.fi> - 21.8.2-1.fmi
+- Repackaged since GeoEngine ABI changed by switching to boost::atomic_shared_ptr
+
 * Tue Jun 15 2021 Mika Heiskanen <mika.heiskanen@fmi.fi> - 21.6.15-1.fmi
 - Support multiple language queries as in lang=fi,sv,en
 
