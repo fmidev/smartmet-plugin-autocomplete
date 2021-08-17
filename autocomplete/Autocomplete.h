@@ -39,7 +39,6 @@ class Autocomplete
   ~Autocomplete();
 
  private:
-  std::atomic<bool> itsShutdownRequested;
   Engine::Querydata::Engine* itsQEngine = nullptr;   // does not own
   Engine::Geonames::Engine* itsGeoEngine = nullptr;  // does not own
   SmartMetPlugin* itsParent = nullptr;               // does not own

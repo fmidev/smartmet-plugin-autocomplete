@@ -26,10 +26,7 @@ namespace Autocomplete
 // ----------------------------------------------------------------------
 
 Plugin::Plugin(Spine::Reactor *theReactor, const char *theConfig)
-    : itsShutdownRequested(false),
-      itsReactor(theReactor),
-      itsConfig(theConfig),
-      itsModuleName("Autocomplete")
+    : itsReactor(theReactor), itsConfig(theConfig), itsModuleName("Autocomplete")
 {
   try
   {
@@ -69,7 +66,6 @@ void Plugin::init()
 void Plugin::shutdown()
 {
   std::cout << "  -- Shutdown requested (autocomplete)\n";
-  itsShutdownRequested = true;
   itsAutocomplete->shutdown();
 }
 

@@ -36,7 +36,6 @@ class Plugin : public SmartMetPlugin
                       Spine::HTTP::Response& theResponse);
 
  private:
-  boost::atomic<bool> itsShutdownRequested;
   Spine::Reactor* itsReactor;
   const char* itsConfig;
   boost::movelib::unique_ptr<Autocomplete> itsAutocomplete;
