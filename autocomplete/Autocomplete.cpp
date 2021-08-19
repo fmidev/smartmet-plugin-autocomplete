@@ -119,7 +119,8 @@ void append_forecast(Json::Value &theResult,
                      const Fmi::TimeFormatter &theTimeFormatter,
                      const std::string &theStamp,
                      const std::string &theLang,
-                     const std::locale &theLocale)
+                     const std::locale &theLocale,
+                     const Spine::TimeSeries::LocalTimePoolPtr &thePool)
 {
   try
   {
@@ -178,7 +179,8 @@ void append_forecast(Json::Value &theResult,
                                                   theLoc->timezone,
                                                   findnearest,
                                                   nearestpoint,
-                                                  lastpoint);
+                                                  lastpoint,
+                                                  thePool);
 
       auto tmp = q->value(qparams, t);
       boost::apply_visitor(val_visitor, tmp);
@@ -365,6 +367,9 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
       return;
     }
 
+    // Shared time objects
+    auto pool = boost::make_shared<Spine::TimeSeries::LocalTimePool>();
+
     // Check how many languages are requested, since the output changes for multiple languages
 
     std::vector<std::string> languages;
@@ -410,7 +415,8 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
                         *timeformatter,
                         stamp,
                         lang,
-                        outlocale);
+                        outlocale,
+                        pool);
 
         jresult.append(j);
       }
@@ -464,7 +470,8 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
                         *timeformatter,
                         stamp,
                         lang,
-                        outlocale);
+                        outlocale,
+                        pool);
 
         jresult.append(j);
       }
