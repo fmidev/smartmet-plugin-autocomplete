@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 21.8.21
+Version: 21.8.31
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -14,19 +14,19 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: libconfig-devel
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 21.8.20
+BuildRequires: smartmet-library-macgyver-devel >= 21.8.30
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 21.8.21
-BuildRequires: smartmet-engine-geonames-devel >= 21.8.17
-BuildRequires: smartmet-engine-querydata-devel >= 21.8.21
+BuildRequires: smartmet-library-spine-devel >= 21.8.30
+BuildRequires: smartmet-engine-geonames-devel >= 21.8.30
+BuildRequires: smartmet-engine-querydata-devel >= 21.8.30
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: gdal32-libs
 Requires: libconfig
-Requires: smartmet-library-macgyver >= 21.8.20
-Requires: smartmet-library-spine >= 21.8.21
-Requires: smartmet-engine-geonames >= 21.8.17
+Requires: smartmet-library-macgyver >= 21.8.30
+Requires: smartmet-library-spine >= 21.8.30
+Requires: smartmet-engine-geonames >= 21.8.30
 Requires: smartmet-server >= 21.6.3
-Requires: smartmet-engine-querydata >= 21.8.21
+Requires: smartmet-engine-querydata >= 21.8.30
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
@@ -42,8 +42,8 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal32-libs
 #TestRequires: jsoncpp-devel >= 1.8.4
 #TestRequires: postgis31_12
-#TestRequires: smartmet-engine-geonames >= 21.8.17
-#TestRequires: smartmet-engine-querydata >= 21.8.21
+#TestRequires: smartmet-engine-geonames >= 21.8.30
+#TestRequires: smartmet-engine-querydata >= 21.8.30
 #TestRequires: smartmet-engine-sputnik-devel
 #TestRequires: smartmet-library-spine-devel >= 20.12.04
 #TestRequires: smartmet-test-data >= 20.6.30
@@ -72,6 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue Aug 31 2021 Mika Heiskanen <mika.heiskanen@fmi.fi> - 21.8.31-1.fmi
+- Repackaged due to Spine ABI changes
+
 * Sat Aug 21 2021 Mika Heiskanen <mika.heiskanen@fmi.fi> - 21.8.21-1.fmi
 - Repackaged due to LocalTimePool ABI changes
 
