@@ -22,18 +22,18 @@ class Plugin : public SmartMetPlugin
 {
  public:
   Plugin(Spine::Reactor* theReactor, const char* theConfig);
-  virtual ~Plugin() = default;
+  ~Plugin() override = default;
 
-  const std::string& getPluginName() const;
-  int getRequiredAPIVersion() const;
-  bool queryIsFast(const Spine::HTTP::Request& theRequest) const;
+  const std::string& getPluginName() const override;
+  int getRequiredAPIVersion() const override;
+  bool queryIsFast(const Spine::HTTP::Request& theRequest) const override;
 
  protected:
-  void init();
-  void shutdown();
+  void init() override;
+  void shutdown() override;
   void requestHandler(Spine::Reactor& theReactor,
                       const Spine::HTTP::Request& theRequest,
-                      Spine::HTTP::Response& theResponse);
+                      Spine::HTTP::Response& theResponse) override;
 
  private:
   Spine::Reactor* itsReactor;

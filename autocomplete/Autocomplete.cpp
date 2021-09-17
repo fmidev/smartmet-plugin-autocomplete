@@ -430,6 +430,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
       // Create location list iterators for each language
 
       std::vector<Spine::LocationList::const_iterator> iterators;
+      iterators.reserve(lang_suggestions.size());
       for (const auto &suggestions : lang_suggestions)
         iterators.push_back(suggestions.begin());
 

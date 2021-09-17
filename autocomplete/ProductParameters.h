@@ -20,8 +20,8 @@ namespace Autocomplete
 class ProductParameters
 {
  public:
-  typedef std::list<Spine::Parameter> ParameterList;
-  typedef std::map<std::string, ParameterList> Parameters;
+  using ParameterList = std::list<Spine::Parameter>;
+  using Parameters = std::map<std::string, ParameterList>;
 
   void add(const std::string& theProduct, const Spine::Parameter& theParameter);
   bool contains(const std::string& theProduct) const;
