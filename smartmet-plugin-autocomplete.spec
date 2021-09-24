@@ -35,15 +35,14 @@ Requires: jsoncpp >= 1.8.4
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
-#TestRequires: gcc-c++
-#TestRequires: gdal32-devel
 #TestRequires: gdal32-libs
-#TestRequires: jsoncpp-devel >= 1.8.4
+#TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis31_12
 #TestRequires: smartmet-engine-geonames >= 21.8.30
 #TestRequires: smartmet-engine-querydata >= 21.9.7
-#TestRequires: smartmet-engine-sputnik-devel
-#TestRequires: smartmet-library-spine-devel >= 21.9.7
+#TestRequires: smartmet-engine-sputnik
+#TestRequires: smartmet-utils-devel >= 21.9.24
+#TestRequires: smartmet-library-spine-plugin-test >= 21.9.17
 #TestRequires: smartmet-test-data >= 20.6.30
 #TestRequires: smartmet-test-db
 
