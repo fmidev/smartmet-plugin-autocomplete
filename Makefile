@@ -2,7 +2,7 @@ SUBNAME = autocomplete
 SPEC = smartmet-plugin-$(SUBNAME)
 INCDIR = smartmet/plugins/$(SUBNAME)
 
-REQUIRES = gdal jsoncpp
+REQUIRES = gdal jsoncpp configpp
 
 include $(shell echo $${PREFIX-/usr})/share/smartmet/devel/makefile.inc
 
