@@ -1,0 +1,19 @@
+{
+   "autocomplete" : {
+      "found-results" : 1,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Alankomaat",
+            "country" : "NL",
+            "feature" : "PPLA",
+            "id" : 2747351,
+            "lat" : 51.699170000000002,
+            "lon" : 5.3041700000000001,
+            "name" : "'s-Hertogenbosch",
+            "population" : 134520,
+            "timezone" : "Europe/Amsterdam"
+         }
+      ]
+   }
+}
