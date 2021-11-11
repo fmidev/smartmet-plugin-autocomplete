@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 21.10.18
+Version: 21.11.11
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -13,18 +13,18 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 21.8.30
+BuildRequires: smartmet-library-macgyver-devel >= 21.10.4
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 21.9.7
-BuildRequires: smartmet-engine-geonames-devel >= 21.8.30
-BuildRequires: smartmet-engine-querydata-devel >= 21.9.7
+BuildRequires: smartmet-library-spine-devel >= 21.11.10
+BuildRequires: smartmet-engine-geonames-devel >= 21.9.28
+BuildRequires: smartmet-engine-querydata-devel >= 21.9.13
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: gdal32-libs
-Requires: smartmet-library-macgyver >= 21.8.30
-Requires: smartmet-library-spine >= 21.9.7
-Requires: smartmet-engine-geonames >= 21.8.30
-Requires: smartmet-server >= 21.6.3
-Requires: smartmet-engine-querydata >= 21.9.7
+Requires: smartmet-library-macgyver >= 21.10.4
+Requires: smartmet-library-spine >= 21.11.10
+Requires: smartmet-engine-geonames >= 21.9.28
+Requires: smartmet-server >= 21.9.7
+Requires: smartmet-engine-querydata >= 21.9.13
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
@@ -38,8 +38,8 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal32-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis31_12
-#TestRequires: smartmet-engine-geonames >= 21.8.30
-#TestRequires: smartmet-engine-querydata >= 21.9.7
+#TestRequires: smartmet-engine-geonames >= 21.9.28
+#TestRequires: smartmet-engine-querydata >= 21.9.13
 #TestRequires: smartmet-engine-sputnik
 #TestRequires: smartmet-utils-devel >= 21.9.24
 #TestRequires: smartmet-library-spine-plugin-test >= 21.9.17
@@ -69,6 +69,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Thu Nov 11 2021 Mika Heiskanen <mika.heiskanen@fmi.fi> - 21.11.11-1.fmi
+- Repackaged since ValueFormatter ABI changed
+
 * Mon Oct 18 2021 Andris Pavēnis <andris.pavenis@fmi.fi> 21.10.18-1.fmi
 - Repackage due to dependency changes (libconfig++)
 
