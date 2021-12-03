@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 21.11.11
+Version: 21.12.3
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -13,18 +13,18 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 21.10.4
+BuildRequires: smartmet-library-macgyver-devel >= 21.12.1
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 21.11.10
-BuildRequires: smartmet-engine-geonames-devel >= 21.9.28
-BuildRequires: smartmet-engine-querydata-devel >= 21.9.13
+BuildRequires: smartmet-library-spine-devel >= 21.12.2
+BuildRequires: smartmet-engine-geonames-devel >= 21.12.2
+BuildRequires: smartmet-engine-querydata-devel >= 21.12.2
 BuildRequires: smartmet-engine-sputnik-devel
-Requires: gdal32-libs
-Requires: smartmet-library-macgyver >= 21.10.4
-Requires: smartmet-library-spine >= 21.11.10
-Requires: smartmet-engine-geonames >= 21.9.28
+Requires: gdal33-libs
+Requires: smartmet-library-macgyver >= 21.12.1
+Requires: smartmet-library-spine >= 21.12.2
+Requires: smartmet-engine-geonames >= 21.12.2
 Requires: smartmet-server >= 21.9.7
-Requires: smartmet-engine-querydata >= 21.9.13
+Requires: smartmet-engine-querydata >= 21.12.2
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
@@ -35,14 +35,14 @@ Requires: jsoncpp >= 1.8.4
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
-#TestRequires: gdal32-libs
+#TestRequires: gdal33-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis31_12
-#TestRequires: smartmet-engine-geonames >= 21.9.28
-#TestRequires: smartmet-engine-querydata >= 21.9.13
+#TestRequires: smartmet-engine-geonames >= 21.12.2
+#TestRequires: smartmet-engine-querydata >= 21.12.2
 #TestRequires: smartmet-engine-sputnik
-#TestRequires: smartmet-utils-devel >= 21.9.24
-#TestRequires: smartmet-library-spine-plugin-test >= 21.9.17
+#TestRequires: smartmet-utils-devel >= 21.11.23
+#TestRequires: smartmet-library-spine-plugin-test >= 21.12.2
 #TestRequires: smartmet-test-data >= 20.6.30
 #TestRequires: smartmet-test-db
 
