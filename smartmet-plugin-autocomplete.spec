@@ -13,18 +13,18 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 21.12.1
+BuildRequires: smartmet-library-macgyver-devel >= 21.1.21
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 21.12.2
-BuildRequires: smartmet-engine-geonames-devel >= 21.12.2
-BuildRequires: smartmet-engine-querydata-devel >= 21.12.2
+BuildRequires: smartmet-library-spine-devel >= 21.1.21
+BuildRequires: smartmet-engine-geonames-devel >= 21.1.21
+BuildRequires: smartmet-engine-querydata-devel >= 21.1.21
 BuildRequires: smartmet-engine-sputnik-devel
-Requires: gdal33-libs
-Requires: smartmet-library-macgyver >= 21.12.1
-Requires: smartmet-library-spine >= 21.12.2
-Requires: smartmet-engine-geonames >= 21.12.2
+Requires: gdal34-libs
+Requires: smartmet-library-macgyver >= 21.1.21
+Requires: smartmet-library-spine >= 21.1.21
+Requires: smartmet-engine-geonames >= 21.1.21
 Requires: smartmet-server >= 21.9.7
-Requires: smartmet-engine-querydata >= 21.12.2
+Requires: smartmet-engine-querydata >= 21.1.21
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
@@ -35,14 +35,14 @@ Requires: jsoncpp >= 1.8.4
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
-#TestRequires: gdal33-libs
+#TestRequires: gdal34-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis31_12
-#TestRequires: smartmet-engine-geonames >= 21.12.2
-#TestRequires: smartmet-engine-querydata >= 21.12.2
+#TestRequires: smartmet-engine-geonames >= 21.1.21
+#TestRequires: smartmet-engine-querydata >= 21.1.21
 #TestRequires: smartmet-engine-sputnik
-#TestRequires: smartmet-utils-devel >= 21.11.23
-#TestRequires: smartmet-library-spine-plugin-test >= 21.12.2
+#TestRequires: smartmet-utils-devel >= 22.1.20
+#TestRequires: smartmet-library-spine-plugin-test >= 21.1.21
 #TestRequires: smartmet-test-data >= 20.6.30
 #TestRequires: smartmet-test-db
 
