@@ -5,12 +5,14 @@ INCDIR = smartmet/plugins/$(SUBNAME)
 REQUIRES = gdal jsoncpp configpp
 
 include $(shell echo $${PREFIX-/usr})/share/smartmet/devel/makefile.inc
+FLAGS += -Wno-deprecated-declarations
 
 DEFINES = -DUNIX -D_REENTRANT
 
 LIBS += -L$(libdir) \
 	$(JSONCPP_LIBS) \
 	-lsmartmet-spine \
+	-lsmartmet-timeseries \
 	-lsmartmet-macgyver \
 	-lboost_date_time \
 	-lboost_thread \

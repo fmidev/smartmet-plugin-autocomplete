@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 22.1.21
+Version: 22.3.8
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -13,18 +13,20 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 21.1.21
+BuildRequires: smartmet-library-macgyver-devel >= 22.3.8
+BuildRequires: smartmet-library-timeseries-devel >= 22.3.8
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 21.1.21
-BuildRequires: smartmet-engine-geonames-devel >= 21.1.21
-BuildRequires: smartmet-engine-querydata-devel >= 21.1.21
+BuildRequires: smartmet-library-spine-devel >= 22.3.8
+BuildRequires: smartmet-engine-geonames-devel >= 22.1.31
+BuildRequires: smartmet-engine-querydata-devel >= 22.3.8
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: gdal34-libs
-Requires: smartmet-library-macgyver >= 21.1.21
-Requires: smartmet-library-spine >= 21.1.21
-Requires: smartmet-engine-geonames >= 21.1.21
-Requires: smartmet-server >= 21.9.7
-Requires: smartmet-engine-querydata >= 21.1.21
+Requires: smartmet-library-macgyver >= 22.3.8
+Requires: smartmet-library-timeseries >= 22.3.8
+Requires: smartmet-library-spine >= 22.3.8
+Requires: smartmet-engine-geonames >= 22.1.31
+Requires: smartmet-server >= 21.11.25
+Requires: smartmet-engine-querydata >= 22.3.8
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
@@ -38,8 +40,8 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal34-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis31_12
-#TestRequires: smartmet-engine-geonames >= 21.1.21
-#TestRequires: smartmet-engine-querydata >= 21.1.21
+#TestRequires: smartmet-engine-geonames >= 22.1.31
+#TestRequires: smartmet-engine-querydata >= 22.3.8
 #TestRequires: smartmet-engine-sputnik
 #TestRequires: smartmet-utils-devel >= 22.1.20
 #TestRequires: smartmet-library-spine-plugin-test >= 21.1.21
@@ -69,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue Mar  8 2022 Mika Heiskanen <mika.heiskanen@fmi.fi> - 22.3.8-1.fmi
+- Use the new TimeSeries library
+
 * Fri Jan 21 2022 Andris Pavēnis <andris.pavenis@fmi.fi> 22.1.21-1.fmi
 - Repackage due to upgrade of packages from PGDG repo: gdal-3.4, geos-3.10, proj-8.2
 

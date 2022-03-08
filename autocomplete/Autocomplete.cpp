@@ -18,8 +18,8 @@
 #include <spine/Convenience.h>
 #include <spine/ParameterFactory.h>
 #include <spine/Reactor.h>
-#include <spine/TimeSeries.h>
-#include <spine/TimeSeriesOutput.h>
+#include <timeseries/TimeSeries.h>
+#include <timeseries/TimeSeriesOutput.h>
 #include <iostream>
 #include <map>
 #include <sstream>
@@ -115,12 +115,12 @@ void append_forecast(Json::Value &theResult,
                      const Spine::LocationPtr &theLoc,
                      Engine::Querydata::Engine &theEngine,
                      Engine::Geonames::Engine &theGeoEngine,
-                     const Spine::ValueFormatter &theValueFormatter,
+                     const Fmi::ValueFormatter &theValueFormatter,
                      const Fmi::TimeFormatter &theTimeFormatter,
                      const std::string &theStamp,
                      const std::string &theLang,
                      const std::locale &theLocale,
-                     const Spine::TimeSeries::LocalTimePoolPtr &thePool)
+                     const TimeSeries::LocalTimePoolPtr &thePool)
 {
   try
   {
@@ -163,7 +163,7 @@ void append_forecast(Json::Value &theResult,
     // And process all parameters
 
     std::ostringstream ss;
-    Spine::TimeSeries::OStreamVisitor val_visitor(ss, theValueFormatter, precision);
+    TimeSeries::OStreamVisitor val_visitor(ss, theValueFormatter, precision);
 
     for (const Spine::Parameter &param : theParameters)
     {
@@ -335,7 +335,8 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     if (!product.empty() && !itsProductParameters.contains(product))
       throw Fmi::Exception(BCP, "Product " + product + " has no associated parameters");
 
-    Spine::ValueFormatter valueformatter(theRequest);
+    Fmi::ValueFormatterParam opt;
+    Fmi::ValueFormatter valueformatter(opt);
     boost::shared_ptr<Fmi::TimeFormatter> timeformatter(Fmi::TimeFormatter::create(timeformat));
 
     std::locale outlocale = std::locale(localename.c_str());
@@ -368,7 +369,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     }
 
     // Shared time objects
-    auto pool = boost::make_shared<Spine::TimeSeries::LocalTimePool>();
+    auto pool = boost::make_shared<TimeSeries::LocalTimePool>();
 
     // Check how many languages are requested, since the output changes for multiple languages
 
