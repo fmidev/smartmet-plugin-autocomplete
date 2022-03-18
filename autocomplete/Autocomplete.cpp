@@ -16,8 +16,8 @@
 #include <macgyver/TimeFormatter.h>
 #include <macgyver/TimeParser.h>
 #include <spine/Convenience.h>
-#include <spine/ParameterFactory.h>
 #include <spine/Reactor.h>
+#include <timeseries/ParameterFactory.h>
 #include <timeseries/TimeSeries.h>
 #include <timeseries/TimeSeriesOutput.h>
 #include <iostream>
@@ -72,7 +72,7 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
         try
         {
           std::string param = product[j];
-          result.add(productName, Spine::ParameterFactory::instance().parse(param));
+          result.add(productName, TimeSeries::ParameterFactory::instance().parse(param));
         }
         catch (const libconfig::ParseException &e)
         {
