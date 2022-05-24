@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 22.4.28
+Version: 22.5.24
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -13,20 +13,20 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 22.3.8
-BuildRequires: smartmet-library-timeseries-devel >= 22.3.18
+BuildRequires: smartmet-library-macgyver-devel >= 22.5.24
+BuildRequires: smartmet-library-timeseries-devel >= 22.5.24
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 22.4.26
-BuildRequires: smartmet-engine-geonames-devel >= 22.1.31
-BuildRequires: smartmet-engine-querydata-devel >= 22.3.18
+BuildRequires: smartmet-library-spine-devel >= 22.5.24
+BuildRequires: smartmet-engine-geonames-devel >= 22.5.24
+BuildRequires: smartmet-engine-querydata-devel >= 22.5.24
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: gdal34-libs
-Requires: smartmet-library-macgyver >= 22.3.8
-Requires: smartmet-library-timeseries >= 22.3.18
-Requires: smartmet-library-spine >= 22.4.26
-Requires: smartmet-engine-geonames >= 22.1.31
-Requires: smartmet-server >= 21.11.25
-Requires: smartmet-engine-querydata >= 22.3.18
+Requires: smartmet-library-macgyver >= 22.5.24
+Requires: smartmet-library-timeseries >= 22.5.24
+Requires: smartmet-library-spine >= 22.5.24
+Requires: smartmet-engine-geonames >= 22.5.24
+Requires: smartmet-server >= 22.5.16
+Requires: smartmet-engine-querydata >= 22.5.24
 Requires: boost169-date-time
 Requires: boost169-filesystem
 Requires: boost169-iostreams
@@ -40,7 +40,7 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal34-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis31_12
-#TestRequires: smartmet-engine-geonames >= 22.1.31
+#TestRequires: smartmet-engine-geonames >= 22.5.24
 #TestRequires: smartmet-engine-querydata >= 22.3.8
 #TestRequires: smartmet-engine-sputnik
 #TestRequires: smartmet-utils-devel >= 22.1.20
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue May 24 2022 Mika Heiskanen <mika.heiskanen@fmi.fi> - 22.5.24-1.fmi
+- Repackaged due to NFmiArea ABI changes
+
 * Thu Apr 28 2022 Andris Pavenis <andris.pavenis@fmi.fi> 22.4.28-1.fmi
 - Repackage due to SmartMet::Spine::Reactor ABI changes
 
