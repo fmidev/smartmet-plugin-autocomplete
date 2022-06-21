@@ -9,29 +9,38 @@ Group: SmartMet/Plugins
 URL: https://github.com/fmidev/smartmet-plugin-autocomplete
 Source0: %{name}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+%if 0%{?rhel} && 0%{rhel} < 9
+%define smartmet_boost boost169
+%else
+%define smartmet_boost boost
+%endif
+
+%define smartmet_fmt_min 8.1.1
+%define smartmet_fmt_max 8.2.0
+
 BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
-BuildRequires: boost169-devel
-BuildRequires: smartmet-library-macgyver-devel >= 22.5.24
-BuildRequires: smartmet-library-timeseries-devel >= 22.5.24
+BuildRequires: %{smartmet_boost}-devel
+BuildRequires: smartmet-library-macgyver-devel >= 22.6.16
+BuildRequires: smartmet-library-timeseries-devel >= 22.6.16
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 22.5.24
-BuildRequires: smartmet-engine-geonames-devel >= 22.5.24
-BuildRequires: smartmet-engine-querydata-devel >= 22.5.31
+BuildRequires: smartmet-library-spine-devel >= 22.6.16
+BuildRequires: smartmet-engine-geonames-devel >= 22.6.17
+BuildRequires: smartmet-engine-querydata-devel >= 22.6.17
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: gdal34-libs
-Requires: smartmet-library-macgyver >= 22.5.24
-Requires: smartmet-library-timeseries >= 22.5.24
-Requires: smartmet-library-spine >= 22.5.24
-Requires: smartmet-engine-geonames >= 22.5.24
+Requires: smartmet-library-macgyver >= 22.6.16
+Requires: smartmet-library-timeseries >= 22.6.16
+Requires: smartmet-library-spine >= 22.6.16
+Requires: smartmet-engine-geonames >= 22.6.17
 Requires: smartmet-server >= 22.5.16
-Requires: smartmet-engine-querydata >= 22.5.31
-Requires: boost169-date-time
-Requires: boost169-filesystem
-Requires: boost169-iostreams
-Requires: boost169-system
-Requires: boost169-thread
+Requires: smartmet-engine-querydata >= 22.6.17
+Requires: %{smartmet_boost}-date-time
+Requires: %{smartmet_boost}-filesystem
+Requires: %{smartmet_boost}-iostreams
+Requires: %{smartmet_boost}-system
+Requires: %{smartmet_boost}-thread
 Requires: jsoncpp >= 1.8.4
 
 Provides: %{SPECNAME}
@@ -40,11 +49,11 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal34-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis31_12
-#TestRequires: smartmet-engine-geonames >= 22.5.24
-#TestRequires: smartmet-engine-querydata >= 22.5.31
+#TestRequires: smartmet-engine-geonames >= 22.6.17
+#TestRequires: smartmet-engine-querydata >= 22.6.17
 #TestRequires: smartmet-engine-sputnik
 #TestRequires: smartmet-utils-devel >= 22.1.20
-#TestRequires: smartmet-library-spine-plugin-test >= 22.4.26
+#TestRequires: smartmet-library-spine-plugin-test >= 22.6.16
 #TestRequires: smartmet-test-data >= 20.6.30
 #TestRequires: smartmet-test-db
 
