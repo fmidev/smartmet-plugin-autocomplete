@@ -1,7 +1,7 @@
 #include "Autocomplete.h"
 #include <boost/algorithm/string/classification.hpp>
 #include <boost/algorithm/string/split.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/foreach.hpp>
@@ -535,6 +535,7 @@ void Autocomplete::shutdown() {}
 
 void Autocomplete::init()
 {
+  using namespace boost::placeholders;
   try
   {
     // Connect to GeoEngine
