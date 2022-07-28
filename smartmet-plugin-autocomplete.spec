@@ -48,7 +48,7 @@ Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal34-libs
 #TestRequires: jsoncpp >= 1.8.4
-#TestRequires: postgis31_12
+#TestRequires: postgis32_13
 #TestRequires: smartmet-engine-geonames >= 22.6.17
 #TestRequires: smartmet-engine-querydata >= 22.6.17
 #TestRequires: smartmet-engine-sputnik
