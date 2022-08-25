@@ -16,6 +16,7 @@
 #include <macgyver/TimeFormatter.h>
 #include <macgyver/TimeParser.h>
 #include <spine/Convenience.h>
+#include <spine/Exceptions.h>
 #include <spine/Reactor.h>
 #include <timeseries/ParameterFactory.h>
 #include <timeseries/TimeSeries.h>
@@ -74,24 +75,9 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
           std::string param = product[j];
           result.add(productName, TimeSeries::ParameterFactory::instance().parse(param));
         }
-        catch (const libconfig::ParseException &e)
+        catch (...)
         {
-          throw Fmi::Exception(BCP,
-                               std::string("Configuration error ' ") + e.getError() +
-                                   "' with variable '" + productName + "' on line " +
-                                   Fmi::to_string(e.getLine()));
-        }
-        catch (const libconfig::ConfigException &)
-        {
-          throw Fmi::Exception(BCP,
-                               std::string("Configuration error with variable '") + productName +
-                                   "' on line " + Fmi::to_string(product[j].getSourceLine()));
-        }
-        catch (const std::exception &e)
-        {
-          throw Fmi::Exception(BCP,
-                               e.what() + std::string(" (line number ") +
-                                   Fmi::to_string(product[j].getSourceLine()) + ")");
+          Spine::Exceptions::handle("Autocomplete plugin");
         }
       }
     }

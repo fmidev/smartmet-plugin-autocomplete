@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 22.7.28
+Version: 22.8.25
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -22,20 +22,20 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
-BuildRequires: smartmet-library-macgyver-devel >= 22.7.27
+BuildRequires: smartmet-library-macgyver-devel >= 22.8.23
 BuildRequires: smartmet-library-timeseries-devel >= 22.7.27
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 22.7.27
-BuildRequires: smartmet-engine-geonames-devel >= 22.7.27
-BuildRequires: smartmet-engine-querydata-devel >= 22.7.28
+BuildRequires: smartmet-library-spine-devel >= 22.8.25
+BuildRequires: smartmet-engine-geonames-devel >= 22.8.4
+BuildRequires: smartmet-engine-querydata-devel >= 22.8.24
 BuildRequires: smartmet-engine-sputnik-devel
 Requires: gdal34-libs
-Requires: smartmet-library-macgyver >= 22.7.27
+Requires: smartmet-library-macgyver >= 22.8.23
 Requires: smartmet-library-timeseries >= 22.7.27
-Requires: smartmet-library-spine >= 22.7.27
-Requires: smartmet-engine-geonames >= 22.7.27
-Requires: smartmet-server >= 22.5.16
-Requires: smartmet-engine-querydata >= 22.7.28
+Requires: smartmet-library-spine >= 22.8.25
+Requires: smartmet-engine-geonames >= 22.8.4
+Requires: smartmet-server >= 22.8.19
+Requires: smartmet-engine-querydata >= 22.8.24
 Requires: %{smartmet_boost}-date-time
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
@@ -49,12 +49,12 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal34-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis32_13
-#TestRequires: smartmet-engine-geonames >= 22.7.27
-#TestRequires: smartmet-engine-querydata >= 22.7.28
+#TestRequires: smartmet-engine-geonames >= 22.8.4
+#TestRequires: smartmet-engine-querydata >= 22.8.24
 #TestRequires: smartmet-engine-sputnik
-#TestRequires: smartmet-utils-devel >= 22.1.20
-#TestRequires: smartmet-library-spine-plugin-test >= 22.6.16
-#TestRequires: smartmet-test-data >= 20.6.30
+#TestRequires: smartmet-utils-devel >= 22.2.8
+#TestRequires: smartmet-library-spine-plugin-test >= 22.8.25
+#TestRequires: smartmet-test-data >= 20.12.1
 #TestRequires: smartmet-test-db
 
 %description
@@ -80,6 +80,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Thu Aug 25 2022 Mika Heiskanen <mika.heiskanen@fmi.fi> - 22.8.25-1.fmi
+- Use a generic exception handler for configuration file errors
+
 * Thu Jul 28 2022 Mika Heiskanen <mika.heiskanen@fmi.fi> - 22.7.28-1.fmi
 - Repackaged due to QEngine ABI change
 
