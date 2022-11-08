@@ -28,7 +28,6 @@ BuildRequires: jsoncpp-devel >= 1.8.4
 BuildRequires: smartmet-library-spine-devel >= 22.8.25
 BuildRequires: smartmet-engine-geonames-devel >= 22.8.4
 BuildRequires: smartmet-engine-querydata-devel >= 22.8.24
-BuildRequires: smartmet-engine-sputnik-devel
 Requires: gdal34-libs
 Requires: smartmet-library-macgyver >= 22.8.23
 Requires: smartmet-library-timeseries >= 22.7.27
@@ -51,7 +50,6 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: postgis32_13
 #TestRequires: smartmet-engine-geonames >= 22.8.4
 #TestRequires: smartmet-engine-querydata >= 22.8.24
-#TestRequires: smartmet-engine-sputnik
 #TestRequires: smartmet-utils-devel >= 22.2.8
 #TestRequires: smartmet-library-spine-plugin-test >= 22.8.25
 #TestRequires: smartmet-test-data >= 20.12.1

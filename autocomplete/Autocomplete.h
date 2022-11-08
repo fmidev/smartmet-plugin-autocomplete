@@ -3,7 +3,6 @@
 #include "ProductParameters.h"
 #include <engines/geonames/Engine.h>
 #include <engines/querydata/Engine.h>
-#include <engines/sputnik/Engine.h>
 #include <spine/HTTP.h>
 #include <spine/Reactor.h>
 #include <spine/SmartMetPlugin.h>
