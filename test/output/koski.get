@@ -92,17 +92,6 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "",
-            "country" : "FI",
-            "feature" : "ADM3",
-            "id" : 651091,
-            "lat" : 60.666699999999999,
-            "lon" : 23.083300000000001,
-            "name" : "Koski",
-            "population" : 2514,
-            "timezone" : "Europe/Helsinki"
-         },
-         {
             "area" : "Pudasj\u00e4rvi",
             "country" : "FI",
             "feature" : "PPL",
@@ -210,6 +199,17 @@
             "lon" : 23.149999999999999,
             "name" : "Koski Tl",
             "population" : 0,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "ADM3",
+            "id" : 651091,
+            "lat" : 60.666699999999999,
+            "lon" : 23.083300000000001,
+            "name" : "Koski",
+            "population" : 2514,
             "timezone" : "Europe/Helsinki"
          },
          {
