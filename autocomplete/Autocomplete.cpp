@@ -17,6 +17,7 @@
 #include <macgyver/TimeParser.h>
 #include <spine/Convenience.h>
 #include <spine/Exceptions.h>
+#include <spine/HostInfo.h>
 #include <spine/Reactor.h>
 #include <timeseries/ParameterFactory.h>
 #include <timeseries/TimeSeries.h>
@@ -259,6 +260,7 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
       Fmi::Exception exception(BCP, "Request processing exception!", nullptr);
       exception.addParameter("URI", theRequest.getURI());
       exception.addParameter("ClientIP", theRequest.getClientIP());
+      exception.addParameter("ClientIP", Spine::HostInfo::getHostName(theRequest.getClientIP()));
       exception.printError();
 
       std::string msg = std::string("Error: ") + exception.what();
