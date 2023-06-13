@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 22.8.25
+Version: 23.6.13
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -22,19 +22,19 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
-BuildRequires: smartmet-library-macgyver-devel >= 22.12.16
-BuildRequires: smartmet-library-timeseries-devel >= 23.1.31
+BuildRequires: smartmet-library-macgyver-devel >= 23.6.6
+BuildRequires: smartmet-library-timeseries-devel >= 23.3.15
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 23.2.8
-BuildRequires: smartmet-engine-geonames-devel >= 23.1.18
-BuildRequires: smartmet-engine-querydata-devel >= 22.12.15
+BuildRequires: smartmet-library-spine-devel >= 23.6.13
+BuildRequires: smartmet-engine-geonames-devel >= 23.6.13
+BuildRequires: smartmet-engine-querydata-devel >= 23.6.13
 Requires: gdal34-libs
-Requires: smartmet-library-macgyver >= 22.12.16
-Requires: smartmet-library-timeseries >= 23.1.31
-Requires: smartmet-library-spine >= 23.2.8
-Requires: smartmet-engine-geonames >= 23.1.18
-Requires: smartmet-server >= 23.2.1
-Requires: smartmet-engine-querydata >= 22.12.15
+Requires: smartmet-library-macgyver >= 23.6.6
+Requires: smartmet-library-timeseries >= 23.3.15
+Requires: smartmet-library-spine >= 23.6.13
+Requires: smartmet-engine-geonames >= 23.6.13
+Requires: smartmet-server >= 23.5.19
+Requires: smartmet-engine-querydata >= 23.6.13
 Requires: %{smartmet_boost}-date-time
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
@@ -48,11 +48,11 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal34-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis32_13
-#TestRequires: smartmet-engine-geonames >= 23.1.18
-#TestRequires: smartmet-engine-querydata >= 22.12.15
-#TestRequires: smartmet-utils-devel >= 23.1.19
-#TestRequires: smartmet-library-spine-plugin-test >= 23.2.8
-#TestRequires: smartmet-test-data >= 23.2.2
+#TestRequires: smartmet-engine-geonames >= 23.6.13
+#TestRequires: smartmet-engine-querydata >= 23.6.13
+#TestRequires: smartmet-utils-devel >= 23.4.28
+#TestRequires: smartmet-library-spine-plugin-test >= 23.6.13
+#TestRequires: smartmet-test-data >= 23.5.15
 #TestRequires: smartmet-test-db
 
 %description
@@ -78,6 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue Jun 13 2023 Mika Heiskanen <mika.heiskanen@fmi.fi> - 23.6.13-1.fmi
+- Support internal and environment variables in configuration files
+
 * Thu Aug 25 2022 Mika Heiskanen <mika.heiskanen@fmi.fi> - 22.8.25-1.fmi
 - Use a generic exception handler for configuration file errors
 
