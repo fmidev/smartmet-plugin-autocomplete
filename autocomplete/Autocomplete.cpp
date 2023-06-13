@@ -15,6 +15,7 @@
 #include <macgyver/StringConversion.h>
 #include <macgyver/TimeFormatter.h>
 #include <macgyver/TimeParser.h>
+#include <spine/ConfigTools.h>
 #include <spine/Convenience.h>
 #include <spine/Exceptions.h>
 #include <spine/HostInfo.h>
@@ -549,6 +550,7 @@ void Autocomplete::init()
       itsConfig.setIncludeDir(p.c_str());
 
       itsConfig.readFile(itsConfigFile);
+      Spine::expandVariables(itsConfig);
 
       itsDefaultLanguage = itsConfig.lookup("language").c_str();
       itsDefaultLocale = itsConfig.lookup("locale").c_str();
