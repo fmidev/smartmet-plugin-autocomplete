@@ -35,7 +35,6 @@ class Autocomplete
   // Constructor and destructor
   //
   Autocomplete(SmartMetPlugin* theParent, Spine::Reactor* theReactor, const char* theConfig);
-  ~Autocomplete();
 
  private:
   Engine::Querydata::Engine* itsQEngine = nullptr;   // does not own
