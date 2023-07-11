@@ -15,6 +15,7 @@
 #include <macgyver/StringConversion.h>
 #include <macgyver/TimeFormatter.h>
 #include <macgyver/TimeParser.h>
+#include <spine/ConfigTools.h>
 #include <spine/Convenience.h>
 #include <spine/Exceptions.h>
 #include <spine/HostInfo.h>
@@ -34,6 +35,21 @@ namespace Plugin
 {
 namespace Autocomplete
 {
+namespace
+{
+boost::movelib::unique_ptr<Json::Writer> get_json_writer(bool pretty)
+{
+  if (pretty)
+    return boost::movelib::make_unique<Json::StyledWriter>();
+  return boost::movelib::make_unique<Json::FastWriter>();
+}
+
+void validate_product(const std::string &product, const ProductParameters &productparameters)
+{
+  if (!product.empty() && !productparameters.contains(product))
+    throw Fmi::Exception(BCP, "Product " + product + " has no associated parameters");
+}
+
 // ----------------------------------------------------------------------
 /*!
  * \brief Read product parameters from the database
@@ -181,6 +197,8 @@ void append_forecast(Json::Value &theResult,
   }
 }
 
+}  // namespace
+
 // ----------------------------------------------------------------------
 /*!
  * \brief Handle incoming request
@@ -268,7 +286,8 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
 
       // Remove newlines, make sure length is reasonable
       boost::algorithm::replace_all(msg, "\n", " ");
-      msg = msg.substr(0, 100);
+      if (msg.size() > 100)
+        msg.resize(100);
       theResponse.setHeader("X-Autocomplete-Error", msg);
     }
   }
@@ -289,8 +308,6 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 {
   try
   {
-    std::string theURI = theRequest.getURI();
-
     // Parse query std::strings
     std::string keyword = Spine::optional_string(theRequest.getParameter("keyword"), "");
 
@@ -320,8 +337,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     bool duplicates = Spine::optional_bool(theRequest.getParameter("duplicates"), false);
 
-    if (!product.empty() && !itsProductParameters.contains(product))
-      throw Fmi::Exception(BCP, "Product " + product + " has no associated parameters");
+    validate_product(product, itsProductParameters);
 
     Fmi::ValueFormatterParam opt;
     Fmi::ValueFormatter valueformatter(opt);
@@ -329,17 +345,13 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     std::locale outlocale = std::locale(localename.c_str());
 
+    auto writer = get_json_writer(pretty);
+
+    // ---- NORMAL AUTOCOMPLETION ROUTINES --------------------------------
+
     Json::Value json;
     Json::Value jautocomplete;
     Json::Value jresult;
-
-    boost::movelib::unique_ptr<Json::Writer> writer;
-    if (pretty)
-      writer = boost::movelib::make_unique<Json::StyledWriter>();
-    else
-      writer = boost::movelib::make_unique<Json::FastWriter>();
-
-    // ---- NORMAL AUTOCOMPLETION ROUTINES --------------------------------
 
     // If the pattern is empty or too big it makes no point to do search.
     if (pattern.empty() || pattern.size() >= 32)
@@ -549,6 +561,7 @@ void Autocomplete::init()
       itsConfig.setIncludeDir(p.c_str());
 
       itsConfig.readFile(itsConfigFile);
+      Spine::expandVariables(itsConfig);
 
       itsDefaultLanguage = itsConfig.lookup("language").c_str();
       itsDefaultLocale = itsConfig.lookup("locale").c_str();
@@ -584,10 +597,12 @@ void Autocomplete::init()
 
     // Ready for service now
 
-    if (!itsReactor->addContentHandler(
-            itsParent,
-            "/autocomplete",
-            boost::bind(&Autocomplete::requestHandler, this, _1, _2, _3)))
+    if (!itsReactor->addContentHandler(itsParent,
+                                       "/autocomplete",
+                                       [this](Spine::Reactor &theReactor,
+                                              const Spine::HTTP::Request &theRequest,
+                                              Spine::HTTP::Response &theResponse)
+                                       { requestHandler(theReactor, theRequest, theResponse); }))
     {
       throw Fmi::Exception(BCP, "Failed to register autocomplete content handler");
     }
@@ -596,17 +611,6 @@ void Autocomplete::init()
   {
     throw Fmi::Exception::Trace(BCP, "Operation failed!");
   }
-}
-
-// ----------------------------------------------------------------------
-/*!
- * \brief Destructor
- */
-// ----------------------------------------------------------------------
-
-Autocomplete::~Autocomplete()
-{
-  std::cout << "\t+ Autocomplete plugin shutting down" << std::endl;
 }
 
 }  // namespace Autocomplete

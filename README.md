@@ -17,7 +17,6 @@ Table of Contents
     * [locale (fi_FI)](#locale-fi_fi)
     * [stamp () y](#stamp--y)
   * [Formatting numeric values](#formatting-numeric-values)
-  * [Geolocation](#geolocation)
   * [Docker](#docker)
 
 # SmartMet Server
@@ -39,10 +38,8 @@ location information when  we start  to type a search location "de".
 ![](docs/autocomplete_example.png)
 
 
-The SmartMet autocomplete plugin provides geolocation services for HTML text
-fields and IP based location detection. The main idea is to provide a
-<a href =
-"https://developers.google.com/maps/documentation/javascript/places-autocomplete">Google
+The main idea is to provide a
+<a href="https://developers.google.com/maps/documentation/javascript/places-autocomplete">Google
 Suggest type API</a> geographic information stored in the fminames
 database. Autocomplete is a feature of the Places library in the
 Google Maps JavaScript API. The autocomplete API can provide a
@@ -140,28 +137,9 @@ The same options as used in the pointforecast-plugin are available for formattin
 * width
 * fill
 * adjustfield
-*  showpos
-*  uppercase
-*  floatfield
-
-# Geolocation
-
-If the option 
-
-<pre><code>locate  </code></pre>
-
-is set, the plugin will attempt to locate the user at the city level, which is the level of accuracy available with the GeoIP database for free.
-
-If the IP is given using the option 
-<pre><code> ip </code></pre>
-
-, that  IP will be located. Otherwise the request will be parsed for the header
-
-<pre><code> X-Forwarded-For </code></pre>
-
- , and if that is not available, actual request IP will be used. 
-
-If GET-parameters contains product-parameter (i.e. &product=rich), corresponding weather forecast information is added to the response.
+* showpos
+* uppercase
+* floatfield
 
 # Docker
 
