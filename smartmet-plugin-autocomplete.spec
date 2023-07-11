@@ -23,18 +23,18 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
 BuildRequires: smartmet-library-macgyver-devel >= 22.12.16
-BuildRequires: smartmet-library-timeseries-devel >= 23.1.31
+BuildRequires: smartmet-library-timeseries-devel >= 23.7.10
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 23.2.8
-BuildRequires: smartmet-engine-geonames-devel >= 23.1.18
-BuildRequires: smartmet-engine-querydata-devel >= 22.12.15
+BuildRequires: smartmet-library-spine-devel >= 23.7.10
+BuildRequires: smartmet-engine-geonames-devel >= 23.7.11
+BuildRequires: smartmet-engine-querydata-devel >= 23.7.10
 Requires: gdal35-libs
 Requires: smartmet-library-macgyver >= 22.12.16
-Requires: smartmet-library-timeseries >= 23.1.31
-Requires: smartmet-library-spine >= 23.2.8
-Requires: smartmet-engine-geonames >= 23.1.18
+Requires: smartmet-library-timeseries >= 23.7.10
+Requires: smartmet-library-spine >= 23.7.10
+Requires: smartmet-engine-geonames >= 23.7.11
 Requires: smartmet-server >= 23.2.1
-Requires: smartmet-engine-querydata >= 22.12.15
+Requires: smartmet-engine-querydata >= 23.7.10
 Requires: %{smartmet_boost}-date-time
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
@@ -48,10 +48,10 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal35-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis33_15
-#TestRequires: smartmet-engine-geonames >= 23.1.18
-#TestRequires: smartmet-engine-querydata >= 22.12.15
+#TestRequires: smartmet-engine-geonames >= 23.7.11
+#TestRequires: smartmet-engine-querydata >= 23.7.10
 #TestRequires: smartmet-utils-devel >= 23.1.19
-#TestRequires: smartmet-library-spine-plugin-test >= 23.2.8
+#TestRequires: smartmet-library-spine-plugin-test >= 23.7.10
 #TestRequires: smartmet-test-data >= 23.2.2
 #TestRequires: smartmet-test-db
 
