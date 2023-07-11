@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 23.7.10
+Version: 23.7.11
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -22,19 +22,19 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
-BuildRequires: smartmet-library-macgyver-devel >= 23.6.15
+BuildRequires: smartmet-library-macgyver-devel >= 23.6.30
 BuildRequires: smartmet-library-timeseries-devel >= 23.6.15
 BuildRequires: jsoncpp-devel >= 1.8.4
 BuildRequires: smartmet-library-spine-devel >= 23.6.21
-BuildRequires: smartmet-engine-geonames-devel >= 23.6.13
-BuildRequires: smartmet-engine-querydata-devel >= 23.6.15
+BuildRequires: smartmet-engine-geonames-devel >= 23.7.10
+BuildRequires: smartmet-engine-querydata-devel >= 23.7.11
 Requires: gdal34-libs
-Requires: smartmet-library-macgyver >= 23.6.15
+Requires: smartmet-library-macgyver >= 23.6.30
 Requires: smartmet-library-timeseries >= 23.6.15
 Requires: smartmet-library-spine >= 23.6.21
-Requires: smartmet-engine-geonames >= 23.6.13
+Requires: smartmet-engine-geonames >= 23.7.10
 Requires: smartmet-server >= 23.5.19
-Requires: smartmet-engine-querydata >= 23.6.15
+Requires: smartmet-engine-querydata >= 23.7.11
 Requires: %{smartmet_boost}-date-time
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
@@ -48,9 +48,9 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal34-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis32_13
-#TestRequires: smartmet-engine-geonames >= 23.6.13
-#TestRequires: smartmet-engine-querydata >= 23.6.15
-#TestRequires: smartmet-utils-devel >= 23.6.14
+#TestRequires: smartmet-engine-geonames >= 23.7.10
+#TestRequires: smartmet-engine-querydata >= 23.7.11
+#TestRequires: smartmet-utils-devel >= 23.6.16
 #TestRequires: smartmet-library-spine-plugin-test >= 23.6.21
 #TestRequires: smartmet-test-data >= 23.5.15
 #TestRequires: smartmet-test-db
@@ -78,6 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Tue Jul 11 2023 Mika Heiskanen <mika.heiskanen@fmi.fi> - 23.7.11-1.fmi
+- Repackaged due to QEngine API changes
+
 * Mon Jul 10 2023 Mika Heiskanen <mika.heiskanen@fmi.fi> - 23.7.10-1.fmi
 - Silenced compiler warnings
 
