@@ -3,7 +3,7 @@
 #include <boost/algorithm/string/split.hpp>
 #include <boost/bind/bind.hpp>
 #include <boost/date_time/gregorian/gregorian.hpp>
-#include <boost/date_time/posix_time/posix_time.hpp>
+#include <macgyver/DateTime.h>
 #include <boost/foreach.hpp>
 #include <boost/move/unique_ptr.hpp>
 #include <boost/shared_ptr.hpp>
@@ -146,8 +146,8 @@ void append_forecast(Json::Value &theResult,
 
     auto timezone = theGeoEngine.getTimeZones().time_zone_from_string(theLoc->timezone);
 
-    auto utc = boost::posix_time::second_clock::universal_time();
-    boost::local_time::local_date_time t(utc, timezone);
+    auto utc = Fmi::SecondClock::universal_time();
+    Fmi::LocalDateTime t(utc, timezone);
 
     // Regression tests may override the date
     if (!theStamp.empty())
@@ -225,7 +225,7 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
 
     // Now
 
-    const auto t_now = boost::posix_time::second_clock::universal_time();
+    const auto t_now = Fmi::SecondClock::universal_time();
 
     // Handle If-Modified-Since queries
 
@@ -236,7 +236,7 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
       try
       {
         const auto t_modified = Fmi::TimeParser::parse_http(*if_modified_since);
-        if (t_now - t_modified < boost::posix_time::seconds(expires_seconds))
+        if (t_now - t_modified < Fmi::Seconds(expires_seconds))
         {
           theResponse.setStatus(Spine::HTTP::Status::not_modified);
           return;
@@ -261,7 +261,7 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
 
       boost::shared_ptr<Fmi::TimeFormatter> tformat(Fmi::TimeFormatter::create("http"));
 
-      auto t_expires = t_now + boost::posix_time::seconds(expires_seconds);
+      auto t_expires = t_now + Fmi::Seconds(expires_seconds);
 
       // The headers themselves
 
