@@ -369,7 +369,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     }
 
     // Shared time objects
-    auto pool = boost::make_shared<TimeSeries::LocalTimePool>();
+    auto pool = std::make_shared<TimeSeries::LocalTimePool>();
 
     // Check how many languages are requested, since the output changes for multiple languages
 
