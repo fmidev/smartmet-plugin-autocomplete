@@ -592,7 +592,7 @@ void Autocomplete::init()
     {
       if (Spine::Reactor::isShuttingDown())
         return;
-      boost::this_thread::sleep(boost::posix_time::milliseconds(100));
+      boost::this_thread::sleep_for(boost::chrono::milliseconds(100));
     }
 
     // Ready for service now
