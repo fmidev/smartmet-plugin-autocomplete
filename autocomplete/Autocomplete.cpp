@@ -36,7 +36,7 @@ namespace Autocomplete
 {
 namespace
 {
-boost::movelib::unique_ptr<Json::Writer> get_json_writer(bool pretty)
+std::unique_ptr<Json::Writer> get_json_writer(bool pretty)
 {
   if (pretty)
     return std::make_unique<Json::StyledWriter>();
