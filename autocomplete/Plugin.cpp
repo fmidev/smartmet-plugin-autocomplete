@@ -48,7 +48,7 @@ void Plugin::init()
 {
   try
   {
-    itsAutocomplete = boost::movelib::make_unique<Autocomplete>(this, itsReactor, itsConfig);
+    itsAutocomplete = std::make_unique<Autocomplete>(this, itsReactor, itsConfig);
     itsAutocomplete->init();
   }
   catch (...)
