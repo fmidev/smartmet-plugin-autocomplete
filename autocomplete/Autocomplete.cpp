@@ -183,7 +183,7 @@ void append_forecast(Json::Value &theResult,
                                                   lastpoint);
 
       auto tmp = q->value(qparams, t);
-      boost::apply_visitor(val_visitor, tmp);
+      tmp.apply_visitor(val_visitor);
       theResult[param.name()] = ss.str();
       ss.str("");
     }
