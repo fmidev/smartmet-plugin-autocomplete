@@ -37,7 +37,7 @@ class Plugin : public SmartMetPlugin
  private:
   Spine::Reactor* itsReactor;
   const char* itsConfig;
-  boost::movelib::unique_ptr<Autocomplete> itsAutocomplete;
+  std::unique_ptr<Autocomplete> itsAutocomplete;
   const std::string itsModuleName;
 
 };  // class Plugin
