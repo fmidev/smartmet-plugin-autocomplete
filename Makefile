@@ -15,7 +15,6 @@ LIBS += -L$(libdir) \
 	-lsmartmet-timeseries \
 	-lsmartmet-macgyver \
 	-lboost_thread \
-	-lboost_filesystem \
 	-lboost_iostreams \
 	-lboost_system
 

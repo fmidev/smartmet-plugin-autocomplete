@@ -3,9 +3,8 @@
 #include <boost/algorithm/string/split.hpp>
 #include <boost/bind/bind.hpp>
 #include <macgyver/DateTime.h>
-#include <boost/foreach.hpp>
 #include <boost/move/unique_ptr.hpp>
-#include <boost/shared_ptr.hpp>
+#include <memory>
 #include <boost/thread.hpp>
 #include <engines/geonames/Engine.h>
 #include <json/json.h>
@@ -36,11 +35,11 @@ namespace Autocomplete
 {
 namespace
 {
-boost::movelib::unique_ptr<Json::Writer> get_json_writer(bool pretty)
+std::unique_ptr<Json::Writer> get_json_writer(bool pretty)
 {
   if (pretty)
-    return boost::movelib::make_unique<Json::StyledWriter>();
-  return boost::movelib::make_unique<Json::FastWriter>();
+    return std::make_unique<Json::StyledWriter>();
+  return std::make_unique<Json::FastWriter>();
 }
 
 void validate_product(const std::string &product, const ProductParameters &productparameters)
@@ -183,7 +182,7 @@ void append_forecast(Json::Value &theResult,
                                                   lastpoint);
 
       auto tmp = q->value(qparams, t);
-      boost::apply_visitor(val_visitor, tmp);
+      tmp.apply_visitor(val_visitor);
       theResult[param.name()] = ss.str();
       ss.str("");
     }
@@ -256,7 +255,7 @@ void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
 
       // Build cache expiration time info
 
-      boost::shared_ptr<Fmi::TimeFormatter> tformat(Fmi::TimeFormatter::create("http"));
+      std::shared_ptr<Fmi::TimeFormatter> tformat(Fmi::TimeFormatter::create("http"));
 
       auto t_expires = t_now + Fmi::Seconds(expires_seconds);
 
@@ -338,7 +337,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     Fmi::ValueFormatterParam opt;
     Fmi::ValueFormatter valueformatter(opt);
-    boost::shared_ptr<Fmi::TimeFormatter> timeformatter(Fmi::TimeFormatter::create(timeformat));
+    std::shared_ptr<Fmi::TimeFormatter> timeformatter(Fmi::TimeFormatter::create(timeformat));
 
     std::locale outlocale = std::locale(localename.c_str());
 
@@ -549,7 +548,7 @@ void Autocomplete::init()
     try
     {
       // Enable sensible relative include paths
-      boost::filesystem::path p = itsConfigFile;
+      std::filesystem::path p = itsConfigFile;
       p.remove_filename();
       itsConfig.setIncludeDir(p.c_str());
 

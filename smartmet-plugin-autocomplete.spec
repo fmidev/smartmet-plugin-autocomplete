@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 24.5.28
+Version: 24.7.17
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -22,19 +22,19 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
-BuildRequires: smartmet-library-macgyver-devel >= 24.1.17
-BuildRequires: smartmet-library-timeseries-devel >= 24.5.28
+BuildRequires: smartmet-library-macgyver-devel >= 24.7.12
+BuildRequires: smartmet-library-timeseries-devel >= 24.7.12
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 24.2.8
-BuildRequires: smartmet-engine-geonames-devel >= 24.2.23
-BuildRequires: smartmet-engine-querydata-devel >= 24.5.28
+BuildRequires: smartmet-library-spine-devel >= 24.7.12
+BuildRequires: smartmet-engine-geonames-devel >= 24.7.12
+BuildRequires: smartmet-engine-querydata-devel >= 24.7.12
 Requires: gdal38-libs
-Requires: smartmet-library-macgyver >= 24.5.6
-Requires: smartmet-library-timeseries >= 24.5.28
-Requires: smartmet-library-spine >= 24.5.6
-Requires: smartmet-engine-geonames >= 24.5.6
-Requires: smartmet-server >= 24.5.6
-Requires: smartmet-engine-querydata >= 24.5.28
+Requires: smartmet-library-macgyver >= 24.7.12
+Requires: smartmet-library-timeseries >= 24.7.12
+Requires: smartmet-library-spine >= 24.7.12
+Requires: smartmet-engine-geonames >= 24.7.12
+Requires: smartmet-server >= 24.7.12
+Requires: smartmet-engine-querydata >= 24.7.12
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
 Requires: %{smartmet_boost}-system
@@ -47,10 +47,10 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal38-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis34_15
-#TestRequires: smartmet-engine-geonames >= 24.5.6
-#TestRequires: smartmet-engine-querydata >= 24.5.28
+#TestRequires: smartmet-engine-geonames >= 24.7.12
+#TestRequires: smartmet-engine-querydata >= 24.7.12
 #TestRequires: smartmet-utils-devel >= 23.9.6
-#TestRequires: smartmet-library-spine-plugin-test >= 24.2.8
+#TestRequires: smartmet-library-spine-plugin-test >= 24.7.12
 #TestRequires: smartmet-test-data >= 23.11.8
 #TestRequires: smartmet-test-db
 
@@ -77,6 +77,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Wed Jul 17 2024 Andris Pavēnis <andris.pavenis@fmi.fi> 24.7.17-1.fmi
+- Do not link with libboost_filesystem
+
+* Fri Jul 12 2024 Andris Pavēnis <andris.pavenis@fmi.fi> 24.7.12-1.fmi
+- Replace many boost library types with C++ standard library ones
+
 * Tue May 28 2024 Andris Pavēnis <andris.pavenis@fmi.fi> 24.5.28-1.fmi
 - Do not use LocalTimePool
 
