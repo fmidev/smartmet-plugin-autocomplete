@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 24.9.3
+Version: 24.11.8
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Fri Nov  8 2024 Andris Pavēnis <andris.pavenis@fmi.fi> 24.11.8-1.fmi
+- Repackage due to smartmet-library-spine ABI changes
+
 * Tue Sep  3 2024 Andris Pavēnis <andris.pavenis@fmi.fi> 24.9.3-1.fmi
 - Repackage due smartmlibrary-grid-data and smartmet-engine-querydata changes
 
