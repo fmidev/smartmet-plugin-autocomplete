@@ -25,7 +25,7 @@ BuildRequires: jsoncpp-devel >= 1.8.4
 BuildRequires: smartmet-library-spine-devel >= 24.11.8
 BuildRequires: smartmet-engine-geonames-devel >= 24.11.8
 BuildRequires: smartmet-engine-querydata-devel >= 24.11.8
-Requires: gdal38-libs
+Requires: gdal310-libs
 Requires: smartmet-library-macgyver >= 24.10.28
 Requires: smartmet-library-timeseries >= 24.11.8
 Requires: smartmet-library-spine >= 24.11.8
@@ -41,7 +41,7 @@ Requires: jsoncpp >= 1.8.4
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
-#TestRequires: gdal38-libs
+#TestRequires: gdal310-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis34_15
 #TestRequires: smartmet-engine-geonames >= 24.11.8
