@@ -66,13 +66,20 @@ Below we describe the query string options. The default value for each option is
 
 The keyword identifies the set of locations enabled in autocomplete. The allowed keywords are listed in
 
-<pre><code> fminames.keywords </code></pre>
+```
+fminames.keywords
+```
 
 and the locations for each keyword in
 
-<pre><code> fminames.keywords_has_geonames </code></pre>
+```
+fminames.keywords_has_geonames
+```
 
 Since Aug 4th 2021 the keyword may be a comma separated list. This enables one to join search results say from city names, amusement parks, golf courses etc.
+
+There is a special case `keyword=all` which defines the set of places as *all places which belong to some known keyword*.
+
 
 ## pattern  
 
@@ -108,13 +115,17 @@ Pretty print is used mostly for debugging purposes (and regression tests to spot
 
 Identify a product name to add localized forecast data to the output. The allowed product names are listed in a table.
 
-<pre><code> autocomplete.products </code></pre>
+```
+autocomplete.products
+```
 
 and the forecast parameters for each product in
 
 and the forecast parameters for each product in
 
-<pre><code> autocomplete.parameters </code></pre>
+```
+autocomplete.parameters
+```
 
 The default is not to include a forecast in the output.
 
