@@ -1,0 +1,96 @@
+{
+   "autocomplete" : {
+      "found-results" : 8,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLC",
+            "id" : 658225,
+            "lat" : 60.169519999999999,
+            "lon" : 24.935449999999999,
+            "name" : "Helsinki",
+            "population" : 558457,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "HK",
+            "feature" : "PPLC",
+            "id" : 1819729,
+            "lat" : 22.285520000000002,
+            "lon" : 114.15769,
+            "name" : "Hong Kong",
+            "population" : 7012738,
+            "timezone" : "Asia/Hong_Kong"
+         },
+         {
+            "area" : "Kuuba",
+            "country" : "CU",
+            "feature" : "PPLC",
+            "id" : 3553478,
+            "lat" : 23.133019999999998,
+            "lon" : -82.383039999999994,
+            "name" : "Havanna",
+            "population" : 2163824,
+            "timezone" : "America/Havana"
+         },
+         {
+            "area" : "Zimbabwe",
+            "country" : "ZW",
+            "feature" : "PPLC",
+            "id" : 890299,
+            "lat" : -17.827719999999999,
+            "lon" : 31.053370000000001,
+            "name" : "Harare",
+            "population" : 1542813,
+            "timezone" : "Africa/Harare"
+         },
+         {
+            "area" : "Vietnam",
+            "country" : "VN",
+            "feature" : "PPLC",
+            "id" : 1581130,
+            "lat" : 21.0245,
+            "lon" : 105.84117000000001,
+            "name" : "Hanoi",
+            "population" : 1431270,
+            "timezone" : "Asia/Ho_Chi_Minh"
+         },
+         {
+            "area" : "Salomonsaaret",
+            "country" : "SB",
+            "feature" : "PPLC",
+            "id" : 2108502,
+            "lat" : -9.4333299999999998,
+            "lon" : 159.94999999999999,
+            "name" : "Honiara",
+            "population" : 56298,
+            "timezone" : "Pacific/Guadalcanal"
+         },
+         {
+            "area" : "",
+            "country" : "JE",
+            "feature" : "PPLC",
+            "id" : 3042091,
+            "lat" : 49.188040000000001,
+            "lon" : -2.1049099999999998,
+            "name" : "Saint Helier",
+            "population" : 28000,
+            "timezone" : "Europe/Jersey"
+         },
+         {
+            "area" : "Bermuda",
+            "country" : "BM",
+            "feature" : "PPLC",
+            "id" : 3573197,
+            "lat" : 32.294899999999998,
+            "lon" : -64.783029999999997,
+            "name" : "Hamilton",
+            "population" : 902,
+            "timezone" : "Atlantic/Bermuda"
+         }
+      ]
+   }
+}

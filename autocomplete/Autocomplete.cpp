@@ -2,13 +2,12 @@
 #include <boost/algorithm/string/classification.hpp>
 #include <boost/algorithm/string/split.hpp>
 #include <boost/bind/bind.hpp>
-#include <macgyver/DateTime.h>
 #include <boost/move/unique_ptr.hpp>
-#include <memory>
 #include <boost/thread.hpp>
 #include <engines/geonames/Engine.h>
 #include <json/json.h>
 #include <macgyver/CharsetTools.h>
+#include <macgyver/DateTime.h>
 #include <macgyver/Exception.h>
 #include <macgyver/StringConversion.h>
 #include <macgyver/TimeFormatter.h>
@@ -23,6 +22,7 @@
 #include <timeseries/TimeSeriesOutput.h>
 #include <iostream>
 #include <map>
+#include <memory>
 #include <sstream>
 #include <stdexcept>
 #include <unistd.h>
@@ -333,6 +333,36 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     bool duplicates = Spine::optional_bool(theRequest.getParameter("duplicates"), false);
 
+    // By default accept all locations. The name is rejector since we use remove_if
+
+    std::set<std::string> parts;
+    std::function<bool(const Spine::LocationPtr &)> rejector = [](const Spine::LocationPtr &loc)
+    { return false; };
+
+    std::string feature = Spine::optional_string(theRequest.getParameter("feature"), "");
+    std::string nofeature = Spine::optional_string(theRequest.getParameter("nofeature"), "");
+
+    if (!feature.empty() && !nofeature.empty())
+      throw Fmi::Exception(BCP,
+                           "Cannot use 'feature' and 'nofeature' settings simultaneously to filter "
+                           "wanted locations");
+
+    // Accept only given features by removing non matches
+    if (!feature.empty())
+    {
+      boost::algorithm::split(parts, feature, boost::is_any_of(","));
+      rejector = [&parts](const Spine::LocationPtr &loc)
+      { return (parts.find(loc->feature) == parts.end()); };
+    }
+
+    // Remove given features by removing matches
+    if (!nofeature.empty())
+    {
+      boost::algorithm::split(parts, nofeature, boost::is_any_of(","));
+      rejector = [&parts](const Spine::LocationPtr &loc)
+      { return (parts.find(loc->feature) != parts.end()); };
+    }
+
     validate_product(product, itsProductParameters);
 
     Fmi::ValueFormatterParam opt;
@@ -375,8 +405,9 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
       // Query the Suggestor engine for a single language
 
       auto suggestions =
-          (duplicates ? itsGeoEngine->suggestDuplicates(pattern, lang, keyword, page, maxresults)
-                      : itsGeoEngine->suggest(pattern, lang, keyword, page, maxresults));
+          (duplicates
+               ? itsGeoEngine->suggestDuplicates(pattern, rejector, lang, keyword, page, maxresults)
+               : itsGeoEngine->suggest(pattern, rejector, lang, keyword, page, maxresults));
 
       // Loop through the Locations
 
@@ -419,7 +450,8 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     else
     {
       // Query the Suggestor engine for multiple languages
-      auto lang_suggestions = itsGeoEngine->suggest(pattern, languages, keyword, page, maxresults);
+      auto lang_suggestions =
+          itsGeoEngine->suggest(pattern, rejector, languages, keyword, page, maxresults);
 
       // Create location list iterators for each language
 
