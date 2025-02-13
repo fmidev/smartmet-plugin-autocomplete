@@ -46,7 +46,9 @@ Keyword is used to identify the set of locations enabled in autocomplete.
 ```
 keyword =
 ```
-The allowed keywords are listed in table **fminames.keywords** and the locations for each keyword are listed in table **fminames.keywords_has_geonames**. 
+The allowed keywords are listed in table `fminames.keywords` and the locations for each keyword are listed in table `fminames.keywords_has_geonames`.
+
+There is a special case `keyword=all` which defines the set of places as *all places which belong to some known keyword*.
 
 ### pattern
 Pattern is used to define the beginning of the location name usually typed by the user. It gets always changed in practice so it is not very useful to provide a default value for it in the config file. 
@@ -65,7 +67,9 @@ lang = fi
 ### maxresults
 Maxresults is used to define the number of results to return in one page.
 
+```
 maxresults = 15
+```
 
 ### page
 Page is used to define the page number. This option works in conjuction with the maxresults option. It will only be given if you do not want to have the first page of hits.
@@ -108,6 +112,7 @@ Time is used to define the date and time for the request. Time is always changed
 ```
 time =
 ```
+
 3. Test the plugin. The URL of the HTTP request contains parameters that have to be delivered to the autocomplete plugin. 
 
 http://hostname:8080/autocomplete?pattern=Hel&keyword=ajax_fi_fi
