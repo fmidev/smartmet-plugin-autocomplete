@@ -37,7 +37,7 @@ geonames-database:
 	    false; \
 	fi
 
-start-geonames-db:
+start-geonames-db: geonames-database
 	/usr/share/smartmet/test/db/test-db-ctl.sh $(TEST_DB_DIR) start -w
 
 stop-test-db:
