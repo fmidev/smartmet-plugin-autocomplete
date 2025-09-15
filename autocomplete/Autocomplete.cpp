@@ -336,8 +336,8 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     // By default accept all locations. The name is rejector since we use remove_if
 
     std::set<std::string> parts;
-    std::function<bool(const Spine::LocationPtr &)> rejector = [](const Spine::LocationPtr &loc)
-    { return false; };
+    std::function<bool(const Spine::LocationPtr &)> rejector =
+        [](const Spine::LocationPtr & /* loc */) { return false; };
 
     std::string feature = Spine::optional_string(theRequest.getParameter("feature"), "");
     std::string nofeature = Spine::optional_string(theRequest.getParameter("nofeature"), "");
