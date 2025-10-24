@@ -472,6 +472,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
         j["lon"] = ptr->longitude;
         j["lat"] = ptr->latitude;
         j["timezone"] = ptr->timezone;
+        j["country"] = ptr->iso2;
 
         for (std::size_t i = 0; i < languages.size(); i++)
         {
@@ -480,7 +481,6 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
           j["name"][lg] = lptr->name;
           j["area"][lg] = lptr->area;
-          j["country"][lg] = lptr->country;
 
           ++iterators[i];
         }

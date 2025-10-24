@@ -9,11 +9,7 @@
                "fi" : "",
                "sv" : ""
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "PPLC",
             "id" : 658225,
             "lat" : 60.169519999999999,
@@ -32,11 +28,7 @@
                "fi" : "Ruotsi",
                "sv" : "Sverige"
             },
-            "country" : {
-               "en" : "Sweden",
-               "fi" : "Ruotsi",
-               "sv" : "Sverige"
-            },
+            "country" : "SE",
             "feature" : "PPLA2",
             "id" : 2706767,
             "lat" : 56.046729999999997,
@@ -55,11 +47,7 @@
                "fi" : "Espoo",
                "sv" : "Esbo"
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "PPL",
             "id" : 6691859,
             "lat" : 60.189590000000003,
@@ -78,11 +66,7 @@
                "fi" : "Tanska",
                "sv" : "Danmark"
             },
-            "country" : {
-               "en" : "Denmark",
-               "fi" : "Tanska",
-               "sv" : "Danmark"
-            },
+            "country" : "DK",
             "feature" : "PPLA2",
             "id" : 2620473,
             "lat" : 56.036059999999999,
@@ -101,11 +85,7 @@
                "fi" : "Vantaa",
                "sv" : "Vanda"
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "PPL",
             "id" : 658227,
             "lat" : 60.283329999999999,
@@ -124,11 +104,7 @@
                "fi" : "Mustasaari",
                "sv" : "Korsholm"
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "PPL",
             "id" : 658230,
             "lat" : 63.033329999999999,
@@ -147,11 +123,7 @@
                "fi" : "Taivassalo",
                "sv" : "T\u00f6vsala"
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "PPL",
             "id" : 658224,
             "lat" : 60.607799999999997,
@@ -170,11 +142,7 @@
                "fi" : "Ruotsi",
                "sv" : "Sverige"
             },
-            "country" : {
-               "en" : "Sweden",
-               "fi" : "Ruotsi",
-               "sv" : "Sverige"
-            },
+            "country" : "SE",
             "feature" : "ADM3",
             "id" : 8132399,
             "lat" : 56.038449999999997,
@@ -193,11 +161,7 @@
                "fi" : "Ruotsi",
                "sv" : "Sverige"
             },
-            "country" : {
-               "en" : "Sweden",
-               "fi" : "Ruotsi",
-               "sv" : "Sverige"
-            },
+            "country" : "SE",
             "feature" : "ADM3",
             "id" : 8132398,
             "lat" : 56.046410000000002,
@@ -216,11 +180,7 @@
                "fi" : "Helsinki",
                "sv" : "Helsingfors"
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "RECG",
             "id" : -10000557,
             "lat" : 60.2121,
@@ -239,11 +199,7 @@
                "fi" : "Helsinki",
                "sv" : "Helsingfors"
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "RECG",
             "id" : -10000569,
             "lat" : 60.189999999999998,
@@ -262,11 +218,7 @@
                "fi" : "Helsinki",
                "sv" : "Helsingfors"
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "STDM",
             "id" : 6956577,
             "lat" : 60.186990000000002,
@@ -285,11 +237,7 @@
                "fi" : "Helsinki",
                "sv" : "Helsingfors"
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "RECG",
             "id" : -16777445,
             "lat" : 60.359000000000002,
@@ -308,11 +256,7 @@
                "fi" : "Suomi",
                "sv" : "Finland"
             },
-            "country" : {
-               "en" : "Finland",
-               "fi" : "Suomi",
-               "sv" : "Finland"
-            },
+            "country" : "FI",
             "feature" : "RECG",
             "id" : -16777444,
             "lat" : 60.314,
