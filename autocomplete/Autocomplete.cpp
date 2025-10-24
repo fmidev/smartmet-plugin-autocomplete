@@ -563,19 +563,10 @@ void Autocomplete::init()
   try
   {
     // Connect to GeoEngine
-    auto *engine = itsReactor->getSingleton("Geonames", nullptr);
-    if (engine == nullptr)
-      throw Fmi::Exception(BCP, "Geonames engine unavailable");
-
-    itsGeoEngine = reinterpret_cast<Engine::Geonames::Engine *>(engine);
+    itsGeoEngine = itsReactor->getEngine<Engine::Geonames::Engine>("Geonames", nullptr);
 
     // Connect to QEngine
-
-    engine = itsReactor->getSingleton("Querydata", nullptr);
-    if (engine == nullptr)
-      throw Fmi::Exception(BCP, "Querydata engine unavailable");
-
-    itsQEngine = reinterpret_cast<Engine::Querydata::Engine *>(engine);
+    itsQEngine = itsReactor->getEngine<Engine::Querydata::Engine>("Querydata", nullptr);
 
     try
     {

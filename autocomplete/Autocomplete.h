@@ -37,8 +37,8 @@ class Autocomplete
   Autocomplete(SmartMetPlugin* theParent, Spine::Reactor* theReactor, const char* theConfig);
 
  private:
-  Engine::Querydata::Engine* itsQEngine = nullptr;   // does not own
-  Engine::Geonames::Engine* itsGeoEngine = nullptr;  // does not own
+  std::shared_ptr<Engine::Querydata::Engine> itsQEngine;
+  std::shared_ptr<Engine::Geonames::Engine> itsGeoEngine;
   SmartMetPlugin* itsParent = nullptr;               // does not own
   libconfig::Config itsConfig;
   Spine::Reactor* itsReactor;  // does not own
