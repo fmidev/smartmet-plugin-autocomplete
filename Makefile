@@ -16,7 +16,6 @@ LIBS += -L$(libdir) \
 	-lsmartmet-macgyver \
 	-lboost_thread \
 	-lboost_iostreams \
-	-lboost_system
 
 # What to install
 
