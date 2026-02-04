@@ -23,19 +23,19 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
-BuildRequires: smartmet-library-macgyver-devel >= 25.12.2
-BuildRequires: smartmet-library-timeseries-devel >= 25.12.29
+BuildRequires: smartmet-library-macgyver-devel >= 26.2.4
+BuildRequires: smartmet-library-timeseries-devel >= 26.2.4
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 25.12.12
-BuildRequires: smartmet-engine-geonames-devel >= 25.12.2
-BuildRequires: smartmet-engine-querydata-devel >= 25.12.29
-Requires: gdal310-libs
-Requires: smartmet-library-macgyver >= 25.12.2
-Requires: smartmet-library-timeseries >= 25.12.29
-Requires: smartmet-library-spine >= 25.12.12
-Requires: smartmet-engine-geonames >= 25.12.2
-Requires: smartmet-server >= 25.12.2
-Requires: smartmet-engine-querydata >= 25.12.29
+BuildRequires: smartmet-library-spine-devel >= 26.2.4
+BuildRequires: smartmet-engine-geonames-devel >= 26.2.4
+BuildRequires: smartmet-engine-querydata-devel >= 26.2.4
+Requires: gdal312-libs
+Requires: smartmet-library-macgyver >= 26.2.4
+Requires: smartmet-library-timeseries >= 26.2.4
+Requires: smartmet-library-spine >= 26.2.4
+Requires: smartmet-engine-geonames >= 26.2.4
+Requires: smartmet-server >= 26.2.4
+Requires: smartmet-engine-querydata >= 26.2.4
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
 Requires: %{smartmet_boost}-system
@@ -45,13 +45,13 @@ Requires: jsoncpp >= 1.8.4
 Provides: %{SPECNAME}
 Obsoletes: smartmet-brainstorm-autocomplete < 16.11.1
 Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
-#TestRequires: gdal310-libs
+#TestRequires: gdal312-libs
 #TestRequires: jsoncpp >= 1.8.4
-#TestRequires: postgis35_15
-#TestRequires: smartmet-engine-geonames >= 25.12.2
-#TestRequires: smartmet-engine-querydata >= 25.12.29
-#TestRequires: smartmet-utils-devel >= 25.11.27
-#TestRequires: smartmet-library-spine-plugin-test >= 25.12.12
+#TestRequires: postgis36_15
+#TestRequires: smartmet-engine-geonames >= 26.2.4
+#TestRequires: smartmet-engine-querydata >= 26.2.4
+#TestRequires: smartmet-utils-devel >= 26.2.4
+#TestRequires: smartmet-library-spine-plugin-test >= 26.2.4
 #TestRequires: smartmet-test-data >= 25.8.13
 #TestRequires: smartmet-test-db
 
