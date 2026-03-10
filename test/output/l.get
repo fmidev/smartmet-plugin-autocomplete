@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Peru",
+            "country" : "PE",
+            "feature" : "PPLC",
+            "id" : 3936456,
+            "lat" : -12.04318,
+            "lon" : -77.028239999999997,
+            "name" : "Lima",
+            "population" : 7737002,
+            "score" : 112370,
+            "timezone" : "America/Lima"
+         },
+         {
+            "area" : "Britannia",
+            "country" : "GB",
+            "feature" : "PPLC",
+            "id" : 2643743,
+            "lat" : 51.50853,
+            "lon" : -0.12573999999999999,
+            "name" : "Lontoo",
+            "population" : 7556900,
+            "score" : 110569,
+            "timezone" : "Europe/London"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 649360,
+            "lat" : 60.982669999999999,
+            "lon" : 25.66151,
+            "name" : "Lahti",
+            "population" : 98826,
+            "score" : 89413,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Nigeria",
+            "country" : "NG",
+            "feature" : "PPLA2",
+            "id" : 2332459,
+            "lat" : 6.4540699999999998,
+            "lon" : 3.3946700000000001,
+            "name" : "Lagos",
+            "population" : 9000000,
+            "score" : 83065,
+            "timezone" : "Africa/Lagos"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 648900,
+            "lat" : 61.058709999999998,
+            "lon" : 28.18871,
+            "name" : "Lappeenranta",
+            "population" : 59276,
+            "score" : 69638,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "CA, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPLA2",
+            "id" : 5368361,
+            "lat" : 34.052230000000002,
+            "lon" : -118.24368,
+            "name" : "Los Angeles",
+            "population" : 3792621,
+            "score" : 62926,
+            "timezone" : "America/Los_Angeles"
+         },
+         {
+            "area" : "Pakistan",
+            "country" : "PK",
+            "feature" : "PPLA",
+            "id" : 1172451,
+            "lat" : 31.549720000000001,
+            "lon" : 74.343609999999998,
+            "name" : "Lahore",
+            "population" : 6310888,
+            "score" : 62790,
+            "timezone" : "Asia/Karachi"
+         },
+         {
+            "area" : "Angola",
+            "country" : "AO",
+            "feature" : "PPLC",
+            "id" : 2240449,
+            "lat" : -8.8368199999999995,
+            "lon" : 13.23432,
+            "name" : "Luanda",
+            "population" : 2776168,
+            "score" : 62762,
+            "timezone" : "Africa/Luanda"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA2",
+            "id" : 647751,
+            "lat" : 60.24859,
+            "lon" : 24.065339999999999,
+            "name" : "Lohja",
+            "population" : 35960,
+            "score" : 52980,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Malesia",
+            "country" : "MY",
+            "feature" : "PPLC",
+            "id" : 1735161,
+            "lat" : 3.1412,
+            "lon" : 101.68653,
+            "name" : "Kuala Lumpur",
+            "population" : 1453975,
+            "score" : 49540,
+            "timezone" : "Asia/Kuala_Lumpur"
+         },
+         {
+            "area" : "Sambia",
+            "country" : "ZM",
+            "feature" : "PPLC",
+            "id" : 909137,
+            "lat" : -15.406689999999999,
+            "lon" : 28.287130000000001,
+            "name" : "Lusaka",
+            "population" : 1267440,
+            "score" : 47674,
+            "timezone" : "Africa/Lusaka"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 648366,
+            "lat" : 61.316670000000002,
+            "lon" : 23.75,
+            "name" : "Lemp\u00e4\u00e4l\u00e4",
+            "population" : 18096,
+            "score" : 44048,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 648738,
+            "lat" : 62.414070000000002,
+            "lon" : 25.95194,
+            "name" : "Laukaa",
+            "population" : 17093,
+            "score" : 43547,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Sodankyl\u00e4",
+            "country" : "FI",
+            "feature" : "SKI",
+            "id" : 647373,
+            "lat" : 67.133300000000006,
+            "lon" : 26.899999999999999,
+            "name" : "Luosto",
+            "population" : 0,
+            "score" : 43000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 647571,
+            "lat" : 60.456589999999998,
+            "lon" : 26.22505,
+            "name" : "Loviisa",
+            "population" : 15466,
+            "score" : 42733,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}

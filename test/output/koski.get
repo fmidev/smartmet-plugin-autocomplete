@@ -12,6 +12,7 @@
             "lon" : 24.233329999999999,
             "name" : "Koski",
             "population" : 0,
+            "score" : 135000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 22.199999999999999,
             "name" : "Koski",
             "population" : 0,
+            "score" : 135000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -34,6 +36,7 @@
             "lon" : 23.033329999999999,
             "name" : "Koski",
             "population" : 0,
+            "score" : 135000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -45,6 +48,7 @@
             "lon" : 24.050000000000001,
             "name" : "Koski",
             "population" : 0,
+            "score" : 135000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -56,6 +60,7 @@
             "lon" : 22.949999999999999,
             "name" : "Koski",
             "population" : 0,
+            "score" : 135000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -67,6 +72,7 @@
             "lon" : 22.733329999999999,
             "name" : "Koski",
             "population" : 0,
+            "score" : 135000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -78,6 +84,7 @@
             "lon" : 22.183330000000002,
             "name" : "Koski",
             "population" : 0,
+            "score" : 135000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -89,6 +96,7 @@
             "lon" : 21.75,
             "name" : "Koski",
             "population" : 0,
+            "score" : 135000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -100,6 +108,7 @@
             "lon" : 27.616669999999999,
             "name" : "Koskiaho",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -111,6 +120,7 @@
             "lon" : 27.716670000000001,
             "name" : "Koskimies",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -122,6 +132,7 @@
             "lon" : 29.08333,
             "name" : "Koskim\u00e4ki",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -133,6 +144,7 @@
             "lon" : 21.983329999999999,
             "name" : "Koskim\u00e4ki",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -144,6 +156,7 @@
             "lon" : 24.466670000000001,
             "name" : "Koskim\u00e4ki",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -155,6 +168,7 @@
             "lon" : 30.386980000000001,
             "name" : "Koskinen",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -166,6 +180,7 @@
             "lon" : 23.199999999999999,
             "name" : "Koskioinen",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -177,6 +192,7 @@
             "lon" : 26.033329999999999,
             "name" : "Koskip\u00e4\u00e4",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -188,6 +204,7 @@
             "lon" : 23.300000000000001,
             "name" : "Koskis",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -199,6 +216,7 @@
             "lon" : 23.149999999999999,
             "name" : "Koski Tl",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -210,6 +228,7 @@
             "lon" : 23.083300000000001,
             "name" : "Koski",
             "population" : 2514,
+            "score" : 18257,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -221,6 +240,7 @@
             "lon" : 25.483329999999999,
             "name" : "Koskikeskus",
             "population" : 0,
+            "score" : 16000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -232,6 +252,7 @@
             "lon" : 26.6584,
             "name" : "Koski-Golf",
             "population" : 0,
+            "score" : 15000,
             "timezone" : "Europe/Helsinki"
          }
       ]

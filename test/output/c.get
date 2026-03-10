@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Meksiko",
+            "country" : "MX",
+            "feature" : "PPLC",
+            "id" : 3530597,
+            "lat" : 19.428470000000001,
+            "lon" : -99.127660000000006,
+            "name" : "M\u00e9xico",
+            "population" : 12294193,
+            "score" : 148835,
+            "timezone" : "America/Mexico_City"
+         },
+         {
+            "area" : "Egypti",
+            "country" : "EG",
+            "feature" : "PPLC",
+            "id" : 360630,
+            "lat" : 30.062629999999999,
+            "lon" : 31.249669999999998,
+            "name" : "Kairo",
+            "population" : 7734614,
+            "score" : 112346,
+            "timezone" : "Africa/Cairo"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLC",
+            "id" : 2618425,
+            "lat" : 55.675939999999997,
+            "lon" : 12.565530000000001,
+            "name" : "K\u00f6\u00f6penhamina",
+            "population" : 1153615,
+            "score" : 102681,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "NY, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPL",
+            "id" : 5128581,
+            "lat" : 40.714269999999999,
+            "lon" : -74.005970000000005,
+            "name" : "New York",
+            "population" : 8175133,
+            "score" : 101751,
+            "timezone" : "America/New_York"
+         },
+         {
+            "area" : "Chile",
+            "country" : "CL",
+            "feature" : "PPLC",
+            "id" : 3871336,
+            "lat" : -33.456940000000003,
+            "lon" : -70.648269999999997,
+            "name" : "Santiago de Chile",
+            "population" : 4837295,
+            "score" : 83373,
+            "timezone" : "America/Santiago"
+         },
+         {
+            "area" : "Etel\u00e4-Afrikka",
+            "country" : "ZA",
+            "feature" : "PPLC",
+            "id" : 3369157,
+            "lat" : -33.925840000000001,
+            "lon" : 18.423220000000001,
+            "name" : "Kapkaupunki",
+            "population" : 3433441,
+            "score" : 69334,
+            "timezone" : "Africa/Johannesburg"
+         },
+         {
+            "area" : "Venezuela",
+            "country" : "VE",
+            "feature" : "PPLC",
+            "id" : 3646738,
+            "lat" : 10.488009999999999,
+            "lon" : -66.879189999999994,
+            "name" : "Caracas",
+            "population" : 3000000,
+            "score" : 65000,
+            "timezone" : "America/Caracas"
+         },
+         {
+            "area" : "Vietnam",
+            "country" : "VN",
+            "feature" : "PPLA",
+            "id" : 1566083,
+            "lat" : 10.82302,
+            "lon" : 106.62965,
+            "name" : "H\u1ed3 Ch\u00ed Minhin kaupunki",
+            "population" : 3467331,
+            "score" : 59673,
+            "timezone" : "Asia/Ho_Chi_Minh"
+         },
+         {
+            "area" : "Marokko",
+            "country" : "MA",
+            "feature" : "PPLA",
+            "id" : 2553604,
+            "lat" : 33.58831,
+            "lon" : -7.6113799999999996,
+            "name" : "Casablanca",
+            "population" : 3144909,
+            "score" : 56449,
+            "timezone" : "Africa/Casablanca"
+         },
+         {
+            "area" : "Guinea",
+            "country" : "GN",
+            "feature" : "PPLC",
+            "id" : 2422465,
+            "lat" : 9.5379500000000004,
+            "lon" : -13.677289999999999,
+            "name" : "Conakry",
+            "population" : 1767200,
+            "score" : 52672,
+            "timezone" : "Africa/Conakry"
+         },
+         {
+            "area" : "IL, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPLA2",
+            "id" : 4887398,
+            "lat" : 41.850029999999997,
+            "lon" : -87.650049999999993,
+            "name" : "Chicago",
+            "population" : 2695598,
+            "score" : 51956,
+            "timezone" : "America/Chicago"
+         },
+         {
+            "area" : "Bangladesh",
+            "country" : "BD",
+            "feature" : "PPLA",
+            "id" : 1205733,
+            "lat" : 22.3384,
+            "lon" : 91.831680000000006,
+            "name" : "Chittagong",
+            "population" : 3920222,
+            "score" : 49199,
+            "timezone" : "Asia/Dhaka"
+         },
+         {
+            "area" : "Kolumbia",
+            "country" : "CO",
+            "feature" : "PPLA",
+            "id" : 3687925,
+            "lat" : 3.4372199999999999,
+            "lon" : -76.522499999999994,
+            "name" : "Cali",
+            "population" : 2392877,
+            "score" : 48929,
+            "timezone" : "America/Bogota"
+         },
+         {
+            "area" : "",
+            "country" : "GT",
+            "feature" : "PPLC",
+            "id" : 3598132,
+            "lat" : 14.64072,
+            "lon" : -90.513270000000006,
+            "name" : "Guatemala",
+            "population" : 994938,
+            "score" : 44949,
+            "timezone" : "America/Guatemala"
+         },
+         {
+            "area" : "Sri Lanka",
+            "country" : "LK",
+            "feature" : "PPLC",
+            "id" : 1248991,
+            "lat" : 6.93194,
+            "lon" : 79.84778,
+            "name" : "Colombo",
+            "population" : 648034,
+            "score" : 41480,
+            "timezone" : "Asia/Colombo"
+         }
+      ]
+   }
+}

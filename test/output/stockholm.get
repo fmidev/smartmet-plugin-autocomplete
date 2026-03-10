@@ -12,6 +12,7 @@
             "lon" : 18.064900000000002,
             "name" : "Tukholma",
             "population" : 1253309,
+            "score" : 209665,
             "timezone" : "Europe/Stockholm"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 20.523890000000002,
             "name" : "Stockholm",
             "population" : 0,
+            "score" : 127000,
             "timezone" : "Europe/Mariehamn"
          },
          {
@@ -34,6 +36,7 @@
             "lon" : 22.683330000000002,
             "name" : "Tukkisaari",
             "population" : 0,
+            "score" : 127000,
             "timezone" : "Europe/Helsinki"
          }
       ]

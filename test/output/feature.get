@@ -12,6 +12,7 @@
             "lon" : 24.935449999999999,
             "name" : "Helsinki",
             "population" : 558457,
+            "score" : 329229,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 114.15769,
             "name" : "Hong Kong",
             "population" : 7012738,
+            "score" : 105127,
             "timezone" : "Asia/Hong_Kong"
          },
          {
@@ -34,6 +36,7 @@
             "lon" : -82.383039999999994,
             "name" : "Havanna",
             "population" : 2163824,
+            "score" : 56638,
             "timezone" : "America/Havana"
          },
          {
@@ -45,6 +48,7 @@
             "lon" : 31.053370000000001,
             "name" : "Harare",
             "population" : 1542813,
+            "score" : 50428,
             "timezone" : "Africa/Harare"
          },
          {
@@ -56,6 +60,7 @@
             "lon" : 105.84117000000001,
             "name" : "Hanoi",
             "population" : 1431270,
+            "score" : 49313,
             "timezone" : "Asia/Ho_Chi_Minh"
          },
          {
@@ -67,6 +72,7 @@
             "lon" : 159.94999999999999,
             "name" : "Honiara",
             "population" : 56298,
+            "score" : 35563,
             "timezone" : "Pacific/Guadalcanal"
          },
          {
@@ -78,6 +84,7 @@
             "lon" : -2.1049099999999998,
             "name" : "Saint Helier",
             "population" : 28000,
+            "score" : 35280,
             "timezone" : "Europe/Jersey"
          },
          {
@@ -89,6 +96,7 @@
             "lon" : -64.783029999999997,
             "name" : "Hamilton",
             "population" : 902,
+            "score" : 35009,
             "timezone" : "Atlantic/Bermuda"
          }
       ]

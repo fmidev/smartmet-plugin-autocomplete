@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 640999,
+            "lat" : 61.483330000000002,
+            "lon" : 21.783329999999999,
+            "name" : "Pori",
+            "population" : 76772,
+            "score" : 78386,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Brasilia",
+            "country" : "BR",
+            "feature" : "PPLA",
+            "id" : 3448439,
+            "lat" : -23.547499999999999,
+            "lon" : -46.636110000000002,
+            "name" : "S\u00e3o Paulo",
+            "population" : 10021295,
+            "score" : 75106,
+            "timezone" : "America/Sao_Paulo"
+         },
+         {
+            "area" : "Pohjois-Korea",
+            "country" : "KP",
+            "feature" : "PPLC",
+            "id" : 1871859,
+            "lat" : 39.033850000000001,
+            "lon" : 125.75432000000001,
+            "name" : "Pjongjang",
+            "population" : 3222000,
+            "score" : 67220,
+            "timezone" : "Asia/Pyongyang"
+         },
+         {
+            "area" : "Ven\u00e4j\u00e4",
+            "country" : "RU",
+            "feature" : "PPLA",
+            "id" : 498817,
+            "lat" : 59.938630000000003,
+            "lon" : 30.314129999999999,
+            "name" : "Pietari",
+            "population" : 5028000,
+            "score" : 60408,
+            "timezone" : "Europe/Moscow"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 660561,
+            "lat" : 60.392330000000001,
+            "lon" : 25.66507,
+            "name" : "Porvoo",
+            "population" : 47192,
+            "score" : 58596,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Ranska",
+            "country" : "FR",
+            "feature" : "PPLC",
+            "id" : 2988507,
+            "lat" : 48.853409999999997,
+            "lon" : 2.3488000000000002,
+            "name" : "Pariisi",
+            "population" : 2138551,
+            "score" : 56386,
+            "timezone" : "Europe/Paris"
+         },
+         {
+            "area" : "Etel\u00e4-Afrikka",
+            "country" : "ZA",
+            "feature" : "PPLC",
+            "id" : 964137,
+            "lat" : -25.744859999999999,
+            "lon" : 28.187830000000002,
+            "name" : "Pretoria",
+            "population" : 1619438,
+            "score" : 51194,
+            "timezone" : "Africa/Johannesburg"
+         },
+         {
+            "area" : "Kambodza",
+            "country" : "KH",
+            "feature" : "PPLC",
+            "id" : 1821306,
+            "lat" : 11.56245,
+            "lon" : 104.91601,
+            "name" : "Phnom Penh",
+            "population" : 1573544,
+            "score" : 50735,
+            "timezone" : "Asia/Phnom_Penh"
+         },
+         {
+            "area" : "Haiti",
+            "country" : "HT",
+            "feature" : "PPLC",
+            "id" : 3718426,
+            "lat" : 18.539169999999999,
+            "lon" : -72.334999999999994,
+            "name" : "Port-au-Prince",
+            "population" : 1234742,
+            "score" : 47347,
+            "timezone" : "America/Port-au-Prince"
+         },
+         {
+            "area" : "Tshekki",
+            "country" : "CZ",
+            "feature" : "PPLC",
+            "id" : 3067696,
+            "lat" : 50.088039999999999,
+            "lon" : 14.42076,
+            "name" : "Praha",
+            "population" : 1165581,
+            "score" : 46656,
+            "timezone" : "Europe/Prague"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 656130,
+            "lat" : 63.674860000000002,
+            "lon" : 22.702559999999998,
+            "name" : "Pietarsaari",
+            "population" : 19238,
+            "score" : 44619,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLC",
+            "id" : 1816670,
+            "lat" : 39.907499999999999,
+            "lon" : 116.39722999999999,
+            "name" : "Peking",
+            "population" : 11716620,
+            "score" : 44013,
+            "timezone" : "Asia/Shanghai"
+         },
+         {
+            "area" : "Australia",
+            "country" : "AU",
+            "feature" : "PPLA",
+            "id" : 2063523,
+            "lat" : -31.95224,
+            "lon" : 115.8614,
+            "name" : "Perth",
+            "population" : 1896548,
+            "score" : 43965,
+            "timezone" : "Australia/Perth"
+         },
+         {
+            "area" : "Pelkosenniemi",
+            "country" : "FI",
+            "feature" : "SKI",
+            "id" : 640393,
+            "lat" : 67.013900000000007,
+            "lon" : 27.1494,
+            "name" : "Pyh\u00e4tunturi",
+            "population" : 0,
+            "score" : 43000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 641489,
+            "lat" : 61.46125,
+            "lon" : 23.632280000000002,
+            "name" : "Pirkkala",
+            "population" : 15615,
+            "score" : 42808,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}

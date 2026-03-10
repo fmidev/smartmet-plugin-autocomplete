@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Bangladesh",
+            "country" : "BD",
+            "feature" : "PPLC",
+            "id" : 1185241,
+            "lat" : 23.7104,
+            "lon" : 90.407439999999994,
+            "name" : "Dhaka",
+            "population" : 10356500,
+            "score" : 98929,
+            "timezone" : "Asia/Dhaka"
+         },
+         {
+            "area" : "Chile",
+            "country" : "CL",
+            "feature" : "PPLC",
+            "id" : 3871336,
+            "lat" : -33.456940000000003,
+            "lon" : -70.648269999999997,
+            "name" : "Santiago de Chile",
+            "population" : 4837295,
+            "score" : 83373,
+            "timezone" : "America/Santiago"
+         },
+         {
+            "area" : "Senegal",
+            "country" : "SN",
+            "feature" : "PPLC",
+            "id" : 2253354,
+            "lat" : 14.6937,
+            "lon" : -17.44406,
+            "name" : "Dakar",
+            "population" : 2476400,
+            "score" : 59764,
+            "timezone" : "Africa/Dakar"
+         },
+         {
+            "area" : "Dominikaaninen tasavalta",
+            "country" : "DO",
+            "feature" : "PPLC",
+            "id" : 3492908,
+            "lat" : 18.500119999999999,
+            "lon" : -69.988569999999996,
+            "name" : "Santo Domingo",
+            "population" : 2201941,
+            "score" : 57019,
+            "timezone" : "America/Santo_Domingo"
+         },
+         {
+            "area" : "Etel\u00e4-Afrikka",
+            "country" : "ZA",
+            "feature" : "PPLA2",
+            "id" : 1007311,
+            "lat" : -29.857900000000001,
+            "lon" : 31.029199999999999,
+            "name" : "Durban",
+            "population" : 3120282,
+            "score" : 56203,
+            "timezone" : "Africa/Johannesburg"
+         },
+         {
+            "area" : "Brasilia",
+            "country" : "BR",
+            "feature" : "PPLA",
+            "id" : 3451190,
+            "lat" : -22.90278,
+            "lon" : -43.207500000000003,
+            "name" : "Rio de Janeiro",
+            "population" : 6023699,
+            "score" : 55118,
+            "timezone" : "America/Sao_Paulo"
+         },
+         {
+            "area" : "Tansania",
+            "country" : "TZ",
+            "feature" : "PPLA",
+            "id" : 160263,
+            "lat" : -6.8234899999999996,
+            "lon" : 39.269509999999997,
+            "name" : "Dar es Salaam",
+            "population" : 2698652,
+            "score" : 51987,
+            "timezone" : "Africa/Dar_es_Salaam"
+         },
+         {
+            "area" : "Syyria",
+            "country" : "SY",
+            "feature" : "PPLC",
+            "id" : 170654,
+            "lat" : 33.510199999999998,
+            "lon" : 36.29128,
+            "name" : "Damaskos",
+            "population" : 1569394,
+            "score" : 50694,
+            "timezone" : "Asia/Damascus"
+         },
+         {
+            "area" : "Etel\u00e4-Korea",
+            "country" : "KR",
+            "feature" : "PPLA",
+            "id" : 1835329,
+            "lat" : 35.870280000000001,
+            "lon" : 128.59110999999999,
+            "name" : "Daegu",
+            "population" : 2566540,
+            "score" : 50665,
+            "timezone" : "Asia/Seoul"
+         },
+         {
+            "area" : "Irlanti",
+            "country" : "IE",
+            "feature" : "PPLC",
+            "id" : 2964574,
+            "lat" : 53.333060000000003,
+            "lon" : -6.2488900000000003,
+            "name" : "Dublin",
+            "population" : 1024027,
+            "score" : 45240,
+            "timezone" : "Europe/Dublin"
+         },
+         {
+            "area" : "Tadzikistan",
+            "country" : "TJ",
+            "feature" : "PPLC",
+            "id" : 1221874,
+            "lat" : 38.53575,
+            "lon" : 68.779049999999998,
+            "name" : "Du\u0161anbe",
+            "population" : 679400,
+            "score" : 41794,
+            "timezone" : "Asia/Dushanbe"
+         },
+         {
+            "area" : "",
+            "country" : "DJ",
+            "feature" : "PPLC",
+            "id" : 223817,
+            "lat" : 11.58901,
+            "lon" : 43.145029999999998,
+            "name" : "Djibouti",
+            "population" : 623891,
+            "score" : 41239,
+            "timezone" : "Africa/Djibouti"
+         },
+         {
+            "area" : "Arabiemiirikunnat",
+            "country" : "AE",
+            "feature" : "PPLC",
+            "id" : 292968,
+            "lat" : 24.466670000000001,
+            "lon" : 54.366669999999999,
+            "name" : "Abu Dhabi",
+            "population" : 603492,
+            "score" : 41035,
+            "timezone" : "Asia/Dubai"
+         },
+         {
+            "area" : "DC, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPLC",
+            "id" : 4140963,
+            "lat" : 38.895110000000003,
+            "lon" : -77.036370000000005,
+            "name" : "Washington",
+            "population" : 601723,
+            "score" : 41017,
+            "timezone" : "America/New_York"
+         },
+         {
+            "area" : "Etel\u00e4-Korea",
+            "country" : "KR",
+            "feature" : "PPLA",
+            "id" : 1835235,
+            "lat" : 36.321390000000001,
+            "lon" : 127.41972,
+            "name" : "Daejeon",
+            "population" : 1475221,
+            "score" : 39752,
+            "timezone" : "Asia/Seoul"
+         }
+      ]
+   }
+}

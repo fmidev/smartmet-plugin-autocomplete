@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Zaire",
+            "country" : "CD",
+            "feature" : "PPLC",
+            "id" : 2314302,
+            "lat" : -4.3275800000000002,
+            "lon" : 15.31357,
+            "name" : "Kinshasa",
+            "population" : 7785965,
+            "score" : 112860,
+            "timezone" : "Africa/Kinshasa"
+         },
+         {
+            "area" : "Egypti",
+            "country" : "EG",
+            "feature" : "PPLC",
+            "id" : 360630,
+            "lat" : 30.062629999999999,
+            "lon" : 31.249669999999998,
+            "name" : "Kairo",
+            "population" : 7734614,
+            "score" : 112346,
+            "timezone" : "Africa/Cairo"
+         },
+         {
+            "area" : "",
+            "country" : "HK",
+            "feature" : "PPLC",
+            "id" : 1819729,
+            "lat" : 22.285520000000002,
+            "lon" : 114.15769,
+            "name" : "Hong Kong",
+            "population" : 7012738,
+            "score" : 105127,
+            "timezone" : "Asia/Hong_Kong"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLC",
+            "id" : 2618425,
+            "lat" : 55.675939999999997,
+            "lon" : 12.565530000000001,
+            "name" : "K\u00f6\u00f6penhamina",
+            "population" : 1153615,
+            "score" : 102681,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Pakistan",
+            "country" : "PK",
+            "feature" : "PPLA",
+            "id" : 1174872,
+            "lat" : 24.9056,
+            "lon" : 67.0822,
+            "name" : "Karachi",
+            "population" : 11624219,
+            "score" : 94606,
+            "timezone" : "Asia/Karachi"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 650224,
+            "lat" : 62.892380000000003,
+            "lon" : 27.677029999999998,
+            "name" : "Kuopio",
+            "population" : 89104,
+            "score" : 84552,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Etel\u00e4-Afrikka",
+            "country" : "ZA",
+            "feature" : "PPLC",
+            "id" : 3369157,
+            "lat" : -33.925840000000001,
+            "lon" : 18.423220000000001,
+            "name" : "Kapkaupunki",
+            "population" : 3433441,
+            "score" : 69334,
+            "timezone" : "Africa/Johannesburg"
+         },
+         {
+            "area" : "Afganistan",
+            "country" : "AF",
+            "feature" : "PPLC",
+            "id" : 1138958,
+            "lat" : 34.528129999999997,
+            "lon" : 69.172330000000002,
+            "name" : "Kabul",
+            "population" : 3043532,
+            "score" : 65435,
+            "timezone" : "Asia/Kabul"
+         },
+         {
+            "area" : "Ukraina",
+            "country" : "UA",
+            "feature" : "PPLC",
+            "id" : 703448,
+            "lat" : 50.454659999999997,
+            "lon" : 30.523800000000001,
+            "name" : "Kiova",
+            "population" : 2797553,
+            "score" : 62976,
+            "timezone" : "Europe/Kiev"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 650946,
+            "lat" : 60.466670000000001,
+            "lon" : 26.91667,
+            "name" : "Kotka",
+            "population" : 54616,
+            "score" : 62308,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "ADM3",
+            "id" : 650861,
+            "lat" : 60.9206,
+            "lon" : 26.824179999999998,
+            "name" : "Kouvola",
+            "population" : 88072,
+            "score" : 61036,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Vietnam",
+            "country" : "VN",
+            "feature" : "PPLA",
+            "id" : 1566083,
+            "lat" : 10.82302,
+            "lon" : 106.62965,
+            "name" : "H\u1ed3 Ch\u00ed Minhin kaupunki",
+            "population" : 3467331,
+            "score" : 59673,
+            "timezone" : "Asia/Ho_Chi_Minh"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 651943,
+            "lat" : 63.838470000000001,
+            "lon" : 23.130659999999999,
+            "name" : "Kokkola",
+            "population" : 35586,
+            "score" : 57793,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 654899,
+            "lat" : 64.227279999999993,
+            "lon" : 27.728459999999998,
+            "name" : "Kajaani",
+            "population" : 35375,
+            "score" : 57688,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Sudan",
+            "country" : "SD",
+            "feature" : "PPLC",
+            "id" : 379252,
+            "lat" : 15.551769999999999,
+            "lon" : 32.532409999999999,
+            "name" : "Khartum",
+            "population" : 1974647,
+            "score" : 54746,
+            "timezone" : "Africa/Khartoum"
+         }
+      ]
+   }
+}

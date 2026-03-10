@@ -1,1 +1,1 @@
-GET /autocomplete?pretty=1&keyword=ajax_fi_all&pattern=Mynch HTTP/1.0
+GET /autocomplete?pretty=1&keyword=ajax_fi_all&pattern=Mynch&debug=1 HTTP/1.0

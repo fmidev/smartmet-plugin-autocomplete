@@ -12,6 +12,7 @@
             "lon" : 21.375959999999999,
             "name" : "Kristiinankaupunki",
             "population" : 7712,
+            "score" : 38856,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 21.321100000000001,
             "name" : "Karhusaari",
             "population" : 0,
+            "score" : 15000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -34,6 +36,7 @@
             "lon" : 21.411899999999999,
             "name" : "Kristiinankaupunki radioaktiivisuusasema",
             "population" : 0,
+            "score" : 15000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -45,6 +48,7 @@
             "lon" : 21.530819999999999,
             "name" : "Kristiina Opt",
             "population" : 0,
+            "score" : 15000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -56,6 +60,7 @@
             "lon" : 21.530819999999999,
             "name" : "Kristiina R",
             "population" : 0,
+            "score" : 15000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -67,6 +72,7 @@
             "lon" : 21.169830000000001,
             "name" : "Majakka",
             "population" : 0,
+            "score" : 15000,
             "timezone" : "Europe/Helsinki"
          }
       ]

@@ -12,6 +12,7 @@
             "lon" : -63.057830000000003,
             "name" : "The Valley",
             "population" : 2035,
+            "score" : 35020,
             "timezone" : "America/Anguilla"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 4.29861,
             "name" : "Haag",
             "population" : 474292,
+            "score" : 29743,
             "timezone" : "Europe/Amsterdam"
          },
          {
@@ -34,6 +36,7 @@
             "lon" : 22.930859999999999,
             "name" : "Thessaloniki",
             "population" : 354290,
+            "score" : 28543,
             "timezone" : "Europe/Athens"
          },
          {
@@ -45,6 +48,7 @@
             "lon" : -95.489379999999997,
             "name" : "The Woodlands",
             "population" : 93847,
+            "score" : 20938,
             "timezone" : "America/Chicago"
          },
          {
@@ -56,6 +60,7 @@
             "lon" : -80.444500000000005,
             "name" : "The Hammocks",
             "population" : 51003,
+            "score" : 20510,
             "timezone" : "America/New_York"
          },
          {
@@ -67,6 +72,7 @@
             "lon" : 77.315250000000006,
             "name" : "Thenkasi",
             "population" : 65496,
+            "score" : 20055,
             "timezone" : "Asia/Kolkata"
          }
       ]

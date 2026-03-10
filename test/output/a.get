@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Argentiina",
+            "country" : "AR",
+            "feature" : "PPLC",
+            "id" : 3435910,
+            "lat" : -34.613149999999997,
+            "lon" : -58.377229999999997,
+            "name" : "Buenos Aires",
+            "population" : 13076300,
+            "score" : 165763,
+            "timezone" : "America/Argentina/Buenos_Aires"
+         },
+         {
+            "area" : "Turkki",
+            "country" : "TR",
+            "feature" : "PPLC",
+            "id" : 323786,
+            "lat" : 39.919870000000003,
+            "lon" : 32.85427,
+            "name" : "Ankara",
+            "population" : 3517182,
+            "score" : 70172,
+            "timezone" : "Europe/Istanbul"
+         },
+         {
+            "area" : "Egypti",
+            "country" : "EG",
+            "feature" : "PPLA",
+            "id" : 361058,
+            "lat" : 31.21564,
+            "lon" : 29.955269999999999,
+            "name" : "Aleksandria",
+            "population" : 3811516,
+            "score" : 63115,
+            "timezone" : "Africa/Cairo"
+         },
+         {
+            "area" : "CA, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPLA2",
+            "id" : 5368361,
+            "lat" : 34.052230000000002,
+            "lon" : -118.24368,
+            "name" : "Los Angeles",
+            "population" : 3792621,
+            "score" : 62926,
+            "timezone" : "America/Los_Angeles"
+         },
+         {
+            "area" : "Etiopia",
+            "country" : "ET",
+            "feature" : "PPLC",
+            "id" : 344979,
+            "lat" : 9.0249699999999997,
+            "lon" : 38.74689,
+            "name" : "Addis Abeba",
+            "population" : 2757729,
+            "score" : 62577,
+            "timezone" : "Africa/Addis_Ababa"
+         },
+         {
+            "area" : "C\u00f4te d'Ivoire",
+            "country" : "CI",
+            "feature" : "PPLA",
+            "id" : 2293538,
+            "lat" : 5.30966,
+            "lon" : -4.0126600000000003,
+            "name" : "Abidjan",
+            "population" : 3677115,
+            "score" : 61771,
+            "timezone" : "Africa/Abidjan"
+         },
+         {
+            "area" : "Algeria",
+            "country" : "DZ",
+            "feature" : "PPLC",
+            "id" : 2507480,
+            "lat" : 36.752499999999998,
+            "lon" : 3.0419700000000001,
+            "name" : "Alger",
+            "population" : 1977663,
+            "score" : 54777,
+            "timezone" : "Africa/Algiers"
+         },
+         {
+            "area" : "Ghana",
+            "country" : "GH",
+            "feature" : "PPLC",
+            "id" : 2306104,
+            "lat" : 5.5560200000000002,
+            "lon" : -0.19689999999999999,
+            "name" : "Accra",
+            "population" : 1963264,
+            "score" : 54633,
+            "timezone" : "Africa/Accra"
+         },
+         {
+            "area" : "Paraguay",
+            "country" : "PY",
+            "feature" : "PPLC",
+            "id" : 3439389,
+            "lat" : -25.300660000000001,
+            "lon" : -57.635910000000003,
+            "name" : "Asunci\u00f3n",
+            "population" : 1482200,
+            "score" : 49822,
+            "timezone" : "America/Asuncion"
+         },
+         {
+            "area" : "Madagaskar",
+            "country" : "MG",
+            "feature" : "PPLC",
+            "id" : 1070940,
+            "lat" : -18.913679999999999,
+            "lon" : 47.53613,
+            "name" : "Antananarivo",
+            "population" : 1391433,
+            "score" : 48914,
+            "timezone" : "Indian/Antananarivo"
+         },
+         {
+            "area" : "Jordania",
+            "country" : "JO",
+            "feature" : "PPLC",
+            "id" : 250441,
+            "lat" : 31.955220000000001,
+            "lon" : 35.945030000000003,
+            "name" : "Amman",
+            "population" : 1275857,
+            "score" : 47759,
+            "timezone" : "Asia/Amman"
+         },
+         {
+            "area" : "Haiti",
+            "country" : "HT",
+            "feature" : "PPLC",
+            "id" : 3718426,
+            "lat" : 18.539169999999999,
+            "lon" : -72.334999999999994,
+            "name" : "Port-au-Prince",
+            "population" : 1234742,
+            "score" : 47347,
+            "timezone" : "America/Port-au-Prince"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2624652,
+            "lat" : 56.156739999999999,
+            "lon" : 10.210760000000001,
+            "name" : "\u00c5rhus",
+            "population" : 237551,
+            "score" : 46878,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Kazakstan",
+            "country" : "KZ",
+            "feature" : "PPLA",
+            "id" : 1526384,
+            "lat" : 43.25667,
+            "lon" : 76.928610000000006,
+            "name" : "Almaty",
+            "population" : 2000900,
+            "score" : 45009,
+            "timezone" : "Asia/Almaty"
+         },
+         {
+            "area" : "Kouvola",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 661164,
+            "lat" : 60.683329999999998,
+            "lon" : 26.83333,
+            "name" : "Anjala",
+            "population" : 16779,
+            "score" : 43390,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}

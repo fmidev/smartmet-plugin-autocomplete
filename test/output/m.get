@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Meksiko",
+            "country" : "MX",
+            "feature" : "PPLC",
+            "id" : 3530597,
+            "lat" : 19.428470000000001,
+            "lon" : -99.127660000000006,
+            "name" : "M\u00e9xico",
+            "population" : 12294193,
+            "score" : 148835,
+            "timezone" : "America/Mexico_City"
+         },
+         {
+            "area" : "Ven\u00e4j\u00e4",
+            "country" : "RU",
+            "feature" : "PPLC",
+            "id" : 524901,
+            "lat" : 55.752220000000001,
+            "lon" : 37.615560000000002,
+            "name" : "Moskova",
+            "population" : 10381222,
+            "score" : 108107,
+            "timezone" : "Europe/Moscow"
+         },
+         {
+            "area" : "Espanja",
+            "country" : "ES",
+            "feature" : "PPLC",
+            "id" : 3117735,
+            "lat" : 40.416499999999999,
+            "lon" : -3.7025600000000001,
+            "name" : "Madrid",
+            "population" : 3255944,
+            "score" : 67559,
+            "timezone" : "Europe/Madrid"
+         },
+         {
+            "area" : "Australia",
+            "country" : "AU",
+            "feature" : "PPLA",
+            "id" : 2158177,
+            "lat" : -37.814,
+            "lon" : 144.96332000000001,
+            "name" : "Melbourne",
+            "population" : 4246375,
+            "score" : 67464,
+            "timezone" : "Australia/Melbourne"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 646005,
+            "lat" : 61.688569999999999,
+            "lon" : 27.272269999999999,
+            "name" : "Mikkeli",
+            "population" : 46550,
+            "score" : 63275,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Somalia",
+            "country" : "SO",
+            "feature" : "PPLC",
+            "id" : 53654,
+            "lat" : 2.0371100000000002,
+            "lon" : 45.34375,
+            "name" : "Mogadishu",
+            "population" : 2587183,
+            "score" : 60872,
+            "timezone" : "Africa/Mogadishu"
+         },
+         {
+            "area" : "Vietnam",
+            "country" : "VN",
+            "feature" : "PPLA",
+            "id" : 1566083,
+            "lat" : 10.82302,
+            "lon" : 106.62965,
+            "name" : "H\u1ed3 Ch\u00ed Minhin kaupunki",
+            "population" : 3467331,
+            "score" : 59673,
+            "timezone" : "Asia/Ho_Chi_Minh"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLC",
+            "id" : 3041732,
+            "lat" : 60.097259999999999,
+            "lon" : 19.934809999999999,
+            "name" : "Maarianhamina",
+            "population" : 10682,
+            "score" : 55341,
+            "timezone" : "Europe/Mariehamn"
+         },
+         {
+            "area" : "Valko-Ven\u00e4j\u00e4",
+            "country" : "BY",
+            "feature" : "PPLC",
+            "id" : 625144,
+            "lat" : 53.899999999999999,
+            "lon" : 27.566669999999998,
+            "name" : "Minsk",
+            "population" : 1742124,
+            "score" : 52421,
+            "timezone" : "Europe/Minsk"
+         },
+         {
+            "area" : "Filippiinit",
+            "country" : "PH",
+            "feature" : "PPLC",
+            "id" : 1701668,
+            "lat" : 14.604200000000001,
+            "lon" : 120.98220000000001,
+            "name" : "Manila",
+            "population" : 1600000,
+            "score" : 51000,
+            "timezone" : "Asia/Manila"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLA",
+            "id" : 2692969,
+            "lat" : 55.605870000000003,
+            "lon" : 13.000730000000001,
+            "name" : "Malm\u00f6",
+            "population" : 261548,
+            "score" : 50077,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Iran",
+            "country" : "IR",
+            "feature" : "PPLA",
+            "id" : 124665,
+            "lat" : 36.31559,
+            "lon" : 59.567959999999999,
+            "name" : "Ma\u0161had",
+            "population" : 2307177,
+            "score" : 48072,
+            "timezone" : "Asia/Tehran"
+         },
+         {
+            "area" : "Uruguay",
+            "country" : "UY",
+            "feature" : "PPLC",
+            "id" : 3441575,
+            "lat" : -34.903280000000002,
+            "lon" : -56.188160000000003,
+            "name" : "Montevideo",
+            "population" : 1270737,
+            "score" : 47707,
+            "timezone" : "America/Montevideo"
+         },
+         {
+            "area" : "Venezuela",
+            "country" : "VE",
+            "feature" : "PPLA",
+            "id" : 3633009,
+            "lat" : 10.66663,
+            "lon" : -71.612449999999995,
+            "name" : "Maracaibo",
+            "population" : 2225000,
+            "score" : 47250,
+            "timezone" : "America/Caracas"
+         },
+         {
+            "area" : "Mosambik",
+            "country" : "MZ",
+            "feature" : "PPLC",
+            "id" : 1040652,
+            "lat" : -25.965530000000001,
+            "lon" : 32.583219999999997,
+            "name" : "Maputo",
+            "population" : 1191613,
+            "score" : 46916,
+            "timezone" : "Africa/Maputo"
+         }
+      ]
+   }
+}

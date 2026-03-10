@@ -20,6 +20,7 @@
                "sv" : "Helsingfors"
             },
             "population" : 558457,
+            "score" : 329229,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -39,6 +40,7 @@
                "sv" : "Helsingborg"
             },
             "population" : 91025,
+            "score" : 41551,
             "timezone" : "Europe/Stockholm"
          },
          {
@@ -58,6 +60,7 @@
                "sv" : "Teknologbyn"
             },
             "population" : 3496,
+            "score" : 37748,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -77,6 +80,7 @@
                "sv" : "Helsing\u00f6r"
             },
             "population" : 35048,
+            "score" : 36752,
             "timezone" : "Europe/Copenhagen"
          },
          {
@@ -96,6 +100,7 @@
                "sv" : "Helsinginpit\u00e4j\u00e4"
             },
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -115,6 +120,7 @@
                "sv" : "Helsingby"
             },
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -134,6 +140,7 @@
                "sv" : "Helsinginkyl\u00e4"
             },
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -153,6 +160,7 @@
                "sv" : "Helsingborgs Gustav Adolf"
             },
             "population" : 31081,
+            "score" : 33554,
             "timezone" : "Europe/Stockholm"
          },
          {
@@ -172,6 +180,7 @@
                "sv" : "Helsingborgs Maria"
             },
             "population" : 30640,
+            "score" : 33532,
             "timezone" : "Europe/Stockholm"
          },
          {
@@ -191,6 +200,7 @@
                "sv" : "Helsingin Golfklubi"
             },
             "population" : 0,
+            "score" : 17000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -210,6 +220,7 @@
                "sv" : "It\u00e4-Helsingin Golf"
             },
             "population" : 0,
+            "score" : 17000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -229,6 +240,7 @@
                "sv" : "Olympiastadion"
             },
             "population" : 0,
+            "score" : 17000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -248,6 +260,7 @@
                "sv" : "Suur-Helsingin Golf Lakisto"
             },
             "population" : 0,
+            "score" : 17000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -267,6 +280,7 @@
                "sv" : "Suur-Helsingin Golf Luukki"
             },
             "population" : 0,
+            "score" : 15000,
             "timezone" : "Europe/Helsinki"
          }
       ]

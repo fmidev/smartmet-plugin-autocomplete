@@ -12,6 +12,7 @@
             "lon" : 24.935449999999999,
             "name" : "Helsinki",
             "population" : 558457,
+            "score" : 329229,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 12.694369999999999,
             "name" : "Helsingborg",
             "population" : 91025,
+            "score" : 41551,
             "timezone" : "Europe/Stockholm"
          },
          {
@@ -34,6 +36,7 @@
             "lon" : 24.983329999999999,
             "name" : "Helsinginpit\u00e4j\u00e4",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -45,6 +48,7 @@
             "lon" : 21.800000000000001,
             "name" : "Helsingby",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -56,6 +60,7 @@
             "lon" : 21.438099999999999,
             "name" : "Helsinginkyl\u00e4",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          }
       ]

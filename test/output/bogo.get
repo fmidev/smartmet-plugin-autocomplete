@@ -12,6 +12,7 @@
             "lon" : -74.08175,
             "name" : "Bogot\u00e1",
             "population" : 7674366,
+            "score" : 111744,
             "timezone" : "America/Bogota"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 106.78917,
             "name" : "Bogor",
             "population" : 800000,
+            "score" : 23478,
             "timezone" : "Asia/Jakarta"
          }
       ]

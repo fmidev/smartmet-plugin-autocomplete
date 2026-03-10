@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA",
+            "id" : 1790630,
+            "lat" : 34.258330000000001,
+            "lon" : 108.92861000000001,
+            "name" : "Xi'an",
+            "population" : 6501190,
+            "score" : 30001,
+            "timezone" : "Asia/Shanghai"
+         },
+         {
+            "area" : "Meksiko",
+            "country" : "MX",
+            "feature" : "PPLA",
+            "id" : 3526617,
+            "lat" : 19.53124,
+            "lon" : -96.915890000000005,
+            "name" : "Xalapa de Enr\u00edquez",
+            "population" : 425148,
+            "score" : 28937,
+            "timezone" : "America/Mexico_City"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA2",
+            "id" : 1790645,
+            "lat" : 24.479790000000001,
+            "lon" : 118.08187,
+            "name" : "Xiamen",
+            "population" : 3531347,
+            "score" : 27716,
+            "timezone" : "Asia/Shanghai"
+         },
+         {
+            "area" : "Vietnam",
+            "country" : "VN",
+            "feature" : "PPLA",
+            "id" : 1575627,
+            "lat" : 10.38639,
+            "lon" : 105.43518,
+            "name" : "Long Xuy\u00ean",
+            "population" : 158153,
+            "score" : 26582,
+            "timezone" : "Asia/Ho_Chi_Minh"
+         },
+         {
+            "area" : "Mosambik",
+            "country" : "MZ",
+            "feature" : "PPLA",
+            "id" : 1024552,
+            "lat" : -25.051939999999998,
+            "lon" : 33.644170000000003,
+            "name" : "Xai-Xai",
+            "population" : 127366,
+            "score" : 26274,
+            "timezone" : "Africa/Maputo"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA3",
+            "id" : 1790353,
+            "lat" : 34.337780000000002,
+            "lon" : 108.70261000000001,
+            "name" : "Xianyang",
+            "population" : 1034081,
+            "score" : 25795,
+            "timezone" : "Asia/Chongqing"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA",
+            "id" : 1788852,
+            "lat" : 36.625540000000001,
+            "lon" : 101.75739,
+            "name" : "Xining",
+            "population" : 767531,
+            "score" : 25590,
+            "timezone" : "Asia/Chongqing"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA2",
+            "id" : 1790587,
+            "lat" : 32.042200000000001,
+            "lon" : 112.14479,
+            "name" : "Xiangyang",
+            "population" : 462956,
+            "score" : 25356,
+            "timezone" : "Asia/Shanghai"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA3",
+            "id" : 1788694,
+            "lat" : 34.599719999999998,
+            "lon" : 119.15944,
+            "name" : "Xinpu",
+            "population" : 392444,
+            "score" : 25302,
+            "timezone" : "Asia/Shanghai"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA3",
+            "id" : 2033574,
+            "lat" : 40.610280000000003,
+            "lon" : 115.04472,
+            "name" : "Zhangjiakou Shi Xuanhua Qu",
+            "population" : 373422,
+            "score" : 25287,
+            "timezone" : "Asia/Shanghai"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA2",
+            "id" : 1790396,
+            "lat" : 29.84347,
+            "lon" : 114.32201000000001,
+            "name" : "Xianning",
+            "population" : 179494,
+            "score" : 25138,
+            "timezone" : "Asia/Shanghai"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA2",
+            "id" : 1790254,
+            "lat" : 30.92689,
+            "lon" : 113.92221000000001,
+            "name" : "Xiaogan",
+            "population" : 160437,
+            "score" : 25123,
+            "timezone" : "Asia/Shanghai"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA3",
+            "id" : 1788450,
+            "lat" : 38.409170000000003,
+            "lon" : 112.73333,
+            "name" : "Xinzhou",
+            "population" : 154003,
+            "score" : 25118,
+            "timezone" : "Asia/Shanghai"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA3",
+            "id" : 1789647,
+            "lat" : 27.896419999999999,
+            "lon" : 102.26342,
+            "name" : "Xichang",
+            "population" : 126787,
+            "score" : 25098,
+            "timezone" : "Asia/Chongqing"
+         },
+         {
+            "area" : "Kiina",
+            "country" : "CN",
+            "feature" : "PPLA3",
+            "id" : 1788638,
+            "lat" : 31.047039999999999,
+            "lon" : 113.14098,
+            "name" : "Xinshi",
+            "population" : 98422,
+            "score" : 25076,
+            "timezone" : "Asia/Shanghai"
+         }
+      ]
+   }
+}

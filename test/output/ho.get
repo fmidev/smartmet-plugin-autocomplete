@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Ghana",
+            "country" : "GH",
+            "feature" : "PPLA",
+            "id" : 2300379,
+            "lat" : 6.6008399999999998,
+            "lon" : 0.4713,
+            "name" : "Ho",
+            "population" : 69998,
+            "score" : 125700,
+            "timezone" : "Africa/Accra"
+         },
+         {
+            "area" : "",
+            "country" : "HK",
+            "feature" : "PPLC",
+            "id" : 1819729,
+            "lat" : 22.285520000000002,
+            "lon" : 114.15769,
+            "name" : "Hong Kong",
+            "population" : 7012738,
+            "score" : 105127,
+            "timezone" : "Asia/Hong_Kong"
+         },
+         {
+            "area" : "Vietnam",
+            "country" : "VN",
+            "feature" : "PPLA",
+            "id" : 1566083,
+            "lat" : 10.82302,
+            "lon" : 106.62965,
+            "name" : "H\u1ed3 Ch\u00ed Minhin kaupunki",
+            "population" : 3467331,
+            "score" : 59673,
+            "timezone" : "Asia/Ho_Chi_Minh"
+         },
+         {
+            "area" : "TX, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPLA2",
+            "id" : 4699066,
+            "lat" : 29.763280000000002,
+            "lon" : -95.36327,
+            "name" : "Houston",
+            "population" : 2099451,
+            "score" : 45995,
+            "timezone" : "America/Chicago"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 657530,
+            "lat" : 61.049999999999997,
+            "lon" : 25.433330000000002,
+            "name" : "Hollola",
+            "population" : 20405,
+            "score" : 45203,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLA2",
+            "id" : 2706003,
+            "lat" : 56.199710000000003,
+            "lon" : 12.55795,
+            "name" : "H\u00f6gan\u00e4s",
+            "population" : 13461,
+            "score" : 37673,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2619771,
+            "lat" : 55.860660000000003,
+            "lon" : 9.8503399999999992,
+            "name" : "Horsens",
+            "population" : 50074,
+            "score" : 37504,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLA2",
+            "id" : 2705049,
+            "lat" : 55.852379999999997,
+            "lon" : 13.66094,
+            "name" : "H\u00f6rby",
+            "population" : 6651,
+            "score" : 37333,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Brasilia",
+            "country" : "BR",
+            "feature" : "PPLA",
+            "id" : 3470127,
+            "lat" : -19.920829999999999,
+            "lon" : -43.937779999999997,
+            "name" : "Belo Horizonte",
+            "population" : 2373224,
+            "score" : 36866,
+            "timezone" : "America/Sao_Paulo"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2619856,
+            "lat" : 55.880980000000001,
+            "lon" : 12.501110000000001,
+            "name" : "H\u00f8rsholm",
+            "population" : 36670,
+            "score" : 36834,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2620046,
+            "lat" : 56.36009,
+            "lon" : 8.6160700000000006,
+            "name" : "Holstebro",
+            "population" : 32072,
+            "score" : 36604,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2620147,
+            "lat" : 55.713540000000002,
+            "lon" : 11.716900000000001,
+            "name" : "Holb\u00e6k",
+            "population" : 24544,
+            "score" : 36227,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Oulu",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 657596,
+            "lat" : 65.033330000000007,
+            "lon" : 26.050000000000001,
+            "name" : "Hohtila",
+            "population" : 0,
+            "score" : 36000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Oulu",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 7645675,
+            "lat" : 65.108750000000001,
+            "lon" : 25.3888,
+            "name" : "Holstinm\u00e4ki",
+            "population" : 0,
+            "score" : 36000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Oulu",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 450013,
+            "lat" : 65.149069999999995,
+            "lon" : 25.35069,
+            "name" : "Hookananp\u00e4\u00e4",
+            "population" : 0,
+            "score" : 36000,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}

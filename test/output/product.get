@@ -14,6 +14,7 @@
             "lon" : 24.935449999999999,
             "name" : "Helsinki",
             "population" : 558457,
+            "score" : 329229,
             "sunelevation" : "-11",
             "timezone" : "Europe/Helsinki"
          },
@@ -28,6 +29,7 @@
             "lon" : 12.694369999999999,
             "name" : "Helsingborg",
             "population" : 91025,
+            "score" : 41551,
             "sunelevation" : "-16",
             "timezone" : "Europe/Stockholm"
          },
@@ -42,6 +44,7 @@
             "lon" : 12.6136,
             "name" : "Helsing\u00f8r",
             "population" : 35048,
+            "score" : 36752,
             "sunelevation" : "-16",
             "timezone" : "Europe/Copenhagen"
          },
@@ -56,6 +59,7 @@
             "lon" : 24.983329999999999,
             "name" : "Helsinginpit\u00e4j\u00e4",
             "population" : 0,
+            "score" : 36000,
             "sunelevation" : "-11",
             "timezone" : "Europe/Helsinki"
          },
@@ -70,6 +74,7 @@
             "lon" : 21.800000000000001,
             "name" : "Helsingby",
             "population" : 0,
+            "score" : 35000,
             "sunelevation" : "-8",
             "timezone" : "Europe/Helsinki"
          },
@@ -84,6 +89,7 @@
             "lon" : 21.438099999999999,
             "name" : "Helsinginkyl\u00e4",
             "population" : 0,
+            "score" : 35000,
             "sunelevation" : "-10",
             "timezone" : "Europe/Helsinki"
          },
@@ -98,6 +104,7 @@
             "lon" : 12.70261,
             "name" : "Helsingborgs Gustav Adolf",
             "population" : 31081,
+            "score" : 33554,
             "sunelevation" : "-16",
             "timezone" : "Europe/Stockholm"
          },
@@ -112,6 +119,7 @@
             "lon" : 12.696770000000001,
             "name" : "Helsingborgs Maria",
             "population" : 30640,
+            "score" : 33532,
             "sunelevation" : "-16",
             "timezone" : "Europe/Stockholm"
          },
@@ -126,6 +134,7 @@
             "lon" : 24.8598,
             "name" : "Helsingin Golfklubi",
             "population" : 0,
+            "score" : 17000,
             "sunelevation" : "-11",
             "timezone" : "Europe/Helsinki"
          },
@@ -140,6 +149,7 @@
             "lon" : 25.02,
             "name" : "It\u00e4-Helsingin Golf",
             "population" : 0,
+            "score" : 17000,
             "sunelevation" : "-11",
             "timezone" : "Europe/Helsinki"
          },
@@ -154,6 +164,7 @@
             "lon" : 24.92718,
             "name" : "Olympiastadion Helsinki",
             "population" : 0,
+            "score" : 17000,
             "sunelevation" : "-11",
             "timezone" : "Europe/Helsinki"
          },
@@ -168,6 +179,7 @@
             "lon" : 24.6524,
             "name" : "Suur-Helsingin Golf Lakisto",
             "population" : 0,
+            "score" : 17000,
             "sunelevation" : "-11",
             "timezone" : "Europe/Helsinki"
          },
@@ -182,6 +194,7 @@
             "lon" : 24.680199999999999,
             "name" : "Suur-Helsingin Golf Luukki",
             "population" : 0,
+            "score" : 15000,
             "sunelevation" : "-11",
             "timezone" : "Europe/Helsinki"
          }

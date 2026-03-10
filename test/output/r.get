@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Saudi-Arabia",
+            "country" : "SA",
+            "feature" : "PPLC",
+            "id" : 108410,
+            "lat" : 24.687729999999998,
+            "lon" : 46.721850000000003,
+            "name" : "Riad",
+            "population" : 4205961,
+            "score" : 77060,
+            "timezone" : "Asia/Riyadh"
+         },
+         {
+            "area" : "Italia",
+            "country" : "IT",
+            "feature" : "PPLC",
+            "id" : 3169070,
+            "lat" : 41.891930000000002,
+            "lon" : 12.511329999999999,
+            "name" : "Rooma",
+            "population" : 2318895,
+            "score" : 58189,
+            "timezone" : "Europe/Rome"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 638936,
+            "lat" : 66.5,
+            "lon" : 25.716670000000001,
+            "name" : "Rovaniemi",
+            "population" : 34781,
+            "score" : 57391,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Brasilia",
+            "country" : "BR",
+            "feature" : "PPLA",
+            "id" : 3451190,
+            "lat" : -22.90278,
+            "lon" : -43.207500000000003,
+            "name" : "Rio de Janeiro",
+            "population" : 6023699,
+            "score" : 55118,
+            "timezone" : "America/Sao_Paulo"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 639734,
+            "lat" : 61.12724,
+            "lon" : 21.51127,
+            "name" : "Rauma",
+            "population" : 36550,
+            "score" : 53275,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Marokko",
+            "country" : "MA",
+            "feature" : "PPLC",
+            "id" : 2538475,
+            "lat" : 34.013249999999999,
+            "lon" : -6.8325500000000003,
+            "name" : "Rabat",
+            "population" : 1655753,
+            "score" : 51558,
+            "timezone" : "Africa/Casablanca"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 639406,
+            "lat" : 60.737690000000001,
+            "lon" : 24.777259999999998,
+            "name" : "Riihim\u00e4ki",
+            "population" : 26451,
+            "score" : 48226,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 640124,
+            "lat" : 60.48592,
+            "lon" : 22.168949999999999,
+            "name" : "Raisio",
+            "population" : 23597,
+            "score" : 46799,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 640276,
+            "lat" : 64.683329999999998,
+            "lon" : 24.483329999999999,
+            "name" : "Raahe",
+            "population" : 22217,
+            "score" : 46109,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Latvia",
+            "country" : "LV",
+            "feature" : "PPLC",
+            "id" : 456172,
+            "lat" : 56.945999999999998,
+            "lon" : 24.105889999999999,
+            "name" : "Riika",
+            "population" : 742572,
+            "score" : 42426,
+            "timezone" : "Europe/Riga"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 638803,
+            "lat" : 61.283329999999999,
+            "lon" : 28.83333,
+            "name" : "Ruokolahti",
+            "population" : 5780,
+            "score" : 37890,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2615006,
+            "lat" : 56.460700000000003,
+            "lon" : 10.036390000000001,
+            "name" : "Randers",
+            "population" : 55780,
+            "score" : 37789,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 638691,
+            "lat" : 61.985750000000003,
+            "lon" : 24.05714,
+            "name" : "Ruovesi",
+            "population" : 5314,
+            "score" : 37657,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Mikkeli",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 639248,
+            "lat" : 61.5,
+            "lon" : 27.266670000000001,
+            "name" : "Ristiina",
+            "population" : 5171,
+            "score" : 37586,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 639888,
+            "lat" : 65.916669999999996,
+            "lon" : 26.533329999999999,
+            "name" : "Ranua",
+            "population" : 4833,
+            "score" : 37417,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}

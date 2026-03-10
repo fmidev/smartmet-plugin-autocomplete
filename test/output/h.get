@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLC",
+            "id" : 658225,
+            "lat" : 60.169519999999999,
+            "lon" : 24.935449999999999,
+            "name" : "Helsinki",
+            "population" : 558457,
+            "score" : 329229,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "HK",
+            "feature" : "PPLC",
+            "id" : 1819729,
+            "lat" : 22.285520000000002,
+            "lon" : 114.15769,
+            "name" : "Hong Kong",
+            "population" : 7012738,
+            "score" : 105127,
+            "timezone" : "Asia/Hong_Kong"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 659180,
+            "lat" : 60.995959999999997,
+            "lon" : 24.46434,
+            "name" : "H\u00e4meenlinna",
+            "population" : 47261,
+            "score" : 63631,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Vietnam",
+            "country" : "VN",
+            "feature" : "PPLA",
+            "id" : 1566083,
+            "lat" : 10.82302,
+            "lon" : 106.62965,
+            "name" : "H\u1ed3 Ch\u00ed Minhin kaupunki",
+            "population" : 3467331,
+            "score" : 59673,
+            "timezone" : "Asia/Ho_Chi_Minh"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 656913,
+            "lat" : 60.633330000000001,
+            "lon" : 24.866669999999999,
+            "name" : "Hyvink\u00e4\u00e4",
+            "population" : 43515,
+            "score" : 56758,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Kuuba",
+            "country" : "CU",
+            "feature" : "PPLC",
+            "id" : 3553478,
+            "lat" : 23.133019999999998,
+            "lon" : -82.383039999999994,
+            "name" : "Havanna",
+            "population" : 2163824,
+            "score" : 56638,
+            "timezone" : "America/Havana"
+         },
+         {
+            "area" : "Zimbabwe",
+            "country" : "ZW",
+            "feature" : "PPLC",
+            "id" : 890299,
+            "lat" : -17.827719999999999,
+            "lon" : 31.053370000000001,
+            "name" : "Harare",
+            "population" : 1542813,
+            "score" : 50428,
+            "timezone" : "Africa/Harare"
+         },
+         {
+            "area" : "Vietnam",
+            "country" : "VN",
+            "feature" : "PPLC",
+            "id" : 1581130,
+            "lat" : 21.0245,
+            "lon" : 105.84117000000001,
+            "name" : "Hanoi",
+            "population" : 1431270,
+            "score" : 49313,
+            "timezone" : "Asia/Ho_Chi_Minh"
+         },
+         {
+            "area" : "TX, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPLA2",
+            "id" : 4699066,
+            "lat" : 29.763280000000002,
+            "lon" : -95.36327,
+            "name" : "Houston",
+            "population" : 2099451,
+            "score" : 45995,
+            "timezone" : "America/Chicago"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 659169,
+            "lat" : 60.569740000000003,
+            "lon" : 27.197939999999999,
+            "name" : "Hamina",
+            "population" : 21712,
+            "score" : 45856,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 658288,
+            "lat" : 61.205640000000002,
+            "lon" : 26.03811,
+            "name" : "Heinola",
+            "population" : 20849,
+            "score" : 45425,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 657530,
+            "lat" : 61.049999999999997,
+            "lon" : 25.433330000000002,
+            "name" : "Hollola",
+            "population" : 20405,
+            "score" : 45203,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Oulu",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 658629,
+            "lat" : 65.176540000000003,
+            "lon" : 25.352329999999998,
+            "name" : "Haukipudas",
+            "population" : 17298,
+            "score" : 44649,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "J\u00e4ms\u00e4",
+            "country" : "FI",
+            "feature" : "SKI",
+            "id" : -10000703,
+            "lat" : 61.885100000000001,
+            "lon" : 25.3233,
+            "name" : "Himos",
+            "population" : 0,
+            "score" : 43000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Saksa",
+            "country" : "DE",
+            "feature" : "PPLA",
+            "id" : 2911298,
+            "lat" : 53.575319999999998,
+            "lon" : 10.01534,
+            "name" : "Hampuri",
+            "population" : 1739117,
+            "score" : 42391,
+            "timezone" : "Europe/Berlin"
+         }
+      ]
+   }
+}

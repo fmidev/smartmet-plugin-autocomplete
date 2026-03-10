@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Argentiina",
+            "country" : "AR",
+            "feature" : "PPLC",
+            "id" : 3435910,
+            "lat" : -34.613149999999997,
+            "lon" : -58.377229999999997,
+            "name" : "Buenos Aires",
+            "population" : 13076300,
+            "score" : 165763,
+            "timezone" : "America/Argentina/Buenos_Aires"
+         },
+         {
+            "area" : "Kolumbia",
+            "country" : "CO",
+            "feature" : "PPLC",
+            "id" : 3688689,
+            "lat" : 4.6097099999999998,
+            "lon" : -74.08175,
+            "name" : "Bogot\u00e1",
+            "population" : 7674366,
+            "score" : 111744,
+            "timezone" : "America/Bogota"
+         },
+         {
+            "area" : "Irak",
+            "country" : "IQ",
+            "feature" : "PPLC",
+            "id" : 98182,
+            "lat" : 33.340580000000003,
+            "lon" : 44.400880000000001,
+            "name" : "Bagdad",
+            "population" : 7216000,
+            "score" : 107160,
+            "timezone" : "Asia/Baghdad"
+         },
+         {
+            "area" : "Thaimaa",
+            "country" : "TH",
+            "feature" : "PPLC",
+            "id" : 1609350,
+            "lat" : 13.75398,
+            "lon" : 100.50144,
+            "name" : "Bangkok",
+            "population" : 5104476,
+            "score" : 86045,
+            "timezone" : "Asia/Bangkok"
+         },
+         {
+            "area" : "Saksa",
+            "country" : "DE",
+            "feature" : "PPLC",
+            "id" : 2950159,
+            "lat" : 52.524369999999998,
+            "lon" : 13.41053,
+            "name" : "Berliini",
+            "population" : 3426354,
+            "score" : 69264,
+            "timezone" : "Europe/Berlin"
+         },
+         {
+            "area" : "Etel\u00e4-Korea",
+            "country" : "KR",
+            "feature" : "PPLA",
+            "id" : 1838524,
+            "lat" : 35.102780000000003,
+            "lon" : 129.04028,
+            "name" : "Busan",
+            "population" : 3678555,
+            "score" : 61786,
+            "timezone" : "Asia/Seoul"
+         },
+         {
+            "area" : "Libanon",
+            "country" : "LB",
+            "feature" : "PPLC",
+            "id" : 276781,
+            "lat" : 33.888939999999998,
+            "lon" : 35.494419999999998,
+            "name" : "Beirut",
+            "population" : 1916100,
+            "score" : 54161,
+            "timezone" : "Asia/Beirut"
+         },
+         {
+            "area" : "Romania",
+            "country" : "RO",
+            "feature" : "PPLC",
+            "id" : 683506,
+            "lat" : 44.432250000000003,
+            "lon" : 26.106259999999999,
+            "name" : "Bukarest",
+            "population" : 1877155,
+            "score" : 53772,
+            "timezone" : "Europe/Bucharest"
+         },
+         {
+            "area" : "Unkari",
+            "country" : "HU",
+            "feature" : "PPLC",
+            "id" : 3054643,
+            "lat" : 47.498010000000001,
+            "lon" : 19.039909999999999,
+            "name" : "Budapest",
+            "population" : 1741041,
+            "score" : 52410,
+            "timezone" : "Europe/Budapest"
+         },
+         {
+            "area" : "Irak",
+            "country" : "IQ",
+            "feature" : "PPLA",
+            "id" : 99532,
+            "lat" : 30.508520000000001,
+            "lon" : 47.7804,
+            "name" : "Basra",
+            "population" : 2600000,
+            "score" : 51000,
+            "timezone" : "Asia/Baghdad"
+         },
+         {
+            "area" : "Mali",
+            "country" : "ML",
+            "feature" : "PPLC",
+            "id" : 2460596,
+            "lat" : 12.65,
+            "lon" : -8.0,
+            "name" : "Bamako",
+            "population" : 1297281,
+            "score" : 47973,
+            "timezone" : "Africa/Bamako"
+         },
+         {
+            "area" : "Kongo",
+            "country" : "CG",
+            "feature" : "PPLC",
+            "id" : 2260535,
+            "lat" : -4.2661300000000004,
+            "lon" : 15.28318,
+            "name" : "Brazzaville",
+            "population" : 1284609,
+            "score" : 47846,
+            "timezone" : "Africa/Brazzaville"
+         },
+         {
+            "area" : "Serbia",
+            "country" : "RS",
+            "feature" : "PPLC",
+            "id" : 792680,
+            "lat" : 44.804009999999998,
+            "lon" : 20.465129999999998,
+            "name" : "Belgrad",
+            "population" : 1273651,
+            "score" : 47737,
+            "timezone" : "Europe/Belgrade"
+         },
+         {
+            "area" : "Australia",
+            "country" : "AU",
+            "feature" : "PPLA",
+            "id" : 2174003,
+            "lat" : -27.467939999999999,
+            "lon" : 153.02808999999999,
+            "name" : "Brisbane",
+            "population" : 2189878,
+            "score" : 46899,
+            "timezone" : "Australia/Brisbane"
+         },
+         {
+            "area" : "Azerbaidzan",
+            "country" : "AZ",
+            "feature" : "PPLC",
+            "id" : 587084,
+            "lat" : 40.377670000000002,
+            "lon" : 49.892009999999999,
+            "name" : "Baku",
+            "population" : 1116513,
+            "score" : 46165,
+            "timezone" : "Asia/Baku"
+         }
+      ]
+   }
+}

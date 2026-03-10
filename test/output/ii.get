@@ -12,6 +12,7 @@
             "lon" : 25.373100000000001,
             "name" : "Ii",
             "population" : 6546,
+            "score" : 138273,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 27.190670000000001,
             "name" : "Iisalmi",
             "population" : 22588,
+            "score" : 46294,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -34,6 +36,7 @@
             "lon" : 26.33869,
             "name" : "Iitti",
             "population" : 7246,
+            "score" : 38623,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -45,6 +48,7 @@
             "lon" : 25.83333,
             "name" : "Yli-Ii",
             "population" : 2235,
+            "score" : 37118,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -56,6 +60,7 @@
             "lon" : 24.694089999999999,
             "name" : "Iivisniemi",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -67,6 +72,7 @@
             "lon" : 25.366669999999999,
             "name" : "Etel\u00e4-Ii",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -78,6 +84,7 @@
             "lon" : 26.800000000000001,
             "name" : "Iikka",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -89,6 +96,7 @@
             "lon" : 29.850000000000001,
             "name" : "Iiksenvaara",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -100,6 +108,7 @@
             "lon" : 27.066669999999998,
             "name" : "Iim\u00e4ki",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -111,6 +120,7 @@
             "lon" : 25.583210000000001,
             "name" : "Iinatti",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -122,6 +132,7 @@
             "lon" : 27.5,
             "name" : "Iinattij\u00e4rvi",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -133,6 +144,7 @@
             "lon" : 27.149999999999999,
             "name" : "Iiranta",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -144,6 +156,7 @@
             "lon" : 21.83278,
             "name" : "Iiroinen",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -155,6 +168,7 @@
             "lon" : 23.0,
             "name" : "Iirola",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -166,6 +180,7 @@
             "lon" : 24.050000000000001,
             "name" : "Iiruu",
             "population" : 0,
+            "score" : 35000,
             "timezone" : "Europe/Helsinki"
          }
       ]

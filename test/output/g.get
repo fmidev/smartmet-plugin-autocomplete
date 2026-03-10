@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLA",
+            "id" : 2711537,
+            "lat" : 57.707160000000002,
+            "lon" : 11.96679,
+            "name" : "G\u00f6teborg",
+            "population" : 504084,
+            "score" : 62204,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Egypti",
+            "country" : "EG",
+            "feature" : "PPLA",
+            "id" : 360995,
+            "lat" : 30.00808,
+            "lon" : 31.210930000000001,
+            "name" : "Giza",
+            "population" : 2443203,
+            "score" : 49432,
+            "timezone" : "Africa/Cairo"
+         },
+         {
+            "area" : "",
+            "country" : "GT",
+            "feature" : "PPLC",
+            "id" : 3598132,
+            "lat" : 14.64072,
+            "lon" : -90.513270000000006,
+            "name" : "Guatemala",
+            "population" : 994938,
+            "score" : 44949,
+            "timezone" : "America/Guatemala"
+         },
+         {
+            "area" : "Ecuador",
+            "country" : "EC",
+            "feature" : "PPLA",
+            "id" : 3657509,
+            "lat" : -2.2058399999999998,
+            "lon" : -79.90795,
+            "name" : "Guayaquil",
+            "population" : 1952029,
+            "score" : 44520,
+            "timezone" : "America/Guayaquil"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLA",
+            "id" : 2712414,
+            "lat" : 60.674520000000001,
+            "lon" : 17.141739999999999,
+            "name" : "G\u00e4vle",
+            "population" : 68635,
+            "score" : 40432,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Meksiko",
+            "country" : "MX",
+            "feature" : "PPLA",
+            "id" : 4005539,
+            "lat" : 20.666820000000001,
+            "lon" : -103.39182,
+            "name" : "Guadalajara",
+            "population" : 1640589,
+            "score" : 40191,
+            "timezone" : "America/Mexico_City"
+         },
+         {
+            "area" : "Etel\u00e4-Korea",
+            "country" : "KR",
+            "feature" : "PPLA",
+            "id" : 1841811,
+            "lat" : 35.154719999999998,
+            "lon" : 126.91556,
+            "name" : "Gwangju",
+            "population" : 1416938,
+            "score" : 39169,
+            "timezone" : "Asia/Seoul"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLA2",
+            "id" : 2712045,
+            "lat" : 57.304400000000001,
+            "lon" : 13.54078,
+            "name" : "Gislaved",
+            "population" : 10091,
+            "score" : 37505,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2621215,
+            "lat" : 55.583329999999997,
+            "lon" : 12.300000000000001,
+            "name" : "Greve",
+            "population" : 47671,
+            "score" : 37384,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Guyana",
+            "country" : "GY",
+            "feature" : "PPLC",
+            "id" : 3378644,
+            "lat" : 6.8044799999999999,
+            "lon" : -58.155270000000002,
+            "name" : "Georgetown",
+            "population" : 235017,
+            "score" : 37350,
+            "timezone" : "America/Guyana"
+         },
+         {
+            "area" : "Botswana",
+            "country" : "BW",
+            "feature" : "PPLC",
+            "id" : 933773,
+            "lat" : -24.654509999999998,
+            "lon" : 25.90859,
+            "name" : "Gaborone",
+            "population" : 208411,
+            "score" : 37084,
+            "timezone" : "Africa/Gaborone"
+         },
+         {
+            "area" : "Espoo",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : -16777428,
+            "lat" : 60.277099999999997,
+            "lon" : 24.741800000000001,
+            "name" : "Espoo Ringside Golf",
+            "population" : 0,
+            "score" : 36000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Vantaa",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 798942,
+            "lat" : 60.259999999999998,
+            "lon" : 25.148060000000001,
+            "name" : "Gumb\u00f6le",
+            "population" : 0,
+            "score" : 36000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Espoo",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 847357,
+            "lat" : 60.289279999999998,
+            "lon" : 24.72653,
+            "name" : "Perusm\u00e4ki",
+            "population" : 0,
+            "score" : 36000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Norja",
+            "country" : "NO",
+            "feature" : "PPLA2",
+            "id" : 3155573,
+            "lat" : 60.795740000000002,
+            "lon" : 10.691549999999999,
+            "name" : "Gj\u00f8vik",
+            "population" : 17596,
+            "score" : 35880,
+            "timezone" : "Europe/Oslo"
+         }
+      ]
+   }
+}

@@ -12,6 +12,7 @@
             "lon" : 24.94575,
             "name" : "Kaisaniemi",
             "population" : 0,
+            "score" : 137000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 24.944590000000002,
             "name" : "Kaisaniemi",
             "population" : 0,
+            "score" : 17000,
             "timezone" : "Europe/Helsinki"
          }
       ]

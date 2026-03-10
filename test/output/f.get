@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 659935,
+            "lat" : 60.814619999999998,
+            "lon" : 23.621459999999999,
+            "name" : "Forssa",
+            "population" : 17852,
+            "score" : 43926,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Sierra Leone",
+            "country" : "SL",
+            "feature" : "PPLC",
+            "id" : 2409306,
+            "lat" : 8.484,
+            "lon" : -13.229939999999999,
+            "name" : "Freetown",
+            "population" : 802639,
+            "score" : 43026,
+            "timezone" : "Africa/Freetown"
+         },
+         {
+            "area" : "Pakistan",
+            "country" : "PK",
+            "feature" : "PPLA2",
+            "id" : 1179400,
+            "lat" : 31.41667,
+            "lon" : 73.083330000000004,
+            "name" : "Faisalabad",
+            "population" : 2506595,
+            "score" : 40010,
+            "timezone" : "Asia/Karachi"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "SKI",
+            "id" : -16777228,
+            "lat" : 60.620744999999999,
+            "lon" : 15.656651999999999,
+            "name" : "Falun",
+            "population" : 0,
+            "score" : 40000,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2621942,
+            "lat" : 55.679380000000002,
+            "lon" : 12.53463,
+            "name" : "Frederiksbergin kunta",
+            "population" : 95029,
+            "score" : 39751,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Norja",
+            "country" : "NO",
+            "feature" : "PPLA2",
+            "id" : 3156529,
+            "lat" : 59.2181,
+            "lon" : 10.9298,
+            "name" : "Fredrikstad",
+            "population" : 72760,
+            "score" : 38638,
+            "timezone" : "Europe/Oslo"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLA2",
+            "id" : 2714903,
+            "lat" : 58.705779999999997,
+            "lon" : 15.767390000000001,
+            "name" : "Finsp\u00e5ng",
+            "population" : 12415,
+            "score" : 37621,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLA2",
+            "id" : 2715656,
+            "lat" : 60.004179999999998,
+            "lon" : 15.79316,
+            "name" : "Fagersta",
+            "population" : 10432,
+            "score" : 37522,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Brasilia",
+            "country" : "BR",
+            "feature" : "PPLA",
+            "id" : 3399415,
+            "lat" : -3.7172200000000002,
+            "lon" : -38.543059999999997,
+            "name" : "Fortaleza",
+            "population" : 2400000,
+            "score" : 37000,
+            "timezone" : "America/Fortaleza"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2621951,
+            "lat" : 55.56568,
+            "lon" : 9.7525700000000004,
+            "name" : "Fredericia",
+            "population" : 36946,
+            "score" : 36847,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA2",
+            "id" : 3041798,
+            "lat" : 60.266669999999998,
+            "lon" : 19.933330000000002,
+            "name" : "Finstr\u00f6m",
+            "population" : 2412,
+            "score" : 36206,
+            "timezone" : "Europe/Mariehamn"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2621927,
+            "lat" : 57.440730000000002,
+            "lon" : 10.53661,
+            "name" : "Frederikshavn",
+            "population" : 24103,
+            "score" : 36205,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Espoo",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 7521730,
+            "lat" : 60.164020000000001,
+            "lon" : 24.718039999999998,
+            "name" : "Friisil\u00e4",
+            "population" : 0,
+            "score" : 36000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Turku",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 841799,
+            "lat" : 60.396940000000001,
+            "lon" : 22.238890000000001,
+            "name" : "Friskala",
+            "population" : 0,
+            "score" : 36000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "PPLA2",
+            "id" : 2622306,
+            "lat" : 55.808579999999999,
+            "lon" : 12.360659999999999,
+            "name" : "Farum",
+            "population" : 18376,
+            "score" : 35919,
+            "timezone" : "Europe/Copenhagen"
+         }
+      ]
+   }
+}

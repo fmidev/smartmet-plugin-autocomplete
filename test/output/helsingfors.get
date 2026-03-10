@@ -12,6 +12,7 @@
             "lon" : 24.935449999999999,
             "name" : "Helsingfors",
             "population" : 558457,
+            "score" : 329229,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -23,6 +24,7 @@
             "lon" : 26.03811,
             "name" : "Heinola",
             "population" : 20849,
+            "score" : 45425,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -34,6 +36,7 @@
             "lon" : 12.694369999999999,
             "name" : "Helsingborg",
             "population" : 91025,
+            "score" : 41551,
             "timezone" : "Europe/Stockholm"
          },
          {
@@ -45,6 +48,7 @@
             "lon" : 28.600000000000001,
             "name" : "Hein\u00e4vesi",
             "population" : 4457,
+            "score" : 37229,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -56,6 +60,7 @@
             "lon" : 25.073889999999999,
             "name" : "Henriksdal",
             "population" : 0,
+            "score" : 37000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -67,6 +72,7 @@
             "lon" : 24.967120000000001,
             "name" : "Hermanstad",
             "population" : 0,
+            "score" : 37000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -78,6 +84,7 @@
             "lon" : 23.86308,
             "name" : "Etel\u00e4-Hervanta",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -89,6 +96,7 @@
             "lon" : 23.976289999999999,
             "name" : "Hein\u00e4nen",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -100,6 +108,7 @@
             "lon" : 24.983329999999999,
             "name" : "Helsinginpit\u00e4j\u00e4",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -111,6 +120,7 @@
             "lon" : 24.524920000000002,
             "name" : "Hembacken",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -122,6 +132,7 @@
             "lon" : 22.24633,
             "name" : "Hepokulta",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -133,6 +144,7 @@
             "lon" : 25.035350000000001,
             "name" : "Herton\u00e4s",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -144,6 +156,7 @@
             "lon" : 25.036899999999999,
             "name" : "Herton\u00e4s strand",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -155,6 +168,7 @@
             "lon" : 23.851659999999999,
             "name" : "Hervanta",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          },
          {
@@ -166,6 +180,7 @@
             "lon" : 22.25694,
             "name" : "Lill Heikkil\u00e4",
             "population" : 0,
+            "score" : 36000,
             "timezone" : "Europe/Helsinki"
          }
       ]

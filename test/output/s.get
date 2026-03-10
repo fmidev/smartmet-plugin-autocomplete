@@ -1,0 +1,188 @@
+{
+   "autocomplete" : {
+      "found-results" : 15,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "Tanska",
+            "country" : "DK",
+            "feature" : "ISL",
+            "id" : 2613979,
+            "lat" : 55.5,
+            "lon" : 11.75,
+            "name" : "Sj\u00e6lland",
+            "population" : 2500000,
+            "score" : 147000,
+            "timezone" : "Europe/Copenhagen"
+         },
+         {
+            "area" : "Etel\u00e4-Korea",
+            "country" : "KR",
+            "feature" : "PPLC",
+            "id" : 1835848,
+            "lat" : 37.566000000000003,
+            "lon" : 126.97839999999999,
+            "name" : "Soul",
+            "population" : 10349312,
+            "score" : 138493,
+            "timezone" : "Asia/Seoul"
+         },
+         {
+            "area" : "Ruotsi",
+            "country" : "SE",
+            "feature" : "PPLC",
+            "id" : 2673730,
+            "lat" : 59.33258,
+            "lon" : 18.064900000000002,
+            "name" : "Tukholma",
+            "population" : 1253309,
+            "score" : 109665,
+            "timezone" : "Europe/Stockholm"
+         },
+         {
+            "area" : "Chile",
+            "country" : "CL",
+            "feature" : "PPLC",
+            "id" : 3871336,
+            "lat" : -33.456940000000003,
+            "lon" : -70.648269999999997,
+            "name" : "Santiago de Chile",
+            "population" : 4837295,
+            "score" : 83373,
+            "timezone" : "America/Santiago"
+         },
+         {
+            "area" : "Brasilia",
+            "country" : "BR",
+            "feature" : "PPLA",
+            "id" : 3448439,
+            "lat" : -23.547499999999999,
+            "lon" : -46.636110000000002,
+            "name" : "S\u00e3o Paulo",
+            "population" : 10021295,
+            "score" : 75106,
+            "timezone" : "America/Sao_Paulo"
+         },
+         {
+            "area" : "Australia",
+            "country" : "AU",
+            "feature" : "PPLA",
+            "id" : 2147714,
+            "lat" : -33.867849999999997,
+            "lon" : 151.20732000000001,
+            "name" : "Sydney",
+            "population" : 4627345,
+            "score" : 71273,
+            "timezone" : "Australia/Sydney"
+         },
+         {
+            "area" : "",
+            "country" : "SG",
+            "feature" : "PPLC",
+            "id" : 1880252,
+            "lat" : 1.2896700000000001,
+            "lon" : 103.85007,
+            "name" : "Singapore",
+            "population" : 3547809,
+            "score" : 70478,
+            "timezone" : "Asia/Singapore"
+         },
+         {
+            "area" : "Ven\u00e4j\u00e4",
+            "country" : "RU",
+            "feature" : "PPLA",
+            "id" : 498817,
+            "lat" : 59.938630000000003,
+            "lon" : 30.314129999999999,
+            "name" : "Pietari",
+            "population" : 5028000,
+            "score" : 60408,
+            "timezone" : "Europe/Moscow"
+         },
+         {
+            "area" : "Dominikaaninen tasavalta",
+            "country" : "DO",
+            "feature" : "PPLC",
+            "id" : 3492908,
+            "lat" : 18.500119999999999,
+            "lon" : -69.988569999999996,
+            "name" : "Santo Domingo",
+            "population" : 2201941,
+            "score" : 57019,
+            "timezone" : "America/Santo_Domingo"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 637219,
+            "lat" : 62.794460000000001,
+            "lon" : 22.828220000000002,
+            "name" : "Sein\u00e4joki",
+            "population" : 32149,
+            "score" : 56075,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Jemen",
+            "country" : "YE",
+            "feature" : "PPLC",
+            "id" : 71137,
+            "lat" : 15.35472,
+            "lon" : 44.206670000000003,
+            "name" : "Sanaa",
+            "population" : 1937451,
+            "score" : 54375,
+            "timezone" : "Asia/Aden"
+         },
+         {
+            "area" : "Tansania",
+            "country" : "TZ",
+            "feature" : "PPLA",
+            "id" : 160263,
+            "lat" : -6.8234899999999996,
+            "lon" : 39.269509999999997,
+            "name" : "Dar es Salaam",
+            "population" : 2698652,
+            "score" : 51987,
+            "timezone" : "Africa/Dar_es_Salaam"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 637292,
+            "lat" : 61.869900000000001,
+            "lon" : 28.879989999999999,
+            "name" : "Savonlinna",
+            "population" : 27353,
+            "score" : 48677,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 637948,
+            "lat" : 60.383330000000001,
+            "lon" : 23.133330000000001,
+            "name" : "Salo",
+            "population" : 24900,
+            "score" : 47450,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Bulgaria",
+            "country" : "BG",
+            "feature" : "PPLC",
+            "id" : 727011,
+            "lat" : 42.697510000000001,
+            "lon" : 23.324149999999999,
+            "name" : "Sofia",
+            "population" : 1152556,
+            "score" : 46526,
+            "timezone" : "Europe/Sofia"
+         }
+      ]
+   }
+}
