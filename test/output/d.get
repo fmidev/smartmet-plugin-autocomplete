@@ -16,18 +16,6 @@
             "timezone" : "Asia/Dhaka"
          },
          {
-            "area" : "Chile",
-            "country" : "CL",
-            "feature" : "PPLC",
-            "id" : 3871336,
-            "lat" : -33.456940000000003,
-            "lon" : -70.648269999999997,
-            "name" : "Santiago de Chile",
-            "population" : 4837295,
-            "score" : 83373,
-            "timezone" : "America/Santiago"
-         },
-         {
             "area" : "Senegal",
             "country" : "SN",
             "feature" : "PPLC",
@@ -62,18 +50,6 @@
             "population" : 3120282,
             "score" : 56203,
             "timezone" : "Africa/Johannesburg"
-         },
-         {
-            "area" : "Brasilia",
-            "country" : "BR",
-            "feature" : "PPLA",
-            "id" : 3451190,
-            "lat" : -22.90278,
-            "lon" : -43.207500000000003,
-            "name" : "Rio de Janeiro",
-            "population" : 6023699,
-            "score" : 55118,
-            "timezone" : "America/Sao_Paulo"
          },
          {
             "area" : "Tansania",
@@ -182,6 +158,30 @@
             "population" : 1475221,
             "score" : 39752,
             "timezone" : "Asia/Seoul"
+         },
+         {
+            "area" : "Norja",
+            "country" : "NO",
+            "feature" : "PPLA",
+            "id" : 3159016,
+            "lat" : 59.74389,
+            "lon" : 10.20449,
+            "name" : "Drammen",
+            "population" : 90722,
+            "score" : 39536,
+            "timezone" : "Europe/Oslo"
+         },
+         {
+            "area" : "Qatar",
+            "country" : "QA",
+            "feature" : "PPLC",
+            "id" : 290030,
+            "lat" : 25.279319999999998,
+            "lon" : 51.522449999999999,
+            "name" : "Doha",
+            "population" : 344939,
+            "score" : 38449,
+            "timezone" : "Asia/Qatar"
          }
       ]
    }

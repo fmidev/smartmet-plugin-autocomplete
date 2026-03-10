@@ -16,18 +16,6 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Tansania",
-            "country" : "TZ",
-            "feature" : "PPLA",
-            "id" : 160263,
-            "lat" : -6.8234899999999996,
-            "lon" : 39.269509999999997,
-            "name" : "Dar es Salaam",
-            "population" : 2698652,
-            "score" : 51987,
-            "timezone" : "Africa/Dar_es_Salaam"
-         },
-         {
             "area" : "Raasepori",
             "country" : "FI",
             "feature" : "PPLA3",
@@ -181,6 +169,18 @@
             "name" : "Evij\u00e4rvi",
             "population" : 2878,
             "score" : 36439,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 660229,
+            "lat" : 68.385729999999995,
+            "lon" : 23.632149999999999,
+            "name" : "Enonteki\u00f6",
+            "population" : 2145,
+            "score" : 36073,
             "timezone" : "Europe/Helsinki"
          }
       ]

@@ -136,18 +136,6 @@
             "timezone" : "Asia/Amman"
          },
          {
-            "area" : "Haiti",
-            "country" : "HT",
-            "feature" : "PPLC",
-            "id" : 3718426,
-            "lat" : 18.539169999999999,
-            "lon" : -72.334999999999994,
-            "name" : "Port-au-Prince",
-            "population" : 1234742,
-            "score" : 47347,
-            "timezone" : "America/Port-au-Prince"
-         },
-         {
             "area" : "Tanska",
             "country" : "DK",
             "feature" : "PPLA2",
@@ -182,6 +170,18 @@
             "population" : 16779,
             "score" : 43390,
             "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Alankomaat",
+            "country" : "NL",
+            "feature" : "PPLC",
+            "id" : 2759794,
+            "lat" : 52.374029999999998,
+            "lon" : 4.8896899999999999,
+            "name" : "Amsterdam",
+            "population" : 741636,
+            "score" : 42416,
+            "timezone" : "Europe/Amsterdam"
          }
       ]
    }
