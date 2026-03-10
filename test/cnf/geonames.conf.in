@@ -69,6 +69,16 @@ cache:
 };
 
 
+# Location specifiers for autocomplete as in "Kallio, Finland" or "Bonn, Germany."                                                                                              
+areas:
+{
+        default = "COUNTRY";            // default is just country
+        US = ["ADMIN1","COUNTRY"];      // USA uses state and country
+        FI = "MUNICIPALITY|COUNTRY";    // geonames extension
+        SG = "";                        // Singapore, Singapore is useless info
+};
+
+
 # Priorities
 
 priorities:
