@@ -1,0 +1,92 @@
+{
+   "autocomplete" : {
+      "found-results" : 7,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "",
+            "country" : "SG",
+            "feature" : "PPLC",
+            "id" : 1880252,
+            "lat" : 1.2896700000000001,
+            "lon" : 103.85007,
+            "name" : "Singapore",
+            "population" : 3547809,
+            "score" : 70478,
+            "timezone" : "Asia/Singapore"
+         },
+         {
+            "area" : "Mustasaari",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 636748,
+            "lat" : 63.166670000000003,
+            "lon" : 21.649999999999999,
+            "name" : "Singsby",
+            "population" : 0,
+            "score" : 35000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Tansania",
+            "country" : "TZ",
+            "feature" : "PPLA",
+            "id" : 149879,
+            "lat" : -4.8162900000000004,
+            "lon" : 34.743580000000001,
+            "name" : "Singida",
+            "population" : 62432,
+            "score" : 25624,
+            "timezone" : "Africa/Dar_es_Salaam"
+         },
+         {
+            "area" : "Indonesia",
+            "country" : "ID",
+            "feature" : "PPLA3",
+            "id" : 1626932,
+            "lat" : -8.1120000000000001,
+            "lon" : 115.08817999999999,
+            "name" : "Singaraja",
+            "population" : 133784,
+            "score" : 25582,
+            "timezone" : "Asia/Makassar"
+         },
+         {
+            "area" : "Pakistan",
+            "country" : "PK",
+            "feature" : "PPLA2",
+            "id" : 1163272,
+            "lat" : 30.974329999999998,
+            "lon" : 72.482690000000005,
+            "name" : "Toba Tek Singh",
+            "population" : 69064,
+            "score" : 25414,
+            "timezone" : "Asia/Karachi"
+         },
+         {
+            "area" : "Indonesia",
+            "country" : "ID",
+            "feature" : "PPL",
+            "id" : 1626916,
+            "lat" : 0.90925,
+            "lon" : 108.98463,
+            "name" : "Singkawang",
+            "population" : 101838,
+            "score" : 20443,
+            "timezone" : "Asia/Pontianak"
+         },
+         {
+            "area" : "Indonesia",
+            "country" : "ID",
+            "feature" : "PPL",
+            "id" : 1626899,
+            "lat" : -7.8924000000000003,
+            "lon" : 112.6658,
+            "name" : "Singosari",
+            "population" : 57793,
+            "score" : 20251,
+            "timezone" : "Asia/Jakarta"
+         }
+      ]
+   }
+}
