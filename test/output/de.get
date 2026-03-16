@@ -4,54 +4,6 @@
       "max-results" : 15,
       "result" : [
          {
-            "area" : "Chile",
-            "country" : "CL",
-            "feature" : "PPLC",
-            "id" : 3871336,
-            "lat" : -33.456940000000003,
-            "lon" : -70.648269999999997,
-            "name" : "Santiago de Chile",
-            "population" : 4837295,
-            "score" : 83373,
-            "timezone" : "America/Santiago"
-         },
-         {
-            "area" : "Brasilia",
-            "country" : "BR",
-            "feature" : "PPLA",
-            "id" : 3451190,
-            "lat" : -22.90278,
-            "lon" : -43.207500000000003,
-            "name" : "Rio de Janeiro",
-            "population" : 6023699,
-            "score" : 55118,
-            "timezone" : "America/Sao_Paulo"
-         },
-         {
-            "area" : "Meksiko",
-            "country" : "MX",
-            "feature" : "PPLA",
-            "id" : 3521081,
-            "lat" : 19.037929999999999,
-            "lon" : -98.203460000000007,
-            "name" : "Puebla de Zaragoza",
-            "population" : 1590256,
-            "score" : 39725,
-            "timezone" : "America/Mexico_City"
-         },
-         {
-            "area" : "Bolivia",
-            "country" : "BO",
-            "feature" : "PPLA",
-            "id" : 3904906,
-            "lat" : -17.786290000000001,
-            "lon" : -63.181170000000002,
-            "name" : "Santa Cruz",
-            "population" : 1364389,
-            "score" : 38644,
-            "timezone" : "America/La_Paz"
-         },
-         {
             "area" : "Helsinki",
             "country" : "FI",
             "feature" : "PPL",
@@ -64,18 +16,6 @@
             "timezone" : "Europe/Helsinki"
          },
          {
-            "area" : "Dominikaaninen tasavalta",
-            "country" : "DO",
-            "feature" : "PPLA",
-            "id" : 3492914,
-            "lat" : 19.451699999999999,
-            "lon" : -70.697029999999998,
-            "name" : "Santiago de los Caballeros",
-            "population" : 1200000,
-            "score" : 37000,
-            "timezone" : "America/Santo_Domingo"
-         },
-         {
             "area" : "R\u00e9union",
             "country" : "RE",
             "feature" : "PPLC",
@@ -86,30 +26,6 @@
             "population" : 137195,
             "score" : 36372,
             "timezone" : "Indian/Reunion"
-         },
-         {
-            "area" : "Martinique",
-            "country" : "MQ",
-            "feature" : "PPLC",
-            "id" : 3570675,
-            "lat" : 14.608919999999999,
-            "lon" : -61.073340000000002,
-            "name" : "Fort-de-France",
-            "population" : 89995,
-            "score" : 35900,
-            "timezone" : "America/Martinique"
-         },
-         {
-            "area" : "Meksiko",
-            "country" : "MX",
-            "feature" : "PPLA2",
-            "id" : 3998655,
-            "lat" : 21.129079999999998,
-            "lon" : -101.67374,
-            "name" : "Le\u00f3n de los Aldama",
-            "population" : 1114626,
-            "score" : 35321,
-            "timezone" : "America/Mexico_City"
          },
          {
             "area" : "Intia",
@@ -182,6 +98,90 @@
             "population" : 0,
             "score" : 35000,
             "timezone" : "Europe/Mariehamn"
+         },
+         {
+            "area" : "Raasepori",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 644387,
+            "lat" : 60.066670000000002,
+            "lon" : 23.066669999999998,
+            "name" : "Norr-Degerg\u00e5rd",
+            "population" : 0,
+            "score" : 35000,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Intia",
+            "country" : "IN",
+            "feature" : "PPLA",
+            "id" : 1273294,
+            "lat" : 28.651949999999999,
+            "lon" : 77.231489999999994,
+            "name" : "Delhi",
+            "population" : 10927986,
+            "score" : 34107,
+            "timezone" : "Asia/Kolkata"
+         },
+         {
+            "area" : "MI, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPLA2",
+            "id" : 4990729,
+            "lat" : 42.331429999999997,
+            "lon" : -83.045749999999998,
+            "name" : "Detroit",
+            "population" : 713777,
+            "score" : 32138,
+            "timezone" : "America/Detroit"
+         },
+         {
+            "area" : "CO, Yhdysvallat",
+            "country" : "US",
+            "feature" : "PPLA",
+            "id" : 5419384,
+            "lat" : 39.739150000000002,
+            "lon" : -104.9847,
+            "name" : "Denver",
+            "population" : 600158,
+            "score" : 31002,
+            "timezone" : "America/Denver"
+         },
+         {
+            "area" : "Indonesia",
+            "country" : "ID",
+            "feature" : "PPLA",
+            "id" : 1645528,
+            "lat" : -8.6500000000000004,
+            "lon" : 115.21666999999999,
+            "name" : "Denpasar",
+            "population" : 834881,
+            "score" : 28630,
+            "timezone" : "Asia/Makassar"
+         },
+         {
+            "area" : "Turkki",
+            "country" : "TR",
+            "feature" : "PPLA",
+            "id" : 317109,
+            "lat" : 37.774169999999998,
+            "lon" : 29.087499999999999,
+            "name" : "Denizli",
+            "population" : 313238,
+            "score" : 28132,
+            "timezone" : "Europe/Istanbul"
+         },
+         {
+            "area" : "Syyria",
+            "country" : "SY",
+            "feature" : "PPLA",
+            "id" : 170794,
+            "lat" : 35.335880000000003,
+            "lon" : 40.140839999999997,
+            "name" : "Deir ez Zor",
+            "population" : 242565,
+            "score" : 27426,
+            "timezone" : "Asia/Damascus"
          }
       ]
    }
