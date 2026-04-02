@@ -1,33 +1,8 @@
-Table of Contents
-=================
+# smartmet-plugin-autocomplete
 
-  * [SmartMet Server](#smartmet-server)
-  * [Introduction](#introduction)
-  * [Main features](#main-features)
-  * [Query string options](#query-string-options)
-    * [keyword](#keyword)
-    * [pattern](#pattern)
-    * [lang (fi)](#lang-fi)
-    * [max (15)](#max-15)
-    * [page (0)](#page-0)
-    * [format (json)](#format-json)
-    * [pretty (0)](#pretty-0)
-    * [product ()](#product-)
-    * [timeformat (iso)](#timeformat-iso)
-    * [locale (fi_FI)](#locale-fi_fi)
-    * [stamp () y](#stamp--y)
-  * [Formatting numeric values](#formatting-numeric-values)
-  * [Docker](#docker)
+Part of [SmartMet Server](https://github.com/fmidev/smartmet-server). See the [SmartMet Server documentation](https://github.com/fmidev/smartmet-server) for a full overview of the ecosystem.
 
-# SmartMet Server
-
-[SmartMet Server](https://github.com/fmidev/smartmet-server) is a data and product server for MetOcean data. It
-provides a high capacity and high availability data and product server
-for MetOcean data. The server is written in C++, since 2008 it has
-been in operational use by the Finnish Meteorological Institute FMI.
-
-
-# Introduction
+## Introduction
 
 The SmartMet autocmplete plugin provides an efficient and a fast method
 for completing the search locations.  It provides the location
@@ -46,7 +21,7 @@ Google Maps JavaScript API. The autocomplete API can provide a
 type-ahead-search behavior of the Google Maps search field. When a
 user starts typing an address, autocomplete will fill in the rest.
 
-# Main features
+## Main features
 
 The main 
  features offered by  the plugin are as follows:
@@ -58,11 +33,11 @@ The main
 6. Pagination of results
 
 
-# Query string options
+## Query string options
 
 Below we describe the query string options. The default value for each option is given in parenthesis. If there is no default value specified, the option is compulsory.
 
-## keyword
+### keyword
 
 The keyword identifies the set of locations enabled in autocomplete. The allowed keywords are listed in
 
@@ -88,30 +63,30 @@ typed by the user. SmartMet server converts the UTF8 input to
 iso-latin-8859-1 and to lower case to make comparisons
 easier. The  collation sevices are in use.
 
-## lang (fi) 
+### lang (fi) 
 
 The selected language using a 2-character language ISO-code. If no specific translation exists for a location, the primary name for the location will be returned.
 
 
-## max (15)  
+### max (15)  
 
 The number of results to return in one page.
 
 
-## page (0)  
+### page (0)  
 
 The page number. This option works in conjuction with the maxresults option.
 
 
-## format (json)  
+### format (json)  
 
 This option is deprecated. PHP-serialization used to be supported, but the support was terminated when json_spirit was taken into use.
 
-## pretty (0) 
+### pretty (0) 
 
 Pretty print is used mostly for debugging purposes (and regression tests to spot changes more easily).
 
-## product () 
+### product () 
 
 Identify a product name to add localized forecast data to the output. The allowed product names are listed in a table.
 
@@ -129,18 +104,19 @@ autocomplete.parameters
 
 The default is not to include a forecast in the output.
 
-## timeformat (iso)  
+### timeformat (iso)  
 
 The output format as supported by MacGyver::TimeFormatter (iso, xml, timestamp, sql).
 
-## locale (fi_FI)  
+### locale (fi_FI)  
 
 Localization may be used for formatting locale specific forecast parameters.
-## stamp () y
+
+### stamp () y
 
 Alternate forecast start time used only for creating static regression tests.
 
-# Formatting numeric values
+## Formatting numeric values
 
 The same options as used in the pointforecast-plugin are available for formatting floating point values:
 
@@ -152,7 +128,7 @@ The same options as used in the pointforecast-plugin are available for formattin
 * uppercase
 * floatfield
 
-# Docker
+## Docker
 
 SmartMet Server can be dockerized. This [tutorial](docs/docker.md)
 explains how to explains how to configure the Autocomplete plugin of
