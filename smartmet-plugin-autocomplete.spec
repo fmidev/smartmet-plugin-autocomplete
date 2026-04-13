@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 26.2.4
+Version: 26.4.13
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -23,19 +23,19 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
-BuildRequires: smartmet-library-macgyver-devel >= 26.2.4
-BuildRequires: smartmet-library-timeseries-devel >= 26.2.4
+BuildRequires: smartmet-library-macgyver-devel >= 26.4.13
+BuildRequires: smartmet-library-timeseries-devel >= 26.4.13
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 26.2.4
-BuildRequires: smartmet-engine-geonames-devel >= 26.2.4
-BuildRequires: smartmet-engine-querydata-devel >= 26.2.4
+BuildRequires: smartmet-library-spine-devel >= 26.4.13
+BuildRequires: smartmet-engine-geonames-devel >= 26.4.13
+BuildRequires: smartmet-engine-querydata-devel >= 26.4.13
 Requires: gdal312-libs
-Requires: smartmet-library-macgyver >= 26.2.4
-Requires: smartmet-library-timeseries >= 26.2.4
-Requires: smartmet-library-spine >= 26.2.4
-Requires: smartmet-engine-geonames >= 26.2.4
-Requires: smartmet-server >= 26.2.4
-Requires: smartmet-engine-querydata >= 26.2.4
+Requires: smartmet-library-macgyver >= 26.4.13
+Requires: smartmet-library-timeseries >= 26.4.13
+Requires: smartmet-library-spine >= 26.4.13
+Requires: smartmet-engine-geonames >= 26.4.13
+Requires: smartmet-server >= 26.4.13
+Requires: smartmet-engine-querydata >= 26.4.13
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
 Requires: %{smartmet_boost}-system
@@ -48,11 +48,11 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal312-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis36_15
-#TestRequires: smartmet-engine-geonames >= 26.2.4
-#TestRequires: smartmet-engine-querydata >= 26.2.4
+#TestRequires: smartmet-engine-geonames >= 26.4.13
+#TestRequires: smartmet-engine-querydata >= 26.4.13
 #TestRequires: smartmet-utils-devel >= 26.2.4
-#TestRequires: smartmet-library-spine-plugin-test >= 26.2.4
-#TestRequires: smartmet-test-data >= 25.8.13
+#TestRequires: smartmet-library-spine-plugin-test >= 26.4.13
+#TestRequires: smartmet-test-data >= 26.4.1
 #TestRequires: smartmet-test-db
 
 %description
@@ -78,6 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Mon Apr 13 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.4.13-1.fmi
+- Use new querydata options API
+
 * Wed Feb  4 2026 Andris Pavēnis <andris.pavenis@fmi.fi> 26.2.4-1.fmi
 - Update to proj-9.7, gdal-3.12, fmt-12
 
