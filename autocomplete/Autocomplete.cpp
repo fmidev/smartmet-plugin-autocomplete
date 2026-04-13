@@ -156,7 +156,7 @@ void append_forecast(Json::Value &theResult,
 
     int precision = 0;
     const bool findnearest = false;
-    NFmiPoint nearestpoint;
+    const double maxdist = 0;
     NFmiPoint lastpoint;
     const std::string timestring;
 
@@ -178,7 +178,7 @@ void append_forecast(Json::Value &theResult,
                                                   theLocale,
                                                   theLoc->timezone,
                                                   findnearest,
-                                                  nearestpoint,
+                                                  maxdist,
                                                   lastpoint);
 
       auto tmp = q->value(qparams, t);
