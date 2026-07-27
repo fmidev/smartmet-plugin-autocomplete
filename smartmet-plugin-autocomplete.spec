@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 26.7.9
+Version: 26.7.27
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -23,19 +23,19 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
-BuildRequires: smartmet-library-macgyver-devel >= 26.6.26
+BuildRequires: smartmet-library-macgyver-devel >= 26.7.9
 BuildRequires: smartmet-library-timeseries-devel >= 26.5.5
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 26.7.7
+BuildRequires: smartmet-library-spine-devel >= 26.7.16
 BuildRequires: smartmet-engine-geonames-devel >= 26.6.26
-BuildRequires: smartmet-engine-querydata-devel >= 26.6.26
+BuildRequires: smartmet-engine-querydata-devel >= 26.7.17
 Requires: gdal312-libs
-Requires: smartmet-library-macgyver >= 26.6.26
+Requires: smartmet-library-macgyver >= 26.7.9
 Requires: smartmet-library-timeseries >= 26.5.5
-Requires: smartmet-library-spine >= 26.7.7
+Requires: smartmet-library-spine >= 26.7.16
 Requires: smartmet-engine-geonames >= 26.6.26
-Requires: smartmet-server >= 26.6.30
-Requires: smartmet-engine-querydata >= 26.6.26
+Requires: smartmet-server >= 26.7.14
+Requires: smartmet-engine-querydata >= 26.7.17
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
 Requires: %{smartmet_boost}-system
@@ -49,10 +49,10 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis36_15
 #TestRequires: smartmet-engine-geonames >= 26.6.26
-#TestRequires: smartmet-engine-querydata >= 26.6.26
-#TestRequires: smartmet-utils-devel >= 26.6.24
-#TestRequires: smartmet-library-spine-plugin-test >= 26.7.7
-#TestRequires: smartmet-test-data >= 26.6.16
+#TestRequires: smartmet-engine-querydata >= 26.7.17
+#TestRequires: smartmet-utils-devel >= 26.7.14
+#TestRequires: smartmet-library-spine-plugin-test >= 26.7.16
+#TestRequires: smartmet-test-data >= 26.7.27
 #TestRequires: smartmet-test-db
 
 %description
@@ -78,6 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Mon Jul 27 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.7.27-1.fmi
+- GeoEngines data structure changes
+
 * Thu Jul  9 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.7.9-1.fmi
 - Repackaged to satisfy CircleCI dependencies
 
