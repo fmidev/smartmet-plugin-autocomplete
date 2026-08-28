@@ -1,6 +1,6 @@
 {
    "autocomplete" : {
-      "found-results" : 21,
+      "found-results" : 20,
       "max-results" : 100,
       "result" : [
          {
@@ -217,18 +217,6 @@
             "name" : "Koski Tl",
             "population" : 0,
             "score" : 35000,
-            "timezone" : "Europe/Helsinki"
-         },
-         {
-            "area" : "",
-            "country" : "FI",
-            "feature" : "ADM3",
-            "id" : 651091,
-            "lat" : 60.666699999999999,
-            "lon" : 23.083300000000001,
-            "name" : "Koski",
-            "population" : 2514,
-            "score" : 18257,
             "timezone" : "Europe/Helsinki"
          },
          {
