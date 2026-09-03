@@ -333,6 +333,13 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     bool duplicates = Spine::optional_bool(theRequest.getParameter("duplicates"), false);
 
+    auto longitude{Spine::optional_double(theRequest.getParameter("longitude"), kFloatMissing)};
+    auto latitude{Spine::optional_double(theRequest.getParameter("latitude"), kFloatMissing)};
+    if (fabs(longitude) > 180)
+      longitude = kFloatMissing;
+    if (fabs(latitude) > 90)
+      latitude = kFloatMissing;
+
     // By default accept all locations. The name is rejector since we use remove_if
 
     std::set<std::string> parts;
@@ -406,8 +413,10 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
       auto suggestions =
           (duplicates
-               ? itsGeoEngine->suggestDuplicates(pattern, rejector, lang, keyword, page, maxresults)
-               : itsGeoEngine->suggest(pattern, rejector, lang, keyword, page, maxresults));
+               ? itsGeoEngine->suggestDuplicates(
+                     pattern, rejector, lang, keyword, page, maxresults, longitude, latitude)
+               : itsGeoEngine->suggest(
+                     pattern, rejector, lang, keyword, page, maxresults, longitude, latitude));
 
       // Loop through the Locations
 
@@ -450,8 +459,8 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     else
     {
       // Query the Suggestor engine for multiple languages
-      auto lang_suggestions =
-          itsGeoEngine->suggest(pattern, rejector, languages, keyword, page, maxresults);
+      const auto lang_suggestions{itsGeoEngine->suggest(
+          pattern, rejector, languages, keyword, page, maxresults, longitude, latitude)};
 
       // Create location list iterators for each language
 
