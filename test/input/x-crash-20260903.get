@@ -1,0 +1,1 @@
+GET /autocomplete?keyword=non_existent&lang=fi,sv&pattern=%E4&debug=1 HTTP/1.1

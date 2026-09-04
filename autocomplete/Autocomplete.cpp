@@ -455,7 +455,6 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
         jresult.append(j);
       }
     }
-
     else
     {
       // Query the Suggestor engine for multiple languages
@@ -463,52 +462,54 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
           pattern, rejector, languages, keyword, page, maxresults, longitude, latitude)};
 
       // Create location list iterators for each language
-
-      std::vector<Spine::LocationList::const_iterator> iterators;
-      iterators.reserve(lang_suggestions.size());
-      for (const auto &suggestions : lang_suggestions)
-        iterators.push_back(suggestions.begin());
-
-      while (iterators[0] != lang_suggestions[0].end())
+      if (!lang_suggestions.empty())
       {
-        Json::Value j;
+        std::vector<Spine::LocationList::const_iterator> iterators;
+        iterators.reserve(lang_suggestions.size());
+        for (const auto &suggestions : lang_suggestions)
+          iterators.push_back(suggestions.begin());
 
-        const auto &ptr = *iterators[0];
-
-        j["id"] = int(ptr->geoid);
-        j["feature"] = ptr->feature;
-        j["population"] = ptr->population;
-        j["lon"] = ptr->longitude;
-        j["lat"] = ptr->latitude;
-        j["timezone"] = ptr->timezone;
-        j["country"] = ptr->iso2;
-
-        for (std::size_t i = 0; i < languages.size(); i++)
+        while (iterators[0] != lang_suggestions[0].end())
         {
-          const auto &lg = languages[i];
-          const auto &lptr = *iterators[i];
+          Json::Value j;
 
-          j["name"][lg] = lptr->name;
-          j["area"][lg] = lptr->area;
+          const auto &ptr = *iterators[0];
 
-          ++iterators[i];
+          j["id"] = int(ptr->geoid);
+          j["feature"] = ptr->feature;
+          j["population"] = ptr->population;
+          j["lon"] = ptr->longitude;
+          j["lat"] = ptr->latitude;
+          j["timezone"] = ptr->timezone;
+          j["country"] = ptr->iso2;
+
+          for (std::size_t i = 0; i < languages.size(); i++)
+          {
+            const auto &lg = languages[i];
+            const auto &lptr = *iterators[i];
+
+            j["name"][lg] = lptr->name;
+            j["area"][lg] = lptr->area;
+
+            ++iterators[i];
+          }
+
+          if (debug)
+            j["score"] = ptr->priority;
+
+          append_forecast(j,
+                          itsProductParameters.parameters(product),
+                          ptr,
+                          *itsQEngine,
+                          *itsGeoEngine,
+                          valueformatter,
+                          *timeformatter,
+                          stamp,
+                          lang,
+                          outlocale);
+
+          jresult.append(j);
         }
-
-        if (debug)
-          j["score"] = ptr->priority;
-
-        append_forecast(j,
-                        itsProductParameters.parameters(product),
-                        ptr,
-                        *itsQEngine,
-                        *itsGeoEngine,
-                        valueformatter,
-                        *timeformatter,
-                        stamp,
-                        lang,
-                        outlocale);
-
-        jresult.append(j);
       }
     }
 
