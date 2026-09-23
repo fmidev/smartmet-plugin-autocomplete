@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 26.9.16
+Version: 26.9.13
 Release: 2%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -23,19 +23,19 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
-BuildRequires: smartmet-library-macgyver-devel >= 26.9.16
-BuildRequires: smartmet-library-timeseries-devel >= 26.5.5
+BuildRequires: smartmet-library-macgyver-devel >= 26.9.23
+BuildRequires: smartmet-library-timeseries-devel >= 26.9.16
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 26.8.24
-BuildRequires: smartmet-engine-geonames-devel >= 26.7.31
-BuildRequires: smartmet-engine-querydata-devel >= 26.9.16-2
+BuildRequires: smartmet-library-spine-devel >= 26.9.23
+BuildRequires: smartmet-engine-geonames-devel >= 26.9.23
+BuildRequires: smartmet-engine-querydata-devel >= 26.9.16
 Requires: gdal312-libs
-Requires: smartmet-library-macgyver >= 26.9.16
-Requires: smartmet-library-timeseries >= 26.5.5
-Requires: smartmet-library-spine >= 26.8.24
-Requires: smartmet-engine-geonames >= 26.7.31
-Requires: smartmet-server >= 26.8.21
-Requires: smartmet-engine-querydata >= 26.9.16-2
+Requires: smartmet-library-macgyver >= 26.9.23
+Requires: smartmet-library-timeseries >= 26.9.16
+Requires: smartmet-library-spine >= 26.9.23
+Requires: smartmet-engine-geonames >= 26.9.23
+Requires: smartmet-server >= 26.9.2
+Requires: smartmet-engine-querydata >= 26.9.16
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
 Requires: %{smartmet_boost}-system
@@ -48,11 +48,11 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal312-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis36_15
-#TestRequires: smartmet-engine-geonames >= 26.7.31
-#TestRequires: smartmet-engine-querydata >= 26.9.16-2
-#TestRequires: smartmet-utils-devel >= 26.7.14
-#TestRequires: smartmet-library-spine-plugin-test >= 26.8.24
-#TestRequires: smartmet-test-data >= 26.7.27
+#TestRequires: smartmet-engine-geonames >= 26.9.23
+#TestRequires: smartmet-engine-querydata >= 26.9.16
+#TestRequires: smartmet-utils-devel >= 26.9.3
+#TestRequires: smartmet-library-spine-plugin-test >= 26.9.23
+#TestRequires: smartmet-test-data >= 26.8.26
 #TestRequires: smartmet-test-db
 
 %description
@@ -78,8 +78,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Wed Sep 23 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.9.13-2.fmi
+- Repackaged due to base library ABI changes
 * Wed Sep 16 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.9.16-2.fmi
-- Repackaged due to QEngine ABI changes (smartmet-engine-querydata >= 26.9.16-2)
+- Repackaged due to QEngine ABI changes (smartmet-engine-querydata >= 26.9.16)
 
 * Wed Sep 16 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.9.16-1.fmi
 - Repackaged due to Fmi::Cache::Cache locking changes
