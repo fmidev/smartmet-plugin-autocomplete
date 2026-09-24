@@ -316,6 +316,13 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     unsigned long page = Spine::optional_unsigned_long(theRequest.getParameter("page"), 0);
 
+    // Clamp the paging parameters to sane bounds. Autocomplete is a type-ahead endpoint,
+    // so an enormous 'max' or 'page' only serves to force large allocations / offsets.
+    if (maxresults > 10000)
+      maxresults = 10000;
+    if (page > 100000)
+      page = 100000;
+
     bool pretty = Spine::optional_bool(theRequest.getParameter("pretty"), itsPrettyPrintFlag);
 
     bool debug = Spine::optional_bool(theRequest.getParameter("debug"), false);
@@ -369,7 +376,18 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     Fmi::ValueFormatter valueformatter(opt);
     std::shared_ptr<Fmi::TimeFormatter> timeformatter(Fmi::TimeFormatter::create(timeformat));
 
-    std::locale outlocale = std::locale(localename.c_str());
+    // The locale name is request-controlled and std::locale throws for an unknown or
+    // uninstalled name. Fall back to the classic locale instead of letting the request
+    // trigger an exception (and probe which locales are installed on the host).
+    std::locale outlocale;
+    try
+    {
+      outlocale = std::locale(localename.c_str());
+    }
+    catch (const std::exception &)
+    {
+      outlocale = std::locale::classic();
+    }
 
     auto writer = get_json_writer(pretty);
 
