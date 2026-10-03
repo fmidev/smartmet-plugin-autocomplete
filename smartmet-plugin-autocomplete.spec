@@ -2,8 +2,8 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 26.9.24
-Release: 2%{?dist}.fmi
+Version: 26.10.3
+Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
 URL: https://github.com/fmidev/smartmet-plugin-autocomplete
@@ -23,19 +23,19 @@ BuildRequires: rpm-build
 BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: %{smartmet_boost}-devel
-BuildRequires: smartmet-library-macgyver-devel >= 26.9.23
-BuildRequires: smartmet-library-timeseries-devel >= 26.9.16
+BuildRequires: smartmet-library-macgyver-devel >= 26.10.3
+BuildRequires: smartmet-library-timeseries-devel >= 26.10.3
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 26.9.23
-BuildRequires: smartmet-engine-geonames-devel >= 26.9.23
-BuildRequires: smartmet-engine-querydata-devel >= 26.9.23
+BuildRequires: smartmet-library-spine-devel >= 26.10.3
+BuildRequires: smartmet-engine-geonames-devel >= 26.10.3
+BuildRequires: smartmet-engine-querydata-devel >= 26.10.3
 Requires: gdal312-libs
-Requires: smartmet-library-macgyver >= 26.9.23
-Requires: smartmet-library-timeseries >= 26.9.16
-Requires: smartmet-library-spine >= 26.9.23
-Requires: smartmet-engine-geonames >= 26.9.23
+Requires: smartmet-library-macgyver >= 26.10.3
+Requires: smartmet-library-timeseries >= 26.10.3
+Requires: smartmet-library-spine >= 26.10.3
+Requires: smartmet-engine-geonames >= 26.10.3
 Requires: smartmet-server >= 26.9.2
-Requires: smartmet-engine-querydata >= 26.9.23
+Requires: smartmet-engine-querydata >= 26.10.3
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
 Requires: %{smartmet_boost}-system
@@ -48,8 +48,8 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal312-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis36_15
-#TestRequires: smartmet-engine-geonames >= 26.9.23
-#TestRequires: smartmet-engine-querydata >= 26.9.23
+#TestRequires: smartmet-engine-geonames >= 26.10.3
+#TestRequires: smartmet-engine-querydata >= 26.10.3
 #TestRequires: smartmet-utils-devel >= 26.9.3
 #TestRequires: smartmet-library-spine-plugin-test >= 26.9.23
 #TestRequires: smartmet-test-data >= 26.8.26
@@ -78,6 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Sat Oct 03 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.10.3-1.fmi
+- Repackaged due to the macgyver AtomicSharedPtr ABI change
+
 * Thu Sep 24 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.9.24-2.fmi
 - Security: fall back to the classic locale instead of throwing when the request
   'locale' names an unknown/uninstalled locale, and clamp the 'max' and 'page'
