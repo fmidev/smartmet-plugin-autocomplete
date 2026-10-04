@@ -1,0 +1,63 @@
+{
+   "autocomplete" : {
+      "found-results" : 5,
+      "max-results" : 5,
+      "result" : [
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 654899,
+            "lat" : 64.227279999999993,
+            "lon" : 27.728459999999998,
+            "name" : "Kajaani",
+            "population" : 35375,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Nepal",
+            "country" : "NP",
+            "feature" : "PPLC",
+            "id" : 1283240,
+            "lat" : 27.701689999999999,
+            "lon" : 85.320599999999999,
+            "name" : "Kathmandu",
+            "population" : 1442271,
+            "timezone" : "Asia/Kathmandu"
+         },
+         {
+            "area" : "Uganda",
+            "country" : "UG",
+            "feature" : "PPLC",
+            "id" : 232422,
+            "lat" : 0.31628000000000001,
+            "lon" : 32.582189999999997,
+            "name" : "Kampala",
+            "population" : 1353189,
+            "timezone" : "Africa/Kampala"
+         },
+         {
+            "area" : "Nigeria",
+            "country" : "NG",
+            "feature" : "PPLA",
+            "id" : 2335204,
+            "lat" : 12.000120000000001,
+            "lon" : 8.5167199999999994,
+            "name" : "Kano",
+            "population" : 3626068,
+            "timezone" : "Africa/Lagos"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 654440,
+            "lat" : 61.463830000000002,
+            "lon" : 24.07602,
+            "name" : "Kangasala",
+            "population" : 24291,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}

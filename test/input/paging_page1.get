@@ -1,0 +1,2 @@
+GET /autocomplete?pretty=1&keyword=ajax_fi_all&pattern=Ka&max=5&page=1 HTTP/1.0
+

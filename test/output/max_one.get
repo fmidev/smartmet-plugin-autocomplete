@@ -1,0 +1,19 @@
+{
+   "autocomplete" : {
+      "found-results" : 1,
+      "max-results" : 1,
+      "result" : [
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA",
+            "id" : 634963,
+            "lat" : 61.499110000000002,
+            "lon" : 23.787120000000002,
+            "name" : "Tampere",
+            "population" : 202687,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}
