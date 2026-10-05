@@ -9,7 +9,7 @@ FLAGS += -Wno-deprecated-declarations
 
 DEFINES = -DUNIX -D_REENTRANT
 
-LIBS += -L$(libdir) \
+LIBS += $(PREFIX_LDFLAGS) \
 	$(JSONCPP_LIBS) \
 	-lsmartmet-spine \
 	-lsmartmet-timeseries \
