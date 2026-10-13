@@ -114,8 +114,8 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
 void append_forecast(Json::Value &theResult,
                      const ProductParameters::ParameterList &theParameters,
                      const Spine::LocationPtr &theLoc,
-                     Engine::Querydata::Engine &theEngine,
-                     Engine::Geonames::Engine &theGeoEngine,
+                     const Engine::Querydata::Engine& theEngine,
+                     const Engine::Geonames::Engine& theGeoEngine,
                      const Fmi::ValueFormatter &theValueFormatter,
                      const Fmi::TimeFormatter &theTimeFormatter,
                      const std::string &theStamp,
@@ -208,7 +208,7 @@ void append_forecast(Json::Value &theResult,
  */
 // ----------------------------------------------------------------------
 
-void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
+void Autocomplete::requestHandler(const Spine::Reactor& /* theReactor */,
                                   const Spine::HTTP::Request &theRequest,
                                   Spine::HTTP::Response &theResponse)
 
