@@ -20,6 +20,7 @@
 #include <timeseries/ParameterFactory.h>
 #include <timeseries/TimeSeries.h>
 #include <timeseries/TimeSeriesOutput.h>
+#include <algorithm>
 #include <iostream>
 #include <map>
 #include <memory>
@@ -318,10 +319,8 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     // Clamp the paging parameters to sane bounds. Autocomplete is a type-ahead endpoint,
     // so an enormous 'max' or 'page' only serves to force large allocations / offsets.
-    if (maxresults > 10000)
-      maxresults = 10000;
-    if (page > 100000)
-      page = 100000;
+    maxresults = std::min<unsigned long>(maxresults, 10000);
+    page = std::min<unsigned long>(page, 100000);
 
     bool pretty = Spine::optional_bool(theRequest.getParameter("pretty"), itsPrettyPrintFlag);
 
