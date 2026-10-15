@@ -546,14 +546,12 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
  */
 // ----------------------------------------------------------------------
 
-Autocomplete::Autocomplete(SmartMetPlugin *theParent,
-                           Spine::Reactor *theReactor,
-                           const char *theConfig)
-    : itsReactor(theReactor), itsConfigFile(theConfig)
+Autocomplete::Autocomplete(SmartMetPlugin* theParent,
+                           Spine::Reactor* theReactor,
+                           const char* theConfig)
+    : itsParent(theParent), itsReactor(theReactor), itsConfigFile(theConfig)
 {
   // Banner
-
-  itsParent = theParent;
 }
 
 // ----------------------------------------------------------------------
