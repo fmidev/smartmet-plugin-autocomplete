@@ -2,7 +2,7 @@
 %define SPECNAME smartmet-plugin-%{DIRNAME}
 Summary: SmartMet autocomplete plugin (provides pre-emptive text completion)
 Name: %{SPECNAME}
-Version: 26.10.16
+Version: 26.10.17
 Release: 1%{?dist}.fmi
 License: MIT
 Group: SmartMet/Plugins
@@ -30,12 +30,12 @@ BuildRequires: smartmet-library-spine-devel >= 26.10.16
 BuildRequires: smartmet-engine-geonames-devel >= 26.10.16
 BuildRequires: smartmet-engine-querydata-devel >= 26.10.16
 Requires: gdal312-libs
-Requires: smartmet-library-macgyver >= 26.10.16
+Requires: smartmet-library-macgyver >= 26.10.17
 Requires: smartmet-library-timeseries >= 26.10.16
-Requires: smartmet-library-spine >= 26.10.16
-Requires: smartmet-engine-geonames >= 26.10.16
-Requires: smartmet-server >= 26.10.16
-Requires: smartmet-engine-querydata >= 26.10.16
+Requires: smartmet-library-spine >= 26.10.17
+Requires: smartmet-engine-geonames >= 26.10.17
+Requires: smartmet-server >= 26.10.17
+Requires: smartmet-engine-querydata >= 26.10.17
 Requires: %{smartmet_boost}-filesystem
 Requires: %{smartmet_boost}-iostreams
 Requires: %{smartmet_boost}-system
@@ -48,8 +48,8 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: gdal312-libs
 #TestRequires: jsoncpp >= 1.8.4
 #TestRequires: postgis36_15
-#TestRequires: smartmet-engine-geonames >= 26.10.16
-#TestRequires: smartmet-engine-querydata >= 26.10.16
+#TestRequires: smartmet-engine-geonames >= 26.10.17
+#TestRequires: smartmet-engine-querydata >= 26.10.17
 #TestRequires: smartmet-utils-devel >= 26.9.3
 #TestRequires: smartmet-library-spine-plugin-test >= 26.10.16
 #TestRequires: smartmet-test-data >= 26.8.26
@@ -78,6 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0664,root,root,0775)
 
 %changelog
+* Sat Oct 17 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.10.17-1.fmi
+- Split functions with a cognitive complexity above 25 into smaller helpers, no functional changes
+
 * Fri Oct 16 2026 Mika Heiskanen <mika.heiskanen@fmi.fi> - 26.10.16-1.fmi
 - Fixed compiler warnings and clang-tidy findings (unused code, unreachable code, empty statements, member initialization, parameter passing, noexcept), no functional changes
 
