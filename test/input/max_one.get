@@ -1,0 +1,2 @@
+GET /autocomplete?pretty=1&keyword=ajax_fi_all&pattern=Tampere&max=1 HTTP/1.0
+

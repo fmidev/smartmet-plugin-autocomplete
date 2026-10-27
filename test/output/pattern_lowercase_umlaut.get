@@ -1,0 +1,19 @@
+{
+   "autocomplete" : {
+      "found-results" : 1,
+      "max-results" : 15,
+      "result" : [
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 662095,
+            "lat" : 62.600000000000001,
+            "lon" : 25.733329999999999,
+            "name" : "\u00c4\u00e4nekoski",
+            "population" : 13406,
+            "timezone" : "Europe/Helsinki"
+         }
+      ]
+   }
+}

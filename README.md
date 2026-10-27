@@ -65,17 +65,29 @@ easier. The  collation sevices are in use.
 
 ### lang (fi) 
 
-The selected language using a 2-character language ISO-code. If no specific translation exists for a location, the primary name for the location will be returned.
+The selected language using a 2-character language ISO-code. If no specific translation exists for a location, the primary name for the location will be returned. The default comes from the `language` setting of the configuration file. A comma separated list of languages returns the names in each of the languages.
 
 
 ### max (15)  
 
-The number of results to return in one page.
+The number of results to return in one page (at most 10000). The default comes from the `maxresults` setting of the configuration file.
 
 
 ### page (0)  
 
-The page number. This option works in conjuction with the maxresults option.
+The page number. This option works in conjuction with the max option.
+
+### feature, nofeature ()
+
+A comma separated list of feature codes (for example `PPLC,PPLA`) of the locations to accept, or with `nofeature` to reject. The options cannot be used together.
+
+### duplicates (0)
+
+Return also locations whose names duplicate an earlier result.
+
+### debug (0)
+
+Add the score of each location to the output.
 
 
 ### format (json)  
@@ -88,18 +100,14 @@ Pretty print is used mostly for debugging purposes (and regression tests to spot
 
 ### product () 
 
-Identify a product name to add localized forecast data to the output. The allowed product names are listed in a table.
+Identify a product name to add localized forecast data to the output. The products and their
+forecast parameters are listed in the `products` group of the configuration file:
 
 ```
-autocomplete.products
-```
-
-and the forecast parameters for each product in
-
-and the forecast parameters for each product in
-
-```
-autocomplete.parameters
+products:
+{
+	weather = ["Temperature", "WeatherSymbol3"];
+};
 ```
 
 The default is not to include a forecast in the output.
@@ -112,21 +120,9 @@ The output format as supported by MacGyver::TimeFormatter (iso, xml, timestamp, 
 
 Localization may be used for formatting locale specific forecast parameters.
 
-### stamp () y
+### time ()
 
 Alternate forecast start time used only for creating static regression tests.
-
-## Formatting numeric values
-
-The same options as used in the pointforecast-plugin are available for formatting floating point values:
-
-* missingtext
-* width
-* fill
-* adjustfield
-* showpos
-* uppercase
-* floatfield
 
 ## Docker
 

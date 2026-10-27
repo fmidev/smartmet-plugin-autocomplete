@@ -20,6 +20,7 @@
 #include <timeseries/ParameterFactory.h>
 #include <timeseries/TimeSeries.h>
 #include <timeseries/TimeSeriesOutput.h>
+#include <algorithm>
 #include <iostream>
 #include <map>
 #include <memory>
@@ -114,8 +115,8 @@ ProductParameters read_product_parameters(const libconfig::Config &theConfig)
 void append_forecast(Json::Value &theResult,
                      const ProductParameters::ParameterList &theParameters,
                      const Spine::LocationPtr &theLoc,
-                     Engine::Querydata::Engine &theEngine,
-                     Engine::Geonames::Engine &theGeoEngine,
+                     const Engine::Querydata::Engine& theEngine,
+                     const Engine::Geonames::Engine& theGeoEngine,
                      const Fmi::ValueFormatter &theValueFormatter,
                      const Fmi::TimeFormatter &theTimeFormatter,
                      const std::string &theStamp,
@@ -193,6 +194,82 @@ void append_forecast(Json::Value &theResult,
   }
 }
 
+// ----------------------------------------------------------------------
+/*!
+ * \brief Build the location rejector for the feature/nofeature options
+ *
+ * By default all locations are accepted. The selected features are stored
+ * into parts, which must outlive the returned function.
+ */
+// ----------------------------------------------------------------------
+
+std::function<bool(const Spine::LocationPtr &)> make_feature_rejector(
+    const std::string &feature, const std::string &nofeature, std::set<std::string> &parts)
+{
+  if (!feature.empty() && !nofeature.empty())
+    throw Fmi::Exception(BCP,
+                         "Cannot use 'feature' and 'nofeature' settings simultaneously to filter "
+                         "wanted locations");
+
+  // Accept only given features by removing non matches
+  if (!feature.empty())
+  {
+    boost::algorithm::split(parts, feature, boost::is_any_of(","));
+    return [&parts](const Spine::LocationPtr &loc)
+    { return (parts.find(loc->feature) == parts.end()); };
+  }
+
+  // Remove given features by removing matches
+  if (!nofeature.empty())
+  {
+    boost::algorithm::split(parts, nofeature, boost::is_any_of(","));
+    return [&parts](const Spine::LocationPtr &loc)
+    { return (parts.find(loc->feature) != parts.end()); };
+  }
+
+  return [](const Spine::LocationPtr & /* loc */) { return false; };
+}
+
+// ----------------------------------------------------------------------
+/*!
+ * \brief Create the output locale
+ *
+ * The locale name is request-controlled and std::locale throws for an unknown or
+ * uninstalled name. Fall back to the classic locale instead of letting the request
+ * trigger an exception (and probe which locales are installed on the host).
+ */
+// ----------------------------------------------------------------------
+
+std::locale make_output_locale(const std::string &localename)
+{
+  try
+  {
+    return std::locale(localename.c_str());
+  }
+  catch (const std::exception &)
+  {
+    return std::locale::classic();
+  }
+}
+
+// ----------------------------------------------------------------------
+/*!
+ * \brief The language independent JSON fields of a location
+ */
+// ----------------------------------------------------------------------
+
+Json::Value location_json(const Spine::LocationPtr &ptr)
+{
+  Json::Value j;
+  j["id"] = int(ptr->geoid);
+  j["feature"] = ptr->feature;
+  j["population"] = ptr->population;
+  j["lon"] = ptr->longitude;
+  j["lat"] = ptr->latitude;
+  j["timezone"] = ptr->timezone;
+  return j;
+}
+
 }  // namespace
 
 // ----------------------------------------------------------------------
@@ -208,7 +285,7 @@ void append_forecast(Json::Value &theResult,
  */
 // ----------------------------------------------------------------------
 
-void Autocomplete::requestHandler(Spine::Reactor & /* theReactor */,
+void Autocomplete::requestHandler(const Spine::Reactor& /* theReactor */,
                                   const Spine::HTTP::Request &theRequest,
                                   Spine::HTTP::Response &theResponse)
 
@@ -316,6 +393,11 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     unsigned long page = Spine::optional_unsigned_long(theRequest.getParameter("page"), 0);
 
+    // Clamp the paging parameters to sane bounds. Autocomplete is a type-ahead endpoint,
+    // so an enormous 'max' or 'page' only serves to force large allocations / offsets.
+    maxresults = std::min<unsigned long>(maxresults, 10000);
+    page = std::min<unsigned long>(page, 100000);
+
     bool pretty = Spine::optional_bool(theRequest.getParameter("pretty"), itsPrettyPrintFlag);
 
     bool debug = Spine::optional_bool(theRequest.getParameter("debug"), false);
@@ -336,32 +418,12 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     // By default accept all locations. The name is rejector since we use remove_if
 
     std::set<std::string> parts;
-    std::function<bool(const Spine::LocationPtr &)> rejector =
-        [](const Spine::LocationPtr & /* loc */) { return false; };
 
     std::string feature = Spine::optional_string(theRequest.getParameter("feature"), "");
     std::string nofeature = Spine::optional_string(theRequest.getParameter("nofeature"), "");
 
-    if (!feature.empty() && !nofeature.empty())
-      throw Fmi::Exception(BCP,
-                           "Cannot use 'feature' and 'nofeature' settings simultaneously to filter "
-                           "wanted locations");
-
-    // Accept only given features by removing non matches
-    if (!feature.empty())
-    {
-      boost::algorithm::split(parts, feature, boost::is_any_of(","));
-      rejector = [&parts](const Spine::LocationPtr &loc)
-      { return (parts.find(loc->feature) == parts.end()); };
-    }
-
-    // Remove given features by removing matches
-    if (!nofeature.empty())
-    {
-      boost::algorithm::split(parts, nofeature, boost::is_any_of(","));
-      rejector = [&parts](const Spine::LocationPtr &loc)
-      { return (parts.find(loc->feature) != parts.end()); };
-    }
+    std::function<bool(const Spine::LocationPtr &)> rejector =
+        make_feature_rejector(feature, nofeature, parts);
 
     validate_product(product, itsProductParameters);
 
@@ -369,7 +431,10 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
     Fmi::ValueFormatter valueformatter(opt);
     std::shared_ptr<Fmi::TimeFormatter> timeformatter(Fmi::TimeFormatter::create(timeformat));
 
-    std::locale outlocale = std::locale(localename.c_str());
+    // The locale name is request-controlled and std::locale throws for an unknown or
+    // uninstalled name. Fall back to the classic locale instead of letting the request
+    // trigger an exception (and probe which locales are installed on the host).
+    std::locale outlocale = make_output_locale(localename);
 
     auto writer = get_json_writer(pretty);
 
@@ -416,14 +481,7 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
         std::string name = ptr->name;
         std::string area = ptr->area;
 
-        Json::Value j;
-
-        j["id"] = int(ptr->geoid);
-        j["feature"] = ptr->feature;
-        j["population"] = ptr->population;
-        j["lon"] = ptr->longitude;
-        j["lat"] = ptr->latitude;
-        j["timezone"] = ptr->timezone;
+        Json::Value j = location_json(ptr);
 
         j["name"] = name;
         j["country"] = ptr->iso2;
@@ -462,16 +520,9 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
       while (iterators[0] != lang_suggestions[0].end())
       {
-        Json::Value j;
-
         const auto &ptr = *iterators[0];
 
-        j["id"] = int(ptr->geoid);
-        j["feature"] = ptr->feature;
-        j["population"] = ptr->population;
-        j["lon"] = ptr->longitude;
-        j["lat"] = ptr->latitude;
-        j["timezone"] = ptr->timezone;
+        Json::Value j = location_json(ptr);
         j["country"] = ptr->iso2;
 
         for (std::size_t i = 0; i < languages.size(); i++)
@@ -529,14 +580,12 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
  */
 // ----------------------------------------------------------------------
 
-Autocomplete::Autocomplete(SmartMetPlugin *theParent,
-                           Spine::Reactor *theReactor,
-                           const char *theConfig)
-    : itsReactor(theReactor), itsConfigFile(theConfig)
+Autocomplete::Autocomplete(SmartMetPlugin* theParent,
+                           Spine::Reactor* theReactor,
+                           const char* theConfig)
+    : itsParent(theParent), itsReactor(theReactor), itsConfigFile(theConfig)
 {
   // Banner
-
-  itsParent = theParent;
 }
 
 // ----------------------------------------------------------------------

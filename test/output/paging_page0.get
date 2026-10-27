@@ -1,0 +1,63 @@
+{
+   "autocomplete" : {
+      "found-results" : 5,
+      "max-results" : 5,
+      "result" : [
+         {
+            "area" : "Egypti",
+            "country" : "EG",
+            "feature" : "PPLC",
+            "id" : 360630,
+            "lat" : 30.062629999999999,
+            "lon" : 31.249669999999998,
+            "name" : "Kairo",
+            "population" : 7734614,
+            "timezone" : "Africa/Cairo"
+         },
+         {
+            "area" : "Pakistan",
+            "country" : "PK",
+            "feature" : "PPLA",
+            "id" : 1174872,
+            "lat" : 24.9056,
+            "lon" : 67.0822,
+            "name" : "Karachi",
+            "population" : 11624219,
+            "timezone" : "Asia/Karachi"
+         },
+         {
+            "area" : "Etel\u00e4-Afrikka",
+            "country" : "ZA",
+            "feature" : "PPLC",
+            "id" : 3369157,
+            "lat" : -33.925840000000001,
+            "lon" : 18.423220000000001,
+            "name" : "Kapkaupunki",
+            "population" : 3433441,
+            "timezone" : "Africa/Johannesburg"
+         },
+         {
+            "area" : "Afganistan",
+            "country" : "AF",
+            "feature" : "PPLC",
+            "id" : 1138958,
+            "lat" : 34.528129999999997,
+            "lon" : 69.172330000000002,
+            "name" : "Kabul",
+            "population" : 3043532,
+            "timezone" : "Asia/Kabul"
+         },
+         {
+            "area" : "Vietnam",
+            "country" : "VN",
+            "feature" : "PPLA",
+            "id" : 1566083,
+            "lat" : 10.82302,
+            "lon" : 106.62965,
+            "name" : "H\u1ed3 Ch\u00ed Minhin kaupunki",
+            "population" : 3467331,
+            "timezone" : "Asia/Ho_Chi_Minh"
+         }
+      ]
+   }
+}

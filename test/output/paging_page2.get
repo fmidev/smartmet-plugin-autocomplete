@@ -1,0 +1,63 @@
+{
+   "autocomplete" : {
+      "found-results" : 5,
+      "max-results" : 5,
+      "result" : [
+         {
+            "area" : "Kotka",
+            "country" : "FI",
+            "feature" : "PPL",
+            "id" : 654137,
+            "lat" : 60.516669999999998,
+            "lon" : 26.949999999999999,
+            "name" : "Karhula",
+            "population" : 22867,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 655130,
+            "lat" : 60.407240000000002,
+            "lon" : 22.369039999999998,
+            "name" : "Kaarina",
+            "population" : 21684,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 653627,
+            "lat" : 62.433329999999998,
+            "lon" : 22.183330000000002,
+            "name" : "Kauhajoki",
+            "population" : 14526,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "",
+            "country" : "FI",
+            "feature" : "PPLA3",
+            "id" : 654363,
+            "lat" : 61.799999999999997,
+            "lon" : 22.41667,
+            "name" : "Kankaanp\u00e4\u00e4",
+            "population" : 12381,
+            "timezone" : "Europe/Helsinki"
+         },
+         {
+            "area" : "Kiinan tasavalta",
+            "country" : "TW",
+            "feature" : "PPLA",
+            "id" : 1673820,
+            "lat" : 22.61626,
+            "lon" : 120.31332999999999,
+            "name" : "Kaohsiung",
+            "population" : 1519711,
+            "timezone" : "Asia/Taipei"
+         }
+      ]
+   }
+}
