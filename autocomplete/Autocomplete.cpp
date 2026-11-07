@@ -1,5 +1,6 @@
 #include "Autocomplete.h"
 #include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/join.hpp>
 #include <boost/algorithm/string/split.hpp>
 #include <boost/bind/bind.hpp>
 #include <boost/move/unique_ptr.hpp>
@@ -54,6 +55,33 @@ void validate_product(const std::string &product, const ProductParameters &produ
  * \brief Read product parameters from the database
  */
 // ----------------------------------------------------------------------
+
+// ----------------------------------------------------------------------
+/*!
+ * \brief Split a comma separated list, remove duplicates keeping the order
+ *
+ * Throws if the list has more than the allowed number of unique values.
+ */
+// ----------------------------------------------------------------------
+
+std::vector<std::string> unique_list(const std::string &theValue, const char *theName)
+{
+  const std::size_t max_values = 5;
+
+  std::vector<std::string> values;
+  boost::algorithm::split(values, theValue, boost::algorithm::is_any_of(","));
+
+  std::vector<std::string> result;
+  for (const auto &value : values)
+    if (std::find(result.begin(), result.end(), value) == result.end())
+      result.push_back(value);
+
+  if (result.size() > max_values)
+    throw Fmi::Exception(BCP,
+                         std::string("Too many values for parameter '") + theName +
+                             "', maximum is " + Fmi::to_string(max_values));
+  return result;
+}
 
 ProductParameters read_product_parameters(const libconfig::Config &theConfig)
 {
@@ -388,6 +416,12 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     std::string lang = Spine::optional_string(theRequest.getParameter("lang"), itsDefaultLanguage);
 
+    // Remove duplicate languages and keywords keeping the order, each language produces a
+    // translated copy of all candidates and each keyword a separate search
+    const std::vector<std::string> languages = unique_list(lang, "lang");
+    lang = boost::algorithm::join(languages, ",");
+    keyword = boost::algorithm::join(unique_list(keyword, "keyword"), ",");
+
     unsigned long maxresults =
         Spine::optional_unsigned_long(theRequest.getParameter("max"), itsMaxResults);
 
@@ -395,6 +429,9 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     // Clamp the paging parameters to sane bounds. Autocomplete is a type-ahead endpoint,
     // so an enormous 'max' or 'page' only serves to force large allocations / offsets.
+    // max=0 would mean unlimited in the engine, use the configured maximum instead
+    if (maxresults == 0)
+      maxresults = itsMaxResults;
     maxresults = std::min<unsigned long>(maxresults, 10000);
     page = std::min<unsigned long>(page, 100000);
 
@@ -461,9 +498,6 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
     // Shared time objects
     // Check how many languages are requested, since the output changes for multiple languages
-
-    std::vector<std::string> languages;
-    boost::algorithm::split(languages, lang, boost::algorithm::is_any_of(","));
 
     if (languages.size() == 1)
     {
