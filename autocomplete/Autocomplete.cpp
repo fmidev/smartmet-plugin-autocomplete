@@ -518,7 +518,11 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
       for (const auto &suggestions : lang_suggestions)
         iterators.push_back(suggestions.begin());
 
-      while (iterators[0] != lang_suggestions[0].end())
+      // The engine returns an empty result for example for an unknown keyword
+      const bool have_all_languages =
+          (!lang_suggestions.empty() && lang_suggestions.size() == languages.size());
+
+      while (have_all_languages && iterators[0] != lang_suggestions[0].end())
       {
         const auto &ptr = *iterators[0];
 
@@ -527,6 +531,9 @@ void Autocomplete::complete(const Spine::HTTP::Request &theRequest,
 
         for (std::size_t i = 0; i < languages.size(); i++)
         {
+          if (iterators[i] == lang_suggestions[i].end())
+            continue;
+
           const auto &lg = languages[i];
           const auto &lptr = *iterators[i];
 
