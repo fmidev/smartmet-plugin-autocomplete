@@ -4,7 +4,7 @@ Part of [SmartMet Server](https://github.com/fmidev/smartmet-server). See the [S
 
 ## Introduction
 
-The SmartMet autocmplete plugin provides an efficient and a fast method
+The SmartMet autocomplete plugin provides an efficient and a fast method
 for completing the search locations.  It provides the location
 information enriched with simple weather information.  The
 figure below  shows how the autocomplete plugin suggests several
@@ -75,7 +75,7 @@ The number of results to return in one page (at most 10000). The default comes f
 
 ### page (0)  
 
-The page number. This option works in conjuction with the max option.
+The page number. This option works in conjunction with the max option.
 
 ### feature, nofeature ()
 

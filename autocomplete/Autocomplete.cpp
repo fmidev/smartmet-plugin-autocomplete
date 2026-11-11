@@ -179,7 +179,7 @@ void append_forecast(Json::Value &theResult,
     if (!theStamp.empty())
       t = Fmi::TimeParser::parse(theStamp, timezone);
 
-    // Model, querydata and some default settins
+    // Model, querydata and some default settings
 
     auto q = theEngine.get(producer);
 
