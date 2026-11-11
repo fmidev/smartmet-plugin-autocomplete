@@ -26,13 +26,13 @@ BuildRequires: %{smartmet_boost}-devel
 BuildRequires: smartmet-library-macgyver-devel >= 26.11.3
 BuildRequires: smartmet-library-timeseries-devel >= 26.11.4
 BuildRequires: jsoncpp-devel >= 1.8.4
-BuildRequires: smartmet-library-spine-devel >= 26.11.4
+BuildRequires: smartmet-library-spine-devel >= 26.11.11
 BuildRequires: smartmet-engine-geonames-devel >= 26.10.16
 BuildRequires: smartmet-engine-querydata-devel >= 26.11.5
 Requires: gdal312-libs
 Requires: smartmet-library-macgyver >= 26.11.3
 Requires: smartmet-library-timeseries >= 26.11.4
-Requires: smartmet-library-spine >= 26.11.4
+Requires: smartmet-library-spine >= 26.11.11
 Requires: smartmet-engine-geonames >= 26.10.17
 Requires: smartmet-server >= 26.10.17
 Requires: smartmet-engine-querydata >= 26.11.5
@@ -51,7 +51,7 @@ Obsoletes: smartmet-brainstorm-autocomplete-debuginfo < 16.11.1
 #TestRequires: smartmet-engine-geonames >= 26.10.17
 #TestRequires: smartmet-engine-querydata >= 26.11.5
 #TestRequires: smartmet-utils-devel >= 26.9.3
-#TestRequires: smartmet-library-spine-plugin-test >= 26.11.4
+#TestRequires: smartmet-library-spine-plugin-test >= 26.11.11
 #TestRequires: smartmet-test-data >= 26.8.26
 #TestRequires: smartmet-test-db
 

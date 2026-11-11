@@ -703,7 +703,7 @@ void Autocomplete::init()
     // Ready for service now
 
     if (!itsReactor->addContentHandler(itsParent,
-                                       "/autocomplete",
+                                       Spine::Reactor::HandlerOptions("/autocomplete"),
                                        [this](Spine::Reactor &theReactor,
                                               const Spine::HTTP::Request &theRequest,
                                               Spine::HTTP::Response &theResponse)
