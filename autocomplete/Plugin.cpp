@@ -6,12 +6,10 @@
 
 #include "Plugin.h"
 #include "Autocomplete.h"
-
 #include <macgyver/Exception.h>
 #include <spine/Reactor.h>
 #include <spine/SmartMet.h>
-#include <sstream>
-#include <stdexcept>
+#include <iostream>
 
 namespace SmartMet
 {

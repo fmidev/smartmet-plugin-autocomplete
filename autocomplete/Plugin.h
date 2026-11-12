@@ -7,10 +7,14 @@
 #pragma once
 
 #include "Autocomplete.h"
-#include <boost/move/unique_ptr.hpp>
-#include <spine/HTTP.h>
-#include <spine/Reactor.h>
 #include <spine/SmartMetPlugin.h>
+#include <memory>
+#include <string>
+
+namespace SmartMet::Spine
+{
+class Reactor;
+}  // namespace SmartMet::Spine
 
 namespace SmartMet
 {

@@ -1,18 +1,31 @@
 #pragma once
 
 #include "ProductParameters.h"
-#include <engines/geonames/Engine.h>
-#include <engines/querydata/Engine.h>
-#include <spine/HTTP.h>
-#include <spine/Reactor.h>
-#include <spine/SmartMetPlugin.h>
 #include <libconfig.h++>
-#include <set>
+#include <memory>
 #include <string>
+
+class SmartMetPlugin;
+namespace SmartMet::Engine::Geonames
+{
+class Engine;
+}  // namespace SmartMet::Engine::Geonames
+namespace SmartMet::Engine::Querydata
+{
+class Engine;
+}  // namespace SmartMet::Engine::Querydata
+namespace SmartMet::Spine::HTTP
+{
+class Request;
+class Response;
+}  // namespace SmartMet::Spine::HTTP
+namespace SmartMet::Spine
+{
+class Reactor;
+}  // namespace SmartMet::Spine
 
 namespace SmartMet
 {
-class FmiNames;
 
 namespace Plugin
 {
