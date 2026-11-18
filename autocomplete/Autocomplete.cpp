@@ -82,7 +82,7 @@ void validate_product(const std::string &product, const ProductParameters &produ
 
 std::vector<std::string> unique_list(const std::string &theValue, const char *theName)
 {
-  const std::size_t max_values = 5;
+  const std::size_t max_values = 50;
 
   std::vector<std::string> values;
   boost::algorithm::split(values, theValue, boost::algorithm::is_any_of(","));
